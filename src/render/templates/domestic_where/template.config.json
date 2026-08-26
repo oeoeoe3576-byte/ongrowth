@@ -1,0 +1,15 @@
+{
+  "name": "domestic_where",
+  "description": "기본 템플릿 - 국내어디감 브랜드 카드뉴스 스타일",
+  "font_family": "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+  "colors": {
+    "background": "#0f1b16",
+    "accent": "#ffd166",
+    "text_primary": "#ffffff",
+    "text_secondary": "#c9d6cf",
+    "overlay": "rgba(0,0,0,0.45)"
+  },
+  "logo_text": "국내어디감",
+  "show_page_number": true,
+  "cta_default": "저장해두고 여행할 때 꺼내보세요."
+}

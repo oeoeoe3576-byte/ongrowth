@@ -1,0 +1,15 @@
+{
+  "name": "minimal",
+  "description": "미니멀 화이트 템플릿",
+  "font_family": "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+  "colors": {
+    "background": "#ffffff",
+    "accent": "#1f6f50",
+    "text_primary": "#111111",
+    "text_secondary": "#555555",
+    "overlay": "rgba(255,255,255,0.55)"
+  },
+  "logo_text": "국내어디감",
+  "show_page_number": true,
+  "cta_default": "저장해두고 여행할 때 꺼내보세요."
+}

@@ -1,0 +1,47 @@
+# 국내여행 카드뉴스 자동 발행 시스템 - 전역 설정
+# 코드에 값을 박아넣지 않고 이 파일에서 관리한다 (지시사항 34)
+
+brand:
+  name: "국내어디감"
+  account: "domestic_where"
+  default_cta: "저장해두고 여행할 때 꺼내보세요."
+  follow_cta: "국내여행지는 @domestic_where"
+  tone: "친근하고 담백한 말투, 과한 이모지/AI 느낌 문장 지양"
+
+cardnews:
+  slide_count: 7
+  width: 1080
+  height: 1350
+  template: domestic_where
+
+place_rules:
+  minimum_rating: 4.0
+  exclude_temporarily_closed: true
+  exclude_permanently_closed: true
+
+caption:
+  hashtag_count: 10
+  use_emoji: true
+  linebreak_style: "double"   # single | double
+  max_lines_hook: 1
+
+publishing:
+  timezone: "Asia/Seoul"
+  review_mode: true            # true=REVIEW 모드(승인 필요), false=AUTO
+  default_publish_hour: 19
+  default_publish_minute: 0
+  retry_schedule_minutes: [5, 15]   # 1차 실패 5분 후, 2차 실패 15분 후, 그 다음 failed
+
+instagram:
+  enabled: false                # Access Token/계정 연결 전까지 false 유지. false여도 전체 파이프라인은 정상 동작해야 한다.
+  graph_api_version: ""         # 구현 시점 최신 안정 버전을 확인 후 채울 것
+
+scheduler:
+  poll_interval_seconds: 60
+
+folders:
+  output_dir: "cardnews_output"
+  inbox_dir: "publish_inbox"
+  scheduled_dir: "publish_scheduled"
+  success_dir: "publish_success"
+  failed_dir: "publish_failed"

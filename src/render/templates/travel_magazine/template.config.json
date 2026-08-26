@@ -1,0 +1,15 @@
+{
+  "name": "travel_magazine",
+  "description": "매거진풍 세리프 템플릿",
+  "font_family": "'Noto Serif KR', 'Nanum Myeongjo', serif",
+  "colors": {
+    "background": "#2b2320",
+    "accent": "#e0a458",
+    "text_primary": "#f7f2ea",
+    "text_secondary": "#d8cdbf",
+    "overlay": "rgba(20,15,10,0.5)"
+  },
+  "logo_text": "국내어디감",
+  "show_page_number": true,
+  "cta_default": "저장해두고 여행할 때 꺼내보세요."
+}

@@ -13,7 +13,9 @@
     "start:server": "tsx src/server/index.ts",
     "scheduler": "tsx src/scheduler/run.ts",
     "typecheck": "tsc --noEmit",
-    "test": "tsx src/test/run-all.ts"
+    "test": "tsx src/test/run-all.ts",
+    "sheet": "tsx src/sheet/cli.ts",
+    "test:sheet": "tsx src/sheet/sheet.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",

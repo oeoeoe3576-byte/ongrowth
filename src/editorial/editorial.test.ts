@@ -7,7 +7,7 @@ import fs from "node:fs";
 const base = (): Calendar => ({
   brand: "t", category: "marketing", objective: "SAVE", target: "t", maxPages: 10, reviewTime: "09:00", publishTime: "18:30", timezone: "Asia/Seoul",
   channels: { blog: "블로그", instagram: "인스타", threads: "스레드" },
-  weekly: { mon: "blog", tue: "blog", wed: "instagram", thu: "blog", fri: "blog", sat: "threads", sun: "blog" },
+  weekly: { mon: "blog", tue: "blog", wed: ["instagram", "threads"], thu: "blog", fri: "blog" },
   rules: [],
   backlog: [
     { id: "B01", channel: "blog", topic: "블로그1", angle: "", status: "todo" },
@@ -17,15 +17,19 @@ const base = (): Calendar => ({
 });
 
 const tests: [string, () => void][] = [
-  ["요일 → 채널 (2026-10-01 목=blog, 10-07 수=instagram, 10-03 토=threads)", () => {
+  ["요일 → 채널: 평일만, 수요일은 인스타/스레드 격주, 주말은 쉬는 날", () => {
     const c = base();
-    assert.equal(channelFor(c, "2026-10-01"), "blog");
-    assert.equal(channelFor(c, "2026-10-07"), "instagram");
-    assert.equal(channelFor(c, "2026-10-03"), "threads");
+    assert.equal(channelFor(c, "2026-10-01"), "blog"); // 목
+    const w1 = channelFor(c, "2026-10-07"); // 수
+    const w2 = channelFor(c, "2026-10-14"); // 다음 주 수
+    assert.deepEqual([w1, w2].sort(), ["instagram", "threads"]);
+    assert.equal(channelFor(c, "2026-10-03"), null); // 토
+    assert.equal(pickTopic(c, "2026-10-04").dayOff, true); // 일
   }],
   ["오늘 주제: 요일 채널 우선, 이미 맡은 주제가 있으면 같은 것 (여러 번 실행해도 동일)", () => {
     const c = base();
-    assert.equal(pickTopic(c, "2026-10-07").topic?.id, "I01");
+    const wedChannel = channelFor(c, "2026-10-07");
+    assert.equal(pickTopic(c, "2026-10-07").topic?.channel, wedChannel === "instagram" ? "instagram" : "blog");
     c.backlog[0].date = "2026-10-01";
     c.backlog[0].status = "reserved";
     assert.equal(pickTopic(c, "2026-10-01").topic?.id, "B01");
@@ -33,7 +37,8 @@ const tests: [string, () => void][] = [
   }],
   ["요일 채널 주제가 없으면 다른 채널로 대체, 전부 없으면 null", () => {
     const c = base();
-    const r = pickTopic(c, "2026-10-03"); // 토요일 threads 주제 없음
+    const threadsWed = channelFor(c, "2026-10-07") === "threads" ? "2026-10-07" : "2026-10-14";
+    const r = pickTopic(c, threadsWed); // 스레드 차례인데 스레드 주제 없음
     assert.equal(r.fallback, true);
     assert.equal(r.topic?.channel, "blog");
     c.backlog.forEach((t) => (t.status = "published"));

@@ -3,8 +3,8 @@
 매일 아침 예약 실행(Claude Code Routine)되는 세션이 이 문서를 읽고 그대로 수행한다.
 사람은 검토 요청 알림을 받고 **승인 / 수정 / 보류** 중 하나로 답한다.
 
-- 주제: 블로그 마케팅 중심, 수요일 인스타그램 · 토요일 스레드 (`data/editorial/ongrowth.json`의 `weekly`)
-- 검토 요청: 매일 오전 (약 9시) · 발행: 승인된 날 18:30 (KST)
+- **평일만** 운영: 월·화·목·금 블로그, 수요일은 인스타그램/스레드 격주 (`data/editorial/ongrowth.json`의 `weekly`)
+- 검토 요청: 평일 오전 (약 9시) · 발행: 승인된 날 18:30 (KST)
 - 디자인: 인사이트(검정 + 초록) — `data/brands/ongrowth.json`
 - 원고 작성은 이 세션의 Claude가 직접 한다 (API 키 불필요, `--response` 방식)
 
@@ -20,6 +20,7 @@ npm install
 ```bash
 npm run editorial -- next --reserve
 ```
+- 쉬는 날(종료 코드 3)이면 아무것도 하지 않고 끝낸다.
 - 오늘 주제가 이미 `review`/`approved`/`published`면 새로 만들지 말고 현재 상태만 알려준다.
 - 남은 주제가 없으면(종료 코드 2) 블로그 주제 5개를 새로 제안해 `editorial add`로 넣고 다시 실행한다. 최근 주제와 겹치지 않게.
 

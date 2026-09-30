@@ -31,7 +31,8 @@ export interface Calendar {
   publishTime: string;
   timezone: string;
   channels: Record<string, string>;
-  weekly: Record<string, string>;
+  /** 요일별 채널. 배열이면 주마다 번갈아 (ISO 주 번호 기준). 없는 요일은 쉬는 날 */
+  weekly: Record<string, string | string[]>;
   rules: string[];
   backlog: Topic[];
 }
@@ -56,24 +57,27 @@ export function now(cal: Calendar): DateTime {
   return DateTime.now().setZone(cal.timezone);
 }
 
-/** 그 날짜 요일의 채널 (weekly 설정) */
-export function channelFor(cal: Calendar, date: string): string {
+/** 그 날짜 요일의 채널 (weekly 설정). 배열이면 주마다 번갈아 쓴다. 설정이 없는 요일은 null (쉬는 날) */
+export function channelFor(cal: Calendar, date: string): string | null {
   const d = DateTime.fromISO(date, { zone: cal.timezone });
-  return cal.weekly[WEEKDAYS[d.weekday - 1]] ?? "blog";
+  const v = cal.weekly[WEEKDAYS[d.weekday - 1]];
+  if (!v) return null;
+  return Array.isArray(v) ? v[d.weekNumber % v.length] : v;
 }
 
 /**
  * 오늘의 주제. 이미 오늘 맡은 주제가 있으면 그것을 돌려준다 (여러 번 실행해도 같은 결과).
  * 요일 채널의 todo가 없으면 다른 채널의 todo, 그것도 없으면 null (주제 추가 필요).
  */
-export function pickTopic(cal: Calendar, date: string): { topic: Topic | null; channel: string; fallback: boolean } {
-  const channel = channelFor(cal, date);
+export function pickTopic(cal: Calendar, date: string): { topic: Topic | null; channel: string; fallback: boolean; dayOff: boolean } {
+  const channel = channelFor(cal, date) ?? "";
+  if (!channel) return { topic: null, channel, fallback: false, dayOff: true };
   const already = cal.backlog.find((t) => t.date === date && t.status !== "skipped");
-  if (already) return { topic: already, channel, fallback: already.channel !== channel };
+  if (already) return { topic: already, channel, fallback: already.channel !== channel, dayOff: false };
   const same = cal.backlog.find((t) => t.status === "todo" && t.channel === channel);
-  if (same) return { topic: same, channel, fallback: false };
+  if (same) return { topic: same, channel, fallback: false, dayOff: false };
   const other = cal.backlog.find((t) => t.status === "todo");
-  return { topic: other ?? null, channel, fallback: !!other };
+  return { topic: other ?? null, channel, fallback: !!other, dayOff: false };
 }
 
 export function findByContent(cal: Calendar, contentId: string): Topic {

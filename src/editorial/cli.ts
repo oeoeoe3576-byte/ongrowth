@@ -25,7 +25,12 @@ program
   .action((o: { brand: string; date?: string; reserve?: boolean; json?: boolean }) => {
     const cal = loadCalendar(o.brand);
     const date = o.date ?? now(cal).toISODate()!;
-    const { topic, channel, fallback } = pickTopic(cal, date);
+    const { topic, channel, fallback, dayOff } = pickTopic(cal, date);
+    if (dayOff) {
+      console.log(`[${date}] 쉬는 날 (weekly 설정에 없는 요일). 오늘은 카드뉴스를 만들지 않습니다.`);
+      process.exitCode = 3;
+      return;
+    }
     if (!topic) {
       console.log(`남은 주제가 없음 (${channel} 요일). editorial add로 주제를 추가하세요.`);
       process.exitCode = 2;
@@ -165,7 +170,7 @@ program.command("status").option(...brandOpt).action((o: { brand: string }) => {
   const cal = loadCalendar(o.brand);
   const today = now(cal).toISODate()!;
   const count = (s: string) => cal.backlog.filter((t) => t.status === s).length;
-  console.log(`${cal.brand} · 오늘 ${today} (${channelFor(cal, today)} 요일) · 검토 ${cal.reviewTime} / 발행 ${cal.publishTime} KST`);
+  console.log(`${cal.brand} · 오늘 ${today} (${channelFor(cal, today) ?? "쉬는"} 요일) · 검토 ${cal.reviewTime} / 발행 ${cal.publishTime} KST`);
   console.log(`대기 ${count("todo")} · 진행 ${count("reserved") + count("planned")} · 검토 ${count("review")} · 승인 ${count("approved")} · 발행 ${count("published")} · 보류 ${count("hold")}`);
   for (const ch of Object.keys(cal.channels)) console.log(`  ${cal.channels[ch]}: 남은 주제 ${cal.backlog.filter((t) => t.channel === ch && t.status === "todo").length}개`);
   for (const t of cal.backlog.filter((x) => x.status !== "todo")) console.log(`  ${t.id} ${t.status.padEnd(9)} ${t.date ?? ""} ${t.content_id ?? ""} ${t.topic}`);

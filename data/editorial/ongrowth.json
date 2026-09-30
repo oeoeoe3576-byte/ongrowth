@@ -15,11 +15,12 @@
   "weekly": {
     "mon": "blog",
     "tue": "blog",
-    "wed": "instagram",
+    "wed": [
+      "instagram",
+      "threads"
+    ],
     "thu": "blog",
-    "fri": "blog",
-    "sat": "threads",
-    "sun": "blog"
+    "fri": "blog"
   },
   "rules": [
     "수치·통계·알고리즘 설명은 참고자료가 있을 때만 쓰고, 없으면 방법·원칙 중심으로 쓴다",

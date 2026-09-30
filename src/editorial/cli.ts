@@ -1,5 +1,6 @@
 // 콘텐츠 캘린더 CLI (매일 자동 작업과 사람의 승인이 이 명령들을 쓴다)
 //   npm run editorial -- next [--brand ongrowth] [--date YYYY-MM-DD] [--reserve]   오늘 주제와 기획 조건
+//   npm run editorial -- swap [--to <topicId>]           오늘 주제를 다른 주제로 바꾸기 (주제 컨펌에서 '다른 주제')
 //   npm run editorial -- link <topicId> <contentId>     주제 ↔ 원고 연결
 //   npm run editorial -- review <contentId>             검토 요청 상태로
 //   npm run editorial -- approve <contentId> [--at "YYYY-MM-DD HH:mm"]   승인 + 발행 시각
@@ -63,10 +64,34 @@ program
     }
     console.log(`[${date}] ${channel} 요일${fallback ? ` → ${topic.channel} 주제로 대체` : ""}`);
     console.log(`주제 ${topic.id}: ${topic.topic}`);
+    const alt = cal.backlog.find((t) => t.status === "todo" && t.channel === topic.channel && t.id !== topic.id);
+    if (alt) console.log(`다른 후보 ${alt.id}: ${alt.topic}`);
     console.log(`방향: ${topic.angle}`);
     console.log(`상태: ${topic.status}${topic.content_id ? ` (${topic.content_id})` : ""}`);
     console.log(`기획 명령: npm run planner -- plan --brand ${cal.brand} --topic "${topic.topic}" --objective ${cal.objective} --category ${cal.category} --target "${cal.target}" --max-pages ${cal.maxPages} --response <응답.json>`);
     if (recent.length) console.log(`최근 주제 (겹치지 않게):\n  ${recent.join("\n  ")}`);
+  });
+
+program
+  .command("swap")
+  .option(...brandOpt)
+  .option("--date <date>", "날짜 (기본: 오늘, KST)")
+  .option("--to <topicId>", "바꿀 주제 ID (없으면 같은 채널의 다음 주제)")
+  .action((o: { brand: string; date?: string; to?: string }) => {
+    const cal = loadCalendar(o.brand);
+    const date = o.date ?? now(cal).toISODate()!;
+    const cur = cal.backlog.find((t) => t.date === date && t.status === "reserved");
+    if (!cur) throw new Error(`${date}에 바꿀 수 있는 주제(reserved)가 없음. 이미 원고가 만들어졌으면 hold 후 새로 진행`);
+    const next = o.to
+      ? cal.backlog.find((t) => t.id === o.to && t.status === "todo")
+      : cal.backlog.find((t) => t.status === "todo" && t.channel === cur.channel && t.id !== cur.id);
+    if (!next) throw new Error(o.to ? `주제 ${o.to}가 없거나 이미 사용됨` : "같은 채널에 남은 주제가 없음 (editorial add로 추가)");
+    cur.status = "todo";
+    delete cur.date;
+    next.status = "reserved";
+    next.date = date;
+    saveCalendar(cal);
+    console.log(`✓ ${cur.id} → ${next.id}: ${next.topic}`);
   });
 
 program

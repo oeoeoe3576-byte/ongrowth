@@ -1,0 +1,202 @@
+{
+  "brand": "ongrowth",
+  "category": "marketing",
+  "objective": "SAVE",
+  "target": "블로그와 SNS로 직접 마케팅하는 1인 사업자·소상공인",
+  "maxPages": 10,
+  "reviewTime": "09:00",
+  "publishTime": "18:30",
+  "timezone": "Asia/Seoul",
+  "channels": {
+    "blog": "블로그 마케팅 (네이버 블로그 중심)",
+    "instagram": "인스타그램 운영",
+    "threads": "스레드 운영"
+  },
+  "weekly": {
+    "mon": "blog",
+    "tue": "blog",
+    "wed": "instagram",
+    "thu": "blog",
+    "fri": "blog",
+    "sat": "threads",
+    "sun": "blog"
+  },
+  "rules": [
+    "수치·통계·알고리즘 설명은 참고자료가 있을 때만 쓰고, 없으면 방법·원칙 중심으로 쓴다",
+    "확인이 필요한 내용은 fact_check NEEDS_CHECK로 표시한다",
+    "최근 14일 안에 다룬 주제와 겹치지 않게 한다"
+  ],
+  "backlog": [
+    {
+      "id": "B01",
+      "channel": "blog",
+      "topic": "검색되는 블로그 제목, 이 순서로 쓰세요",
+      "angle": "키워드 → 대상 → 얻는 것 순서로 제목 짓기",
+      "status": "review",
+      "date": "2026-10-01",
+      "content_id": "CN-20261001-002"
+    },
+    {
+      "id": "B02",
+      "channel": "blog",
+      "topic": "글 하나에 키워드는 하나만",
+      "angle": "한 글에 여러 키워드를 넣으면 생기는 문제와 한 키워드 집중법",
+      "status": "todo"
+    },
+    {
+      "id": "B03",
+      "channel": "blog",
+      "topic": "첫 문단에서 이탈을 막는 법",
+      "angle": "검색해서 들어온 사람이 바로 답을 찾게 하는 첫 문단 구성",
+      "status": "todo"
+    },
+    {
+      "id": "B04",
+      "channel": "blog",
+      "topic": "블로그 글 뼈대 템플릿",
+      "angle": "문제 → 해결 → 근거 → 행동 4단 구조",
+      "status": "todo"
+    },
+    {
+      "id": "B05",
+      "channel": "blog",
+      "topic": "읽히는 블로그는 사진 배치가 다르다",
+      "angle": "사진·글 간격, 캡션, 한 화면 한 메시지",
+      "status": "todo"
+    },
+    {
+      "id": "B06",
+      "channel": "blog",
+      "topic": "블로그 카테고리 설계하는 법",
+      "angle": "주제 3~5개로 카테고리를 나누는 기준",
+      "status": "todo"
+    },
+    {
+      "id": "B07",
+      "channel": "blog",
+      "topic": "글감이 떨어지지 않는 글감 노트",
+      "angle": "고객 질문·후기·작업 과정에서 글감 모으는 루틴",
+      "status": "todo"
+    },
+    {
+      "id": "B08",
+      "channel": "blog",
+      "topic": "한 달 블로그 발행 계획 세우기",
+      "angle": "주 단위 발행 요일과 주제 순환 정하기",
+      "status": "todo"
+    },
+    {
+      "id": "B09",
+      "channel": "blog",
+      "topic": "끝까지 읽히는 글 흐름 만들기",
+      "angle": "소제목·목차·요약으로 체류를 늘리는 구성",
+      "status": "todo"
+    },
+    {
+      "id": "B10",
+      "channel": "blog",
+      "topic": "블로그 글을 문의로 연결하는 마무리",
+      "angle": "글 끝 CTA 문장과 연락 동선 설계",
+      "status": "todo"
+    },
+    {
+      "id": "B11",
+      "channel": "blog",
+      "topic": "후기형 글 잘 쓰는 법",
+      "angle": "사실·경험·추천 이유를 나누어 쓰는 후기 구조",
+      "status": "todo"
+    },
+    {
+      "id": "B12",
+      "channel": "blog",
+      "topic": "예전 글 업데이트로 다시 살리기",
+      "angle": "오래된 글을 고쳐 다시 쓰는 기준과 순서",
+      "status": "todo"
+    },
+    {
+      "id": "B13",
+      "channel": "blog",
+      "topic": "이웃·댓글 소통 루틴",
+      "angle": "하루 15분 소통 루틴 만들기",
+      "status": "todo"
+    },
+    {
+      "id": "B14",
+      "channel": "blog",
+      "topic": "무료로 키워드 찾는 방법",
+      "angle": "검색창 자동완성·연관검색어로 키워드 후보 찾기",
+      "status": "todo"
+    },
+    {
+      "id": "B15",
+      "channel": "blog",
+      "topic": "블로그 운영 점검 체크리스트",
+      "angle": "제목·첫 문단·사진·마무리·발행 주기 점검",
+      "status": "todo"
+    },
+    {
+      "id": "B16",
+      "channel": "blog",
+      "topic": "블로그 글 하나를 SNS로 쪼개 쓰기",
+      "angle": "블로그 글을 인스타 카드뉴스·스레드 글로 나누는 법",
+      "status": "todo"
+    },
+    {
+      "id": "I01",
+      "channel": "instagram",
+      "topic": "저장되는 카드뉴스는 첫 장이 다릅니다",
+      "angle": "표지 문구 체크리스트",
+      "status": "planned",
+      "content_id": "CN-20261001-001"
+    },
+    {
+      "id": "I02",
+      "channel": "instagram",
+      "topic": "인스타 프로필 정리 체크리스트",
+      "angle": "이름·소개·링크·하이라이트 점검",
+      "status": "todo"
+    },
+    {
+      "id": "I03",
+      "channel": "instagram",
+      "topic": "카드뉴스 마지막 장 CTA 쓰는 법",
+      "angle": "저장·팔로우·문의별 마무리 문장",
+      "status": "todo"
+    },
+    {
+      "id": "I04",
+      "channel": "instagram",
+      "topic": "릴스 첫 화면 문구 만드는 법",
+      "angle": "첫 1초에 보이는 문구 구성",
+      "status": "todo"
+    },
+    {
+      "id": "T01",
+      "channel": "threads",
+      "topic": "스레드 첫 문장 쓰는 법",
+      "angle": "피드에서 멈추게 하는 첫 줄 유형",
+      "status": "todo"
+    },
+    {
+      "id": "T02",
+      "channel": "threads",
+      "topic": "스레드 답글로 대화 이어가기",
+      "angle": "답글 루틴과 대화형 글 구조",
+      "status": "todo"
+    },
+    {
+      "id": "T03",
+      "channel": "threads",
+      "topic": "스레드 글을 블로그 글감으로",
+      "angle": "반응 좋은 스레드를 블로그 글로 키우기",
+      "status": "todo"
+    },
+    {
+      "id": "T04",
+      "channel": "threads",
+      "topic": "스레드 주 3회 운영 루틴",
+      "angle": "요일별 글 유형 나누기",
+      "status": "todo"
+    }
+  ]
+}

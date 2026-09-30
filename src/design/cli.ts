@@ -3,6 +3,7 @@
 //   npm run design -- preview [content_id…]  미리보기 HTML만 (PNG 없이, 빠름)
 //   npm run design -- layouts                 구현된 레이아웃 목록
 //   npm run design -- sheet <content_id> --themes default,insight,brand --out docs/design-presets   디자인 견본 이미지 저장
+//   npm run design -- export <content_id>     발행 패키지: JPEG + caption.txt + ZIP (cardnews_output/publish/)
 //   npm run design -- compare [content_id…] [--themes default,insight,life,campaign] [--png]   테마 비교 화면
 
 import fs from "node:fs";
@@ -15,6 +16,7 @@ import { buildPreviewHtml } from "./preview.js";
 import { LAYOUT_COMPONENTS } from "./layouts/index.js";
 import { buildCompareHtml, buildContactSheetHtml } from "./compare.js";
 import { launchBrowser } from "./renderPng.js";
+import { exportPackage } from "./exportPackage.js";
 
 function loadContents(ids: string[], theme?: string): RenderedContent[] {
   const store = loadStore();
@@ -115,6 +117,15 @@ program
     } finally {
       await browser.close();
     }
+  });
+
+program
+  .command("export")
+  .argument("<id>")
+  .action(async (id: string) => {
+    const pkg = await exportPackage(loadContents([id])[0]);
+    console.log(`✓ JPEG ${pkg.images.length}장 + caption.txt → ${path.relative(process.cwd(), pkg.dir)}`);
+    if (pkg.zip) console.log(`✓ ZIP → ${path.relative(process.cwd(), pkg.zip)}`);
   });
 
 program.command("layouts").action(() => {

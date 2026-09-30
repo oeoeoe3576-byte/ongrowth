@@ -64,7 +64,8 @@ export function validatePlan(plan: CardnewsPlan, input: PlanInput): PlanIssue[] 
     return issues;
   }
   const n = plan.pages.length;
-  if (n < MIN_PAGES || n > MAX_PAGES) err(`카드 장수 ${n}장 - ${MIN_PAGES}~${MAX_PAGES}장이어야 함`, undefined, "pages");
+  const maxPages = Math.min(input.maxPages ?? MAX_PAGES, MAX_PAGES);
+  if (n < MIN_PAGES || n > maxPages) err(`카드 장수 ${n}장 - ${MIN_PAGES}~${maxPages}장이어야 함`, undefined, "pages");
   if (plan.page_count !== n) err(`page_count(${plan.page_count})와 실제 pages 수(${n})가 다름`, undefined, "page_count");
   if (isStr(plan.caption) && len(plan.caption) > LIMITS.caption) err(`caption 글자 수 초과 (${len(plan.caption)}/${LIMITS.caption})`, undefined, "caption");
   if (isStr(plan.hashtags) && plan.hashtags.trim()) {

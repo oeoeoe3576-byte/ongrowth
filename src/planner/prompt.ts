@@ -94,6 +94,7 @@ export function buildPlannerUserPrompt(input: PlanInput): string {
     `콘텐츠 목적: ${input.objective} (${OBJECTIVES[input.objective]})`,
     input.category ? `분야(지정): ${input.category}` : "분야: 주제를 보고 판단",
     input.target ? `대상 독자(지정): ${input.target}` : "대상 독자: 주제와 목적을 보고 판단",
+    ...(input.maxPages ? [`카드 장수: 최대 ${input.maxPages}장`] : []),
     "",
     "[참고자료]",
     input.reference?.trim() || "없음 - 수치/통계/가격/날짜/고유 정보는 쓰지 말 것",

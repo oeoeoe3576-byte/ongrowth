@@ -13,7 +13,8 @@ export const BigTitleTemplate: LayoutComponent = {
 .cn-l-BIG_TITLE .cn-sub { font-size: calc(var(--fs-sub) * 1.1); max-width: 820px; }
 .cn-l-BIG_TITLE .cn-body { color: var(--c-muted); max-width: 820px; }`,
   render(p, ctx) {
-    const kicker = ctx.master.category ? `<div class="cn-kicker">${esc(ctx.master.category)}</div>` : "";
+    const header = (ctx.brand.categoryLabel ?? ctx.master.brand).toLowerCase();
+    const kicker = ctx.master.category && !header.includes(ctx.master.category.toLowerCase()) ? `<div class="cn-kicker">${esc(ctx.master.category)}</div>` : "";
     return frame(p, ctx, this.tone!(p, ctx), `
       ${kicker}
       ${text("cn-display", "headline", p.headline, 4, p.visualFocus)}

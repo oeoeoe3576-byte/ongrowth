@@ -19,7 +19,9 @@
     "planner": "tsx src/planner/cli.ts",
     "test:planner": "tsx src/planner/planner.test.ts",
     "design": "tsx src/design/cli.ts",
-    "test:design": "tsx src/design/design.test.ts"
+    "test:design": "tsx src/design/design.test.ts",
+    "editorial": "tsx src/editorial/cli.ts",
+    "test:editorial": "tsx src/editorial/editorial.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",

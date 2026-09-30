@@ -1,0 +1,75 @@
+# 온그로스 카드뉴스 매일 작업 절차
+
+매일 아침 예약 실행(Claude Code Routine)되는 세션이 이 문서를 읽고 그대로 수행한다.
+사람은 검토 요청 알림을 받고 **승인 / 수정 / 보류** 중 하나로 답한다.
+
+- 주제: 블로그 마케팅 중심, 수요일 인스타그램 · 토요일 스레드 (`data/editorial/ongrowth.json`의 `weekly`)
+- 검토 요청: 매일 오전 (약 9시) · 발행: 승인된 날 18:30 (KST)
+- 디자인: 인사이트(검정 + 초록) — `data/brands/ongrowth.json`
+- 원고 작성은 이 세션의 Claude가 직접 한다 (API 키 불필요, `--response` 방식)
+
+## 1. 준비
+```bash
+cd <ongrowth 저장소>   # 없으면 add_repo(oeoeoe3576-byte/ongrowth)로 추가 후 clone
+git fetch origin claude/cardnews-data-structure-vyne5l
+git checkout claude/cardnews-data-structure-vyne5l && git pull
+npm install
+```
+
+## 2. 오늘 주제
+```bash
+npm run editorial -- next --reserve
+```
+- 오늘 주제가 이미 `review`/`approved`/`published`면 새로 만들지 말고 현재 상태만 알려준다.
+- 남은 주제가 없으면(종료 코드 2) 블로그 주제 5개를 새로 제안해 `editorial add`로 넣고 다시 실행한다. 최근 주제와 겹치지 않게.
+
+## 3. 원고 작성
+`npm run planner -- prompt`의 규칙 + 캘린더 `rules`를 지켜 기획 JSON을 직접 써서
+`data/editorial/responses/<날짜>-<주제ID>.json`에 저장한다.
+
+- **10장 이하.** 첫 장 `BIG_TITLE` (실제 사진이 있을 때만 `PHOTO_COVER`), 마지막 장 `FOLLOW`
+- 핵심 구절은 `**구절**`로 강조 (칸당 1~2곳)
+- 수치·통계·검색 알고리즘 설명은 참고자료가 없으면 쓰지 않는다. 방법과 원칙 중심
+- 확인이 필요한 내용이 있으면 `fact_check: NEEDS_CHECK`로 표시하고 검토 요청 때 따로 알린다
+- 같은 번호를 두 번 보여주지 않는다 (큰 숫자 `01`이 있으면 제목에 `01`을 또 쓰지 않음)
+
+```bash
+npm run planner -- plan --brand ongrowth --topic "<주제>" --objective SAVE --category marketing \
+  --target "<캘린더 target>" --max-pages 10 --response data/editorial/responses/<파일>.json
+npm run editorial -- link <주제ID> <content_id>
+```
+검증 오류가 나면 JSON을 고쳐 다시 실행한다 (같은 content_id로 고칠 때는 `--id <content_id>`).
+
+## 4. 렌더링과 자체 점검
+```bash
+npm run design -- render <content_id>          # 오류 0이어야 함
+npm run design -- sheet <content_id> --themes brand --out <임시 폴더>
+```
+견본 이미지를 **직접 보고** 확인: 같은 문구 반복, 자리표시 문구, 어두운 배경 위 안 보이는 글자, 잘린 글자.
+문제가 있으면 원고를 고쳐 다시 렌더링.
+
+## 5. 검토 요청
+```bash
+npm run editorial -- review <content_id>
+git add -A && git commit -m "카드뉴스 <날짜> <주제ID> 검토 요청" && git push
+```
+사용자에게 보낸다:
+- 견본 이미지 1장 + 카드 PNG 전체, 캡션과 해시태그
+- 확인이 필요한 사실(NEEDS_CHECK)이 있으면 목록
+- 알림: "오늘 카드뉴스 검토 요청 — 승인 / 수정: … / 보류"
+
+## 6. 답에 따라
+| 답 | 할 일 |
+|---|---|
+| **승인** | `npm run editorial -- approve <id>` → `npm run design -- export <id>` → 커밋·푸시 → 오늘 18:30 KST에 이 세션으로 "발행 단계 실행: <id>" 메시지 예약 (`send_later`) |
+| **수정: …** | `editorial revise <id> --note "…"` → 원고 고쳐 3~5단계 반복 |
+| **보류** | `editorial hold <id>` → 커밋·푸시 |
+
+발행 시각까지 답이 없으면 **발행하지 않는다** (상태는 review 유지).
+
+## 7. 발행 단계 (18:30)
+인스타그램 API 연결 전까지:
+1. `npm run design -- export <id>` 결과(JPEG + caption.txt + ZIP)를 사용자에게 보내고 "지금 업로드해 주세요" 알림
+2. 사용자가 "올렸어"라고 하면 `npm run editorial -- published <id>` → 커밋·푸시
+
+API 연결 후: 기존 `src/publishers/instagram/` 발행기로 자동 업로드 (JPEG 공개 URL 필요).

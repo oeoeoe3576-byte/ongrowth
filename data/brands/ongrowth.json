@@ -3,8 +3,5 @@
   "displayName": "ongrowth",
   "theme": "insight",
   "categoryLabel": "MARKETING NOTE",
-  "bio": [
-    "(브랜드 소개 1줄 - data/brands/ongrowth.json에서 수정)",
-    "(브랜드 소개 2줄 - 게시물/팔로워 숫자는 stats에 넣을 때만 표시)"
-  ]
+  "bio": []
 }

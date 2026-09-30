@@ -27,6 +27,7 @@ program
   .option("--category <category>")
   .option("--target <target>")
   .option("--id <content_id>", "기존 content_id를 다시 기획 (교체)")
+  .option("--max-pages <n>", "최대 장수 (인스타그램 캐러셀은 10)")
   .option("--response <files...>", "AI 응답 파일 (지정하면 API를 부르지 않음)")
   .action(async (o) => {
     const input: PlanInput = {
@@ -36,6 +37,7 @@ program
       reference: o.reference ? fs.readFileSync(o.reference, "utf8") : undefined,
       category: o.category,
       target: o.target,
+      maxPages: o.maxPages ? Number(o.maxPages) : undefined,
     };
     let provider: PlanProvider;
     if (o.response) provider = new FileProvider(o.response);

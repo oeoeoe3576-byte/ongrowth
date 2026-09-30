@@ -79,6 +79,8 @@ export interface PlanInput {
   topic: string;
   objective: Objective;
   reference?: string;
+  /** 이 기획의 최대 장수 (예: 인스타그램 캐러셀 API 한도 10장). 없으면 MAX_PAGES */
+  maxPages?: number;
   /** 선택: 지정하지 않으면 AI가 판단 */
   category?: string;
   target?: string;

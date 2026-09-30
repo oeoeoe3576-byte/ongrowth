@@ -1,0 +1,71 @@
+// 렌더링 단계의 입력 타입. 2단계 PAGES/MASTER 행(문자열)을 렌더링하기 좋은 형태로 바꾼 것.
+
+import type { DesignTheme } from "./tokens.js";
+import { ITEM_SEPARATOR, type Layout, type MasterRow, type PageRow } from "../planner/types.js";
+
+export interface RenderPage {
+  contentId: string;
+  number: number;
+  role: string;
+  layout: string;
+  headline: string;
+  subheadline: string;
+  body: string;
+  visualFocus: string;
+  items: string[];
+  imageRequired: boolean;
+  imageType: string;
+  imageSource: string;
+  imagePrompt: string;
+  cta: string;
+  factCheck: string;
+}
+
+export interface RenderContext {
+  master: MasterRow;
+  total: number;
+  theme: DesignTheme;
+}
+
+export type Tone = "light" | "dark";
+
+export interface LayoutLimits {
+  /** 권장 글자 수. 넘으면 warning (폰트를 줄여 억지로 넣지 않는다) */
+  headline: number;
+  subheadline: number;
+  body: number;
+  itemChars: number;
+  itemsMin: number;
+  itemsMax: number;
+}
+
+/** 레이아웃 컴포넌트. layouts/*.ts 한 파일 = 한 레이아웃 */
+export interface LayoutComponent {
+  name: Layout;
+  label: string;
+  limits: LayoutLimits;
+  /** 이 레이아웃 전용 CSS (.cn-l-<NAME> 아래에만 적용) */
+  css: string;
+  tone?(page: RenderPage, ctx: RenderContext): Tone;
+  render(page: RenderPage, ctx: RenderContext): string;
+}
+
+export function toRenderPage(row: PageRow): RenderPage {
+  return {
+    contentId: row.content_id,
+    number: Number(row.page_number),
+    role: row.page_role,
+    layout: row.layout_type,
+    headline: row.headline,
+    subheadline: row.subheadline,
+    body: row.body,
+    visualFocus: row.visual_focus,
+    items: row.items ? row.items.split(ITEM_SEPARATOR).map((s) => s.trim()).filter(Boolean) : [],
+    imageRequired: row.image_required === "TRUE",
+    imageType: row.image_type,
+    imageSource: row.image_source,
+    imagePrompt: row.image_prompt,
+    cta: row.cta,
+    factCheck: row.fact_check,
+  };
+}

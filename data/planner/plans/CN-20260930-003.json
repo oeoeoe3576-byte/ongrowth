@@ -1,0 +1,152 @@
+{
+  "provider": "file:data/planner/test/response_cafe_case.json",
+  "attempts": 1,
+  "plan": {
+    "category": "marketing",
+    "target": "인스타그램을 직접 운영하는 동네 가게 사장님",
+    "content_type": "CASE",
+    "page_count": 7,
+    "planning_note": "한 가게의 운영 변화와 결과를 보여주는 사례라 사례/성과형. 전후 비교, 바꾼 내용, 수치 변화, 대표 성과, 적용법 순서로 7장. 수치는 모두 참고자료에서 가져옴.",
+    "caption": "동네 카페 한 곳이 3개월 동안 인스타그램 운영 방식을 바꿨어요.\n요일을 고정하고, 메뉴 사진 대신 원두 정보·후기·작업 과정을 올렸더니 DM 예약 문의가 12건에서 31건이 됐습니다.\n\n우리 가게에 적용할 수 있는 부분만 골라보세요.",
+    "hashtags": "#인스타그램운영 #카페마케팅 #소상공인마케팅 #운영사례 #콘텐츠기획",
+    "pages": [
+      {
+        "page_number": 1,
+        "page_role": "HOOK",
+        "layout_type": "BIG_TITLE",
+        "headline": "문의가 12건에서 31건으로 늘기까지",
+        "subheadline": "동네 카페가 3개월 동안 바꾼 인스타그램 운영법",
+        "body": "",
+        "visual_focus": "31건",
+        "items": [],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "참고자료: 월별 DM 예약 문의",
+        "fact_check": "REFERENCE"
+      },
+      {
+        "page_number": 2,
+        "page_role": "OVERVIEW",
+        "layout_type": "COMPARE",
+        "headline": "무엇을 바꿨을까요",
+        "subheadline": "",
+        "body": "",
+        "visual_focus": "",
+        "items": [
+          "전: 생각날 때 가끔 업로드",
+          "전: 메뉴 사진 위주",
+          "후: 주 3회 요일 고정",
+          "후: 원두·후기·과정 콘텐츠"
+        ],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "참고자료: 변경 전/후",
+        "fact_check": "REFERENCE"
+      },
+      {
+        "page_number": 3,
+        "page_role": "INFORMATION",
+        "layout_type": "GRID",
+        "headline": "새로 올린 콘텐츠 4가지",
+        "subheadline": "",
+        "body": "",
+        "visual_focus": "4가지",
+        "items": [
+          "원두 정보: 산지와 맛",
+          "단골 후기: 손님 이야기",
+          "작업 과정: 로스팅과 추출",
+          "공지: 신메뉴와 휴무"
+        ],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "참고자료: 새로 올린 콘텐츠",
+        "fact_check": "REFERENCE"
+      },
+      {
+        "page_number": 4,
+        "page_role": "RESULT",
+        "layout_type": "GRAPH",
+        "headline": "월별 DM 예약 문의",
+        "subheadline": "요일을 고정한 뒤 매달 늘었습니다",
+        "body": "",
+        "visual_focus": "31건",
+        "items": [
+          "6월: 12건",
+          "7월: 19건",
+          "8월: 31건"
+        ],
+        "image_required": true,
+        "image_type": "GRAPH",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "참고자료: 월별 DM 예약 문의",
+        "fact_check": "REFERENCE"
+      },
+      {
+        "page_number": 5,
+        "page_role": "RESULT",
+        "layout_type": "RESULT",
+        "headline": "가장 많이 저장된 게시물",
+        "subheadline": "'원두 고르는 법' 카드뉴스",
+        "body": "손님이 자주 묻던 내용을 정리한 게시물이 저장 214회로 가장 많았습니다.",
+        "visual_focus": "214회",
+        "items": [],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "참고자료: 가장 많이 저장된 게시물",
+        "fact_check": "REFERENCE"
+      },
+      {
+        "page_number": 6,
+        "page_role": "SUMMARY",
+        "layout_type": "NUMBER_LIST",
+        "headline": "우리 가게에 적용하기",
+        "subheadline": "",
+        "body": "",
+        "visual_focus": "",
+        "items": [
+          "올리는 요일부터 고정하기",
+          "자주 받는 질문 모아두기",
+          "작업 과정도 콘텐츠로 쓰기"
+        ],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "",
+        "fact_check": "NOT_REQUIRED"
+      },
+      {
+        "page_number": 7,
+        "page_role": "CTA",
+        "layout_type": "CTA",
+        "headline": "요일 고정부터 시작해 보세요",
+        "subheadline": "",
+        "body": "가게마다 맞는 방법은 다르니, 한 가지씩 바꿔보고 반응을 비교해 보세요.",
+        "visual_focus": "",
+        "items": [],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "팔로우하고 다음 사례 보기",
+        "source": "",
+        "fact_check": "NOT_REQUIRED"
+      }
+    ]
+  }
+}

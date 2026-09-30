@@ -17,7 +17,9 @@
     "sheet": "tsx src/sheet/cli.ts",
     "test:sheet": "tsx src/sheet/sheet.test.ts",
     "planner": "tsx src/planner/cli.ts",
-    "test:planner": "tsx src/planner/planner.test.ts"
+    "test:planner": "tsx src/planner/planner.test.ts",
+    "design": "tsx src/design/cli.ts",
+    "test:design": "tsx src/design/design.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
@@ -28,6 +30,7 @@
     "luxon": "^3.5.0",
     "node-cron": "^3.0.3",
     "playwright": "^1.48.0",
+    "pretendard": "^1.3.9",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

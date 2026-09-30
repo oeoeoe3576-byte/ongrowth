@@ -28,6 +28,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "..", "dashboard", "public")));
+// 3단계 카드 디자인 미리보기 (npm run design -- render 결과): /rendered/preview.html
+app.use("/rendered", express.static(path.join(__dirname, "..", "..", "cardnews_output", "rendered")));
 
 function handle(fn: (req: express.Request, res: express.Response) => Promise<void>) {
   return (req: express.Request, res: express.Response) => {

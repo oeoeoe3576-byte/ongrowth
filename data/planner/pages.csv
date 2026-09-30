@@ -1,0 +1,15 @@
+content_id,page_number,page_role,layout_type,headline,subheadline,body,visual_focus,items,image_required,image_type,image_source,image_prompt,cta,source,fact_check
+CN-20260930-001,1,HOOK,BIG_NUMBER,"한 달 치 콘텐츠, 한 번에 짜는 법",매일 주제 고민을 줄여주는 기획 4단계,,4단계,,FALSE,,,,,,NOT_REQUIRED
+CN-20260930-001,2,PROBLEM,TEXT,오늘도 '뭐 올리지?',,"그날그날 주제를 정하면 올리는 날이 들쭉날쭉해지고, 급하게 만든 게시물이 쌓입니다.",,,FALSE,,,,,,NOT_REQUIRED
+CN-20260930-001,3,OVERVIEW,TIMELINE,전체 흐름 한눈에 보기,순서대로 한 번만 해두면 됩니다,,,콘텐츠 기둥 정하기 | 주제 목록 만들기 | 요일별로 배치하기 | 몰아서 제작하기,FALSE,,,,,,NOT_REQUIRED
+CN-20260930-001,4,STEP,THREE_COLUMN,STEP 1. 콘텐츠 기둥 3개,계정이 반복해서 다룰 큰 주제,기둥을 먼저 정하면 주제가 흩어지지 않습니다.,3개,정보: 알려주고 싶은 것 | 공감: 고객이 겪는 상황 | 브랜드: 우리가 하는 일,FALSE,,,,,,NOT_REQUIRED
+CN-20260930-001,5,STEP,BIG_NUMBER,STEP 2. 기둥별 주제 10개씩,기둥 3개 × 10개 = 주제 후보 30개,"자주 받는 질문, 고객 후기, 작업 과정에서 주제를 찾아 적어보세요.",30개,,FALSE,,,,,,NOT_REQUIRED
+CN-20260930-001,6,STEP,SCREENSHOT,STEP 3. 요일별로 배치하기,,기둥을 요일에 고정해 캘린더에 적어두면 매번 무엇을 만들지 고민하지 않아도 됩니다.,,,TRUE,SCREENSHOT,,요일마다 기둥 이름과 주제를 적어둔 월간 콘텐츠 캘린더 화면 캡처,,,NOT_REQUIRED
+CN-20260930-001,7,STEP,NUMBER_LIST,STEP 4. 작업별로 몰아서 만들기,같은 작업끼리 묶으면 준비 시간이 줄어요,,,촬영은 촬영끼리 한 번에 | 글은 글끼리 한 번에 | 디자인은 템플릿으로 한 번에,FALSE,,,,,,NOT_REQUIRED
+CN-20260930-001,8,CTA,CTA,이번 주엔 기둥 3개부터,,처음부터 30개를 다 채우지 않아도 괜찮아요. 기둥을 정하는 것부터 시작해 보세요.,,,FALSE,,,,저장하고 이번 달 기획에 쓰기,,NOT_REQUIRED
+CN-20260930-002,1,HOOK,IMAGE_TEXT,평일에 2박 하면 20% 할인,"11월 한 달, 숲속스테이 평일 연박 혜택",,20%,,TRUE,AI_IMAGE,,"숲 속 조용한 숙소 객실 창밖으로 단풍이 보이는 아침 풍경, 따뜻한 자연광, 사람 없음",,"참고자료: 평일 연박 할인, 기간",REFERENCE
+CN-20260930-002,2,PROBLEM,TEXT,"주말 여행, 쉬러 갔다 지쳐 오죠",,사람 많은 주말 대신 조용한 평일에 쉬어가는 여행을 떠올려 보세요.,,,FALSE,,,,,,NOT_REQUIRED
+CN-20260930-002,3,OVERVIEW,THREE_COLUMN,혜택 한눈에 보기,,,20%,평일 2박 이상 20% 할인 | 조식 포함 | 11월 한 달 진행,FALSE,,,,,"참고자료: 평일 연박 할인, 조식, 기간",REFERENCE
+CN-20260930-002,4,INFORMATION,TEXT,체크인·체크아웃 안내,,"체크인은 오후 3시, 체크아웃은 오전 11시입니다. 여유 있게 도착해 쉬어가세요.",,,FALSE,,,,,참고자료: 체크인/체크아웃,REFERENCE
+CN-20260930-002,5,SUMMARY,NUMBER_LIST,예약 전 확인할 것,,,,평일 2박 이상인가요? | 11월 일정인가요? | 체크인 시간에 맞출 수 있나요?,FALSE,,,,,"참고자료: 할인 조건, 기간, 체크인",REFERENCE
+CN-20260930-002,6,CTA,CTA,"11월 평일, 숲에서 쉬어가세요",,날짜만 정하면 준비는 끝이에요.,,,FALSE,,,,프로필 링크에서 예약하기,참고자료: 예약,REFERENCE

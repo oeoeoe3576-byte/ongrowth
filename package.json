@@ -15,7 +15,9 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx src/test/run-all.ts",
     "sheet": "tsx src/sheet/cli.ts",
-    "test:sheet": "tsx src/sheet/sheet.test.ts"
+    "test:sheet": "tsx src/sheet/sheet.test.ts",
+    "planner": "tsx src/planner/cli.ts",
+    "test:planner": "tsx src/planner/planner.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",

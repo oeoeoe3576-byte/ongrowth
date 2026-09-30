@@ -11,6 +11,7 @@ import type { MasterRow, PageRow } from "../planner/types.js";
 
 export interface RenderedCard {
   page: RenderPage;
+  theme: DesignTheme;
   component: string;
   html: string;
   checks: CardCheck[];
@@ -18,27 +19,40 @@ export interface RenderedCard {
 
 export interface RenderedContent {
   master: MasterRow;
+  /** 기본 테마 (본문) */
   theme: DesignTheme;
+  /** 이 세트에 쓰인 모든 테마 (표지 테마 포함) */
+  themes: DesignTheme[];
+  /** 사람이 읽는 디자인 이름. 예: "default + 표지 insight" */
+  designLabel: string;
   themeFallback: boolean;
   brand: BrandProfile;
   cards: RenderedCard[];
 }
 
+/**
+ * themeName을 주면 모든 장을 그 테마로 (비교용).
+ * 안 주면 계정 설정을 따른다: brand.theme(본문) + brand.coverTheme(첫 장·마지막 장).
+ */
 export function renderContent(master: MasterRow, pageRows: PageRow[], themeName?: string): RenderedContent {
   const brand = loadBrand(master.brand);
   const { theme, fallback } = resolveTheme(themeName ?? brand.theme ?? master.category);
+  const cover = !themeName && brand.coverTheme ? resolveTheme(brand.coverTheme).theme : theme;
   const pages = pageRows
     .filter((r) => r.content_id === master.content_id)
     .map(toRenderPage)
     .map((p) => ({ ...p, imageSource: toImageSrc(p.imageSource) }))
     .sort((a, b) => a.number - b.number);
   if (!pages.length) throw new Error(`${master.content_id}의 PAGES 데이터가 없음`);
-  const ctx: RenderContext = { master, total: pages.length, theme, brand };
   const cards = pages.map((page) => {
+    const cardTheme = page.number === 1 || page.number === pages.length ? cover : theme;
+    const ctx: RenderContext = { master, total: pages.length, theme: cardTheme, brand };
     const { component, fallback: layoutFallback } = resolveLayout(page.layout);
-    return { page, component: component.name, html: component.render(page, ctx), checks: staticChecks(page, component, layoutFallback) };
+    return { page, theme: cardTheme, component: component.name, html: component.render(page, ctx), checks: staticChecks(page, component, layoutFallback) };
   });
-  return { master, theme, themeFallback: fallback, brand, cards };
+  const themes = [...new Map(cards.map((c) => [c.theme.name, c.theme])).values()];
+  const designLabel = cover.name !== theme.name ? `${theme.name} + 표지·마무리 ${cover.name}` : theme.name;
+  return { master, theme, themes, designLabel, themeFallback: fallback, brand, cards };
 }
 
 /** 카드 CSS 전체 (폰트 + 테마 변수 + 공통 + 레이아웃별) */
@@ -48,6 +62,6 @@ export function cardCss(themes: DesignTheme[]): string {
 }
 
 /** PNG 캡처용: 카드 한 장짜리 HTML 문서 */
-export function cardDocument(card: RenderedCard, theme: DesignTheme): string {
-  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>html,body{margin:0;padding:0;background:#fff}${cardCss([theme])}</style></head><body>${card.html}</body></html>`;
+export function cardDocument(card: RenderedCard): string {
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>html,body{margin:0;padding:0;background:#fff}${cardCss([card.theme])}</style></head><body>${card.html}</body></html>`;
 }

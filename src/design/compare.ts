@@ -8,17 +8,18 @@ const THEME_LABEL: Record<string, string> = {
   insight: "인사이트 · 검정 + 초록",
   life: "라이프 · 크림 + 갈색 (굵기로 강조)",
   campaign: "캠페인 · 진초록 + 주황 (형광펜 강조)",
+  ongrowth: "온그로스 · 밝은 본문 + 초록",
 };
 
 /** rows: 테마별로 그린 같은 원고 목록 */
 export function buildCompareHtml(rows: RenderedContent[][]): string {
-  const themes = rows.flat().map((c) => c.theme);
+  const themes = rows.flat().flatMap((c) => c.themes);
   const sections = rows
     .map((group) => {
       const first = group[0];
       const title = `${first.master.content_id} · ${first.master.topic}`;
       const lines = group
-        .map((c) => `<div class="row"><h3>${esc(THEME_LABEL[c.theme.name] ?? c.theme.name)}</h3><div class="strip">${c.cards.map((k) => `<figure><div class="scaler">${k.html}</div><figcaption>${k.page.number} · ${esc(k.component)}</figcaption></figure>`).join("")}</div></div>`)
+        .map((c) => `<div class="row"><h3>${esc(c.themes.length > 1 ? `계정 설정 (@${c.brand.handle}) · ${c.designLabel}` : THEME_LABEL[c.theme.name] ?? c.theme.name)}</h3><div class="strip">${c.cards.map((k) => `<figure><div class="scaler">${k.html}</div><figcaption>${k.page.number} · ${esc(k.component)}</figcaption></figure>`).join("")}</div></div>`)
         .join("");
       return `<section><h2>${esc(title)}</h2>${lines}</section>`;
     })
@@ -48,4 +49,19 @@ figcaption { font-size: 12px; color: #71717A; margin-top: 6px; }
 <header><h1>테마 비교</h1><p>같은 원고를 테마만 바꿔 그렸습니다. 가로로 넘겨 보세요.</p></header>
 ${sections}
 </body></html>`;
+}
+
+/** 견본 한 장: 한 세트의 카드를 3열 격자로 (디자인 카탈로그 저장용) */
+export function buildContactSheetHtml(c: RenderedContent, title: string): string {
+  const cells = c.cards.map((k) => `<div class="cell"><div class="sc">${k.html}</div></div>`).join("");
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>
+${cardCss(c.themes)}
+* { box-sizing: border-box; }
+body { margin: 0; background: #ECEAE5; font-family: 'Pretendard', sans-serif; }
+.sheet { width: 1080px; padding: 40px; }
+h1 { margin: 0 0 24px; font-size: 24px; color: #18181B; font-weight: 800; word-break: keep-all; }
+.grid { display: grid; grid-template-columns: repeat(3, 320px); gap: 20px; }
+.cell { width: 320px; height: 400px; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.sc > .cn-card { position: absolute; left: 0; top: 0; transform-origin: 0 0; transform: scale(${(320 / 1080).toFixed(6)}); }
+</style></head><body><div class="sheet"><h1>${esc(title)}</h1><div class="grid">${cells}</div></div></body></html>`;
 }

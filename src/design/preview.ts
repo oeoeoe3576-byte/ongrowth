@@ -12,7 +12,7 @@ export function buildPreviewHtml(contents: RenderedContent[]): string {
     brand: c.master.brand,
     objective: c.master.objective,
     contentType: c.master.content_type,
-    theme: c.theme.name + (c.themeFallback ? ` (분야 '${c.master.category}' 전용 테마 없음 → 기본 테마)` : ""),
+    theme: c.designLabel + (c.themeFallback ? ` (분야 '${c.master.category}' 전용 테마 없음 → 기본 테마)` : ""),
     cards: c.cards.map((k) => ({ ...k.page, component: k.component, checks: k.checks })),
   }));
   const sources = contents
@@ -26,7 +26,7 @@ export function buildPreviewHtml(contents: RenderedContent[]): string {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>카드뉴스 미리보기</title>
 <style>
-${cardCss(contents.map((c) => c.theme))}
+${cardCss(contents.flatMap((c) => c.themes))}
 :root { --ui-bg:#EEECE7; --ui-panel:#FFFFFF; --ui-text:#18181B; --ui-muted:#71717A; --ui-line:#E2DFD8; --ui-accent:#2F54EB; --ui-err:#D92D20; --ui-warn:#B54708; --ui-info:#475467; }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; }

@@ -26,7 +26,8 @@ export interface BrandProfile {
   handle: string;
   displayName?: string;
   bio?: string[];
-  theme?: string;
+  theme?: string; // 이 계정의 기본 디자인 (default / insight / life / campaign)
+  coverTheme?: string; // 첫 장·마지막 장만 다른 디자인으로 (예: 본문 default + 표지/마무리 insight)
   logo?: string; // 이미지 경로 또는 URL
   categoryLabel?: string; // 모든 카드 상단 라벨
   stats?: { posts?: string; followers?: string; following?: string };

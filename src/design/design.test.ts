@@ -50,7 +50,7 @@ const tests: [string, () => void | Promise<void>][] = [
     assert.equal(resolveTheme("marketing").theme.name, "default");
     assert.equal(resolveTheme("stay").theme.name, "life");
     assert.equal(resolveTheme("beauty").fallback, true);
-    for (const t of ["insight", "life", "campaign"]) assert.equal(resolveTheme(t).theme.name, t);
+    for (const t of ["insight", "life", "campaign", "ongrowth"]) assert.equal(resolveTheme(t).theme.name, t);
     const beauty = extendTheme(defaultTheme, { name: "beauty", color: { accent: "#C2185B" } });
     assert.equal(beauty.color.accent, "#C2185B");
     assert.equal(beauty.color.background, defaultTheme.color.background);
@@ -113,7 +113,7 @@ const tests: [string, () => void | Promise<void>][] = [
     assert.ok(!html.includes('class="cn-stats"'), "stats가 없으면 게시물/팔로워 숫자를 표시하지 않음");
   }],
   ["테마 4종 × 체험 원고: 모두 1080x1350, overflow 없음", async () => {
-    for (const t of ["default", "insight", "life", "campaign"]) {
+    for (const t of ["default", "insight", "life", "campaign", "ongrowth"]) {
       const res = await renderPngs(renderContent(master("CN-20261001-001"), store.pages, t), tmpDir());
       assert.equal(res.length, 6);
       for (const r of res) {
@@ -121,6 +121,14 @@ const tests: [string, () => void | Promise<void>][] = [
         assert.deepEqual(r.checks.filter((x) => x.level === "error"), [], `${t} p${r.page}`);
       }
     }
+  }],
+  ["계정 설정: ongrowth는 본문 ongrowth + 첫/마지막 장 insight, --theme를 주면 한 가지로", () => {
+    const c = renderContent(master("CN-20261001-001"), store.pages);
+    assert.deepEqual(c.cards.map((k) => k.theme.name), ["insight", "ongrowth", "ongrowth", "ongrowth", "ongrowth", "insight"]);
+    assert.equal(c.designLabel, "ongrowth + 표지·마무리 insight");
+    assert.ok(c.cards[1].html.includes("cn-theme-ongrowth"));
+    const forced = renderContent(master("CN-20261001-001"), store.pages, "life");
+    assert.ok(forced.cards.every((k) => k.theme.name === "life"));
   }],
   ["실제 렌더링: 1080x1350 PNG, 한글 폰트 로드, 테스트 세트 overflow 없음", async () => {
     const dir = tmpDir();

@@ -39,7 +39,7 @@ export async function renderPngs(content: RenderedContent, outDir = path.join(RE
   try {
     const page = await browser.newPage({ viewport: { width: CARD_WIDTH, height: CARD_HEIGHT }, deviceScaleFactor: 1 });
     for (const card of content.cards) {
-      await page.setContent(cardDocument(card, content.theme), { waitUntil: "load" });
+      await page.setContent(cardDocument(card), { waitUntil: "load" });
       await page.evaluate("document.fonts.ready.then(() => true)");
       const fontOk = (await page.evaluate(`document.fonts.check("800 72px Pretendard", "가")`)) as boolean;
       const measured = (await page.evaluate(`(${MEASURE_SCRIPT.replace("function cnMeasure", "function")})(document)`)) as { page: number; issues: CardCheck[] }[];
@@ -56,7 +56,7 @@ export async function renderPngs(content: RenderedContent, outDir = path.join(RE
   }
   fs.writeFileSync(
     path.join(outDir, "report.json"),
-    JSON.stringify({ content_id: content.master.content_id, theme: content.theme.name, rendered_at: new Date().toISOString(), cards: results }, null, 2) + "\n",
+    JSON.stringify({ content_id: content.master.content_id, theme: content.designLabel, rendered_at: new Date().toISOString(), cards: results }, null, 2) + "\n",
     "utf8",
   );
   return results;

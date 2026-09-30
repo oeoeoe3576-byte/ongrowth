@@ -1,5 +1,5 @@
 // TIMELINE: 단계/로드맵. 왼쪽 세로선 + 점, STEP 번호, 순서가 한눈에 보이게
-import { frame, text, esc, splitItem } from "../parts.js";
+import { frame, text, rich, splitItem } from "../parts.js";
 import type { LayoutComponent } from "../types.js";
 
 export const TimelineTemplate: LayoutComponent = {
@@ -19,7 +19,7 @@ export const TimelineTemplate: LayoutComponent = {
   render(p, ctx) {
     const steps = p.items.map((it, i) => {
       const { title, desc } = splitItem(it);
-      return `<li class="cn-step"><span class="cn-dot"></span><div><div class="cn-step-label">STEP ${String(i + 1).padStart(2, "0")}</div><div class="cn-step-title cn-fit" style="--lines:2" data-fit data-field="items">${esc(title)}</div>${desc ? `<div class="cn-step-desc cn-fit" style="--lines:2">${esc(desc)}</div>` : ""}</div></li>`;
+      return `<li class="cn-step"><span class="cn-dot"></span><div><div class="cn-step-label">STEP ${String(i + 1).padStart(2, "0")}</div><div class="cn-step-title cn-fit" style="--lines:2" data-fit data-field="items">${rich(title)}</div>${desc ? `<div class="cn-step-desc cn-fit" style="--lines:2">${rich(desc)}</div>` : ""}</div></li>`;
     }).join("");
     return frame(p, ctx, "light", `
       ${text("cn-headline", "headline", p.headline, 2, p.visualFocus)}

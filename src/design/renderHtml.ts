@@ -5,7 +5,8 @@ import { resolveLayout, allLayoutCss } from "./layouts/index.js";
 import { resolveTheme } from "./themes/index.js";
 import { themeToCssVars, type DesignTheme } from "./tokens.js";
 import { staticChecks, type CardCheck } from "./checks.js";
-import { toRenderPage, type RenderContext, type RenderPage } from "./types.js";
+import { toRenderPage, type BrandProfile, type RenderContext, type RenderPage } from "./types.js";
+import { loadBrand, toImageSrc } from "./brand.js";
 import type { MasterRow, PageRow } from "../planner/types.js";
 
 export interface RenderedCard {
@@ -19,22 +20,25 @@ export interface RenderedContent {
   master: MasterRow;
   theme: DesignTheme;
   themeFallback: boolean;
+  brand: BrandProfile;
   cards: RenderedCard[];
 }
 
 export function renderContent(master: MasterRow, pageRows: PageRow[], themeName?: string): RenderedContent {
-  const { theme, fallback } = resolveTheme(themeName ?? master.category);
+  const brand = loadBrand(master.brand);
+  const { theme, fallback } = resolveTheme(themeName ?? brand.theme ?? master.category);
   const pages = pageRows
     .filter((r) => r.content_id === master.content_id)
     .map(toRenderPage)
+    .map((p) => ({ ...p, imageSource: toImageSrc(p.imageSource) }))
     .sort((a, b) => a.number - b.number);
   if (!pages.length) throw new Error(`${master.content_id}의 PAGES 데이터가 없음`);
-  const ctx: RenderContext = { master, total: pages.length, theme };
+  const ctx: RenderContext = { master, total: pages.length, theme, brand };
   const cards = pages.map((page) => {
     const { component, fallback: layoutFallback } = resolveLayout(page.layout);
     return { page, component: component.name, html: component.render(page, ctx), checks: staticChecks(page, component, layoutFallback) };
   });
-  return { master, theme, themeFallback: fallback, cards };
+  return { master, theme, themeFallback: fallback, brand, cards };
 }
 
 /** 카드 CSS 전체 (폰트 + 테마 변수 + 공통 + 레이아웃별) */

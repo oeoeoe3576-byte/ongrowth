@@ -13,6 +13,31 @@ export function highlight(text: string, focus: string): string {
   return `${esc(text.slice(0, i))}<em class="cn-hl">${esc(focus)}</em>${esc(text.slice(i + focus.length))}`;
 }
 
+/**
+ * 원고 문자열 → HTML. **구절**은 테마의 강조 방식(색/형광펜/굵기)으로, visual_focus는 강조색으로.
+ * 모든 레이아웃은 글자를 넣을 때 이 함수를 쓴다.
+ */
+export function rich(text: string, focus = ""): string {
+  let focusUsed = false;
+  return text
+    .split(/(\*\*[^*]+\*\*)/)
+    .map((part) => {
+      const m = part.match(/^\*\*([^*]+)\*\*$/);
+      if (m) return `<strong class="cn-em">${esc(m[1])}</strong>`;
+      if (!focusUsed && focus && part.includes(focus)) {
+        focusUsed = true;
+        return highlight(part, focus);
+      }
+      return esc(part);
+    })
+    .join("");
+}
+
+/** 강조 표시(**)를 뺀 글자 */
+export function plain(text: string): string {
+  return text.replace(/\*\*([^*]+)\*\*/g, "$1");
+}
+
 /** "30개" → { pre:"", num:"30", unit:"개" }. 숫자가 없으면 num에 전체 */
 export function splitNumber(s: string): { pre: string; num: string; unit: string } {
   const m = s.match(/^(\D*?)([\d][\d,.]*)(.*)$/);
@@ -36,7 +61,7 @@ export function splitItem(item: string): { title: string; desc: string } {
 /** 줄 수를 제한한 텍스트. 넘치면 잘리고, 검수기가 overflow로 잡는다 */
 export function text(cls: string, field: string, value: string, lines: number, focus = ""): string {
   if (!value) return "";
-  return `<div class="${cls} cn-fit" style="--lines:${lines}" data-fit data-field="${field}">${highlight(value, focus)}</div>`;
+  return `<div class="${cls} cn-fit" style="--lines:${lines}" data-fit data-field="${field}">${rich(value, focus)}</div>`;
 }
 
 const IMAGE_LABEL: Record<string, string> = {
@@ -65,13 +90,13 @@ export function imageSlot(page: RenderPage, cls = ""): string {
 }
 
 /** 모든 카드에 공통인 틀: 상단(브랜드 · 페이지), 본문, 하단(진행 표시) */
-export function frame(page: RenderPage, ctx: RenderContext, tone: Tone, inner: string): string {
-  const brand = ctx.theme.brandLabel ?? ctx.master.brand;
+export function frame(page: RenderPage, ctx: RenderContext, tone: Tone, inner: string, background = ""): string {
+  const brand = ctx.brand.categoryLabel ?? ctx.theme.brandLabel ?? ctx.master.brand;
   const pn = String(page.number).padStart(2, "0");
   const total = String(ctx.total).padStart(2, "0");
   const segments = Array.from({ length: ctx.total }, (_, i) => `<i class="${i < page.number ? "on" : ""}"></i>`).join("");
   const swipe = page.number === 1 && ctx.total > 1 ? `<span class="cn-swipe">넘겨보기 →</span>` : "";
-  return `<article class="cn-card cn-theme-${esc(ctx.theme.name)} cn-tone-${tone} cn-l-${esc(page.layout)}" data-page="${page.number}" data-layout="${esc(page.layout)}">
+  return `<article class="cn-card cn-theme-${esc(ctx.theme.name)} cn-tone-${tone} cn-l-${esc(page.layout)}" data-page="${page.number}" data-layout="${esc(page.layout)}">${background ? `\n  <div class="cn-bg">${background}</div>` : ""}
   <header class="cn-top"><span class="cn-brand">${esc(brand)}</span><span class="cn-pn">${pn}<span class="cn-pn-total"> / ${total}</span></span></header>
   <main class="cn-main" data-fit data-field="card">${inner}</main>
   <footer class="cn-foot"><div class="cn-progress">${segments}</div>${swipe}</footer>

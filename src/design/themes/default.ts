@@ -16,7 +16,12 @@ export const defaultTheme: DesignTheme = {
     accent: "#2F54EB",
     accentSoft: "#E3E8FC",
     line: "#DCD7CC",
+    onAccent: "#FFFFFF",
+    accentOnDark: "#7D95FF",
+    cardBg: "#FFFFFF",
+    cardText: "#15161A",
   },
+  emphasis: { color: "var(--c-accent)", background: "none", weight: 800, colorOnDark: "var(--c-accent-dark)" },
   font: {
     family: "'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif",
     weightRegular: 500,
@@ -35,6 +40,7 @@ export const defaultTheme: DesignTheme = {
     headlineLineHeight: 1.24,
     bodyLineHeight: 1.6,
     headlineTracking: "-0.03em",
+    displayWeight: 800,
   },
   spacing: {
     pagePadding: 96,

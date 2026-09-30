@@ -1,5 +1,5 @@
 // THREE_COLUMN: 같은 크기 3칸. 각 칸에 번호 + 제목 + 짧은 설명 ("제목: 설명")
-import { frame, text, esc, splitItem } from "../parts.js";
+import { frame, text, rich, splitItem } from "../parts.js";
 import type { LayoutComponent } from "../types.js";
 
 export const ThreeColumnTemplate: LayoutComponent = {
@@ -17,7 +17,7 @@ export const ThreeColumnTemplate: LayoutComponent = {
   render(p, ctx) {
     const cols = p.items.slice(0, 3).map((it, i) => {
       const { title, desc } = splitItem(it);
-      return `<div class="cn-col" data-fit data-field="items"><span class="cn-num">${String(i + 1).padStart(2, "0")}</span><div class="cn-col-title cn-fit" style="--lines:3">${esc(title)}</div>${desc ? `<div class="cn-col-desc cn-fit" style="--lines:4">${esc(desc)}</div>` : ""}</div>`;
+      return `<div class="cn-col" data-fit data-field="items"><span class="cn-num">${String(i + 1).padStart(2, "0")}</span><div class="cn-col-title cn-fit" style="--lines:3">${rich(title)}</div>${desc ? `<div class="cn-col-desc cn-fit" style="--lines:4">${rich(desc)}</div>` : ""}</div>`;
     }).join("");
     return frame(p, ctx, "light", `
       ${text("cn-headline", "headline", p.headline, 2, p.visualFocus)}

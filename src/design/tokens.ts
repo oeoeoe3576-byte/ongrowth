@@ -17,6 +17,17 @@ export interface DesignTheme {
     accent: string; // visual_focus, 번호, 강조
     accentSoft: string; // 강조 배경
     line: string;
+    onAccent: string; // 강조색 위 글자 (버튼, 비교 오른쪽)
+    accentOnDark: string; // 어두운 카드/사진 위에서 쓰는 강조색
+    cardBg: string; // 프로필 카드처럼 항상 밝은 카드
+    cardText: string;
+  };
+  /** 본문 속 **강조** 표시 방식: 색 / 형광펜 / 굵기 */
+  emphasis: {
+    color: string;
+    background: string;
+    weight: number;
+    colorOnDark: string; // 어두운 카드/사진 위 강조 색
   };
   font: {
     family: string;
@@ -36,6 +47,7 @@ export interface DesignTheme {
     headlineLineHeight: number;
     bodyLineHeight: number;
     headlineTracking: string;
+    displayWeight: number; // 제목 기본 굵기. 낮추면 **강조** 부분만 굵게 보인다
   };
   spacing: {
     pagePadding: number;
@@ -63,8 +75,17 @@ export function themeToCssVars(t: DesignTheme): string {
     "--c-muted": t.color.muted,
     "--c-muted-on-primary": t.color.mutedOnPrimary,
     "--c-accent": t.color.accent,
+    "--c-accent-base": t.color.accent,
+    "--c-accent-dark": t.color.accentOnDark,
     "--c-accent-soft": t.color.accentSoft,
     "--c-line": t.color.line,
+    "--c-on-accent": t.color.onAccent,
+    "--c-card-bg": t.color.cardBg,
+    "--c-card-text": t.color.cardText,
+    "--em-color": t.emphasis.color,
+    "--em-bg": t.emphasis.background,
+    "--em-weight": t.emphasis.weight,
+    "--em-color-dark": t.emphasis.colorOnDark,
     "--font": t.font.family,
     "--w-regular": t.font.weightRegular,
     "--w-bold": t.font.weightBold,
@@ -80,6 +101,7 @@ export function themeToCssVars(t: DesignTheme): string {
     "--lh-headline": t.typography.headlineLineHeight,
     "--lh-body": t.typography.bodyLineHeight,
     "--tracking-headline": t.typography.headlineTracking,
+    "--w-display": t.typography.displayWeight,
     "--sp-page": `${t.spacing.pagePadding}px`,
     "--sp-section": `${t.spacing.sectionGap}px`,
     "--sp-item": `${t.spacing.itemGap}px`,

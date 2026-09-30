@@ -1,5 +1,5 @@
 // NUMBER_LIST: 번호 목록. 항목 사이 구분선과 넉넉한 간격
-import { frame, text, highlight } from "../parts.js";
+import { frame, text, rich } from "../parts.js";
 import type { LayoutComponent } from "../types.js";
 
 export const NumberListTemplate: LayoutComponent = {
@@ -15,7 +15,7 @@ export const NumberListTemplate: LayoutComponent = {
 .cn-l-NUMBER_LIST .cn-body { color: var(--c-muted); }`,
   render(p, ctx) {
     const items = p.items
-      .map((it, i) => `<li><span class="cn-num">${String(i + 1).padStart(2, "0")}</span><span class="cn-li-text cn-fit" style="--lines:2" data-fit data-field="items">${highlight(it, p.visualFocus)}</span></li>`)
+      .map((it, i) => `<li><span class="cn-num">${String(i + 1).padStart(2, "0")}</span><span class="cn-li-text cn-fit" style="--lines:2" data-fit data-field="items">${rich(it, p.visualFocus)}</span></li>`)
       .join("");
     return frame(p, ctx, "light", `
       ${text("cn-headline", "headline", p.headline, 2, p.visualFocus)}

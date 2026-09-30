@@ -19,6 +19,7 @@ export const PLANNER_RULES = [
   "같은 레이아웃을 연속으로 쓰지 않고, 한 레이아웃이 절반 넘게 쓰이지 않게 한다. 페이지 역할에 가장 맞는 레이아웃을 고른다.",
   "카드 장수는 내용 분량과 전달 방식에 맞게 정한다. 7장으로 고정하지 않는다.",
   "모든 문자열은 한 줄로 쓴다(줄바꿈 금지). =, +, -, @ 로 시작하지 않는다. items 안에 '|' 문자를 쓰지 않는다.",
+  "문장 속 가장 중요한 구절은 **구절** 처럼 강조 표시한다. 한 칸에 1~2곳만, 필요 없으면 쓰지 않는다. 글자 수에는 ** 가 포함되지 않는다.",
 ];
 
 export function buildPlannerSystemPrompt(): string {
@@ -33,7 +34,9 @@ ${list(PAGE_ROLES)}
 
 [레이아웃 layout_type]
 ${list(LAYOUTS)}
-- HOOK 페이지는 BIG_TITLE, BIG_NUMBER, IMAGE_TEXT, SCREENSHOT 중 하나. CTA 레이아웃은 CTA 페이지에서만.
+- HOOK 페이지는 BIG_TITLE, BIG_NUMBER, IMAGE_TEXT, SCREENSHOT, PHOTO_COVER 중 하나. CTA 페이지는 CTA 또는 FOLLOW 레이아웃.
+- PHOTO_COVER는 사진이 주인공인 표지. image_required=true, image_type PHOTO 또는 AI_IMAGE.
+- FOLLOW는 계정 프로필 카드로 팔로우를 유도하는 마지막 장 (목적이 팔로우일 때 적합).
 - BIG_NUMBER는 숫자가 든 visual_focus 필요. RESULT도 visual_focus 필요.
 - GRAPH, image_type GRAPH/CHART는 참고자료에 실제 수치가 있을 때만.
 

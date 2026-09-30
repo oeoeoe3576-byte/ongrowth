@@ -10,6 +10,7 @@ import {
   MIN_PAGES,
   MAX_PAGES,
   ITEM_SEPARATOR,
+  stripEmphasis,
   type CardnewsPlan,
   type PlanInput,
   type PlanPage,
@@ -37,10 +38,12 @@ export const LIMITS = {
 // 과장/낚시성 표현 (필요 시 추가)
 const HYPE_WORDS = ["충격", "무조건", "100%", "대박", "역대급", "미친", "절대 실패", "모르면 손해", "이것만 하면"];
 const FORMULA_START_RE = /^[=+\-@]/;
-const HOOK_LAYOUTS = ["BIG_TITLE", "BIG_NUMBER", "IMAGE_TEXT", "SCREENSHOT"];
+const HOOK_LAYOUTS = ["BIG_TITLE", "BIG_NUMBER", "IMAGE_TEXT", "SCREENSHOT", "PHOTO_COVER"];
+const CTA_LAYOUTS = ["CTA", "FOLLOW"];
 
-const len = (s: string) => [...s].length;
-const norm = (s: string) => s.replace(/\s+/g, "");
+/** 보이는 글자 수 (강조 표시 ** 제외) */
+const len = (s: string) => [...stripEmphasis(s)].length;
+const norm = (s: string) => stripEmphasis(s).replace(/\s+/g, "");
 
 function isStr(v: unknown): v is string {
   return typeof v === "string";
@@ -133,6 +136,8 @@ function validatePage(
     if (/[\r\n]/.test(p[f])) err("줄바꿈 금지 - 한 줄로", pg, f);
     if (FORMULA_START_RE.test(p[f])) err("=, +, -, @ 로 시작하면 시트가 수식으로 해석함", pg, f);
     if (p[f] !== p[f].trim()) warn("앞뒤 공백", pg, f);
+    if ((p[f].match(/\*\*/g) ?? []).length % 2 !== 0) err("강조 표시 **가 짝이 맞지 않음", pg, f);
+    if ((p[f].match(/\*\*[^*]+\*\*/g) ?? []).length > 2) err("한 칸에 강조(**)는 2곳까지", pg, f);
   }
   if (!Array.isArray(p.items) || !p.items.every(isStr)) {
     err("items는 문자열 배열이어야 함 (없으면 [])", pg, "items");
@@ -153,6 +158,7 @@ function validatePage(
     if (len(it) > LIMITS.item) err(`items[${i}] 글자 수 초과 (${len(it)}/${LIMITS.item})`, pg, "items");
     if (it.includes(ITEM_SEPARATOR.trim())) err(`items[${i}]에 구분자 '${ITEM_SEPARATOR.trim()}' 사용 불가`, pg, "items");
     if (!it.trim()) err(`items[${i}] 비어 있음`, pg, "items");
+    if ((it.match(/\*\*/g) ?? []).length % 2 !== 0) err(`items[${i}] 강조 표시 **가 짝이 맞지 않음`, pg, "items");
   });
 
   const text = [p.headline, p.subheadline, p.body, ...p.items].filter(isStr).join(" ");
@@ -169,7 +175,7 @@ function validatePage(
 
   // 역할 ↔ 레이아웃
   if (p.page_role === "HOOK" && !HOOK_LAYOUTS.includes(p.layout_type)) err(`HOOK 페이지 레이아웃은 ${HOOK_LAYOUTS.join("/")} 중 하나`, pg, "layout_type");
-  if ((p.layout_type === "CTA") !== (p.page_role === "CTA")) err("CTA 레이아웃은 CTA 페이지에만, CTA 페이지는 CTA 레이아웃", pg, "layout_type");
+  if (CTA_LAYOUTS.includes(p.layout_type) !== (p.page_role === "CTA")) err("CTA/FOLLOW 레이아웃은 CTA 페이지에만, CTA 페이지는 CTA 또는 FOLLOW 레이아웃", pg, "layout_type");
   if (p.page_role === "CTA" && (!isStr(p.cta) || !p.cta.trim())) err("CTA 페이지는 cta 필수", pg, "cta");
   if (p.page_role !== "CTA" && isStr(p.cta) && p.cta.trim()) err("cta는 CTA 페이지에만", pg, "cta");
   if (pg !== 1 && p.page_role === "HOOK") err("HOOK은 첫 페이지에만", pg, "page_role");
@@ -186,6 +192,7 @@ function validatePage(
   if (p.layout_type === "IMAGE_TEXT" && p.image_required !== true) err("IMAGE_TEXT는 image_required=true", pg, "image_required");
   if (p.layout_type === "SCREENSHOT" && (p.image_required !== true || p.image_type !== "SCREENSHOT")) err("SCREENSHOT 레이아웃은 image_type=SCREENSHOT", pg, "image_type");
   if (p.layout_type === "GRAPH" && !(p.image_type === "GRAPH" || p.image_type === "CHART")) err("GRAPH 레이아웃은 image_type=GRAPH 또는 CHART", pg, "image_type");
+  if (p.layout_type === "PHOTO_COVER" && (p.image_required !== true || !(p.image_type === "PHOTO" || p.image_type === "AI_IMAGE"))) err("PHOTO_COVER는 image_required=true, image_type PHOTO 또는 AI_IMAGE", pg, "image_type");
 
   // 이미지
   if (p.image_required === true) {

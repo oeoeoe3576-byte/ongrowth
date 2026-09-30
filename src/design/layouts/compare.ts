@@ -1,5 +1,5 @@
 // COMPARE: 좌/우 비교. items는 "라벨: 내용" 형식. 첫 라벨 = 왼쪽, 둘째 라벨 = 오른쪽
-import { frame, text, esc, splitItem } from "../parts.js";
+import { frame, text, esc, rich, splitItem } from "../parts.js";
 import type { LayoutComponent, RenderPage } from "../types.js";
 
 export function compareSides(p: RenderPage): { left: { label: string; lines: string[] }; right: { label: string; lines: string[] } } {
@@ -28,7 +28,7 @@ export const CompareTemplate: LayoutComponent = {
 .cn-l-COMPARE .cn-vs { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: auto 0; flex: 0 1 auto; min-height: 520px; max-height: 820px; }
 .cn-l-COMPARE .cn-side { border-radius: var(--r-box); padding: 52px 40px; display: flex; flex-direction: column; gap: 36px; overflow: hidden; }
 .cn-l-COMPARE .cn-side.left { background: var(--c-secondary); }
-.cn-l-COMPARE .cn-side.right { background: var(--c-accent); color: #fff; }
+.cn-l-COMPARE .cn-side.right { background: var(--c-accent); color: var(--c-on-accent); }
 .cn-l-COMPARE .cn-side-label { font-size: 48px; font-weight: var(--w-heavy); letter-spacing: .02em; padding-bottom: 20px; border-bottom: var(--bw) solid currentColor; opacity: .9; }
 .cn-l-COMPARE .cn-side ul { list-style: none; display: flex; flex-direction: column; gap: 32px; }
 .cn-l-COMPARE .cn-side li { font-size: 40px; font-weight: var(--w-bold); line-height: 1.4; letter-spacing: -0.015em; }
@@ -38,11 +38,11 @@ export const CompareTemplate: LayoutComponent = {
   render(p, ctx) {
     const { left, right } = compareSides(p);
     const side = (cls: string, s: { label: string; lines: string[] }, fallback: string) =>
-      `<div class="cn-side ${cls}" data-fit data-field="items"><div class="cn-side-label">${esc(s.label || fallback)}</div><ul>${s.lines.map((l) => `<li class="cn-fit" style="--lines:3">${esc(l)}</li>`).join("")}</ul></div>`;
+      `<div class="cn-side ${cls}" data-fit data-field="items"><div class="cn-side-label">${esc(s.label || fallback)}</div><ul>${s.lines.map((l) => `<li class="cn-fit" style="--lines:3">${rich(l)}</li>`).join("")}</ul></div>`;
     return frame(p, ctx, "light", `
       ${text("cn-headline", "headline", p.headline, 2, p.visualFocus)}
       ${text("cn-sub", "subheadline", p.subheadline, 2, p.visualFocus)}
-      <div class="cn-vs">${side("left", left, "A")}${side("right", right, "B")}<div class="cn-vs-badge">VS</div></div>
+      <div class="cn-vs">${side("left", left, "A")}${side("right cn-on-accent", right, "B")}<div class="cn-vs-badge">VS</div></div>
       ${text("cn-body", "body", p.body, 2, p.visualFocus)}`);
   },
 };

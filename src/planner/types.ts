@@ -52,6 +52,8 @@ export const LAYOUTS = {
   GRAPH: "그래프/차트 (자료에 수치가 있을 때만)",
   RESULT: "결과/성과 강조",
   CTA: "행동 유도",
+  PHOTO_COVER: "사진이 카드 전체를 덮고 아래에 큰 제목 (image_type PHOTO/AI_IMAGE)",
+  FOLLOW: "프로필 카드 + 팔로우 버튼 (마지막 CTA 페이지용)",
 } as const;
 export type Layout = keyof typeof LAYOUTS;
 
@@ -155,3 +157,11 @@ export type PageRow = Record<(typeof PAGE_COLUMNS)[number], string>;
 
 /** 시트 셀 안에서 items를 구분하는 문자 */
 export const ITEM_SEPARATOR = " | ";
+
+/** 본문 속 강조 표시. 예: "첫 장에서 **무엇을 얻는지** 보여주세요" */
+export const EMPHASIS_RE = /\*\*([^*]+)\*\*/g;
+
+/** 강조 표시(**)를 뺀 실제 보이는 글자 */
+export function stripEmphasis(s: string): string {
+  return s.replace(EMPHASIS_RE, "$1");
+}

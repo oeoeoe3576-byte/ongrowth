@@ -21,13 +21,25 @@ export interface RenderPage {
   factCheck: string;
 }
 
+/** 브랜드 프로필 (data/brands/<brand>.json). 없으면 계정명만 쓴다. 숫자는 입력된 값만 표시 */
+export interface BrandProfile {
+  handle: string;
+  displayName?: string;
+  bio?: string[];
+  theme?: string;
+  logo?: string; // 이미지 경로 또는 URL
+  categoryLabel?: string; // 모든 카드 상단 라벨
+  stats?: { posts?: string; followers?: string; following?: string };
+}
+
 export interface RenderContext {
   master: MasterRow;
   total: number;
   theme: DesignTheme;
+  brand: BrandProfile;
 }
 
-export type Tone = "light" | "dark";
+export type Tone = "light" | "dark" | "photo";
 
 export interface LayoutLimits {
   /** 권장 글자 수. 넘으면 warning (폰트를 줄여 억지로 넣지 않는다) */

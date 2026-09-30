@@ -152,6 +152,22 @@ const tests: [string, () => void | Promise<void>][] = [
     loaded.pages.push({ ...loaded.pages[0], content_id: "CN-20260930-999" });
     assert.ok(validateStore(loaded).some((e) => /MASTER에 없는 content_id/.test(e)));
   }],
+  ["새 레이아웃/강조: PHOTO_COVER는 사진 필수, FOLLOW는 CTA 페이지, ** 짝 검사, 글자 수에서 ** 제외", () => {
+    const trial: CardnewsPlan = JSON.parse(fs.readFileSync(`${T}/response_trial_emphasis.json`, "utf8"));
+    assert.deepEqual(errors(trial), []);
+    const a = clone(trial);
+    a.pages[0].image_required = false; a.pages[0].image_type = ""; a.pages[0].image_source = ""; a.pages[0].image_prompt = "";
+    assert.ok(hasError(a, /PHOTO_COVER는 image_required=true/));
+    const b = clone(trial);
+    b.pages[2].layout_type = "FOLLOW";
+    assert.ok(hasError(b, /CTA\/FOLLOW 레이아웃은 CTA 페이지에만/));
+    const c = clone(trial);
+    c.pages[1].body = "짝이 **안 맞는 강조";
+    assert.ok(hasError(c, /짝이 맞지 않음/));
+    const d = clone(trial);
+    d.pages[1].headline = "**" + "가".repeat(24) + "**";
+    assert.ok(!hasError(d, /headline.*글자 수 초과|글자 수 초과 \(2[5-9]/));
+  }],
   ["입력/프롬프트: 한글 목적 입력, 코드블록 JSON 추출, 프롬프트에 모든 허용 값 포함", () => {
     assert.equal(parseObjective("저장유도"), "SAVE");
     assert.equal(parseObjective("sales"), "SALES");

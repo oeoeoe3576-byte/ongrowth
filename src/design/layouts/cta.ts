@@ -1,5 +1,5 @@
 // CTA: 마지막 페이지. headline, 마무리 문구, CTA 버튼, 저장/팔로우 등 행동 표시
-import { frame, text, esc } from "../parts.js";
+import { frame, text, esc, rich } from "../parts.js";
 import type { LayoutComponent } from "../types.js";
 
 const ACTION_HINT: Record<string, string> = {
@@ -20,7 +20,8 @@ export const CtaTemplate: LayoutComponent = {
 .cn-l-CTA .cn-main { justify-content: center; gap: 36px; padding-bottom: calc(var(--sp-section) * 2); }
 .cn-l-CTA .cn-display { font-size: calc(var(--fs-display) * .96); }
 .cn-l-CTA .cn-body { color: var(--c-muted); max-width: 820px; }
-.cn-l-CTA .cn-cta-btn { align-self: flex-start; margin-top: 28px; background: var(--c-accent); color: #fff; font-size: 40px; font-weight: var(--w-heavy); letter-spacing: -0.02em; padding: 34px 56px; border-radius: var(--r-pill); max-width: 100%; }
+.cn-l-CTA .cn-cta-btn { align-self: flex-start; margin-top: 28px; background: var(--c-accent); color: var(--c-on-accent); font-size: 40px; font-weight: var(--w-heavy); letter-spacing: -0.02em; padding: 34px 56px; border-radius: var(--r-pill); max-width: 100%; }
+.cn-l-CTA.cn-tone-dark .cn-cta-btn { color: var(--c-primary); }
 .cn-l-CTA .cn-cta-hint { font-size: var(--fs-caption); color: var(--c-muted); font-weight: var(--w-bold); }
 .cn-l-CTA .cn-handle { font-size: 30px; font-weight: var(--w-heavy); letter-spacing: .02em; margin-top: 24px; }`,
   render(p, ctx) {
@@ -28,7 +29,7 @@ export const CtaTemplate: LayoutComponent = {
     return frame(p, ctx, "dark", `
       ${text("cn-display", "headline", p.headline, 3, p.visualFocus)}
       ${text("cn-body", "body", p.body, 3, p.visualFocus)}
-      ${p.cta ? `<div class="cn-cta-btn cn-fit" style="--lines:2" data-fit data-field="cta">${esc(p.cta)} →</div>` : ""}
+      ${p.cta ? `<div class="cn-cta-btn cn-on-accent cn-fit" style="--lines:2" data-fit data-field="cta">${rich(p.cta)} →</div>` : ""}
       ${hint ? `<div class="cn-cta-hint">${esc(hint)}</div>` : ""}
       <div class="cn-handle">@${esc(ctx.master.brand)}</div>`);
   },

@@ -14,6 +14,8 @@ import { TimelineTemplate } from "./timeline.js";
 import { GraphTemplate } from "./graph.js";
 import { ResultTemplate } from "./result.js";
 import { CtaTemplate } from "./cta.js";
+import { PhotoCoverTemplate } from "./photoCover.js";
+import { FollowTemplate } from "./follow.js";
 
 export const LAYOUT_COMPONENTS: Record<Layout, LayoutComponent> = {
   BIG_TITLE: BigTitleTemplate,
@@ -29,6 +31,8 @@ export const LAYOUT_COMPONENTS: Record<Layout, LayoutComponent> = {
   GRAPH: GraphTemplate,
   RESULT: ResultTemplate,
   CTA: CtaTemplate,
+  PHOTO_COVER: PhotoCoverTemplate,
+  FOLLOW: FollowTemplate,
 };
 
 /** 모르는 layout_type이면 TEXT로 대신 그리고 fallback=true */

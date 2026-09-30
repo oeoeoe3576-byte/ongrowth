@@ -1,14 +1,22 @@
 // 테마 레지스트리. 새 브랜드 테마는 파일 하나 추가 + 여기 등록으로 끝난다.
-// 이번 단계에서는 default(마케팅)만 실제 구현한다.
+// default(코발트), insight(검정+초록), life(크림+갈색), campaign(진초록+주황).
 
 import type { DesignTheme } from "../tokens.js";
 import { defaultTheme } from "./default.js";
+import { insightTheme } from "./insight.js";
+import { lifeTheme } from "./life.js";
+import { campaignTheme } from "./campaign.js";
+export { extendTheme } from "./extend.js";
 
 const THEMES: Record<string, DesignTheme> = {
   default: defaultTheme,
   marketing: defaultTheme,
-  // beauty: beautyTheme,   // 4단계 이후
-  // travel: travelTheme,
+  insight: insightTheme,
+  life: lifeTheme,
+  campaign: campaignTheme,
+  // 분야 → 테마 기본 연결 (브랜드 설정의 theme가 있으면 그게 우선)
+  travel: lifeTheme,
+  stay: lifeTheme,
 };
 
 /** 브랜드/카테고리에서 테마를 고른다. 없으면 default */
@@ -21,11 +29,3 @@ export function listThemes(): string[] {
   return Object.keys(THEMES);
 }
 
-/** 기존 테마 일부만 바꿔 새 테마를 만들 때 사용 */
-export function extendTheme(base: DesignTheme, patch: { name: string } & { [K in keyof DesignTheme]?: Partial<DesignTheme[K]> | DesignTheme[K] }): DesignTheme {
-  const out = structuredClone(base) as unknown as Record<string, unknown>;
-  for (const [k, v] of Object.entries(patch)) {
-    out[k] = v && typeof v === "object" && !Array.isArray(v) ? { ...(out[k] as object), ...v } : v;
-  }
-  return out as unknown as DesignTheme;
-}

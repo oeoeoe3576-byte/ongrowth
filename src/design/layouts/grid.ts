@@ -1,5 +1,5 @@
 // GRID: 2x2 (4개 이하) 또는 2x3 (5~6개) 격자. items 수에 따라 자동
-import { frame, text, esc, splitItem } from "../parts.js";
+import { frame, text, rich, splitItem } from "../parts.js";
 import type { LayoutComponent } from "../types.js";
 
 export const GridTemplate: LayoutComponent = {
@@ -20,7 +20,7 @@ export const GridTemplate: LayoutComponent = {
     const rows = items.length > 4 ? 3 : 2;
     const cells = items.map((it, i) => {
       const { title, desc } = splitItem(it);
-      return `<div class="cn-cell" data-fit data-field="items"><span class="cn-num">${String(i + 1).padStart(2, "0")}</span><div class="cn-cell-title cn-fit" style="--lines:2">${esc(title)}</div>${desc ? `<div class="cn-cell-desc cn-fit" style="--lines:2">${esc(desc)}</div>` : ""}</div>`;
+      return `<div class="cn-cell" data-fit data-field="items"><span class="cn-num">${String(i + 1).padStart(2, "0")}</span><div class="cn-cell-title cn-fit" style="--lines:2">${rich(title)}</div>${desc ? `<div class="cn-cell-desc cn-fit" style="--lines:2">${rich(desc)}</div>` : ""}</div>`;
     }).join("");
     return frame(p, ctx, "light", `
       ${text("cn-headline", "headline", p.headline, 2, p.visualFocus)}

@@ -26,7 +26,7 @@ function fakeContent(pages: Partial<PageRow>[]): { m: MasterRow; rows: PageRow[]
 }
 
 const tests: [string, () => void | Promise<void>][] = [
-  ["2단계의 layout_type 13개 모두 전용 컴포넌트가 있음", () => {
+  ["2단계의 layout_type 15개 모두 전용 컴포넌트가 있음", () => {
     assert.deepEqual(Object.keys(LAYOUT_COMPONENTS).sort(), Object.keys(LAYOUTS).sort());
     for (const [k, c] of Object.entries(LAYOUT_COMPONENTS)) assert.equal(c.name, k);
   }],
@@ -48,7 +48,9 @@ const tests: [string, () => void | Promise<void>][] = [
   }],
   ["테마: 전용 테마가 없으면 default, extendTheme로 확장 가능", () => {
     assert.equal(resolveTheme("marketing").theme.name, "default");
-    assert.equal(resolveTheme("stay").fallback, true);
+    assert.equal(resolveTheme("stay").theme.name, "life");
+    assert.equal(resolveTheme("beauty").fallback, true);
+    for (const t of ["insight", "life", "campaign"]) assert.equal(resolveTheme(t).theme.name, t);
     const beauty = extendTheme(defaultTheme, { name: "beauty", color: { accent: "#C2185B" } });
     assert.equal(beauty.color.accent, "#C2185B");
     assert.equal(beauty.color.background, defaultTheme.color.background);
@@ -71,12 +73,12 @@ const tests: [string, () => void | Promise<void>][] = [
     assert.ok(checks.some((x) => /items가 너무 많음 \(8\/5개\)/.test(x.message)));
     assert.ok(checks.some((x) => x.message === SPLIT_MESSAGE));
   }],
-  ["테스트 카드뉴스 3세트 = 21장, 13개 레이아웃 모두 사용, MASTER-PAGES 연결", () => {
-    const ids = ["CN-20260930-001", "CN-20260930-002", "CN-20260930-003"];
+  ["테스트 카드뉴스 4세트 = 27장, 15개 레이아웃 모두 사용, MASTER-PAGES 연결", () => {
+    const ids = ["CN-20260930-001", "CN-20260930-002", "CN-20260930-003", "CN-20261001-001"];
     const all = ids.map((id) => renderContent(master(id), store.pages));
-    assert.deepEqual(all.map((c) => c.cards.length), [8, 6, 7]);
+    assert.deepEqual(all.map((c) => c.cards.length), [8, 6, 7, 6]);
     const used = new Set(all.flatMap((c) => c.cards.map((k) => k.component)));
-    assert.equal(used.size, 13);
+    assert.equal(used.size, 15);
     assert.ok(new Set(all[2].cards.map((k) => k.component)).size >= 5);
     all.forEach((c) => c.cards.forEach((k, i) => assert.equal(k.page.number, i + 1)));
   }],
@@ -87,6 +89,38 @@ const tests: [string, () => void | Promise<void>][] = [
     assert.ok(html.includes("문의가 12건에서"));
     assert.ok(html.includes('name="viewport"'));
     assert.ok(!/<\/script>[^]*<\/script>[^]*<\/script>/.test(html.split("var DATA")[1] ?? ""), "DATA 안에 </script>가 섞이지 않음");
+  }],
+  ["**강조**: 강조 태그로 바뀌고, 글자 수에서 ** 는 빠짐", () => {
+    const { m, rows } = fakeContent([{ headline: "첫 장에서 **얻는 것**을 보여주세요", body: "짝이 **맞는** 강조와 visual 3단계", visual_focus: "3단계" }]);
+    const c = renderContent(m, rows).cards[0];
+    assert.ok(c.html.includes('<strong class="cn-em">얻는 것</strong>'));
+    assert.ok(c.html.includes('<em class="cn-hl">3단계</em>'));
+    assert.ok(!c.html.includes("**"));
+    const long = fakeContent([{ headline: "**" + "가".repeat(20) + "**" }]);
+    assert.ok(!renderContent(long.m, long.rows).cards[0].checks.some((x) => /headline 권장 길이 초과/.test(x.message)));
+  }],
+  ["PHOTO_COVER: 로컬 사진은 data URL로 들어가고, 사진이 없으면 자리 표시", () => {
+    const withPhoto = fakeContent([{ page_role: "HOOK", layout_type: "PHOTO_COVER", image_required: "TRUE", image_type: "PHOTO", image_source: "data/planner/test/images/sample-cover.jpg" }]);
+    assert.ok(renderContent(withPhoto.m, withPhoto.rows).cards[0].html.includes('src="data:image/jpeg;base64,'));
+    const noPhoto = fakeContent([{ page_role: "HOOK", layout_type: "PHOTO_COVER", image_required: "TRUE", image_type: "PHOTO", image_source: "data/없는파일.jpg" }]);
+    assert.ok(renderContent(noPhoto.m, noPhoto.rows).cards[0].html.includes("사진 자리"));
+  }],
+  ["FOLLOW: 브랜드 프로필 표시, 숫자는 설정에 있을 때만", () => {
+    const { m, rows } = fakeContent([{ page_role: "CTA", layout_type: "FOLLOW", cta: "팔로우하기" }]);
+    const html = renderContent({ ...m, brand: "ongrowth" }, rows).cards[0].html;
+    assert.ok(html.includes("@ongrowth"));
+    assert.ok(html.includes("팔로우"));
+    assert.ok(!html.includes('class="cn-stats"'), "stats가 없으면 게시물/팔로워 숫자를 표시하지 않음");
+  }],
+  ["테마 4종 × 체험 원고: 모두 1080x1350, overflow 없음", async () => {
+    for (const t of ["default", "insight", "life", "campaign"]) {
+      const res = await renderPngs(renderContent(master("CN-20261001-001"), store.pages, t), tmpDir());
+      assert.equal(res.length, 6);
+      for (const r of res) {
+        assert.deepEqual([r.width, r.height], [1080, 1350]);
+        assert.deepEqual(r.checks.filter((x) => x.level === "error"), [], `${t} p${r.page}`);
+      }
+    }
   }],
   ["실제 렌더링: 1080x1350 PNG, 한글 폰트 로드, 테스트 세트 overflow 없음", async () => {
     const dir = tmpDir();

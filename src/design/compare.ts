@@ -8,7 +8,6 @@ const THEME_LABEL: Record<string, string> = {
   insight: "인사이트 · 검정 + 초록",
   life: "라이프 · 크림 + 갈색 (굵기로 강조)",
   campaign: "캠페인 · 진초록 + 주황 (형광펜 강조)",
-  ongrowth: "온그로스 · 밝은 본문 + 초록",
 };
 
 /** rows: 테마별로 그린 같은 원고 목록 */

@@ -4,10 +4,13 @@ import fs from "node:fs";
 import path from "node:path";
 import type { BrandProfile } from "./types.js";
 
-export const BRAND_DIR = path.resolve("data/brands");
+/** 실행 위치 기준 data/brands (호출할 때마다 계산) */
+export function brandDir(): string {
+  return path.resolve("data/brands");
+}
 
 export function loadBrand(brand: string): BrandProfile {
-  const file = path.join(BRAND_DIR, `${brand}.json`);
+  const file = path.join(brandDir(), `${brand}.json`);
   const fallback: BrandProfile = { handle: brand };
   if (!fs.existsSync(file)) return fallback;
   const data = JSON.parse(fs.readFileSync(file, "utf8")) as Partial<BrandProfile>;

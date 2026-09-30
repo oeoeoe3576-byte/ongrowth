@@ -1,8 +1,7 @@
 {
   "handle": "ongrowth",
   "displayName": "ongrowth",
-  "theme": "ongrowth",
-  "coverTheme": "insight",
+  "theme": "insight",
   "categoryLabel": "MARKETING NOTE",
   "bio": [
     "(브랜드 소개 1줄 - data/brands/ongrowth.json에서 수정)",

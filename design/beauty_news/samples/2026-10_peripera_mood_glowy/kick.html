@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>킥 후보 — 페리페라 무드 글로이 틴트</title>
+<!--
+  컨셉 '킥' 후보 3종 (시안). 위치·분류 근거: 페리페라 공식 상세페이지 COLOR CHART (Warm↔Cool, Light↔Deep)
+  A. 톤 온도계  B. 퍼스널컬러 매칭  C. 3초 요약 카드
+-->
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+.kick { padding: 180px var(--pad) 0; }
+.kick h2 { font-size: 72px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 26px 0 26px; }
+.kick .lead { font-size: 30px; color: var(--mauve); font-weight: 500; line-height: 1.5; }
+.kick .src { position: absolute; left: var(--pad); bottom: 56px; font-size: 21px; color: var(--mauve); }
+
+/* A. 톤 온도계 */
+.thermo { position: relative; margin-top: 20px; height: 590px; }
+.t-bar {
+  position: absolute; left: 60px; right: 0; top: 290px; height: 40px; border-radius: 999px;
+  background: linear-gradient(90deg, #E9875A 0%, #F0B08F 30%, #EBD3CF 52%, #D9A6C2 72%, #A98BC9 100%);
+  box-shadow: inset 0 3px 8px rgba(0,0,0,.08);
+}
+.t-bulb { position: absolute; left: 0; top: 260px; width: 100px; height: 100px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #F6A27A, #DD6F45); box-shadow: 0 8px 20px rgba(221,111,69,.3); }
+.t-label { position: absolute; top: 548px; transform: translateX(-50%); font-size: 24px; font-weight: 800; letter-spacing: 2px; color: var(--mauve); }
+.pin { position: absolute; transform: translateX(-50%); text-align: center; width: 170px; }
+.pin img { width: 116px; height: 116px; border-radius: 50%; object-fit: cover; border: 6px solid #fff; box-shadow: 0 10px 24px rgba(90,50,55,.18); display: block; margin: 0 auto; }
+.pin b { font-family: var(--serif); font-size: 38px; font-weight: 600; margin-right: 6px; }
+.pin span { font-size: 21px; font-weight: 700; color: var(--mauve); }
+.pin .lbl { margin-top: 6px; white-space: nowrap; }
+.pin.up { top: 50px; } .pin.up::after { content: ""; position: absolute; left: 50%; top: 182px; width: 2px; height: 58px; background: var(--plum); opacity: .35; }
+.pin.down { top: 350px; } .pin.down::before { content: ""; position: absolute; left: 50%; top: -18px; width: 2px; height: 18px; background: var(--plum); opacity: .35; }
+.legend { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 0; }
+.legend div { background: var(--white); border-radius: 20px; padding: 24px 30px; font-size: 26px; font-weight: 600; line-height: 1.45; }
+.legend b { color: var(--rose); }
+
+/* B. 퍼스널컬러 매칭 */
+.seasons { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 60px; }
+.season { border-radius: 28px; padding: 38px 38px 34px; min-height: 330px; position: relative; }
+.season .name { font-size: 40px; font-weight: 800; letter-spacing: -1px; }
+.season .en { font-family: var(--serif); font-style: italic; font-size: 28px; opacity: .7; }
+.season .dots { display: flex; gap: 10px; margin: 18px 0 22px; }
+.season .dots i { width: 34px; height: 34px; border-radius: 50%; }
+.season .match { font-size: 28px; font-weight: 700; line-height: 1.45; }
+.season .match.none { font-weight: 500; opacity: .6; }
+.season .shade { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.75); border-radius: 999px; padding: 6px 18px 6px 6px; margin: 0 8px 10px 0; font-size: 24px; }
+.season .shade img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
+.season .best { position: absolute; top: 30px; right: 30px; font-size: 20px; font-weight: 800; color: #fff; background: var(--rose); border-radius: 999px; padding: 6px 16px; }
+.spring { background: #FCE6D6; } .summer { background: #EDE3F1; } .autumn { background: #F1DCCB; } .winter { background: #E4E2EE; }
+
+/* C. 3초 요약 */
+.tldr { background: var(--plum); color: #fff; }
+.tldr .kicker { color: var(--petal); }
+.tldr h2 { color: #fff; }
+.tldr .rows { margin-top: 56px; display: grid; gap: 20px; }
+.tldr .row { display: grid; grid-template-columns: 170px 1fr; align-items: center; gap: 30px; background: rgba(255,255,255,.07); border: 1.5px solid rgba(255,255,255,.12); border-radius: 26px; padding: 34px 40px; }
+.tldr .row .q { font-family: var(--serif); font-style: italic; font-size: 44px; color: var(--petal); font-weight: 500; }
+.tldr .row .a { font-size: 34px; font-weight: 700; line-height: 1.4; }
+.tldr .row .a small { display: block; font-size: 24px; font-weight: 500; color: rgba(255,255,255,.6); margin-top: 6px; }
+.tldr .chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+.tldr .chips span { font-size: 26px; font-weight: 700; border-radius: 999px; padding: 12px 24px; background: var(--petal); color: var(--plum); }
+.tldr .topbar .wordmark { color: #fff; }
+.tldr .pageno { color: rgba(255,255,255,.7); }
+.tldr .src { color: rgba(255,255,255,.45); }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<!-- A. 톤 온도계 -->
+<section class="card kick" data-name="A_tone_meter">
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>news</i></div><div class="pageno">Tone Meter</div></div>
+  <div class="kicker">TONE TEMPERATURE</div>
+  <h2>신상 4컬러<br/>웜쿨 온도 체크</h2>
+  <p class="lead">왼쪽일수록 따뜻하고, 오른쪽일수록 차가운 컬러예요.</p>
+  <div class="thermo">
+    <div class="t-bar"></div><div class="t-bulb"></div>
+    <div class="pin up" style="left:20%"><img src="img/lip_26.jpg" alt="" /><div class="lbl"><b>26</b><span>종강여신</span></div></div>
+    <div class="pin down" style="left:24%"><img src="img/lip_29.jpg" alt="" /><div class="lbl"><b>29</b><span>콩콩라떼</span></div></div>
+    <div class="pin up" style="left:49%"><img src="img/lip_30.jpg" alt="" /><div class="lbl"><b>30</b><span>드립 로즈</span></div></div>
+    <div class="pin down" style="left:62%"><img src="img/lip_28.jpg" alt="" /><div class="lbl"><b>28</b><span>장미야 두유해</span></div></div>
+    <div class="t-label" style="left:110px">WARM</div>
+    <div class="t-label" style="left:52%">NEUTRAL</div>
+    <div class="t-label" style="left:calc(100% - 60px)">COOL</div>
+  </div>
+  <div class="legend">
+    <div><b>웜톤</b>이라면 → 26 · 29</div>
+    <div><b>쿨톤</b>이라면 → 28 <small style="color:var(--mauve);font-weight:500">(30은 뉴트럴)</small></div>
+  </div>
+  <div class="src">* 페리페라 공식 컬러차트 위치 기준</div>
+</section>
+
+<!-- B. 퍼스널컬러 매칭 -->
+<section class="card kick" data-name="B_personal_color">
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>news</i></div><div class="pageno">Color Match</div></div>
+  <div class="kicker">PERSONAL COLOR</div>
+  <h2>내 퍼스널컬러엔<br/>몇 호가 맞을까?</h2>
+  <div class="seasons">
+    <div class="season spring">
+      <div class="name">봄 웜</div><div class="en">Spring warm</div>
+      <div class="dots"><i style="background:#F6A68A"></i><i style="background:#F8C27A"></i><i style="background:#F28C8C"></i></div>
+      <div class="match none">이번 신상보다는<br/>기존 21·22호 추천</div>
+    </div>
+    <div class="season summer">
+      <div class="best">BEST</div>
+      <div class="name">여름 쿨</div><div class="en">Summer cool</div>
+      <div class="dots"><i style="background:#E9B4C8"></i><i style="background:#C9A7D6"></i><i style="background:#D99AAE"></i></div>
+      <div><span class="shade"><img src="img/lip_28.jpg" alt="" />28 장미야 두유해</span></div>
+    </div>
+    <div class="season autumn">
+      <div class="best">BEST</div>
+      <div class="name">가을 웜</div><div class="en">Autumn warm</div>
+      <div class="dots"><i style="background:#C9825F"></i><i style="background:#B5705A"></i><i style="background:#D59A73"></i></div>
+      <div><span class="shade"><img src="img/lip_26.jpg" alt="" />26 종강여신</span><span class="shade"><img src="img/lip_29.jpg" alt="" />29 콩콩라떼</span></div>
+    </div>
+    <div class="season winter">
+      <div class="name">겨울 쿨</div><div class="en">Winter cool</div>
+      <div class="dots"><i style="background:#B2456E"></i><i style="background:#7E3A63"></i><i style="background:#C2557C"></i></div>
+      <div><span class="shade"><img src="img/lip_30.jpg" alt="" />30 드립 로즈</span><div class="match none" style="font-size:22px;margin-top:6px">딥한 뉴트럴이라 가을 웜도 OK</div></div>
+    </div>
+  </div>
+  <div class="src">* 공식 컬러차트(웜·쿨, 라이트·딥)를 바탕으로 한 에디터 추천이에요</div>
+</section>
+
+<!-- C. 3초 요약 -->
+<section class="card kick tldr" data-name="C_3sec_summary">
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>news</i></div><div class="pageno">3-Second Summary</div></div>
+  <div class="kicker">3초 요약</div>
+  <h2>바쁘면 이것만<br/>보고 가세요</h2>
+  <div class="rows">
+    <div class="row"><div class="q">What</div><div class="a">무드 글로이 틴트 신상 4컬러<small>페리페라 × CU 콜라보, 한정 2컬러 별도</small></div></div>
+    <div class="row"><div class="q">Point</div><div class="a">한 겹만 발라도 투명한 탱글광<small>가벼운 제형, 덧발라도 맑게</small></div></div>
+    <div class="row"><div class="q">Who</div><div class="a">웜 26·29 / 쿨 28 / 뉴트럴 30<small>뮤트하고 차분한 립 좋아하는 사람</small></div></div>
+    <div class="row"><div class="q">Price</div><div class="a">정가 13,000원<small>판매처·시기별로 달라요</small></div></div>
+  </div>
+  <div class="chips"><span>#가을립</span><span>#뮤트립</span><span>#글로이틴트</span></div>
+</section>
+
+</div>
+</body>
+</html>

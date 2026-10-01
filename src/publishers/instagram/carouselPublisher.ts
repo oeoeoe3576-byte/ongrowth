@@ -14,8 +14,8 @@ import { logEvent } from "../../logging/logger.js";
 export const instagramPublisher: Publisher = {
   platform: "instagram",
 
-  async checkAuth() {
-    return checkInstagramAuth();
+  async checkAuth(account?: string) {
+    return checkInstagramAuth(account);
   },
 
   async publish(post: QueuePost, images: string[], caption: string): Promise<PublishResult> {
@@ -31,7 +31,7 @@ export const instagramPublisher: Publisher = {
       return { ok: true, externalPostId: `dry-run-${post.id}` };
     }
 
-    const authCheck = await checkInstagramAuth();
+    const authCheck = await checkInstagramAuth(post.account);
     if (!authCheck.ok) {
       return { ok: false, errorCode: "AUTH_NOT_READY", errorMessage: authCheck.reason };
     }
@@ -45,7 +45,7 @@ export const instagramPublisher: Publisher = {
       };
     }
 
-    const auth = getInstagramAuthConfig()!;
+    const auth = getInstagramAuthConfig(post.account)!;
     const client = new InstagramClient(auth);
 
     try {

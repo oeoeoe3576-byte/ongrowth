@@ -35,6 +35,15 @@ publishing:
 instagram:
   enabled: false                # Access Token/계정 연결 전까지 false 유지. false여도 전체 파이프라인은 정상 동작해야 한다.
   graph_api_version: ""         # 구현 시점 최신 안정 버전을 확인 후 채울 것
+  # 여러 인스타 계정으로 발행할 때: 계정명(--account 값) → .env 변수 이름
+  # 여기 없는 계정은 기본 INSTAGRAM_ACCOUNT_ID / META_ACCESS_TOKEN 을 쓴다.
+  accounts:
+    domestic_where:
+      account_id_env: INSTAGRAM_ACCOUNT_ID
+      access_token_env: META_ACCESS_TOKEN
+    beauty_news:                # 뷰티 계정 아이디 확정되면 이름만 바꾸면 됨
+      account_id_env: INSTAGRAM_ACCOUNT_ID_BEAUTY
+      access_token_env: META_ACCESS_TOKEN_BEAUTY
 
 scheduler:
   poll_interval_seconds: 60

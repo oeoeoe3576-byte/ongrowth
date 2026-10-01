@@ -37,7 +37,7 @@ export async function runPreflight(post: QueuePost): Promise<PreflightResult> {
 
   try {
     const publisher = getPublisher(post.platform);
-    const auth = await publisher.checkAuth();
+    const auth = await publisher.checkAuth(post.account);
     // DRY_RUN에서는 인증 미비를 막지 않는다 (실제 업로드를 안 하므로) - 그 외에는 반드시 인증이 되어야 한다.
     if (!auth.ok && (process.env.DRY_RUN ?? "true").toLowerCase() === "false") {
       problems.push(`API 인증 확인 실패: ${auth.reason}`);

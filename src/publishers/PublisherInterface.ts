@@ -13,7 +13,7 @@ export interface PublishResult {
 
 export interface Publisher {
   platform: string;
-  /** 실제 발행 전 인증/설정 상태를 점검한다 (지시사항 36: API 인증 체크). */
-  checkAuth(): Promise<{ ok: boolean; reason?: string }>;
+  /** 실제 발행 전 인증/설정 상태를 점검한다 (지시사항 36: API 인증 체크). account를 주면 그 계정 기준으로 점검한다. */
+  checkAuth(account?: string): Promise<{ ok: boolean; reason?: string }>;
   publish(post: QueuePost, images: string[], caption: string): Promise<PublishResult>;
 }

@@ -39,6 +39,8 @@ export interface AppConfig {
   instagram: {
     enabled: boolean;
     graph_api_version: string;
+    /** 계정명(post.account) → 해당 계정의 ID/토큰이 들어있는 환경변수 이름 */
+    accounts?: Record<string, { account_id_env: string; access_token_env: string }>;
   };
   scheduler: {
     poll_interval_seconds: number;

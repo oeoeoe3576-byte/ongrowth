@@ -4,16 +4,18 @@ import { defaultTheme } from "./default.js";
 
 // 트렌드 (여행 계정용): 요즘 인스타 캐러셀 감성.
 // 표지 = 사진 전체 + 아주 굵은 흰 제목, 강조 단어는 연두 글자, 가운데에 검정 박스 한 줄(질문/훅), 제목 위 흰 한 줄.
-// 본문 = 연회색 바탕, 가운데 정렬, 굵은 검정 제목 → 얇은 테두리 사진 → 가운데 본문, 핵심 문장은 연두 형광펜.
+// 본문 = 흰 바탕 + 연민트 땡땡이, 가운데 정렬, 굵은 검정 제목 → 얇은 테두리 사진 → 가운데 본문, 핵심 문장은 연두 형광펜.
 // 쪽수는 인스타가 1/9로 보여주므로 카드에는 넣지 않고, 오른쪽 아래 연두 화살표로 넘김을 알린다.
 const GREEN = "#A6F2A2"; // 사진 위 강조 글자
 const GREEN_HL = "#C7F5D4"; // 밝은 바탕 형광펜
 const ARROW = "#74E3A4";
+// 본문 배경: 흰색 + 연민트 땡땡이 (사선으로 엇갈린 점, 90px 간격)
+const DOTS = `url("data:image/svg+xml,${encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'><circle cx='22' cy='22' r='6' fill='#D9F5E3'/><circle cx='67' cy='67' r='6' fill='#D9F5E3'/></svg>")}")`;
 
 export const trendTheme: DesignTheme = extendTheme(defaultTheme, {
   name: "trend",
   color: {
-    background: "#EFEFEF",
+    background: "#FFFFFF",
     surface: "#FFFFFF",
     primary: "#FFFFFF", // 표지(사진 없을 때)·마무리도 밝게
     secondary: "#DCDCDC",
@@ -55,6 +57,7 @@ export const trendTheme: DesignTheme = extendTheme(defaultTheme, {
 .cn-theme-trend .cn-rule { display: none; }
 .cn-theme-trend .cn-image { border-radius: 0; border: 2px solid #2A2A2A; }
 .cn-theme-trend.cn-tone-dark { --c-line: #DDDDDD; --c-surface: #F4F4F4; }
+.cn-theme-trend.cn-tone-light, .cn-theme-trend.cn-tone-dark { background-color: #FFFFFF; background-image: ${DOTS}; }
 .cn-theme-trend.cn-tone-dark .cn-em { background: var(--em-bg); color: inherit; }
 .cn-theme-trend.cn-tone-photo .cn-em { background: none; color: ${GREEN}; }
 .cn-theme-trend.cn-l-FOLLOW .cn-profile { border: 2px solid #E2E2E2; }

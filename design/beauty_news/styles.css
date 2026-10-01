@@ -443,3 +443,23 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 /* 본문 장 배경은 사진 1장만 (콜라주 금지, 2026-10-01 사용자 결정) */
 .bgimg.single img { opacity: .38; filter: saturate(.9); object-position: center 20%; }
 .bgimg.single::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(251,246,241,.45), rgba(251,246,241,.15) 45%, rgba(251,246,241,.45)); }
+/* 본문 장 배경을 표지처럼 진하게: 사진 그대로 + 아래쪽 블랙 그라데이션, 흰 글씨 */
+.points.dark { color: var(--white); }
+.bgimg.dark img { opacity: 1; filter: none; object-position: center 15%; }
+.bgimg.dark::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,10,14,.55) 0%, rgba(20,10,14,.35) 30%, rgba(20,10,14,.55) 55%, rgba(20,10,14,.88) 100%); }
+.points.dark .kicker { color: var(--petal); }
+.points.dark .kicker::before { background: var(--petal); }
+.points.dark h2 .hl { color: var(--petal); background: none; }
+.points.dark .topbar .wordmark { color: var(--white); }
+.points.dark .pageno, .points.dark .pageno b { color: rgba(255,255,255,.8); }
+.points.dark .item { background: rgba(255,255,255,.9); color: var(--plum); }
+/* P.S. 표시는 작게 (2026-10-01) */
+.ps .ps-mark { font-size: 110px; letter-spacing: -2px; margin-bottom: 10px; }
+.points.dark { padding-top: 520px; }
+.points.dark h2 { margin: 20px 0 30px; font-size: 64px; }
+.points.dark .items { gap: 14px; }
+.points.dark .item { padding: 22px 32px; grid-template-columns: 80px 1fr; }
+.points.dark .item h3 { margin-bottom: 4px; }
+.points.dark .item p { font-size: 25px; line-height: 1.5; }
+.bgimg.dark img { object-position: center 8%; }
+.bgimg.dark::after { background: linear-gradient(180deg, rgba(20,10,14,.35) 0%, rgba(20,10,14,0) 18%, rgba(20,10,14,0) 34%, rgba(20,10,14,.7) 52%, rgba(20,10,14,.9) 100%); }

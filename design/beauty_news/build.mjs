@@ -59,9 +59,9 @@ function cover() {
 function slide(s, i) {
   const n = i + 2, name = `${pad(n)}_${s.name || s.type}`;
   // 배경은 사진 1장만 쓴다 (콜라주 금지)
-  const bg = s.bg ? `<div class="bgimg single"><img src="${esc(Array.isArray(s.bg) ? s.bg[0] : s.bg)}" alt="" /></div>` : "";
+  const bg = s.bg ? `<div class="bgimg ${s.dark ? "dark" : "single"}"><img src="${esc(Array.isArray(s.bg) ? s.bg[0] : s.bg)}" alt="" /></div>` : "";
   if (s.type === "points") {
-    return `<section class="card points" data-name="${name}">${bg}${top(n)}<div class="kicker">${esc(s.kicker)}</div><h2>${md(s.title)}</h2>
+    return `<section class="card points${s.dark ? " dark" : ""}" data-name="${name}">${bg}${top(n)}<div class="kicker">${esc(s.kicker)}</div><h2>${md(s.title)}</h2>
   <div class="items">${s.items.map((it, k) => `<div class="item"><div class="n">${pad(k + 1)}</div><div><h3>${md(it.h)}</h3><p>${mdB(it.p)}</p></div></div>`).join("")}</div>
   ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ""}</section>`;
   }

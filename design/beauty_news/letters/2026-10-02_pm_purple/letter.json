@@ -94,12 +94,7 @@
         }
       ],
       "foot": "* 셀럽 메이크업 사례: 얼루어 코리아 (2026.09.30)",
-      "bg": [
-        "img/bg_ai1.jpg",
-        "img/bg_ai2.jpg",
-        "img/bg_ai3.jpg",
-        "img/bg_ai4.jpg"
-      ]
+      "bg": "img/bg_trend.jpg"
     },
     {
       "type": "points",

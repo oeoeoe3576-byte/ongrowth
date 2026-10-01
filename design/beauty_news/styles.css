@@ -440,3 +440,6 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 .bgimg.collage { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
 .bgimg.collage img { position: static; opacity: .16; filter: saturate(.8); }
 .bgimg.collage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(251,246,241,.55), rgba(251,246,241,.25) 40%, rgba(251,246,241,.55)); }
+/* 본문 장 배경은 사진 1장만 (콜라주 금지, 2026-10-01 사용자 결정) */
+.bgimg.single img { opacity: .38; filter: saturate(.9); object-position: center 20%; }
+.bgimg.single::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(251,246,241,.45), rgba(251,246,241,.15) 45%, rgba(251,246,241,.45)); }

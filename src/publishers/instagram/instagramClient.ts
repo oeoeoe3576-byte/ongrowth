@@ -11,7 +11,16 @@
 
 import type { InstagramAuthConfig } from "./auth.js";
 
-const GRAPH_BASE = "https://graph.facebook.com";
+// 토큰 종류에 따라 호스트가 다르다.
+// - Instagram 로그인 방식 토큰(IGAA…): graph.instagram.com
+// - Facebook 로그인 방식 토큰(EAA…):   graph.facebook.com
+// 엔드포인트 경로(/{ig-user-id}/media, /media_publish)는 두 방식이 같다.
+const FACEBOOK_GRAPH_BASE = "https://graph.facebook.com";
+const INSTAGRAM_GRAPH_BASE = "https://graph.instagram.com";
+
+export function graphBaseFor(accessToken: string): string {
+  return accessToken.startsWith("IG") ? INSTAGRAM_GRAPH_BASE : FACEBOOK_GRAPH_BASE;
+}
 
 export interface GraphApiError {
   message: string;
@@ -39,7 +48,7 @@ export class InstagramClient {
   constructor(private auth: InstagramAuthConfig) {}
 
   private endpoint(path: string): string {
-    return `${GRAPH_BASE}/${this.auth.graphApiVersion}/${path}`;
+    return `${graphBaseFor(this.auth.accessToken)}/${this.auth.graphApiVersion}/${path}`;
   }
 
   /** 캐러셀 항목 하나(이미지)를 컨테이너로 등록한다. imageUrl은 공개적으로 접근 가능한 HTTPS URL이어야 한다. */

@@ -33,9 +33,10 @@
       "channel": "blog",
       "topic": "검색되는 블로그 제목, 이 순서로 쓰세요",
       "angle": "키워드 → 대상 → 얻는 것 순서로 제목 짓기",
-      "status": "review",
+      "status": "approved",
       "date": "2026-10-01",
-      "content_id": "CN-20261001-002"
+      "content_id": "CN-20261001-002",
+      "publish_at": "2026-10-01 19:01"
     },
     {
       "id": "B02",

@@ -1,0 +1,158 @@
+{
+  "brand": "travel",
+  "category": "travel",
+  "objective": "SAVE",
+  "target": "주말·연휴에 국내 여행을 계획하는 20~30대",
+  "maxPages": 10,
+  "reviewTime": "09:00",
+  "publishTime": "18:30",
+  "timezone": "Asia/Seoul",
+  "channels": {
+    "stay": "숙소",
+    "festival": "축제·행사",
+    "course": "여행 코스"
+  },
+  "weekly": {
+    "tue": "stay",
+    "thu": "festival",
+    "sat": "course"
+  },
+  "rules": [
+    "그 주·그 달 시즌에 맞는 내용만 쓴다 (지금 갈 수 있는 곳, 지금 볼 수 있는 것)",
+    "축제·행사는 날짜·장소·운영 시간을 지자체 또는 한국관광공사(visitkorea) 공식 페이지에서 확인하고 source에 주소를 적는다. 확인 못 한 항목은 쓰지 않는다",
+    "숙소·가게 가격, 예약 가능 여부, 운영 여부처럼 바뀌는 정보는 공식 출처로 확인한 경우만 쓰고, 그래도 fact_check NEEDS_CHECK로 표시한다",
+    "광고·협찬처럼 보이는 표현(최저가, 무조건, 강력 추천)은 쓰지 않는다",
+    "사진은 직접 찍은 사진 또는 무료 사진(Pexels 등)만 쓰고, 다른 계정·블로그 사진은 쓰지 않는다",
+    "마무리 멘트에 업로드 횟수(매주, 매일 등)를 쓰지 않고, 매번 표현을 바꾼다",
+    "제목은 뜻 단위로 줄바꿈(\\n)한다",
+    "최근 14일 안에 다룬 장소·주제와 겹치지 않게 한다"
+  ],
+  "backlog": [
+    {
+      "id": "S01",
+      "channel": "stay",
+      "topic": "단풍 명소 바로 옆, 가을에 묵기 좋은 숙소",
+      "angle": "아침 일찍 단풍길을 걷기 좋은 위치 중심. 지역별 1곳씩",
+      "status": "todo"
+    },
+    {
+      "id": "S02",
+      "channel": "stay",
+      "topic": "서울 근교 1박, 불멍 되는 감성 숙소",
+      "angle": "2시간 안쪽, 저녁이 쌀쌀해지는 10월에 맞게",
+      "status": "todo"
+    },
+    {
+      "id": "S03",
+      "channel": "stay",
+      "topic": "바다 보며 쉬는 가을 오션뷰 숙소",
+      "angle": "사람 적은 가을 바다. 동해·남해·서해 고르게",
+      "status": "todo"
+    },
+    {
+      "id": "S04",
+      "channel": "stay",
+      "topic": "한옥에서 하룻밤, 한옥 스테이 고르는 법",
+      "angle": "경주·전주·안동 등. 고를 때 볼 것 위주",
+      "status": "todo"
+    },
+    {
+      "id": "S05",
+      "channel": "stay",
+      "topic": "쌀쌀해질 때 가는 온천 숙소",
+      "angle": "11월용. 숙소 안에서 온천 가능한 곳",
+      "status": "todo"
+    },
+    {
+      "id": "S06",
+      "channel": "stay",
+      "topic": "반려견과 함께 묵는 숙소 체크리스트",
+      "angle": "동반 조건(크기·마릿수·추가 요금) 확인법",
+      "status": "todo"
+    },
+    {
+      "id": "F01",
+      "channel": "festival",
+      "topic": "이번 주말 가볼 만한 가을 축제",
+      "angle": "10월 둘째 주 주말 기준. 지역 고르게 3~5곳",
+      "status": "todo"
+    },
+    {
+      "id": "F02",
+      "channel": "festival",
+      "topic": "억새·코스모스, 가을꽃 축제 모음",
+      "angle": "10월 중순 개화 시기에 맞는 꽃 축제",
+      "status": "todo"
+    },
+    {
+      "id": "F03",
+      "channel": "festival",
+      "topic": "먹으러 가는 가을 먹거리 축제",
+      "angle": "지역 특산물 축제. 날짜·장소 공식 확인",
+      "status": "todo"
+    },
+    {
+      "id": "F04",
+      "channel": "festival",
+      "topic": "밤에 더 예쁜 빛·불꽃 축제",
+      "angle": "야간 행사 위주, 운영 시간 꼭 표기",
+      "status": "todo"
+    },
+    {
+      "id": "F05",
+      "channel": "festival",
+      "topic": "10월 마지막 주 가볼 만한 축제",
+      "angle": "10월 말 기준",
+      "status": "todo"
+    },
+    {
+      "id": "F06",
+      "channel": "festival",
+      "topic": "11월 단풍 축제와 행사",
+      "angle": "11월 초 단풍 절정 시기 행사",
+      "status": "todo"
+    },
+    {
+      "id": "C01",
+      "channel": "course",
+      "topic": "서울에서 2시간, 단풍 1박 2일 코스",
+      "angle": "출발 시간·동선 중심. 붐비는 시간 피하기",
+      "status": "todo"
+    },
+    {
+      "id": "C02",
+      "channel": "course",
+      "topic": "사진 잘 나오는 억새 명소 당일치기",
+      "angle": "빛 좋은 시간대(해 질 녘) 안내",
+      "status": "todo"
+    },
+    {
+      "id": "C03",
+      "channel": "course",
+      "topic": "가을 바다 드라이브 코스",
+      "angle": "해안 도로 + 들를 곳 3곳",
+      "status": "todo"
+    },
+    {
+      "id": "C04",
+      "channel": "course",
+      "topic": "경주 가을 1박 2일 코스",
+      "angle": "걷기 좋은 동선, 야경 포함",
+      "status": "todo"
+    },
+    {
+      "id": "C05",
+      "channel": "course",
+      "topic": "비 와도 괜찮은 실내 여행 코스",
+      "angle": "박물관·전시·카페 등 날씨 걱정 없는 곳",
+      "status": "todo"
+    },
+    {
+      "id": "C06",
+      "channel": "course",
+      "topic": "11월 단풍 절정 코스",
+      "angle": "남쪽으로 내려가는 늦가을 단풍",
+      "status": "todo"
+    }
+  ]
+}

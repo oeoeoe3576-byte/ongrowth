@@ -96,12 +96,28 @@ export class InstagramClient {
     return json.id as string;
   }
 
-  /** 컨테이너를 실제로 게시한다. */
-  async publishContainer(creationId: string): Promise<string> {
-    const json = await graphPost(this.endpoint(`${this.auth.accountId}/media_publish`), {
-      creation_id: creationId,
-      access_token: this.auth.accessToken,
-    });
-    return json.id as string;
+  /**
+   * 컨테이너를 실제로 게시한다.
+   * 처리 완료(FINISHED) 직후에도 'Media ID is not available'(code 9007)이 나올 수 있다 (아직 게시 준비 전).
+   * 이 오류는 게시가 일어나지 않은 상태라 같은 컨테이너로 잠시 뒤 다시 시도해도 중복 게시되지 않는다.
+   */
+  async publishContainer(creationId: string, tries = 8, intervalMs = 15000): Promise<string> {
+    for (let i = 0; ; i++) {
+      try {
+        const json = await graphPost(this.endpoint(`${this.auth.accountId}/media_publish`), {
+          creation_id: creationId,
+          access_token: this.auth.accessToken,
+        });
+        return json.id as string;
+      } catch (e) {
+        const g = (e as { graphError?: GraphApiError }).graphError;
+        const notReady = g?.code === 9007 || /Media ID is not available/i.test(g?.message ?? (e as Error).message);
+        if (!notReady || i >= tries - 1) {
+          if (g) (e as Error).message = `${(e as Error).message} (code ${g.code ?? "?"}${g.error_subcode ? `/${g.error_subcode}` : ""})`;
+          throw e;
+        }
+        await new Promise((r) => setTimeout(r, intervalMs));
+      }
+    }
   }
 }

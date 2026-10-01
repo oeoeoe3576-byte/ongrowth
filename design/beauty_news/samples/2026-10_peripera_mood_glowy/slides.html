@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>페리페라 무드 글로이 틴트 신상 컬러 — 카드뉴스</title>
+<!--
+  조합: 신제품 소식형 (표지 → 제품 → 컬러 → 포인트 → 사용 팁 → 마무리)
+  이미지 출처: 페리페라 공식몰(클럽클리오) 상품 상세페이지 — sources.md 참고
+  협찬 아님 → #광고 배지/고지 없음
+-->
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+/* 이 샘플에서만 쓰는 보정 */
+.cover-cut { background: var(--blush); }
+.cover-cut .glow {
+  position: absolute; right: -160px; top: 120px; width: 820px; height: 820px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 68%);
+}
+.cover-cut .cut { position: absolute; right: 110px; top: 70px; width: 420px; transform: rotate(-6deg); z-index: 1; filter: drop-shadow(0 30px 40px rgba(120,60,50,.22)); }
+.cover-cut .body { position: absolute; left: var(--pad); right: var(--pad); bottom: 170px; z-index: 2; }
+.cover-cut h1 { font-size: 100px; line-height: 1.16; font-weight: 800; letter-spacing: -3.5px; margin: 30px 0 34px; }
+.cover-cut p { font-size: 34px; color: var(--mauve); font-weight: 500; line-height: 1.5; }
+.new-badge {
+  position: absolute; left: var(--pad); top: 190px; z-index: 2;
+  font-family: var(--serif); font-style: italic; font-size: 44px; font-weight: 600; color: var(--rose);
+  border: 2px solid var(--rose); border-radius: 999px; padding: 6px 30px 10px;
+}
+
+.product .cut-img { position: absolute; left: 50%; top: 140px; transform: translateX(-50%); width: 560px; filter: drop-shadow(0 30px 40px rgba(120,60,50,.2)); }
+.product .tag-float b { font-size: 56px; }
+
+.swatches.photo .chip { height: auto; aspect-ratio: 1; overflow: hidden; box-shadow: none; }
+.swatches.photo .chip::after { display: none; }
+.swatches.photo .chip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.swatches.photo { gap: 20px; margin-bottom: 44px; }
+.swatches.photo .no { font-size: 46px; margin-top: 16px; }
+.swatches.photo .ko { font-size: 25px; font-weight: 700; margin-top: 2px; }
+.swatches.photo .desc { font-size: 20px; font-family: var(--serif); font-style: italic; font-size: 24px; }
+.spec .spec-row { font-size: 29px; padding: 26px 4px; }
+
+.point .photo-wrap { background: #fff; }
+.point .photo-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.point .photo-wrap::after { background: linear-gradient(180deg, transparent 70%, var(--cream)); }
+
+.tip { padding: 240px var(--pad) 0; }
+.tip h2 { font-size: 72px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 26px 0 50px; }
+.tip-card { background: var(--white); border-radius: 26px; padding: 40px 44px; margin-bottom: 26px; }
+.tip-card .t { display: flex; align-items: baseline; gap: 18px; margin-bottom: 14px; }
+.tip-card .t b { font-family: var(--serif); font-size: 46px; font-weight: 600; color: var(--rose); }
+.tip-card .t span { font-size: 32px; font-weight: 800; }
+.tip-card .t small { font-size: 22px; color: var(--mauve); font-weight: 600; margin-left: auto; letter-spacing: 1px; }
+.tip-card li { list-style: none; font-size: 28px; line-height: 1.55; color: #4b3a40; font-weight: 500; padding-left: 30px; position: relative; }
+.tip-card li::before { content: "✓"; position: absolute; left: 0; color: var(--rose); font-weight: 800; }
+.notice { background: var(--blush); border-radius: 22px; padding: 30px 40px; font-size: 26px; line-height: 1.55; font-weight: 500; color: #4b3a40; }
+.notice b { color: var(--rose); }
+
+.outro .credit { position: absolute; bottom: 56px; left: var(--pad); right: var(--pad); font-size: 21px; color: rgba(255,255,255,.45); }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<!-- 01 표지 (누끼 + 타이포) -->
+<section class="card cover-cut" data-name="01_cover">
+  <div class="glow"></div>
+  <img class="cut" src="img/product_cutout.png" alt="" />
+  <div class="topbar">
+    <div class="wordmark">BEAUTY <i>news</i></div>
+    <div class="pageno">New Color</div>
+  </div>
+  <div class="new-badge">New!</div>
+  <div class="body">
+    <div class="kicker">PERIPERA × CU</div>
+    <h1>푸딩처럼 탱글한<br/><span class="hl">무드 글로이 틴트</span><br/>신상 컬러 나왔다</h1>
+    <p>신규 4컬러에 한정 2컬러까지, 한 번에 정리했어요.</p>
+  </div>
+  <div class="footbar"><span class="wordmark">BEAUTY NEWS</span><span>옆으로 넘겨보기 →</span></div>
+</section>
+
+<!-- 02 제품 소개 -->
+<section class="card product" data-name="02_product">
+  <div class="stage">
+    <div data-slot="photo" class="ph-soft"></div>
+    <img class="cut-img" src="img/product_cutout.png" alt="" />
+    <div class="tag-float"><b>NEW</b><span>4 colors</span></div>
+  </div>
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>news</i></div><div class="pageno"><b>02</b> / 06</div></div>
+  <div class="caption-box">
+    <div class="kicker">한 겹만 발라도 투명한 탱글광</div>
+    <h2>페리페라 <span class="hl">무드 글로이 틴트</span>,<br/>CU 콜라보 신상 컬러</h2>
+    <p>제형은 더 가볍게, 광은 더 예쁘게. 칙칙함 걱정 없이 맑게 올라가는 글로이 틴트예요.</p>
+  </div>
+</section>
+
+<!-- 03 신상 컬러 -->
+<section class="card spec" data-name="03_colors">
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>news</i></div><div class="pageno"><b>03</b> / 06</div></div>
+  <div class="kicker">NEW COLORS</div>
+  <h2>이번 신상 4컬러,<br/>내 취향은 몇 호?</h2>
+  <div class="swatches photo">
+    <div class="swatch"><div class="chip"><img src="img/lip_26.jpg" alt="" /></div><div class="no">26</div><div class="ko">종강여신</div><div class="desc">Finals queen</div></div>
+    <div class="swatch"><div class="chip"><img src="img/lip_28.jpg" alt="" /></div><div class="no">28</div><div class="ko">장미야 두유해</div><div class="desc">Rosy soy milk</div></div>
+    <div class="swatch"><div class="chip"><img src="img/lip_29.jpg" alt="" /></div><div class="no">29</div><div class="ko">콩콩라떼</div><div class="desc">Soy latte</div></div>
+    <div class="swatch"><div class="chip"><img src="img/lip_30.jpg" alt="" /></div><div class="no">30</div><div class="ko">드립 로즈</div><div class="desc">Drip rose</div></div>
+  </div>
+  <div class="spec-table">
+    <div class="spec-row"><span class="k rose">가격</span><span class="price">13,000원</span><span style="color:var(--mauve);font-size:24px">정가 기준</span></div>
+    <div class="spec-row"><span class="k">컬러</span><span><b>신규 4종</b> + 한정 2종 (-01, -02)</span></div>
+    <div class="spec-row"><span class="k">추천</span><span>차분한 <b>뮤트</b>는 26·28·29, <b>로지</b> 무드는 30</span></div>
+  </div>
+  <div class="footbar"><span>* 가격은 판매처·시기에 따라 다를 수 있어요</span><span>@beauty_news</span></div>
+</section>
+
+<!-- 04 제형 포인트 -->
+<section class="card point" data-name="04_texture">
+  <div class="photo-wrap"><img src="img/texture.jpg" alt="" /></div>
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>news</i></div><div class="pageno"><b>04</b> / 06</div></div>
+  <div class="num">01</div>
+  <div class="body">
+    <div class="label">TEXTURE POINT</div>
+    <h2>가볍지만 확실한 광,<br/><span class="mark">탱글 푸딩광</span></h2>
+    <div class="reco">N번 덧발라도 맑게</div>
+    <p>가벼운 제형에 확실한 광감으로 입술 주름을 커버해 매끈하게 연출해줘요. 여러 번 덧발라도 탁해지지 않고 맑게 올라가는 게 포인트!</p>
+  </div>
+  <div class="footbar"><span></span><span>@beauty_news</span></div>
+</section>
+
+<!-- 05 사용 팁 -->
+<section class="card tip" data-name="05_tip">
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>news</i></div><div class="pageno"><b>05</b> / 06</div></div>
+  <div class="kicker">HOW TO USE</div>
+  <h2>알고 쓰면 더 예쁜<br/>한정 컬러 꿀팁</h2>
+  <div class="tip-card">
+    <div class="t"><b>-01</b><span>유리멘탈</span><small>LIMITED</small></div>
+    <ul><li>베이스로 깔면 경계가 사르르, 내추럴 그라데이션 립</li><li>다크닝 방지용 립 베이스로도 활용</li></ul>
+  </div>
+  <div class="tip-card">
+    <div class="t"><b>-02</b><span>강철멘탈</span><small>LIMITED</small></div>
+    <ul><li>베이스로 쓰면 분위기 한 톤 UP</li><li>채도 높은 쨍한 립 무드를 차분하게 조절</li></ul>
+  </div>
+  <div class="notice"><b>잠깐!</b> 색소 함량이 적은 12·13·26호는 팁 주변에 색소가 몰려 보일 수 있어요. 사용 전 <b>2~3회 충분히 섞어서</b> 바르세요.</div>
+</section>
+
+<!-- 06 마무리 -->
+<section class="card outro" data-name="06_outro">
+  <div class="wordmark">BEAUTY <i>news</i></div>
+  <div class="inner">
+    <div class="save-icon"></div>
+    <h2>저장해두고<br/><em>쇼핑할 때</em> 꺼내보세요</h2>
+    <p>매주 새로 나온 뷰티 소식을<br/>가장 빠르게 정리해드려요.</p>
+    <div class="follow">@beauty_news 팔로우</div>
+  </div>
+  <div class="credit">이미지 출처: 페리페라 공식몰(클럽클리오) 상품 상세페이지</div>
+</section>
+
+</div>
+</body>
+</html>

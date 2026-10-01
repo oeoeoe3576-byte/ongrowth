@@ -1,0 +1,255 @@
+/* 뷰티 뉴스 카드뉴스 공통 스타일 (slides.html / samples/* 공용) */
+@font-face { font-family: "Pretendard"; font-weight: 400; src: url(fonts/Pretendard-Regular.woff2) format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 500; src: url(fonts/Pretendard-Medium.woff2) format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 600; src: url(fonts/Pretendard-SemiBold.woff2) format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 700; src: url(fonts/Pretendard-Bold.woff2) format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 800; src: url(fonts/Pretendard-ExtraBold.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant"; font-weight: 500; src: url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant"; font-weight: 600; src: url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant"; font-weight: 500; font-style: italic; src: url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant"; font-weight: 600; font-style: italic; src: url(fonts/cormorant-garamond-latin-600-italic.woff2) format("woff2"); }
+
+:root {
+  /* 컬러 토큰 */
+  --cream: #FBF6F1;      /* 기본 배경 */
+  --blush: #F5DCDD;      /* 보조 배경 */
+  --petal: #F8BFCB;      /* 사진 위 강조(키워드) */
+  --rose: #CF3F64;       /* 포인트 컬러: 라벨, 숫자, 키워드 */
+  --plum: #2A1A20;       /* 본문 텍스트 */
+  --mauve: #8B6E75;      /* 보조 텍스트 */
+  --line: #EADBD5;       /* 구분선 */
+  --white: #FFFFFF;
+
+  /* 타이포 */
+  --sans: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+  --serif: "Cormorant", "Times New Roman", serif;
+
+  /* 여백 */
+  --pad: 80px;
+
+  /* 브랜드 (계정 확정되면 여기만 수정) */
+  --brand: "BEAUTY NEWS";
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-break: keep-all; -webkit-font-smoothing: antialiased; }
+.sheet { display: flex; flex-wrap: wrap; gap: 40px; padding: 40px; }
+
+.card {
+  position: relative; width: 1080px; height: 1350px; overflow: hidden;
+  background: var(--cream); flex: none;
+}
+
+/* ───────── 공통 요소 ───────── */
+.wordmark { font-family: var(--serif); font-weight: 600; font-size: 34px; letter-spacing: 7px; }
+.wordmark i { font-style: italic; font-weight: 500; letter-spacing: 2px; }
+.topbar {
+  position: absolute; top: 64px; left: var(--pad); right: var(--pad); z-index: 3;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footbar {
+  position: absolute; bottom: 56px; left: var(--pad); right: var(--pad); z-index: 3;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 22px; font-weight: 500; color: var(--mauve); letter-spacing: .5px;
+}
+.footbar .wordmark { font-size: 24px; letter-spacing: 5px; color: var(--plum); }
+.pageno { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 30px; color: var(--mauve); }
+.pageno b { color: var(--rose); font-weight: 600; }
+
+.ad-badge {
+  font-size: 22px; font-weight: 700; padding: 8px 18px; border-radius: 999px;
+  border: 2px solid currentColor; letter-spacing: 1px;
+}
+.kicker {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-size: 28px; font-weight: 700; color: var(--rose); letter-spacing: 1px;
+}
+.kicker::before { content: ""; width: 36px; height: 2px; background: currentColor; }
+.hl { color: var(--rose); }
+.mark {
+  background: linear-gradient(transparent 58%, rgba(207,63,100,.18) 58%, rgba(207,63,100,.18) 92%, transparent 92%);
+}
+
+/* 사진 자리 (실제 이미지로 교체) */
+[data-slot="photo"] { position: absolute; inset: 0; overflow: hidden; }
+[data-slot="photo"] img { width: 100%; height: 100%; object-fit: cover; }
+.ph-warm {
+  background:
+    radial-gradient(ellipse 50% 40% at 30% 35%, #f3d9cc 0%, transparent 70%),
+    radial-gradient(ellipse 45% 35% at 75% 25%, #e9b9b4 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 60% 75%, #a07e72 0%, transparent 70%),
+    linear-gradient(160deg, #d8b8a8, #6f5149);
+}
+.ph-soft {
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 45%, #fff 0%, transparent 70%),
+    linear-gradient(180deg, #f6e7df, #ead2c8);
+}
+.ph-mood {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(255,214,160,.55) 0%, transparent 35%),
+    radial-gradient(circle at 25% 60%, rgba(255,200,150,.35) 0%, transparent 30%),
+    linear-gradient(170deg, #5b463c, #241a16);
+}
+.ph-label {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-size: 22px; font-weight: 600; letter-spacing: 4px; color: rgba(255,255,255,.55);
+  border: 1.5px dashed rgba(255,255,255,.5); padding: 14px 26px; border-radius: 6px;
+}
+.ph-soft .ph-label { color: rgba(42,26,32,.35); border-color: rgba(42,26,32,.25); }
+
+/* ───────── 01 표지 (사진형) ───────── */
+.cover-photo { color: var(--white); }
+.cover-photo .shade {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(20,10,14,.45) 0%, rgba(20,10,14,0) 22%, rgba(20,10,14,0) 42%, rgba(20,10,14,.82) 100%);
+}
+.cover-photo .ad-badge { color: var(--white); }
+.cover-photo .body { position: absolute; left: var(--pad); right: var(--pad); bottom: 150px; z-index: 2; }
+.cover-photo .eyebrow { font-size: 34px; font-weight: 600; color: var(--petal); margin-bottom: 26px; }
+.cover-photo h1 { font-size: 104px; line-height: 1.16; font-weight: 800; letter-spacing: -3px; }
+.cover-photo h1 em { font-style: normal; color: var(--petal); }
+.cover-photo .meta {
+  margin-top: 40px; padding-top: 28px; border-top: 1.5px solid rgba(255,255,255,.35);
+  display: flex; justify-content: space-between;
+  font-family: var(--serif); font-style: italic; font-size: 30px; color: rgba(255,255,255,.8);
+}
+.cover-photo .footbar { color: rgba(255,255,255,.7); }
+.cover-photo .footbar .wordmark { color: var(--white); }
+
+/* ───────── 02 표지 (타이포형: 사진 없을 때 / 트렌드 이슈) ───────── */
+.cover-type { background: var(--blush); }
+.cover-type .issue-no {
+  position: absolute; top: 200px; left: var(--pad);
+  font-family: var(--serif); font-weight: 500; font-size: 300px; line-height: .9; color: var(--rose); letter-spacing: -6px;
+}
+.cover-type .issue-no i { font-size: 120px; letter-spacing: 0; vertical-align: top; margin-left: 12px; }
+.cover-type .body { position: absolute; left: var(--pad); right: var(--pad); top: 560px; }
+.cover-type h1 { font-size: 112px; line-height: 1.14; font-weight: 800; letter-spacing: -4px; margin: 36px 0 44px; }
+.cover-type p { font-size: 36px; line-height: 1.55; color: var(--mauve); font-weight: 500; }
+.cover-type .ring {
+  position: absolute; right: -180px; top: 120px; width: 620px; height: 620px; border-radius: 50%;
+  border: 2px solid rgba(207,63,100,.25);
+}
+.cover-type .ring.two { right: -120px; top: 180px; width: 500px; height: 500px; border-color: rgba(207,63,100,.15); }
+
+/* ───────── 03 제품 소개 ───────── */
+.product .stage { position: absolute; left: 0; right: 0; top: 0; height: 960px; }
+.product .stage .ph-soft { position: absolute; inset: 0; }
+.tube {
+  position: absolute; left: 50%; top: 170px; transform: translateX(-50%) rotate(-8deg);
+  width: 230px; height: 600px;
+}
+.tube .cap { position: absolute; bottom: 0; left: 40px; width: 150px; height: 130px; background: #1f1a1c; border-radius: 10px 10px 24px 24px; }
+.tube .body-t {
+  position: absolute; bottom: 120px; left: 0; width: 230px; height: 480px;
+  background: linear-gradient(90deg, #2a2427, #3d3539 45%, #221d20);
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%); border-radius: 8px;
+}
+.tube .crimp { position: absolute; top: 0; left: -6px; width: 242px; height: 34px; background: repeating-linear-gradient(90deg, #191416 0 6px, #2c2629 6px 12px); border-radius: 4px; }
+.tube .lbl {
+  position: absolute; top: 120px; left: 0; width: 230px; text-align: center; color: #fff;
+  font-family: var(--serif); font-weight: 600; font-size: 40px; letter-spacing: 3px; line-height: 1.1;
+}
+.tube .lbl small { display: block; font-family: var(--sans); font-size: 16px; letter-spacing: 3px; color: var(--petal); margin-top: 14px; font-weight: 600; }
+.product .floor { position: absolute; left: 50%; top: 790px; transform: translateX(-50%); width: 420px; height: 46px; border-radius: 50%; background: radial-gradient(rgba(80,50,45,.28), transparent 70%); }
+.product .tag-float {
+  position: absolute; z-index: 2; top: 210px; right: 110px; width: 190px; height: 190px; border-radius: 50%;
+  background: var(--rose); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transform: rotate(10deg); box-shadow: 0 16px 40px rgba(207,63,100,.3);
+}
+.product .tag-float b { font-family: var(--serif); font-size: 64px; font-weight: 600; line-height: 1; }
+.product .tag-float span { font-size: 22px; font-weight: 700; margin-top: 6px; }
+.product .caption-box {
+  position: absolute; left: var(--pad); right: var(--pad); top: 900px; z-index: 2;
+  background: var(--white); border-radius: 28px; padding: 52px 56px 48px;
+  box-shadow: 0 24px 60px rgba(90,50,55,.12);
+}
+.product .caption-box .kicker { font-size: 24px; margin-bottom: 22px; }
+.product .caption-box h2 { font-size: 54px; line-height: 1.32; font-weight: 800; letter-spacing: -1.5px; }
+.product .caption-box p { font-size: 30px; color: var(--mauve); margin-top: 18px; line-height: 1.5; font-weight: 500; }
+
+/* ───────── 04 스펙 · 컬러칩 ───────── */
+.spec { padding: 180px var(--pad) 0; }
+.spec h2 { font-size: 72px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 26px 0 56px; }
+.swatches { display: flex; gap: 28px; margin-bottom: 52px; }
+.swatch { flex: 1; text-align: center; }
+.swatch .chip {
+  height: 210px; border-radius: 26px; position: relative;
+  box-shadow: inset 0 -30px 50px rgba(0,0,0,.06);
+}
+.swatch .chip::after {
+  content: ""; position: absolute; left: 22px; top: 22px; width: 70px; height: 24px; border-radius: 20px;
+  background: rgba(255,255,255,.45); filter: blur(6px);
+}
+.swatch .no { font-family: var(--serif); font-size: 52px; font-weight: 600; margin-top: 22px; }
+.swatch .desc { font-size: 24px; color: var(--mauve); font-weight: 500; margin-top: 4px; }
+.spec-table { border-top: 2px solid var(--plum); }
+.spec-row { display: flex; align-items: center; gap: 30px; padding: 30px 4px; border-bottom: 1.5px solid var(--line); font-size: 32px; font-weight: 500; }
+.spec-row .k {
+  flex: none; width: 116px; text-align: center; font-size: 24px; font-weight: 700; color: #fff;
+  background: var(--plum); border-radius: 999px; padding: 9px 0;
+}
+.spec-row .k.rose { background: var(--rose); }
+.spec-row b { font-weight: 800; }
+.spec-row .price { font-size: 44px; font-weight: 800; color: var(--rose); letter-spacing: -1px; }
+
+/* ───────── 05 트렌드 포인트 (사진+본문) ───────── */
+.point .photo-wrap { position: absolute; left: 0; right: 0; top: 0; height: 700px; }
+.point .photo-wrap::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, var(--cream)); }
+.point .num {
+  position: absolute; left: var(--pad); top: 600px; z-index: 2;
+  font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 200px; line-height: 1; color: var(--rose);
+}
+.point .body { position: absolute; left: var(--pad); right: var(--pad); top: 830px; }
+.point .label { font-size: 26px; font-weight: 700; letter-spacing: 3px; color: var(--mauve); margin-bottom: 16px; }
+.point h2 { font-size: 70px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin-bottom: 26px; }
+.point .reco {
+  display: inline-block; font-size: 28px; font-weight: 700; color: var(--rose);
+  background: rgba(207,63,100,.09); border-radius: 12px; padding: 12px 20px; margin-bottom: 26px;
+}
+.point p { font-size: 32px; line-height: 1.6; color: #4b3a40; font-weight: 500; }
+
+/* ───────── 06 에디터 리뷰 ───────── */
+.review { padding: 190px var(--pad) 0; }
+.review h2 { font-size: 72px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 26px 0 56px; }
+.scores { background: var(--white); border-radius: 28px; padding: 44px 52px; margin-bottom: 44px; }
+.score { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 32px; font-weight: 700; }
+.score + .score { border-top: 1.5px solid var(--line); }
+.dots { display: flex; gap: 12px; }
+.dots i { width: 30px; height: 30px; border-radius: 50%; background: var(--line); }
+.dots i.on { background: var(--rose); }
+.dots i.half { background: linear-gradient(90deg, var(--rose) 50%, var(--line) 50%); }
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.pc { border-radius: 24px; padding: 36px 36px; }
+.pc.good { background: var(--blush); }
+.pc.bad { background: #EFE8E4; }
+.pc h3 { font-size: 28px; font-weight: 800; margin-bottom: 18px; }
+.pc.good h3 { color: var(--rose); }
+.pc.bad h3 { color: var(--mauve); }
+.pc li { list-style: none; font-size: 28px; line-height: 1.5; font-weight: 500; padding-left: 34px; position: relative; margin-top: 8px; }
+.pc li::before { position: absolute; left: 0; font-weight: 800; }
+.pc.good li::before { content: "✓"; color: var(--rose); }
+.pc.bad li::before { content: "–"; color: var(--mauve); }
+.one-line {
+  margin-top: 40px; font-family: var(--serif); font-style: italic; font-size: 34px; color: var(--mauve); text-align: center;
+}
+.one-line span { font-family: var(--sans); font-style: normal; font-weight: 700; color: var(--plum); font-size: 32px; }
+
+/* ───────── 07 마무리 CTA ───────── */
+.outro { background: var(--plum); color: var(--white); text-align: center; }
+.outro .inner { position: absolute; left: var(--pad); right: var(--pad); top: 50%; transform: translateY(-55%); }
+.outro .save-icon { width: 120px; height: 150px; margin: 0 auto 60px; position: relative; }
+.outro .save-icon::before {
+  content: ""; position: absolute; inset: 0; background: var(--petal);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 74%, 0 100%);
+}
+.outro h2 { font-size: 84px; font-weight: 800; letter-spacing: -2.5px; line-height: 1.22; }
+.outro h2 em { font-style: normal; color: var(--petal); }
+.outro p { font-size: 34px; color: rgba(255,255,255,.7); margin-top: 34px; line-height: 1.55; font-weight: 500; }
+.outro .follow {
+  display: inline-block; margin-top: 70px; font-size: 32px; font-weight: 700;
+  border: 2px solid rgba(255,255,255,.5); border-radius: 999px; padding: 22px 48px;
+}
+.outro .wordmark { position: absolute; top: 64px; left: 0; right: 0; text-align: center; color: var(--white); }
+.outro .disclosure { position: absolute; bottom: 56px; left: var(--pad); right: var(--pad); font-size: 21px; color: rgba(255,255,255,.45); line-height: 1.5; }

@@ -104,3 +104,9 @@ git add -A && git commit -m "카드뉴스 <id> 발행" && git push
 수동 발행 (API가 안 될 때):
 1. `npm run design -- export <id>` 결과(JPEG + caption.txt + ZIP)를 사용자에게 보내고 "지금 업로드해 주세요" 알림
 2. 사용자가 "올렸어"라고 하면 `npm run editorial -- published <id>` → 커밋·푸시
+
+## 발행 전 체크 (10/1 실수 방지)
+- `npm install` 후 `npm run design -- render`가 오류 없이 끝나고, 견본에서 글씨체가 Pretendard인지 확인 (폰트 패키지가 없으면 시스템 글씨체로 조용히 대체됨)
+- 캡션은 `data/planner/master.csv`의 caption이 실제 게시 문구다. 캡션을 고치면 master.csv도 같이 고친다
+- 마지막 장 아이디는 `@ongrowth_marketing`, 이름 `온그로스 마케팅`, 프로필 로고 적용 상태인지 08번 카드 확인
+- 인스타는 게시 후 사진·캡션 수정과 삭제가 API로 안 되므로, `publish`는 위 세 가지를 확인한 뒤 **한 번만** 실행한다 (재발행 금지)

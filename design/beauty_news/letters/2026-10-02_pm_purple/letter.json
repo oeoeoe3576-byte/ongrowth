@@ -7,10 +7,10 @@
   "cover": {
     "style": "photo",
     "image": "img/cover_ai.jpg",
-    "focus": "center 20%",
+    "focus": "center 15%",
     "title": "보라색 메이크업,\n**웜톤도** 할 수 있어요",
     "sub": "올가을 퍼플 코어, 내 톤에 맞는 보라를\n고르는 법을 정리해 왔어요.",
-    "credit": "AI 생성 이미지 (Topview)"
+    "credit": "AI 편집 이미지 (Topview)"
   },
   "slides": [
     {

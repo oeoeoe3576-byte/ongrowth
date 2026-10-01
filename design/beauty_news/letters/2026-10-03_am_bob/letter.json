@@ -31,18 +31,6 @@
       "name": "pencil",
       "cls": "feat",
       "html": "<div class=\"kicker\">EDITOR'S PICK</div>\n<div class=\"hero\"><img src=\"img/tcfs_cut.png\" alt=\"\" class=\"slim\"/></div>\n<div class=\"aw\">Best Eye Makeup</div><h2>투쿨포스쿨 프로타주 펜슬</h2><div class=\"sh\">#22 허밍글로우</div>\n<p class=\"ds\">부드럽게 블렌딩되고 풍부하게 발색돼요. <b>섀도·블러셔</b>로 같이 쓸 수 있는 멀티 펜슬이에요.</p>\n<div class=\"prices\"><div><small>정가</small><b>1만2천원</b></div><div class=\"sale\"><small>공식몰 (10/1 기준)</small><b>11,400원</b></div></div>\n<div class=\"tip\"><span>TIP</span>펜슬로 눈두덩에 긋고 손가락으로 펴면 섀도 브러시 없이도 끝나요.</div>\n<div class=\"foot\">* 수상·설명: 얼루어 코리아 (2026.10.01) · 제품 사진·할인가: 브랜드 공식몰</div>"
-    },
-    {
-      "type": "html",
-      "name": "lips",
-      "cls": "vs",
-      "html": "<div class=\"kicker\">LIP WINNERS</div><h2>매트 vs 글로시,<br/><span class=\"hl\">내 취향은?</span></h2>\n<div class=\"two\">\n <div class=\"side\"><div class=\"aw\">Best Matte Lips</div><b>컬러그램<br/>누디 블러 스틱</b><span class=\"sh\">#02 너드샌드</span><p>블러 처리한 듯 <em>매끈하고 보송한</em> 발색, 오래 유지되는 매트 립.</p><div class=\"pr\">1만2천원</div><div class=\"for\">이런 분께 · 하루 종일 덧바르기 귀찮은 분</div></div>\n <div class=\"side\"><div class=\"aw\">Best Glossy Lips</div><b>맥 러스터글래스<br/>스테인글래스 립 틴트</b><span class=\"sh\">#씨 쉬어</span><p>보이는 그대로 <em>풍부한 컬러</em>에 볼륨감까지 더해 주는 립 틴트.</p><div class=\"pr\">3만8천원대</div><div class=\"for\">이런 분께 · 도톰하고 촉촉한 입술 연출</div></div>\n</div>\n<div class=\"foot\">* 출처: 얼루어 코리아 (2026.10.01)</div>"
-    },
-    {
-      "type": "html",
-      "name": "base",
-      "cls": "steps",
-      "html": "<div class=\"kicker\">BASE WINNERS</div><h2>베이스 위너로<br/><span class=\"hl\">순서대로 쌓기</span></h2>\n<div class=\"st\"><div class=\"n\">01</div><div><div class=\"aw\">Best Base &amp; Prep</div><b>에스쁘아 메이크업 본딩 프라이머 · 2만8천원</b><p>피붓결을 매끈하게 정돈하고 요철 커버. 베이스 밀착력·지속력을 높여줘요.</p></div></div>\n<div class=\"st\"><div class=\"n\">02</div><div><div class=\"aw\">Best Cushion</div><b>탈리다쿰 심리스 쿠션 #21N · 6만2천원</b><p>여러 번 덧발라도 텁텁하지 않은 맑고 투명한 베이스. 촉촉한 피부라면 이쪽.</p></div></div>\n<div class=\"st\"><div class=\"n\">03</div><div><div class=\"aw\">Best Foundation</div><b>나스 내추럴 매트 롱웨어 #몽블랑 · 8만2천원</b><p>가볍고 보송하게 밀착, 결점을 자연스럽게 가려줘요. 유분이 고민이라면 이쪽.</p></div></div>\n<div class=\"foot\">* 제품 설명: 얼루어 코리아 (2026.10.01) · 피부 타입 추천은 에디터 의견</div>"
     }
   ],
   "ps": {

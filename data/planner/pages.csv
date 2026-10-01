@@ -385,3 +385,28 @@ CN-20261001-020,6,INFORMATION,BIG_NUMBER,"쇼핑몰 50곳을
 CN-20261001-020,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
 CN-20261001-020,8,CTA,FOLLOW,"저장해두고
 **이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-021,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/01.jpg,,,,NOT_REQUIRED
+CN-20261001-021,2,INFORMATION,TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/02.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-021,3,INFORMATION,TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/03.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-021,4,INFORMATION,TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,data/images/travel/tmp-I01/04.jpg,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-021,5,INFORMATION,TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/05.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-021,6,INFORMATION,TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,data/images/travel/tmp-I01/07.jpg,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-021,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-021,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

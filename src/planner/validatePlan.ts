@@ -102,7 +102,9 @@ export function validatePlan(plan: CardnewsPlan, input: PlanInput): PlanIssue[] 
   const counts = new Map<string, number>();
   plan.pages.forEach((p) => counts.set(p.layout_type, (counts.get(p.layout_type) ?? 0) + 1));
   for (const [layout, c] of counts) {
-    if (c > Math.ceil(n / 2)) err(`레이아웃 ${layout}가 ${c}/${n}장에 쓰임 - 절반 이하로`, undefined, "layout_type");
+    // 리스트형은 항목 장(표지·정리·마무리 3장 제외)이 같은 레이아웃을 반복하는 게 자연스럽다
+    const limit = plan.content_type === "LIST" ? Math.max(Math.ceil(n / 2), n - 3) : Math.ceil(n / 2);
+    if (c > limit) err(`레이아웃 ${layout}가 ${c}/${n}장에 쓰임 - 절반 이하로`, undefined, "layout_type");
   }
   // 이미지를 모든 카드에 억지로 넣지 않는다
   const withImage = plan.pages.filter((p) => p.image_required === true).length;

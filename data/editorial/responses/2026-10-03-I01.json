@@ -95,11 +95,11 @@
     {
       "page_number": 6,
       "page_role": "INFORMATION",
-      "layout_type": "BIG_NUMBER",
+      "layout_type": "TEXT",
       "headline": "쇼핑몰 50곳을\n**한자리에**",
       "subheadline": "지그재그 익스프레스",
       "body": "📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관\n📅 10/16~18\n🎫 10/7 낮 12시 앱 선착순 예약",
-      "visual_focus": "10/16~18",
+      "visual_focus": "",
       "items": [],
       "image_required": false,
       "image_type": "",

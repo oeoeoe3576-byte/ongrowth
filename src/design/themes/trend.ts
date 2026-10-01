@@ -92,6 +92,10 @@ ${T} .cn-cover-note .cn-em { color: inherit; background: none; }
 /* 이미지+글: 이름(축제명 등)을 연한 하늘색 박스 + 얇은 검정 테두리로 사진 아래에 */
 ${T}.cn-l-TEXT .cn-sub { align-self: center; background: ${P.highlight}; color: #111; border: 2px solid #111; padding: 8px 26px; font-size: 44px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.35; }
 ${T}.cn-l-TEXT .cn-body { text-align: center; line-height: 1.7; }
+${T}.cn-l-TEXT.cn-tone-photo .cn-main { text-align: center; align-items: center; }
+${T}.cn-l-TEXT.cn-tone-photo .cn-main > * { margin-left: auto; margin-right: auto; }
+${T}.cn-l-TEXT.cn-tone-photo .cn-headline { color: #fff; text-shadow: 0 4px 24px rgba(0,0,0,.5); font-size: 92px; }
+${T}.cn-l-TEXT.cn-tone-photo .cn-body { color: #fff !important; font-weight: 700; font-size: 38px; text-shadow: 0 2px 14px rgba(0,0,0,.6); }
 ${T}.cn-l-IMAGE_TEXT .cn-sub { background: ${P.highlight}; color: #111; border: 2px solid #111; padding: 8px 26px; font-size: 44px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.35; }
 ${T}.cn-l-PHOTO_COVER .cn-tag, ${T}.cn-l-BIG_TITLE .cn-kicker { display: none; }
 ${T}.cn-l-PHOTO_COVER .cn-bg-shade { background: linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,.45) 75%, rgba(0,0,0,.7) 100%); }

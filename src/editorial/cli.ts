@@ -10,8 +10,14 @@
 //   npm run editorial -- due                            발행 시각이 지난 승인 건
 //   npm run editorial -- add --channel blog --topic "..." --angle "..."
 //   npm run editorial -- status                         전체 현황
+//   npm run editorial -- ig-check                       인스타그램 토큰 확인 (게시 안 함)
+//   npm run editorial -- publish <contentId> [--dry-run] 인스타그램 캐러셀 자동 발행 (승인 건만)
 
 import { Command } from "commander";
+import { loadStore } from "../planner/store.js";
+import { renderContent } from "../design/renderHtml.js";
+import { exportPackage } from "../design/exportPackage.js";
+import { buildCaption, hostImages, waitForUrls, publishCarousel, checkInstagram } from "./instagram.js";
 import { loadCalendar, saveCalendar, pickTopic, findByContent, setMasterStatus, defaultPublishAt, recentTopics, now, channelFor, type Topic } from "./calendar.js";
 
 const program = new Command().name("editorial").description("콘텐츠 캘린더");
@@ -200,6 +206,42 @@ program.command("status").option(...brandOpt).action((o: { brand: string }) => {
   for (const ch of Object.keys(cal.channels)) console.log(`  ${cal.channels[ch]}: 남은 주제 ${cal.backlog.filter((t) => t.channel === ch && t.status === "todo").length}개`);
   for (const t of cal.backlog.filter((x) => x.status !== "todo")) console.log(`  ${t.id} ${t.status.padEnd(9)} ${t.date ?? ""} ${t.content_id ?? ""} ${t.topic}`);
 });
+
+program.command("ig-check").action(async () => {
+  console.log(`✓ 인스타그램 연결 확인: ${await checkInstagram()}`);
+});
+
+program
+  .command("publish")
+  .argument("<contentId>")
+  .option(...brandOpt)
+  .option("--dry-run", "이미지·캡션만 만들고 업로드하지 않음")
+  .option("--force", "승인(approved) 상태가 아니어도 발행")
+  .action(async (id: string, o: { brand: string; dryRun?: boolean; force?: boolean }) => {
+    const cal = loadCalendar(o.brand);
+    const t = findByContent(cal, id);
+    if (t.status === "published") throw new Error(`${id}는 이미 발행됨 (${t.published_at})`);
+    if (t.status !== "approved" && !o.force) throw new Error(`${id}는 승인 전 (상태 ${t.status}). 승인 후 발행`);
+    const store = loadStore();
+    const master = store.master.find((m) => m.content_id === id);
+    if (!master) throw new Error(`MASTER에 ${id} 없음`);
+    const caption = buildCaption(master.caption, master.hashtags);
+    const pkg = await exportPackage(renderContent(master, store.pages));
+    console.log(`JPEG ${pkg.images.length}장 · 캡션 ${caption.length}자`);
+    if (o.dryRun) {
+      console.log(`[dry-run] 업로드하지 않음 → ${pkg.dir}\n---\n${caption}`);
+      return;
+    }
+    const urls = hostImages(id, pkg.images);
+    await waitForUrls(urls);
+    console.log(`이미지 주소 준비 (${urls.length}장)`);
+    const mediaId = await publishCarousel(urls, caption);
+    transition(id, o.brand, "published", "published", (x) => {
+      x.published_at = now(cal).toFormat("yyyy-MM-dd HH:mm");
+      x.note = `instagram media ${mediaId}`;
+    });
+    console.log(`✓ ${id} 인스타그램 발행 완료 (media ${mediaId})`);
+  });
 
 program.parseAsync().catch((e) => {
   console.error((e as Error).message);

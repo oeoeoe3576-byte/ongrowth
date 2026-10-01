@@ -11,7 +11,14 @@
 
 import type { InstagramAuthConfig } from "./auth.js";
 
-const GRAPH_BASE = "https://graph.facebook.com";
+// Facebook 로그인 토큰(EAA…)은 graph.facebook.com, Instagram 로그인 토큰(IGAA…)은 graph.instagram.com
+export function graphBaseFor(accessToken: string): string {
+  return process.env.META_GRAPH_HOST
+    ? `https://${process.env.META_GRAPH_HOST}`
+    : accessToken.startsWith("IG")
+      ? "https://graph.instagram.com"
+      : "https://graph.facebook.com";
+}
 
 export interface GraphApiError {
   message: string;
@@ -22,9 +29,11 @@ export interface GraphApiError {
 }
 
 async function graphPost(path: string, params: Record<string, string>): Promise<any> {
-  const url = `${path}`;
-  const body = new URLSearchParams(params);
-  const res = await fetch(url, { method: "POST", body });
+  return graphCall(path, { method: "POST", body: new URLSearchParams(params) });
+}
+
+async function graphCall(url: string, init?: RequestInit): Promise<any> {
+  const res = await fetch(url, init);
   const json = (await res.json()) as { id?: string; error?: GraphApiError };
   if (!res.ok || json.error) {
     const err: GraphApiError = json.error ?? { message: `HTTP ${res.status}` };
@@ -39,7 +48,31 @@ export class InstagramClient {
   constructor(private auth: InstagramAuthConfig) {}
 
   private endpoint(path: string): string {
-    return `${GRAPH_BASE}/${this.auth.graphApiVersion}/${path}`;
+    return `${graphBaseFor(this.auth.accessToken)}/${this.auth.graphApiVersion}/${path}`;
+  }
+
+  /** 토큰 확인용: 토큰 주인 계정 */
+  async me(): Promise<{ id: string; username?: string; user_id?: string }> {
+    const q = new URLSearchParams({ fields: "id,username,user_id", access_token: this.auth.accessToken });
+    return graphCall(`${this.endpoint("me")}?${q}`);
+  }
+
+  /** 컨테이너 처리 상태: IN_PROGRESS / FINISHED / ERROR / EXPIRED / PUBLISHED */
+  async containerStatus(containerId: string): Promise<string> {
+    const q = new URLSearchParams({ fields: "status_code", access_token: this.auth.accessToken });
+    const json = await graphCall(`${this.endpoint(containerId)}?${q}`);
+    return json.status_code as string;
+  }
+
+  /** 컨테이너가 FINISHED가 될 때까지 기다린다 (이미지는 보통 몇 초) */
+  async waitUntilReady(containerId: string, tries = 20, intervalMs = 3000): Promise<void> {
+    for (let i = 0; i < tries; i++) {
+      const status = await this.containerStatus(containerId);
+      if (status === "FINISHED") return;
+      if (status === "ERROR" || status === "EXPIRED") throw new Error(`컨테이너 ${containerId} 처리 실패: ${status}`);
+      await new Promise((r) => setTimeout(r, intervalMs));
+    }
+    throw new Error(`컨테이너 ${containerId}가 ${(tries * intervalMs) / 1000}초 안에 준비되지 않음`);
   }
 
   /** 캐러셀 항목 하나(이미지)를 컨테이너로 등록한다. imageUrl은 공개적으로 접근 가능한 HTTPS URL이어야 한다. */

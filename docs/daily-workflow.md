@@ -87,8 +87,16 @@ git add -A && git commit -m "카드뉴스 <날짜> <주제ID> 검토 요청" && 
 - 저장소 push가 거부되면: 작업은 그대로 진행하고, 사용자에게 결과 파일을 보낸 뒤 푸시 실패 사실과 이유를 알린다.
 
 ## 7. 발행 단계 (18:30)
-인스타그램 API 연결 전까지:
+인스타그램 자동 발행 (환경 변수 `META_ACCESS_TOKEN`, `INSTAGRAM_ACCOUNT_ID` + 네트워크 허용 `graph.instagram.com` 필요):
+```bash
+npm run editorial -- ig-check                 # 토큰 확인 (게시 안 함)
+npm run editorial -- publish <id>             # 승인 건만. JPEG를 data/publish/<id>/에 커밋·푸시 → 캐러셀 게시 → published 기록
+git add -A && git commit -m "카드뉴스 <id> 발행" && git push
+```
+- 성공하면 푸시 알림: `✅ 오늘 카드뉴스 발행 완료: '<주제>'`
+- 실패하면 **다시 시도하지 말고** 오류 문구를 그대로 알리고, 아래 수동 발행으로 넘어간다.
+  (토큰 만료 `code 190` → 사용자에게 메타 개발자 화면에서 토큰 재발급 후 환경 변수 교체 요청)
+
+수동 발행 (API가 안 될 때):
 1. `npm run design -- export <id>` 결과(JPEG + caption.txt + ZIP)를 사용자에게 보내고 "지금 업로드해 주세요" 알림
 2. 사용자가 "올렸어"라고 하면 `npm run editorial -- published <id>` → 커밋·푸시
-
-API 연결 후: 기존 `src/publishers/instagram/` 발행기로 자동 업로드 (JPEG 공개 URL 필요).

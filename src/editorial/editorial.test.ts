@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 import { channelFor, pickTopic, recentTopics, type Calendar } from "./calendar.js";
 import { validatePlan } from "../planner/validatePlan.js";
 import fs from "node:fs";
+import { buildCaption } from "./instagram.js";
+import { graphBaseFor } from "../publishers/instagram/instagramClient.js";
 
 const base = (): Calendar => ({
   brand: "t", category: "marketing", objective: "SAVE", target: "t", maxPages: 10, reviewTime: "09:00", publishTime: "18:30", timezone: "Asia/Seoul",
@@ -17,6 +19,14 @@ const base = (): Calendar => ({
 });
 
 const tests: [string, () => void][] = [
+  ["인스타 발행: 캡션 + 해시태그(최대 30개), 토큰 종류별 API 주소", () => {
+    assert.equal(buildCaption(" 본문 ", "#a #b 잡음"), "본문\n\n#a #b");
+    const many = Array.from({ length: 35 }, (_, i) => `#t${i}`).join(" ");
+    assert.equal(buildCaption("x", many).split("#").length - 1, 30);
+    assert.throws(() => buildCaption("가".repeat(2300), ""));
+    assert.equal(graphBaseFor("IGAAxyz"), "https://graph.instagram.com");
+    assert.equal(graphBaseFor("EAAxyz"), "https://graph.facebook.com");
+  }],
   ["요일 → 채널: 평일만, 수요일은 인스타/스레드 격주, 주말은 쉬는 날", () => {
     const c = base();
     assert.equal(channelFor(c, "2026-10-01"), "blog"); // 목

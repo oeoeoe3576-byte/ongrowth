@@ -11,8 +11,9 @@ export interface TrendPalette {
   highlight: string; // 밝은 바탕 형광펜
   arrow: string;
   dot: string; // 배경 땡땡이
-  accent: string; // 번호·버튼
+  accent: string; // 번호·글자 강조 (흰 바탕에서 읽히는 진한 색)
   onAccent: string;
+  button?: string; // 마지막 장 프로필·팔로우 버튼 (없으면 accent). 화살표·표지 강조와 같은 톤으로 맞출 때
 }
 
 const dots = (c: string) => `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'><circle cx='22' cy='22' r='6' fill='${c}'/><circle cx='67' cy='67' r='6' fill='${c}'/></svg>`)}")`;
@@ -68,7 +69,8 @@ ${T}.cn-tone-dark { --c-line: #DDDDDD; --c-surface: #F4F4F4; }
 ${T}.cn-l-IMAGE_TEXT, ${T}.cn-l-SCREENSHOT, ${T}.cn-l-BIG_TITLE, ${T}.cn-l-FOLLOW, ${T}.cn-l-CTA { background-image: ${dots(P.dot)}; }
 ${T}.cn-tone-dark .cn-em { background: var(--em-bg); color: inherit; }
 ${T}.cn-tone-photo .cn-em { background: none; color: ${P.onPhoto}; }
-${T}.cn-l-FOLLOW .cn-profile { border: 2px solid #E2E2E2; }
+${T}.cn-l-FOLLOW .cn-profile { border: 2px solid #E2E2E2; ${P.button ? `--c-accent: ${P.button}; --c-on-accent: #FFFFFF;` : ""} }
+${P.button ? `${T}.cn-l-FOLLOW .cn-cta-line { color: ${P.button}; }` : ""}
 /* 이미지+글: 제목 → 사진 → 본문 순서 */
 ${T}.cn-l-IMAGE_TEXT .cn-main { justify-content: center; gap: 36px; }
 ${T}.cn-l-IMAGE_TEXT .cn-textblock { display: contents; }
@@ -95,4 +97,4 @@ ${T}.cn-l-PHOTO_COVER .cn-bg-shade { background: linear-gradient(180deg, rgba(0,
 
 export const trendTheme = makeTrendTheme("trend", { onPhoto: "#A6F2A2", highlight: "#C7F5D4", arrow: "#74E3A4", dot: "#D9F5E3", accent: "#1FAF6B", onAccent: "#0D2418" });
 export const trendSkyTheme = makeTrendTheme("trend-sky", { onPhoto: "#9FD8FF", highlight: "#CFE8FF", arrow: "#6CB8FF", dot: "#DDEEFF", accent: "#2C86E8", onAccent: "#FFFFFF" });
-export const trendAquaTheme = makeTrendTheme("trend-aqua", { onPhoto: "#86ECF2", highlight: "#C6F1F5", arrow: "#4CC9DB", dot: "#D6F3F6", accent: "#1597AE", onAccent: "#FFFFFF" });
+export const trendAquaTheme = makeTrendTheme("trend-aqua", { onPhoto: "#86ECF2", highlight: "#C6F1F5", arrow: "#4CC9DB", dot: "#D6F3F6", accent: "#1597AE", onAccent: "#FFFFFF", button: "#2BB8D4" });

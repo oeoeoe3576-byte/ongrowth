@@ -6,7 +6,7 @@
 
 - 브랜드 키 `travel` (`data/editorial/travel.json`, `data/brands/travel.json`), 디자인 `trend-aqua`
 - 요일: 월 시즌 · 화 숙소 · 수 정보 · 목 행사 · 금 코스 · 토 정보 · 일 숙소
-- 주말분은 미리: **목요일 아침 = 목 + 토**, **금요일 아침 = 금 + 일**. 토·일 아침에는 검토 요청을 하지 않는다
+- 주말분은 미리: **금요일 아침에 금 + 토 + 일 3개를 한 번에**. 월~목은 그날 1개. 토·일 아침에는 검토 요청을 하지 않는다
 - 인스타 토큰: `META_ACCESS_TOKEN_TRAVEL`, `INSTAGRAM_ACCOUNT_ID_TRAVEL` (온그로스 토큰과 섞지 않는다)
 - 원고 작성은 이 세션의 Claude가 직접 한다 (`--response` 방식)
 
@@ -23,14 +23,14 @@ npm install
   18:30 KST에 "발행 단계 실행: <id>" 메시지를 예약(`send_later`)하고 끝. 승인 건이 없으면 푸시로
   "📌 오늘(토/일) 요즘어디감 업로드할 승인 건이 없어요"만 알리고 끝.
 - **월~금:** `npm run editorial -- next --brand travel --reserve`
-  - **목요일**은 토요일분도: `next --brand travel --date <토요일> --reserve`
-  - **금요일**은 일요일분도: `next --brand travel --date <일요일> --reserve`
+  - **금요일**은 토·일분도: `next --brand travel --date <토요일> --reserve`, `next --brand travel --date <일요일> --reserve`
+    (주제 컨펌·기획안·카드 검토를 3개 한 번에 묶어서 보낸다)
   - 이미 `review`/`approved`/`published`면 새로 만들지 말고 상태만 알린다.
   - 남은 주제가 없으면(종료 코드 2) 그 채널 주제 5개를 시즌에 맞게 새로 만들어 `editorial add --brand travel`로 넣고 다시.
 
 ## 3. ① 주제 컨펌 (푸시 필수)
 `PushNotification`으로 `📌 요즘어디감 주제 컨펌: '<주제>' — 좋아 / 다른 주제로 답해주세요` (한 줄, 200자 이내).
-본문에는 주제, 방향, 채널, 다른 후보 1개(목·금은 2개 주제를 함께).
+본문에는 주제, 방향, 채널, 다른 후보 1개(금요일은 금·토·일 3개 주제를 함께).
 - **좋아/OK/진행** → 4단계
 - **다른 주제** → `editorial swap --brand travel [--date …]` 후 다시 컨펌
 - **직접 주제를 주면** → `editorial add --brand travel --channel <채널> --topic "…"` → `swap --to <새 ID>`

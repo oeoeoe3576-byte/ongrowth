@@ -75,9 +75,9 @@ ${P.button ? `${T}.cn-l-FOLLOW .cn-cta-line { color: ${P.button}; }` : ""}
 ${T}.cn-l-IMAGE_TEXT .cn-main { justify-content: center; gap: 36px; }
 ${T}.cn-l-IMAGE_TEXT .cn-textblock { display: contents; }
 ${T}.cn-l-IMAGE_TEXT .cn-headline { order: -1; }
-/* 사진 전체가 보이도록 잘라내지 않고 비율대로 넣는다 */
-${T}.cn-l-IMAGE_TEXT .cn-image { flex: 0 0 auto; width: auto; height: auto; max-width: 80%; min-height: 0; align-self: center; background: none; }
-${T}.cn-l-IMAGE_TEXT .cn-image img { width: auto; height: auto; max-width: 100%; max-height: 460px; object-fit: contain; }
+/* 사진 칸 크기를 모두 같게 고정하고, 사진은 잘라내지 않고 칸 안에 전체가 보이게 맞춘다 */
+${T}.cn-l-IMAGE_TEXT .cn-image { flex: 0 0 auto; width: 78%; height: 440px; min-height: 0; align-self: center; background: #F1F1F1; display: flex; align-items: center; justify-content: center; }
+${T}.cn-l-IMAGE_TEXT .cn-image img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
 
 /* 표지: 제목 위 흰 한 줄, 가운데 검정 박스(질문), 아주 굵은 제목 */
 ${T}.cn-l-PHOTO_COVER .cn-main, ${T}.cn-l-BIG_TITLE .cn-main { position: relative; justify-content: flex-end; text-align: left; align-items: flex-start; gap: 18px; }

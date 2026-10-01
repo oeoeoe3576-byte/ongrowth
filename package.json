@@ -14,7 +14,8 @@
     "scheduler": "tsx src/scheduler/run.ts",
     "typecheck": "tsc --noEmit",
     "test": "tsx src/test/run-all.ts",
-    "beauty:publish": "tsx src/beauty/publish.ts"
+    "beauty:publish": "tsx src/beauty/publish.ts",
+    "beauty:due": "tsx src/beauty/due.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",

@@ -357,3 +357,33 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 .season .shade img, .season .shade .dot { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; display: inline-block; }
 .season .best { position: absolute; top: 30px; right: 30px; font-size: 20px; font-weight: 800; color: #fff; background: var(--rose); border-radius: 999px; padding: 6px 16px; }
 .spring { background: #FCE6D6; } .summer { background: #EDE3F1; } .autumn { background: #F1DCCB; } .winter { background: #E4E2EE; }
+
+/* ═════════ 레터 빌더용 (build.mjs) ═════════ */
+.cover-type .big-word {
+  position: absolute; top: 210px; left: var(--pad); right: var(--pad);
+  font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 220px; line-height: .9; color: var(--rose); letter-spacing: -4px;
+}
+.cover-type .body.low { top: 600px; }
+
+.points { padding: 180px var(--pad) 0; }
+.points h2 { font-size: 70px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 26px 0 50px; }
+.points .items { display: grid; gap: 22px; }
+.points .item { display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; background: var(--white); border-radius: 26px; padding: 34px 40px; }
+.points .item .n { font-family: var(--serif); font-style: italic; font-size: 64px; font-weight: 600; color: var(--rose); line-height: .9; }
+.points .item h3 { font-size: 36px; font-weight: 800; letter-spacing: -.5px; line-height: 1.3; margin-bottom: 10px; }
+.points .item p { font-size: 28px; line-height: 1.55; color: #4b3a40; font-weight: 500; }
+.points .item p b { color: var(--rose); }
+.points .foot, .swatchset .foot { position: absolute; left: var(--pad); right: var(--pad); bottom: 56px; font-size: 21px; color: var(--mauve); }
+
+.swatchset { padding: 180px var(--pad) 0; }
+.swatchset h2 { font-size: 70px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 26px 0 44px; }
+.swatchset .group { background: var(--white); border-radius: 26px; padding: 30px 36px; margin-bottom: 22px; }
+.swatchset .group .gl { font-size: 30px; font-weight: 800; margin-bottom: 18px; display: flex; align-items: baseline; gap: 12px; }
+.swatchset .group .gl small { font-size: 22px; color: var(--mauve); font-weight: 600; }
+.swatchset .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.swatchset .chip { display: grid; gap: 8px; }
+.swatchset .chip i { display: block; height: 120px; border-radius: 18px; box-shadow: inset 0 -16px 30px rgba(0,0,0,.06); }
+.swatchset .chip b { font-size: 24px; font-weight: 800; line-height: 1.25; }
+.swatchset .chip span { font-size: 20px; color: var(--mauve); line-height: 1.35; }
+.swatchset .note { background: var(--blush); border-radius: 22px; padding: 26px 34px; font-size: 26px; line-height: 1.55; font-weight: 500; color: #4b3a40; }
+.swatchset .note b { color: var(--rose); }

@@ -81,7 +81,7 @@ ${T}.cn-l-IMAGE_TEXT .cn-image { flex: 0 1 auto; width: 74%; height: 480px; min-
 ${T}.cn-l-PHOTO_COVER .cn-main, ${T}.cn-l-BIG_TITLE .cn-main { position: relative; justify-content: flex-end; text-align: left; align-items: flex-start; gap: 18px; }
 ${T}.cn-l-PHOTO_COVER .cn-main > *, ${T}.cn-l-BIG_TITLE .cn-main > * { margin-left: 0; }
 ${T}.cn-l-PHOTO_COVER .cn-sub, ${T}.cn-l-BIG_TITLE .cn-sub { order: -1; font-size: 40px; font-weight: 500; letter-spacing: -0.04em; color: inherit; }
-${T}.cn-l-PHOTO_COVER .cn-display, ${T}.cn-l-BIG_TITLE .cn-display { font-size: 112px; line-height: 1.2; letter-spacing: -0.05em; font-weight: 800; }
+${T}.cn-l-PHOTO_COVER .cn-display, ${T}.cn-l-BIG_TITLE .cn-display { font-size: 92px; line-height: 1.22; letter-spacing: -0.05em; font-weight: 800; }
 ${T}.cn-l-PHOTO_COVER .cn-display { text-shadow: 0 4px 30px rgba(0,0,0,.35); }
 ${T}.cn-l-PHOTO_COVER .cn-sub { text-shadow: 0 2px 14px rgba(0,0,0,.4); }
 ${T} .cn-cover-note {

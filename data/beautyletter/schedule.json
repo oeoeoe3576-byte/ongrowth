@@ -16,5 +16,13 @@
     "title": "보라색 메이크업, 웜톤도 할 수 있어요",
     "status": "approved",
     "approved_at": "2026-10-01"
+  },
+  {
+    "no": 3,
+    "date": "2026-10-03",
+    "time": "08:30",
+    "folder": "design/beauty_news/letters/2026-10-03_am_coffret",
+    "title": "2026 홀리데이 코프레, 예약 날짜부터 챙겨요",
+    "status": "review"
   }
 ]

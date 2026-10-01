@@ -1,0 +1,99 @@
+{
+  "no": 3,
+  "date": "2026-10-03",
+  "slot": "AM",
+  "category": "New Letter",
+  "brand": "HOLIDAY COFFRET 2026",
+  "cover": {
+    "style": "photo",
+    "image": "img/cover_photo.jpg",
+    "focus": "center 40%",
+    "title": "2026 홀리데이 코프레,\n**예약 날짜**부터 챙겨요",
+    "sub": "일본은 벌써 시작됐어요.\n랑콤·샤넬 한정 소식을 담아 왔어요."
+  },
+  "slides": [
+    {
+      "type": "points",
+      "name": "calendar",
+      "kicker": "RESERVE CALENDAR",
+      "title": "일본 예약·발매\n**날짜** 먼저 볼게요",
+      "items": [
+        {
+          "h": "랑콤 뷰티 박스 · ¥22,000",
+          "p": "**10/2(금) 예약 시작 → 10/16(금) 발매.** 세럼·UV 크림·한정 섀도 팔레트 등 현품 사이즈에 오리지널 파우치까지 들어 있어요."
+        },
+        {
+          "h": "랑콤 스위트 이스케이프 팔레트 · ¥15,400",
+          "p": "**10/16(금) 예약 → 10/30(금) 발매.** 섀도·치크·하이라이터로 쓰는 6색 멀티 팔레트예요."
+        },
+        {
+          "h": "샤넬 홀리데이 컬렉션",
+          "p": "**10/30(금) 발매.** 올해 테마는 알프스 설산. 섀도·하이라이터·글로스·네일까지 한정으로 나와요."
+        }
+      ],
+      "foot": "* 일본 기준 날짜·가격: 美的.com (2026.09.20 · 09.30)"
+    },
+    {
+      "type": "points",
+      "name": "chanel",
+      "kicker": "CHANEL PICK",
+      "title": "샤넬 한정 중\n**눈여겨볼 3가지**",
+      "items": [
+        {
+          "h": "레 꺄트르 옹브르 38 · ¥13,200",
+          "p": "그레이시 베이지, 화이트, **골드 베이지**, 브라운 4색. 데일리로도 쓰기 좋은 구성이에요."
+        },
+        {
+          "h": "네주 도르 · ¥16,500",
+          "p": "눈가루처럼 반짝이는 **하이라이팅 파우더**. 각도에 따라 여러 색 펄이 비친대요."
+        },
+        {
+          "h": "루즈 코코 이드라 글로스 · 각 ¥5,830",
+          "p": "한정 2색. 반짝이는 462 지브르, **골드가 도는 464 에탕셀**."
+        }
+      ],
+      "foot": "* 출처: 美的.com 샤넬 크리스마스 코프레 2026 (2026.09.20)"
+    },
+    {
+      "type": "html",
+      "name": "tone",
+      "cls": "tone3",
+      "html": "<div class=\"kicker\">TONE CHECK</div><h2>랑콤 한정 하이라이터,<br/><span class=\"hl\">내 톤엔 몇 번?</span></h2>\n<p class=\"lead\">링 앤 샤인 글로시 하이라이터 한정 3색 · <b>¥7,150</b></p>\n<div class=\"cols\">\n <div class=\"col\"><i style=\"background:linear-gradient(135deg,#F7DDE9,#EDBFD6)\"></i><div class=\"who\">쿨톤이라면</div><b>#002</b><span class=\"nm\">랑콤 핑크 팰리스</span><span class=\"ds\">아이시한 블루 핑크</span></div>\n <div class=\"col\"><i style=\"background:linear-gradient(135deg,#F3E2BE,#DDBF86)\"></i><div class=\"who\">웜톤이라면</div><b>#003</b><span class=\"nm\">골드 딩딩</span><span class=\"ds\">샴페인 골드</span></div>\n <div class=\"col\"><i style=\"background:linear-gradient(135deg,#E0566A,#B32A41)\"></i><div class=\"who\">혈색이 필요할 땐</div><b>#001</b><span class=\"nm\">체리 체크인</span><span class=\"ds\">치크로 써도 좋대요</span></div>\n</div>\n<div class=\"foot\">* 톤 추천: 美的 에디터 리뷰 기준 (2026.09.30) · 컬러칩은 이해를 돕는 예시예요</div>"
+    }
+  ],
+  "summary": {
+    "rows": [
+      [
+        "What",
+        "일본 2026 홀리데이 코프레",
+        "랑콤·샤넬 한정 라인업"
+      ],
+      [
+        "Point",
+        "랑콤 뷰티 박스는 10/2부터 예약 중",
+        "발매는 10/16, 샤넬은 10/30"
+      ],
+      [
+        "Who",
+        "쿨톤 #002 / 웜톤 #003",
+        "랑콤 하이라이터, 美的 에디터 추천 기준"
+      ],
+      [
+        "Price",
+        "¥5,830 ~ ¥22,000",
+        "일본 가격, 한국 출시·가격은 아직 확인 안 됐어요"
+      ]
+    ],
+    "chips": [
+      "#크리스마스코프레",
+      "#홀리데이에디션",
+      "#랑콤",
+      "#샤넬"
+    ]
+  },
+  "ps": {
+    "label": "에디터의 한 줄 팁",
+    "note": "코프레는 **구성품을 따로 샀을 때 가격**과 비교해 보고 고르세요.\n내가 실제로 쓸 아이템이 2개 이상 들어 있으면 이득이에요.",
+    "credit": "참고: 美的.com (2026.09.20 · 09.30)"
+  }
+}

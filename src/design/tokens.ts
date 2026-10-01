@@ -58,6 +58,8 @@ export interface DesignTheme {
   radius: { card: number; box: number; pill: number };
   border: { width: number };
   shadow: { box: string };
+  /** 이 테마에서만 쓰는 추가 CSS (선택자는 .cn-theme-<name>로 시작) */
+  css?: string;
 }
 
 export const CARD_WIDTH = 1080;

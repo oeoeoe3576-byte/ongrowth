@@ -27,3 +27,5 @@
 ```bash
 npm run design -- sheet CN-20261001-001 --themes default,insight,life,campaign,brand
 ```
+
+- `trend.png` — 트렌드: 사진 표지 + 굵은 흰 제목, 민트 강조·박스 라벨, 본문은 연회색 가운데 정렬 + 민트 형광펜 (사진은 예시용 임시 이미지)

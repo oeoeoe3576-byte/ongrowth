@@ -1,11 +1,12 @@
 // 테마 레지스트리. 새 브랜드 테마는 파일 하나 추가 + 여기 등록으로 끝난다.
-// default(코발트), insight(검정+초록), life(크림+갈색), campaign(진초록+주황).
+// default(코발트), insight(검정+초록), life(크림+갈색), campaign(진초록+주황), trend(사진 표지 + 민트 형광펜).
 
 import type { DesignTheme } from "../tokens.js";
 import { defaultTheme } from "./default.js";
 import { insightTheme } from "./insight.js";
 import { lifeTheme } from "./life.js";
 import { campaignTheme } from "./campaign.js";
+import { trendTheme } from "./trend.js";
 export { extendTheme } from "./extend.js";
 
 const THEMES: Record<string, DesignTheme> = {
@@ -14,6 +15,7 @@ const THEMES: Record<string, DesignTheme> = {
   insight: insightTheme,
   life: lifeTheme,
   campaign: campaignTheme,
+  trend: trendTheme,
   // 분야 → 테마 기본 연결 (브랜드 설정의 theme가 있으면 그게 우선)
   travel: lifeTheme,
   stay: lifeTheme,

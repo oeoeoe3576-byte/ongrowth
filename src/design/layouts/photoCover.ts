@@ -11,7 +11,8 @@ export const PhotoCoverTemplate: LayoutComponent = {
 .cn-l-PHOTO_COVER .cn-main { justify-content: flex-end; gap: 28px; padding-bottom: calc(var(--sp-section) * .9); }
 .cn-l-PHOTO_COVER .cn-tag { align-self: flex-start; font-size: var(--fs-caption); font-weight: var(--w-heavy); letter-spacing: .04em; padding: 10px 24px; border-radius: var(--r-pill); background: var(--c-card-bg); color: var(--c-card-text); }
 .cn-l-PHOTO_COVER .cn-display { font-size: calc(var(--fs-display) * 1.02); text-shadow: 0 2px 24px rgba(0,0,0,.25); }
-.cn-l-PHOTO_COVER .cn-sub { color: var(--c-muted); font-weight: var(--w-regular); font-size: calc(var(--fs-sub) * 1.02); }`,
+.cn-l-PHOTO_COVER .cn-sub { color: var(--c-muted); font-weight: var(--w-regular); font-size: calc(var(--fs-sub) * 1.02); }
+.cn-cover-note { display: none; } /* 본문 한 줄(질문/훅): 이를 쓰는 테마(trend)에서만 보인다 */`,
   render(p, ctx) {
     const bg = p.imageSource
       ? `<img src="${esc(p.imageSource)}" alt="">`
@@ -22,6 +23,7 @@ export const PhotoCoverTemplate: LayoutComponent = {
     return frame(p, ctx, "photo", `
       ${tag ? `<div class="cn-tag">${esc(tag)}</div>` : ""}
       ${text("cn-display", "headline", p.headline, 3, p.visualFocus)}
-      ${text("cn-sub", "subheadline", p.subheadline, 2)}`, `${bg}<div class="cn-bg-shade"></div>`);
+      ${text("cn-sub", "subheadline", p.subheadline, 2)}
+      ${text("cn-cover-note", "body", p.body, 2)}`, `${bg}<div class="cn-bg-shade"></div>`);
   },
 };

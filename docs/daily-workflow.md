@@ -68,6 +68,10 @@ npm run editorial -- review <content_id>
 git add -A && git commit -m "카드뉴스 <날짜> <주제ID> 검토 요청" && git push
 ```
 사용자에게 보낸다:
+
+**보내는 방식 (휴대폰에서 보기 쉽게):** `SendUserFile`(display: "render")로 **견본 이미지 1장(전체 카드를 한 장에)을 먼저** 보내고,
+글은 5줄 안으로 짧게(주제 · 장수 · 확인 필요 사항 · 답하는 법). 카드 PNG 낱장은 사용자가 원할 때만 보낸다.
+사용자가 "결과물 보여줘"라고 하면 상태와 상관없이 지금 있는 최신 견본을 바로 다시 보낸다.
 - 견본 이미지 1장 + 카드 PNG 전체, 캡션과 해시태그
 - 확인이 필요한 사실(NEEDS_CHECK)이 있으면 목록
 - 알림: "오늘 카드뉴스 검토 요청 — 승인 / 수정: … / 보류"
@@ -87,8 +91,16 @@ git add -A && git commit -m "카드뉴스 <날짜> <주제ID> 검토 요청" && 
 - 저장소 push가 거부되면: 작업은 그대로 진행하고, 사용자에게 결과 파일을 보낸 뒤 푸시 실패 사실과 이유를 알린다.
 
 ## 7. 발행 단계 (18:30)
-인스타그램 API 연결 전까지:
+인스타그램 자동 발행 (환경 변수 `META_ACCESS_TOKEN`, `INSTAGRAM_ACCOUNT_ID` + 네트워크 허용 `graph.instagram.com` 필요):
+```bash
+npm run editorial -- ig-check [--brand travel] # 토큰 확인 (게시 안 함). 계정별 토큰: META_ACCESS_TOKEN_<브랜드>, INSTAGRAM_ACCOUNT_ID_<브랜드>
+npm run editorial -- publish <id>             # 승인 건만. JPEG를 data/publish/<id>/에 커밋·푸시 → 캐러셀 게시 → published 기록
+git add -A && git commit -m "카드뉴스 <id> 발행" && git push
+```
+- 성공하면 푸시 알림: `✅ 오늘 카드뉴스 발행 완료: '<주제>'`
+- 실패하면 **다시 시도하지 말고** 오류 문구를 그대로 알리고, 아래 수동 발행으로 넘어간다.
+  (토큰 만료 `code 190` → 사용자에게 메타 개발자 화면에서 토큰 재발급 후 환경 변수 교체 요청)
+
+수동 발행 (API가 안 될 때):
 1. `npm run design -- export <id>` 결과(JPEG + caption.txt + ZIP)를 사용자에게 보내고 "지금 업로드해 주세요" 알림
 2. 사용자가 "올렸어"라고 하면 `npm run editorial -- published <id>` → 커밋·푸시
-
-API 연결 후: 기존 `src/publishers/instagram/` 발행기로 자동 업로드 (JPEG 공개 URL 필요).

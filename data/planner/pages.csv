@@ -34,3 +34,864 @@ CN-20261001-002,5,STEP,COMPARE,대상을 좁히세요,STEP 02,,,전: 블로그 �
 CN-20261001-002,6,STEP,THREE_COLUMN,끝에는 얻는 것을,STEP 03 · 읽고 나서 좋아지는 것,,,시간: 10분 만에 끝내는 | 방법: 따라 하는 3단계 | 결과: 문의로 이어지는,FALSE,,,,,,NOT_REQUIRED
 CN-20261001-002,7,SUMMARY,TEXT,제목 완성 공식,,"**키워드 + 대상 + 얻는 것.** 예: 블로그 제목 짓는 법, 1인 카페 사장님이 10분 만에 끝내는 3단계",,,FALSE,,,,,,NOT_REQUIRED
 CN-20261001-002,8,CTA,FOLLOW,매일 하나씩 **블로그 공식**을 알려드려요,,저장해두고 다음 글 제목을 지을 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
+CN-20261001-003,1,HOOK,PHOTO_COVER,"이번 주말,
+**어디 가지?**",🍂 지금 갈 수 있는 가을 축제 4곳,어디부터 가볼래?,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-003,2,INFORMATION,IMAGE_TEXT,"**핑크빛 코스모스**
+물결 속으로",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00 · 입장료 2,000원",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-003,3,INFORMATION,IMAGE_TEXT,"**정선의 소리**,
+끝없는 비상",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료 · 3일 시가지 퍼레이드",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-003,4,INFORMATION,IMAGE_TEXT,"도심이 통째로
+**춤판**이 되는 날",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-003,5,INFORMATION,IMAGE_TEXT,"남강 위에
+**유등**이 떠요",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료 · 드론쇼",,,TRUE,PHOTO,data/images/travel/tmp-F01/01.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-003,6,SUMMARY,NUMBER_LIST,이번 주말 **한눈에**,,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-003,7,CTA,FOLLOW,"저장하고
+**주말에 써먹기**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-004,1,HOOK,PHOTO_COVER,"코스모스부터 유등까지
+**주말 가을 축제 4곳**",🍂 이번 주말 갈 수 있는 곳 모음,이번 주말 어디 가지? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-004,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha,
+**핑크빛 물결**이 일렁여요",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00 · 입장료 2,000원",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-004,3,INFORMATION,IMAGE_TEXT,"토요일 시가지 무대,
+**아리랑 퍼레이드**",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-004,4,INFORMATION,IMAGE_TEXT,"5일 내내 도심이
+**통째로 춤판**",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-004,5,INFORMATION,IMAGE_TEXT,"남강 위 유등,
+**밤하늘엔 드론쇼**",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-004,6,SUMMARY,NUMBER_LIST,축제 4곳 **날짜 한눈에**,,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-004,7,CTA,FOLLOW,"저장하고
+**주말에 써먹기**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-005,1,HOOK,PHOTO_COVER,"코스모스부터
+**유등까지 4곳**",🍂 이번 주말 갈 수 있는 가을 축제 모음,이번 주말 어디 가지? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-005,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha,
+**핑크빛 물결**이 일렁여요",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00 · 입장료 2,000원",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-005,3,INFORMATION,IMAGE_TEXT,"토요일 시가지 무대,
+**아리랑 퍼레이드**",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-005,4,INFORMATION,IMAGE_TEXT,"5일 내내 도심이
+**통째로 춤판**",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-005,5,INFORMATION,IMAGE_TEXT,"남강 위 유등,
+**밤하늘엔 드론쇼**",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-005,6,SUMMARY,NUMBER_LIST,축제 4곳 **날짜 한눈에**,,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-005,7,CTA,FOLLOW,"저장하고
+**주말에 써먹기**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-006,1,HOOK,PHOTO_COVER,"주말 약속 없다면
+**축제 4곳 중 픽**",🍂 코스모스·아리랑·춤판·유등 한 번에,이번 주말 어디 갈지 아직 못 정했다면? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-006,2,INFORMATION,IMAGE_TEXT,"입장료 2,000원에
+**코스모스 28ha**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-006,3,INFORMATION,IMAGE_TEXT,"토요일 정선 시내,
+**아리랑 퍼레이드**",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-006,4,INFORMATION,IMAGE_TEXT,"5일 내내 무료,
+**도심이 춤판**",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-006,5,INFORMATION,IMAGE_TEXT,"해 지면 더 예쁜
+**남강 유등**",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-006,6,SUMMARY,NUMBER_LIST,"놓치기 전에
+**날짜 체크!**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-006,7,CTA,FOLLOW,"저장하고
+**주말에 써먹기**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-007,1,HOOK,PHOTO_COVER,"이번 주말 축제
+**4곳이면 끝**",🍂 코스모스·아리랑·춤판·유등 한 번에,이번 주말 어디 갈지 아직 못 정했다면? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-007,2,INFORMATION,IMAGE_TEXT,"2,000원으로
+**코스모스 바다 풍덩**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-007,3,INFORMATION,IMAGE_TEXT,"토요일엔 정선이
+**아리랑 천지**",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-007,4,INFORMATION,IMAGE_TEXT,"도심이 통째로
+**댄스 플로어**",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-007,5,INFORMATION,IMAGE_TEXT,"퇴근하고 가도 OK
+**남강 유등축제**",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-007,6,SUMMARY,NUMBER_LIST,"언제까지 하는지
+**한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-007,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-008,1,HOOK,PHOTO_COVER,"10월 첫 주말,
+**여기 가면 됩니다**","🍂 코스모스·아리랑·춤판·유등, 10월 축제 4곳",주말 약속 아직 없다면? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-008,2,INFORMATION,IMAGE_TEXT,"입장료 2,000원,
+**코스모스 끝판왕**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-008,3,INFORMATION,IMAGE_TEXT,"정선 시내가 통째로
+**아리랑 퍼레이드**",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-008,4,INFORMATION,IMAGE_TEXT,"5일 내내 무료
+**거리 춤 축제**",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-008,5,INFORMATION,IMAGE_TEXT,"퇴근하고 가는
+**남강 유등 야경**",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-008,6,SUMMARY,NUMBER_LIST,"언제까지 하는지
+**한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-008,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-009,1,HOOK,PHOTO_COVER,"꽃·소리·춤·유등
+**주말 축제 4곳 모음**",🍂 하동·정선·천안·진주,주말 약속 아직 없다면? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-009,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-009,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-009,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-009,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-009,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-009,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-010,1,HOOK,PHOTO_COVER,"주말 축제
+**4곳 모음**","🍂 10/3~4 모두 열려요 · 입장료 무료~2,000원",주말 약속 아직 없다면? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-010,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 10:00~18:00
+📍경남 하동군 북천면 경서대로 2253-9",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-010,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"10/1~4 · 10:00~22:00 · 무료
+📍강원 정선군 정선읍 봉양리 104",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-010,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"10/1~5 · 10:00~22:00 · 무료
+📍충남 천안시 서북구 번영로 208",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-010,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"10/3~18 · 13:00~23:00 · 무료
+📍경남 진주시 남강로 626",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-010,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-010,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-011,1,HOOK,PHOTO_COVER,"주말 축제
+**4곳 모음**","🍂 10/3~4 모두 열려요 · 입장료 무료~2,000원",주말 약속 아직 없다면? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,,NOT_REQUIRED
+CN-20261001-011,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 10:00~18:00
+📍경남 하동군 북천면 경서대로 2253-9",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-011,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"10/1~4 · 10:00~22:00 · 무료
+📍강원 정선군 정선읍 봉양리 104",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-011,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"10/1~5 · 10:00~22:00 · 무료
+📍충남 천안시 서북구 번영로 208",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-011,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"10/3~18 · 13:00~23:00 · 무료
+📍경남 진주시 남강로 626",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-011,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-011,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-012,1,HOOK,PHOTO_COVER,"주말 축제
+**4곳 모음**","🍂 10/3~4 모두 열려요 · 입장료 무료~2,000원",주말 약속 아직 없다면? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,,NOT_REQUIRED
+CN-20261001-012,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 10:00~18:00
+📍경남 하동군 북천면 경서대로 2253-9",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-012,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"10/1~4 · 10:00~22:00 · 무료
+📍강원 정선군 정선읍 봉양리 104",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-012,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"10/1~5 · 10:00~22:00 · 무료
+📍충남 천안시 서북구 번영로 208",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-012,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"10/3~18 · 13:00~23:00 · 무료
+📍경남 진주시 남강로 626",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-012,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-012,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-013,1,HOOK,PHOTO_COVER,"10월 첫 주,
+**지금 가야 할 축제 4곳**",이번 주말 어디감?,"10/3~4 모두 열려요 · 입장료 무료~2,000원",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,,NOT_REQUIRED
+CN-20261001-013,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 10:00~18:00
+📍경남 하동군 북천면 경서대로 2253-9",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-013,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"10/1~4 · 10:00~22:00 · 무료
+📍강원 정선군 정선읍 봉양리 104",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-013,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"10/1~5 · 10:00~22:00 · 무료
+📍충남 천안시 서북구 번영로 208",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-013,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"10/3~18 · 13:00~23:00 · 무료
+📍경남 진주시 남강로 626",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-013,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-013,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-014,1,HOOK,PHOTO_COVER,"10월 첫 주,
+지금 가야 할
+**축제 4곳**",이번 주말 어디감?,"10/3~4 모두 열려요 · 입장료 무료~2,000원",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,,NOT_REQUIRED
+CN-20261001-014,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 10:00~18:00
+📍경남 하동군 북천면 경서대로 2253-9",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-014,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"10/1~4 · 10:00~22:00 · 무료
+📍강원 정선군 정선읍 봉양리 104",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-014,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"10/1~5 · 10:00~22:00 · 무료
+📍충남 천안시 서북구 번영로 208",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-014,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"10/3~18 · 13:00~23:00 · 무료
+📍경남 진주시 남강로 626",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-014,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-014,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-015,1,HOOK,PHOTO_COVER,"10월 첫 주,
+**지금 가야 할 축제 4곳**",이번 주말 어디감?,딱 지금 가야 예쁜 곳들 🌸,,,TRUE,PHOTO,data/images/travel/tmp-F01/08.jpg,,,,NOT_REQUIRED
+CN-20261001-015,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 10:00~18:00
+📍경남 하동군 북천면 경서대로 2253-9",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-015,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"10/1~4 · 10:00~22:00 · 무료
+📍강원 정선군 정선읍 봉양리 104",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-015,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"10/1~5 · 10:00~22:00 · 무료
+📍충남 천안시 서북구 번영로 208",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-015,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"10/3~18 · 13:00~23:00 · 무료
+📍경남 진주시 남강로 626",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-015,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-015,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-016,1,HOOK,PHOTO_COVER,"10월 첫 주,
+**지금 가야 할 축제 4곳**",이번 주말 어디감?,딱 지금 가야 예쁜 곳들 🌸,,,TRUE,PHOTO,data/images/travel/tmp-F01/08.jpg,,,,NOT_REQUIRED
+CN-20261001-016,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"📍 북천면 직전리 일원
+📅 9/22~10/5
+💰 입장료 2,000원",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-016,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"📍 정선읍 일원
+📅 10/1~4
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-016,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"📍 삼거리공원·종합운동장
+📅 10/1~5
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-016,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"📍 진주성·남강 일원
+📅 10/3~18
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-016,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-016,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-017,1,HOOK,PHOTO_COVER,"10월 첫 주,
+**지금 가야 할 축제 4곳**",이번 주말 어디감?,딱 지금 가야 예쁜 곳들 🌸,,,TRUE,PHOTO,data/images/travel/tmp-F01/08.jpg,,,,NOT_REQUIRED
+CN-20261001-017,2,INFORMATION,IMAGE_TEXT,"코스모스 28ha
+**꽃단지 입장료 2,000원**",하동 북천 코스모스·메밀꽃 축제,"📍 경남 하동군 북천면 경서대로 2253-9
+📅 9/22~10/5 · 10:00~18:00
+💰 입장료 2,000원",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-017,3,INFORMATION,IMAGE_TEXT,"아리랑 공연과
+**시내 퍼레이드**",정선아리랑제,"📍 강원 정선군 정선읍 봉양리 104
+📅 10/1~4 · 10:00~22:00
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-017,4,INFORMATION,IMAGE_TEXT,"전국 춤 경연과
+**거리 퍼레이드**",천안흥타령춤축제,"📍 충남 천안시 서북구 번영로 208
+📅 10/1~5 · 10:00~22:00
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-017,5,INFORMATION,IMAGE_TEXT,"남강 유등과
+**야간 드론쇼**",진주남강유등축제,"📍 경남 진주시 남강로 626
+📅 10/3~18 · 13:00~23:00
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-017,6,SUMMARY,NUMBER_LIST,"축제 4곳
+**기간 한눈에 정리**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-017,7,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-018,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/01.jpg,,,,NOT_REQUIRED
+CN-20261001-018,2,INFORMATION,TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,FALSE,,,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-018,3,INFORMATION,TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,FALSE,,,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-018,4,INFORMATION,TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,FALSE,,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-018,5,INFORMATION,TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,FALSE,,,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-018,6,INFORMATION,BIG_NUMBER,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",10/16~18,,FALSE,,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-018,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-018,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-019,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/01.jpg,,,,NOT_REQUIRED
+CN-20261001-019,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/02.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-019,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/03.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-019,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,data/images/travel/tmp-I01/04.jpg,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-019,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/05.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-019,6,INFORMATION,TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,FALSE,,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-019,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-019,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-020,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/01.jpg,,,,NOT_REQUIRED
+CN-20261001-020,2,INFORMATION,TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/02.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-020,3,INFORMATION,TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/03.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-020,4,INFORMATION,TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,data/images/travel/tmp-I01/04.jpg,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-020,5,INFORMATION,TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/05.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-020,6,INFORMATION,BIG_NUMBER,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",10/16~18,,FALSE,,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-020,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-020,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-021,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/01.jpg,,,,NOT_REQUIRED
+CN-20261001-021,2,INFORMATION,TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/02.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-021,3,INFORMATION,TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/03.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-021,4,INFORMATION,TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,data/images/travel/tmp-I01/04.jpg,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-021,5,INFORMATION,TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/05.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-021,6,INFORMATION,TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,data/images/travel/tmp-I01/07.jpg,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-021,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-021,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-022,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-022,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p1-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-022,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p2-creative.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-022,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,data/images/travel/tmp-I01/p3-superdry.jpg,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-022,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p4-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-022,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,data/images/travel/tmp-I01/p5-zigzag.jpg,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-022,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-022,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-023,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-023,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p1-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-023,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p2-creative.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-023,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,data/images/travel/tmp-I01/p3-superdry.jpg,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-023,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p4-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-023,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,data/images/travel/tmp-I01/p5-zigzag.jpg,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-023,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-023,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-024,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-024,2,INFORMATION,TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,FALSE,,,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-024,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-024,4,INFORMATION,TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,FALSE,,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-024,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-024,6,INFORMATION,TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,FALSE,,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-024,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-024,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-025,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cover-seoulforest.jpg,,,,NOT_REQUIRED
+CN-20261001-025,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-025,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-025,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-025,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-025,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-025,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-025,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-026,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cov-a.jpg,,,,NOT_REQUIRED
+CN-20261001-026,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-026,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-026,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-026,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-026,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-026,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-026,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-027,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cov-b.jpg,,,,NOT_REQUIRED
+CN-20261001-027,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-027,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-027,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-027,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-027,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-027,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-027,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-028,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cov-c.jpg,,,,NOT_REQUIRED
+CN-20261001-028,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-028,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-028,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-028,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-028,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-028,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-028,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-029,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cov-d.jpg,,,,NOT_REQUIRED
+CN-20261001-029,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-029,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-029,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-029,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-029,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-029,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-029,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-030,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cover-seongsu.jpg,,,,NOT_REQUIRED
+CN-20261001-030,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-030,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-030,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-030,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-030,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-030,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-030,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-031,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cover-seongsu.jpg,,,,NOT_REQUIRED
+CN-20261001-031,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-031,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-031,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-031,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-031,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-031,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-031,8,CTA,FOLLOW,"저장해두고
+**이번 주말 떠나요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-032,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cover-seongsu.jpg,,,,NOT_REQUIRED
+CN-20261001-032,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-032,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-032,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-superdry.png,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-032,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-032,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-zigzag.jpg,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-032,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-032,8,CTA,FOLLOW,"저장해두고
+**성수 가는 날 꺼내봐요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-033,1,HOOK,PHOTO_COVER,"성수 10월 팝업·행사
+**5곳 일정 모음**",이번주 팝업 어디감?,가기 전에 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I01/cover-clio.png,,,,NOT_REQUIRED
+CN-20261001-033,2,INFORMATION,IMAGE_TEXT,"클리오 가을 신상
+**레트로 다방 팝업**",클리오 풍년다방,"📍 서울 성동구 뚝섬로 273 서울숲 K-뷰티가든 & 파빌리온
+📅 9/22~10/27
+🎫 사전예약·현장대기",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-clio.jpg,,,http://www.sisunnews.co.kr/news/articleView.html?idxno=246432,NEEDS_CHECK
+CN-20261001-033,3,INFORMATION,IMAGE_TEXT,"성수동 전체가
+**테마파크**로",크리에이티브×성수,"📍 서울 성동구 연무장15길 11 에스팩토리 외
+📅 10/5~11
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-creative-poster.jpg,,,https://biz.heraldcorp.com/article/10881338,NEEDS_CHECK
+CN-20261001-033,4,INFORMATION,IMAGE_TEXT,"26FW 신상
+**선판매 팝업**",슈퍼드라이 성수,"📍 서울 성동구 연무장길 17 스토리칸 외
+📅 9/30~10/12
+🛍 경량패딩·콜라보 의류·굿즈",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-superdry.png,,,https://www.apparelnews.co.kr/news/news_view/?cat=CAT114&idx=227912,NEEDS_CHECK
+CN-20261001-033,5,INFORMATION,IMAGE_TEXT,"스탬프 미션 5개
+**체험형 팝업**",스위트 에이전트,"📍 서울 성동구 서울숲2길 43 무신사 서울숲 플레이스
+📅 10/2~15 · 11:00~20:00
+🎁 한정판 굿즈 27종",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-sweet.jpg,,,https://www.newsgn.com/news/articleView.html?idxno=576986,NEEDS_CHECK
+CN-20261001-033,6,INFORMATION,IMAGE_TEXT,"쇼핑몰 50곳을
+**한자리에**",지그재그 익스프레스,"📍 서울 성동구 성수일로6길 36 앤더슨씨 성수 신관
+📅 10/16~18
+🎫 10/7 낮 12시 앱 선착순 예약",,,TRUE,PHOTO,data/images/travel/tmp-I01/p-zigzag.jpg,,,https://tnnews.co.kr/archives/295045,NEEDS_CHECK
+CN-20261001-033,7,SUMMARY,NUMBER_LIST,5곳 **기간 한눈에**,,,,클리오 풍년다방 · ~10/27 | 크리에이티브×성수 · 10/5~11 | 슈퍼드라이 · ~10/12 | 스위트 에이전트 · ~10/15 | 지그재그 익스프레스 · 10/16~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-033,8,CTA,FOLLOW,"이번 주
+**성수 어때요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-034,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",이번주 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-034,2,INFORMATION,TEXT,"서울에서 가장 가까운
+**단풍 산**",북한산국립공원,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-034,3,INFORMATION,TEXT,"성곽 따라 걷는
+**단풍 산책길**",남한산성도립공원,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-034,4,INFORMATION,TEXT,"숲길 따라
+**걷는 단풍**",국립수목원(광릉),"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-034,5,INFORMATION,TEXT,"정원 안에서
+**즐기는 단풍**",아침고요수목원,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-034,6,INFORMATION,TEXT,"은행나무길로
+**유명한 섬**",남이섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-034,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-034,8,CTA,FOLLOW,"단풍 들면
+**다시 알려드려요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-035,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",이번주 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-035,2,INFORMATION,TEXT,도심 속 **단풍 산**,북한산국립공원,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-035,3,INFORMATION,TEXT,성곽 따라 **단풍길**,남한산성도립공원,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-035,4,INFORMATION,TEXT,숲길 **단풍 산책**,국립수목원(광릉),"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-035,5,INFORMATION,TEXT,정원 속 **단풍**,아침고요수목원,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-035,6,INFORMATION,TEXT,은행나무길 **섬**,남이섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-035,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-035,8,CTA,FOLLOW,"단풍 들면
+**다시 알려드려요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-036,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",이번주 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-036,2,INFORMATION,TEXT,**북한산**국립공원,도심 속 단풍 산,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-036,3,INFORMATION,TEXT,**남한산성**도립공원,성곽 따라 단풍길,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-036,4,INFORMATION,TEXT,**국립수목원**(광릉),숲길 단풍 산책,"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-036,5,INFORMATION,TEXT,**아침고요**수목원,정원 속 단풍,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-036,6,INFORMATION,TEXT,**남이섬**,은행나무길로 유명한 섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-036,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-036,8,CTA,FOLLOW,"단풍 들면
+**다시 알려드려요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-037,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",이번주 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-037,2,INFORMATION,TEXT,북한산국립공원,도심 속 단풍 산,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-037,3,INFORMATION,TEXT,남한산성도립공원,성곽 따라 단풍길,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-037,4,INFORMATION,TEXT,국립수목원(광릉),숲길 단풍 산책,"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-037,5,INFORMATION,TEXT,아침고요수목원,정원 속 단풍,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-037,6,INFORMATION,TEXT,남이섬,은행나무길로 유명한 섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-037,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-037,8,CTA,FOLLOW,"단풍 들면
+**다시 알려드려요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-038,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",이번주 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-038,2,INFORMATION,TEXT,북한산국립공원,도심 속 단풍 산,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-038,3,INFORMATION,TEXT,남한산성도립공원,성곽 따라 단풍길,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-038,4,INFORMATION,TEXT,국립수목원(광릉),숲길 단풍 산책,"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-038,5,INFORMATION,TEXT,아침고요수목원,정원 속 단풍,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-038,6,INFORMATION,TEXT,남이섬,은행나무길로 유명한 섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-038,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-038,8,CTA,FOLLOW,"단풍 들면
+**다시 알려드려요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-039,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",이번주 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-039,2,INFORMATION,TEXT,북한산국립공원,도심 속 단풍 산,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-039,3,INFORMATION,TEXT,남한산성도립공원,성곽 따라 단풍길,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-039,4,INFORMATION,TEXT,국립수목원(광릉),숲길 단풍 산책,"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-039,5,INFORMATION,TEXT,아침고요수목원,정원 속 단풍,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-039,6,INFORMATION,TEXT,남이섬,은행나무길로 유명한 섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-039,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-039,8,CTA,FOLLOW,"단풍 구경
+**어디로 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-040,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",곧 물들 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-040,2,INFORMATION,TEXT,북한산국립공원,도심 속 단풍 산,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-040,3,INFORMATION,TEXT,남한산성도립공원,성곽 따라 단풍길,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-040,4,INFORMATION,TEXT,국립수목원(광릉),숲길 단풍 산책,"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-040,5,INFORMATION,TEXT,아침고요수목원,정원 속 단풍,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-040,6,INFORMATION,TEXT,남이섬,은행나무길로 유명한 섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-040,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-040,8,CTA,FOLLOW,"단풍 구경
+**어디로 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-041,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",곧 물들 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-041,2,INFORMATION,TEXT,북한산국립공원,도심 속 단풍 산,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-041,3,INFORMATION,TEXT,남한산성도립공원,성곽 따라 단풍길,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-041,4,INFORMATION,TEXT,국립수목원(광릉),숲길 단풍 산책,"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-041,5,INFORMATION,TEXT,아침고요수목원,정원 속 단풍,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-041,6,INFORMATION,TEXT,남이섬,은행나무길로 유명한 섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-041,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-041,8,CTA,FOLLOW,"단풍 구경
+**어디로 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-042,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",곧 물들 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-042,2,INFORMATION,TEXT,북한산국립공원,도심 속 단풍 산,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-042,3,INFORMATION,TEXT,남한산성도립공원,성곽 따라 단풍길,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-042,4,INFORMATION,TEXT,국립수목원(광릉),숲길 단풍 산책,"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-042,5,INFORMATION,TEXT,아침고요수목원,정원 속 단풍,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-042,6,INFORMATION,TEXT,남이섬,은행나무길로 유명한 섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-042,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-042,8,CTA,FOLLOW,"단풍 구경
+**어디로 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

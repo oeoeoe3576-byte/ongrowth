@@ -50,7 +50,7 @@ const tests: [string, () => void | Promise<void>][] = [
     assert.equal(resolveTheme("marketing").theme.name, "default");
     assert.equal(resolveTheme("stay").theme.name, "life");
     assert.equal(resolveTheme("beauty").fallback, true);
-    for (const t of ["insight", "life", "campaign"]) assert.equal(resolveTheme(t).theme.name, t);
+    for (const t of ["insight", "life", "campaign", "trend"]) assert.equal(resolveTheme(t).theme.name, t);
     const beauty = extendTheme(defaultTheme, { name: "beauty", color: { accent: "#C2185B" } });
     assert.equal(beauty.color.accent, "#C2185B");
     assert.equal(beauty.color.background, defaultTheme.color.background);

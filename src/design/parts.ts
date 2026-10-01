@@ -30,7 +30,8 @@ export function rich(text: string, focus = ""): string {
       }
       return esc(part);
     })
-    .join("");
+    .join("")
+    .replace(/\r?\n/g, "<br>"); // 원고의 줄바꿈은 그대로 줄바꿈
 }
 
 /** 강조 표시(**)를 뺀 글자 */
@@ -96,7 +97,7 @@ export function frame(page: RenderPage, ctx: RenderContext, tone: Tone, inner: s
   const total = String(ctx.total).padStart(2, "0");
   const segments = Array.from({ length: ctx.total }, (_, i) => `<i class="${i < page.number ? "on" : ""}"></i>`).join("");
   const swipe = page.number === 1 && ctx.total > 1 ? `<span class="cn-swipe">넘겨보기 →</span>` : "";
-  return `<article class="cn-card cn-theme-${esc(ctx.theme.name)} cn-tone-${tone} cn-l-${esc(page.layout)}" data-page="${page.number}" data-layout="${esc(page.layout)}">${background ? `\n  <div class="cn-bg">${background}</div>` : ""}
+  return `<article class="cn-card cn-theme-${esc(ctx.theme.name)} cn-tone-${tone} cn-l-${esc(page.layout)} cn-r-${esc(page.role)}" data-page="${page.number}" data-layout="${esc(page.layout)}">${background ? `\n  <div class="cn-bg">${background}</div>` : ""}
   <header class="cn-top"><span class="cn-brand">${esc(brand)}</span><span class="cn-pn">${pn}<span class="cn-pn-total"> / ${total}</span></span></header>
   <main class="cn-main" data-fit data-field="card">${inner}</main>
   <footer class="cn-foot"><div class="cn-progress">${segments}</div>${swipe}</footer>

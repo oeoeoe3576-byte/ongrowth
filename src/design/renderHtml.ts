@@ -57,8 +57,9 @@ export function renderContent(master: MasterRow, pageRows: PageRow[], themeName?
 
 /** 카드 CSS 전체 (폰트 + 테마 변수 + 공통 + 레이아웃별) */
 export function cardCss(themes: DesignTheme[]): string {
-  const vars = [...new Map(themes.map((t) => [t.name, t])).values()].map((t) => `.cn-theme-${t.name}{${themeToCssVars(t)}}`).join("\n");
-  return [fontFaceCss(), vars, BASE_CSS, allLayoutCss()].join("\n");
+  const unique = [...new Map(themes.map((t) => [t.name, t])).values()];
+  const vars = unique.map((t) => `.cn-theme-${t.name}{${themeToCssVars(t)}}`).join("\n");
+  return [fontFaceCss(), vars, BASE_CSS, allLayoutCss(), ...unique.map((t) => t.css ?? "")].join("\n");
 }
 
 /** PNG 캡처용: 카드 한 장짜리 HTML 문서 */

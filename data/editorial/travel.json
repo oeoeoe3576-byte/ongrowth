@@ -1,0 +1,264 @@
+{
+  "brand": "travel",
+  "category": "travel",
+  "objective": "SAVE",
+  "target": "주말·연휴에 국내 여행을 계획하는 20~30대",
+  "maxPages": 10,
+  "reviewTime": "09:00",
+  "publishTime": "18:30",
+  "timezone": "Asia/Seoul",
+  "channels": {
+    "season": "시즌 소식",
+    "stay": "숙소",
+    "course": "여행 코스",
+    "festival": "축제·행사",
+    "info": "정보 (여행 꿀팁·요즘 유행·팝업·전시)"
+  },
+  "weekly": {
+    "mon": "season",
+    "tue": "stay",
+    "wed": "info",
+    "thu": "festival",
+    "fri": "course",
+    "sat": "info",
+    "sun": "stay"
+  },
+  "rules": [
+    "그 주·그 달 시즌에 맞는 내용만 쓴다 (지금 갈 수 있는 곳, 지금 볼 수 있는 것)",
+    "축제·행사는 날짜·장소·운영 시간을 지자체 또는 한국관광공사(visitkorea) 공식 페이지에서 확인하고 source에 주소를 적는다. 확인 못 한 항목은 쓰지 않는다",
+    "숙소·가게 가격, 예약 가능 여부, 운영 여부처럼 바뀌는 정보는 공식 출처로 확인한 경우만 쓰고, 그래도 fact_check NEEDS_CHECK로 표시한다",
+    "광고·협찬처럼 보이는 표현(최저가, 무조건, 강력 추천)은 쓰지 않는다",
+    "사진은 직접 찍은 사진 또는 무료 사진(Pexels 등)만 쓰고, 다른 계정·블로그 사진은 쓰지 않는다",
+    "마무리 멘트에 업로드 횟수(매주, 매일 등)를 쓰지 않고, 매번 표현을 바꾼다",
+    "제목은 뜻 단위로 줄바꿈(\\n)한다",
+    "최근 14일 안에 다룬 장소·주제와 겹치지 않게 한다",
+    "팝업·전시는 기간·장소·예약 방법을 브랜드나 주최 측 공식 채널에서 확인하고, 이미 끝났거나 끝나기 3일 이내인 것은 넣지 않는다",
+    "제목(headline)은 그 카드 내용 전체를 포괄하는 핵심만 담백하게 쓴다. 호기심·과장 문구, 시점 수식('이번 주말 여기 가면 됩니다')을 제목으로 쓰지 않는다. 예: 표지는 '무엇의 모음인지', 장 제목은 그 장의 핵심 정보. 축제·장소 이름은 박스에 따로 넣는다",
+    "사진은 업체(주최 측) 제공 사진만 쓴다: 네이버 플레이스에서 업체가 올린 사진, 공식 홈페이지의 무료 사용 가능 이미지, 관광공사 포토코리아. 블로그·포스트·카페·뉴스·지도 이용자 사진은 개인 저작물이라 쓰지 않는다. 출처는 캡션에만 적는다"
+  ],
+  "backlog": [
+    {
+      "id": "S01",
+      "channel": "stay",
+      "topic": "단풍 명소 바로 옆, 가을에 묵기 좋은 숙소",
+      "angle": "아침 일찍 단풍길을 걷기 좋은 위치 중심. 지역별 1곳씩",
+      "status": "todo"
+    },
+    {
+      "id": "S02",
+      "channel": "stay",
+      "topic": "서울 근교 1박, 불멍 되는 감성 숙소",
+      "angle": "2시간 안쪽, 저녁이 쌀쌀해지는 10월에 맞게",
+      "status": "reserved",
+      "date": "2026-10-04"
+    },
+    {
+      "id": "S03",
+      "channel": "stay",
+      "topic": "바다 보며 쉬는 가을 오션뷰 숙소",
+      "angle": "사람 적은 가을 바다. 동해·남해·서해 고르게",
+      "status": "todo"
+    },
+    {
+      "id": "S04",
+      "channel": "stay",
+      "topic": "한옥에서 하룻밤, 한옥 스테이 고르는 법",
+      "angle": "경주·전주·안동 등. 고를 때 볼 것 위주",
+      "status": "todo"
+    },
+    {
+      "id": "S05",
+      "channel": "stay",
+      "topic": "쌀쌀해질 때 가는 온천 숙소",
+      "angle": "11월용. 숙소 안에서 온천 가능한 곳",
+      "status": "todo"
+    },
+    {
+      "id": "S06",
+      "channel": "stay",
+      "topic": "반려견과 함께 묵는 숙소 체크리스트",
+      "angle": "동반 조건(크기·마릿수·추가 요금) 확인법",
+      "status": "todo"
+    },
+    {
+      "id": "F01",
+      "channel": "festival",
+      "topic": "이번 주말 가볼 만한 가을 축제",
+      "angle": "10월 둘째 주 주말 기준. 지역 고르게 3~5곳",
+      "status": "published",
+      "date": "2026-10-01",
+      "content_id": "CN-20261001-017",
+      "publish_at": "2026-10-01 18:30",
+      "published_at": "2026-10-01 18:56",
+      "note": "instagram media 18112223042332930"
+    },
+    {
+      "id": "F02",
+      "channel": "festival",
+      "topic": "억새·코스모스, 가을꽃 축제 모음",
+      "angle": "10월 중순 개화 시기에 맞는 꽃 축제",
+      "status": "todo"
+    },
+    {
+      "id": "F03",
+      "channel": "festival",
+      "topic": "먹으러 가는 가을 먹거리 축제",
+      "angle": "지역 특산물 축제. 날짜·장소 공식 확인",
+      "status": "todo"
+    },
+    {
+      "id": "F04",
+      "channel": "festival",
+      "topic": "밤에 더 예쁜 빛·불꽃 축제",
+      "angle": "야간 행사 위주, 운영 시간 꼭 표기",
+      "status": "todo"
+    },
+    {
+      "id": "F05",
+      "channel": "festival",
+      "topic": "10월 마지막 주 가볼 만한 축제",
+      "angle": "10월 말 기준",
+      "status": "todo"
+    },
+    {
+      "id": "F06",
+      "channel": "festival",
+      "topic": "11월 단풍 축제와 행사",
+      "angle": "11월 초 단풍 절정 시기 행사",
+      "status": "todo"
+    },
+    {
+      "id": "C01",
+      "channel": "course",
+      "topic": "서울에서 2시간, 단풍 1박 2일 코스",
+      "angle": "출발 시간·동선 중심. 붐비는 시간 피하기",
+      "status": "approved",
+      "date": "2026-10-02",
+      "content_id": "CN-20261001-042",
+      "publish_at": "2026-10-02 18:30"
+    },
+    {
+      "id": "C02",
+      "channel": "course",
+      "topic": "사진 잘 나오는 억새 명소 당일치기",
+      "angle": "빛 좋은 시간대(해 질 녘) 안내",
+      "status": "todo"
+    },
+    {
+      "id": "C03",
+      "channel": "course",
+      "topic": "가을 바다 드라이브 코스",
+      "angle": "해안 도로 + 들를 곳 3곳",
+      "status": "todo"
+    },
+    {
+      "id": "C04",
+      "channel": "course",
+      "topic": "경주 가을 1박 2일 코스",
+      "angle": "걷기 좋은 동선, 야경 포함",
+      "status": "todo"
+    },
+    {
+      "id": "C05",
+      "channel": "course",
+      "topic": "비 와도 괜찮은 실내 여행 코스",
+      "angle": "박물관·전시·카페 등 날씨 걱정 없는 곳",
+      "status": "todo"
+    },
+    {
+      "id": "C06",
+      "channel": "course",
+      "topic": "11월 단풍 절정 코스",
+      "angle": "남쪽으로 내려가는 늦가을 단풍",
+      "status": "todo"
+    },
+    {
+      "id": "N01",
+      "channel": "season",
+      "topic": "지금 단풍 어디까지 왔을까",
+      "angle": "산·지역별 단풍 시작·절정 예상 시기. 기상청·산림청 등 공식 자료로 확인",
+      "status": "todo"
+    },
+    {
+      "id": "N02",
+      "channel": "season",
+      "topic": "10월에만 볼 수 있는 가을 풍경",
+      "angle": "핑크뮬리·억새·코스모스 등 지금 피는 것",
+      "status": "todo"
+    },
+    {
+      "id": "N03",
+      "channel": "season",
+      "topic": "새로 생긴 여행 핫플",
+      "angle": "최근 개장·재개장한 곳. 개장일 공식 확인",
+      "status": "todo"
+    },
+    {
+      "id": "N04",
+      "channel": "season",
+      "topic": "11월에 미리 알아둘 여행 정보",
+      "angle": "단풍 끝물·첫눈·온천 시즌 준비",
+      "status": "todo"
+    },
+    {
+      "id": "I01",
+      "channel": "info",
+      "topic": "10월 성수 팝업 모음",
+      "angle": "기간·장소·예약 여부를 브랜드 공식 계정/사이트로 확인. 끝난 팝업 제외",
+      "status": "approved",
+      "date": "2026-10-03",
+      "content_id": "CN-20261001-033",
+      "publish_at": "2026-10-03 18:30"
+    },
+    {
+      "id": "I02",
+      "channel": "info",
+      "topic": "지금 서울에서 볼 만한 전시 5곳",
+      "angle": "전시 기간·휴관일·관람료 공식 확인",
+      "status": "todo"
+    },
+    {
+      "id": "I03",
+      "channel": "info",
+      "topic": "기차 여행 전에 알면 좋은 예매 꿀팁",
+      "angle": "코레일 공식 안내 기준. 할인 제도는 확인된 것만",
+      "status": "todo"
+    },
+    {
+      "id": "I04",
+      "channel": "info",
+      "topic": "요즘 여행에서 유행하는 것",
+      "angle": "최근 뜨는 여행 방식·장소 트렌드. 출처 있는 내용만",
+      "status": "todo"
+    },
+    {
+      "id": "I05",
+      "channel": "info",
+      "topic": "1박 2일 짐 가볍게 싸는 법",
+      "angle": "계절에 맞는 준비물 체크리스트",
+      "status": "todo"
+    },
+    {
+      "id": "I06",
+      "channel": "info",
+      "topic": "이번 달 팝업·전시 한 곳 깊게 보기",
+      "angle": "한 곳만 자세히: 가는 법·대기 팁·볼거리",
+      "status": "todo"
+    },
+    {
+      "id": "I07",
+      "channel": "info",
+      "topic": "10월 전국 불꽃축제 일정 모음",
+      "angle": "부산 외에 다른 지역 불꽃축제도 날짜·장소 공식 확인해서 묶기",
+      "status": "todo"
+    },
+    {
+      "id": "I08",
+      "channel": "info",
+      "topic": "부산 불꽃축제 명당 5곳",
+      "angle": "공식 안내 기준 관람 장소 5곳. 일정은 주최 측 확인",
+      "status": "todo"
+    }
+  ],
+  "reviewNote": "월~목은 그날 1개, 금요일 아침에 금+토+일 3개를 한 번에 검토"
+}

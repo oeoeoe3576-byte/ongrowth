@@ -42,7 +42,8 @@ const HOOK_LAYOUTS = ["BIG_TITLE", "BIG_NUMBER", "IMAGE_TEXT", "SCREENSHOT", "PH
 const CTA_LAYOUTS = ["CTA", "FOLLOW"];
 
 /** 보이는 글자 수 (강조 표시 ** 제외) */
-const len = (s: string) => [...stripEmphasis(s)].length;
+const len = (s: string) => [...stripEmphasis(s).replace(/\n/g, "")].length;
+const LINE_BREAK_FIELDS: string[] = ["headline", "subheadline", "body"];
 const norm = (s: string) => stripEmphasis(s).replace(/\s+/g, "");
 
 function isStr(v: unknown): v is string {
@@ -101,7 +102,9 @@ export function validatePlan(plan: CardnewsPlan, input: PlanInput): PlanIssue[] 
   const counts = new Map<string, number>();
   plan.pages.forEach((p) => counts.set(p.layout_type, (counts.get(p.layout_type) ?? 0) + 1));
   for (const [layout, c] of counts) {
-    if (c > Math.ceil(n / 2)) err(`레이아웃 ${layout}가 ${c}/${n}장에 쓰임 - 절반 이하로`, undefined, "layout_type");
+    // 리스트형은 항목 장(표지·정리·마무리 3장 제외)이 같은 레이아웃을 반복하는 게 자연스럽다
+    const limit = plan.content_type === "LIST" ? Math.max(Math.ceil(n / 2), n - 3) : Math.ceil(n / 2);
+    if (c > limit) err(`레이아웃 ${layout}가 ${c}/${n}장에 쓰임 - 절반 이하로`, undefined, "layout_type");
   }
   // 이미지를 모든 카드에 억지로 넣지 않는다
   const withImage = plan.pages.filter((p) => p.image_required === true).length;
@@ -134,7 +137,10 @@ function validatePage(
       err("문자열이어야 함 (없으면 빈 문자열)", pg, f);
       continue;
     }
-    if (/[\r\n]/.test(p[f])) err("줄바꿈 금지 - 한 줄로", pg, f);
+    // 제목·부제·본문은 뜻 단위로 줄을 나누는 줄바꿈(\n)을 2개까지 허용. 나머지는 한 줄
+    const breaks = (p[f].match(/\n/g) ?? []).length;
+    if (/\r/.test(p[f]) || (breaks && !LINE_BREAK_FIELDS.includes(f))) err("줄바꿈 금지 - 한 줄로", pg, f);
+    else if (breaks > 2) err("줄바꿈은 2개까지", pg, f);
     if (FORMULA_START_RE.test(p[f])) err("=, +, -, @ 로 시작하면 시트가 수식으로 해석함", pg, f);
     if (p[f] !== p[f].trim()) warn("앞뒤 공백", pg, f);
     if ((p[f].match(/\*\*/g) ?? []).length % 2 !== 0) err("강조 표시 **가 짝이 맞지 않음", pg, f);

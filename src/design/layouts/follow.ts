@@ -21,7 +21,7 @@ export const FollowTemplate: LayoutComponent = {
 .cn-l-FOLLOW .cn-stats b { font-size: 30px; opacity: 1; margin-right: 6px; }
 .cn-l-FOLLOW .cn-bio { font-size: 27px; line-height: 1.55; }
 .cn-l-FOLLOW .cn-follow-btn { background: var(--c-accent); color: var(--c-on-accent); border-radius: 16px; padding: 22px; text-align: center; font-size: 32px; font-weight: var(--w-heavy); }
-.cn-l-FOLLOW .cn-body { color: var(--c-muted); max-width: 820px; }
+.cn-l-FOLLOW .cn-body.cn-body { color: #A3A3A3 !important; max-width: 820px; font-family: 'Nanum Pen Script', var(--font); font-size: 52px; font-weight: 400; line-height: 1.2; }
 .cn-l-FOLLOW .cn-cta-line { font-size: calc(var(--fs-sub) * 1.05); font-weight: var(--w-heavy); color: var(--c-accent); }`,
   render(p, ctx) {
     const b = ctx.brand;

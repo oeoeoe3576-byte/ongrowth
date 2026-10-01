@@ -15,6 +15,9 @@ export function fontFaceCss(): string {
     const file = require.resolve("pretendard/dist/web/variable/woff2/PretendardVariable.woff2");
     const b64 = fs.readFileSync(file).toString("base64");
     fontCache = `@font-face{font-family:'Pretendard';font-weight:45 920;font-style:normal;font-display:block;src:url(data:font/woff2;base64,${b64}) format('woff2');}`;
+    // 손글씨 느낌의 작은 문구(친구 태그 등)용 나눔펜스크립트(OFL)
+    const pen = require.resolve("@fontsource/nanum-pen-script/files/nanum-pen-script-korean-400-normal.woff2");
+    fontCache += `@font-face{font-family:'Nanum Pen Script';font-weight:400;font-style:normal;font-display:block;src:url(data:font/woff2;base64,${fs.readFileSync(pen).toString("base64")}) format('woff2');}`;
   } catch {
     fontCache = ""; // 폰트 패키지가 없으면 시스템 한글 폰트로 대체
   }

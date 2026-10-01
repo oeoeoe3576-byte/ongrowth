@@ -57,6 +57,7 @@ export const instagramPublisher: Publisher = {
       }
 
       const containerId = await client.createCarouselContainer(creationIds, caption);
+      await client.waitUntilReady(containerId);
       const publishedId = await client.publishContainer(containerId);
 
       return { ok: true, externalPostId: publishedId };

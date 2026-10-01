@@ -10,8 +10,18 @@
 //   npm run editorial -- due                            발행 시각이 지난 승인 건
 //   npm run editorial -- add --channel blog --topic "..." --angle "..."
 //   npm run editorial -- status                         전체 현황
+//   npm run editorial -- ig-check                       인스타그램 토큰 확인 (게시 안 함)
+//   npm run editorial -- publish <contentId> [--dry-run] 인스타그램 캐러셀 자동 발행 (승인 건만)
+//   npm run editorial -- photos <검색어> --id <contentId> [--pick 1,3,5]   관광공사 사진 검색/내려받기 (data/images/<brand>/<id>/)
+//   npm run editorial -- festivals --from YYYYMMDD [--to YYYYMMDD]          관광공사 공식 행사·축제 목록
 
 import { Command } from "commander";
+import { loadStore } from "../planner/store.js";
+import { renderContent } from "../design/renderHtml.js";
+import { exportPackage } from "../design/exportPackage.js";
+import path from "node:path";
+import { searchPhotos, downloadPhotos, searchFestivals, PHOTO_CREDIT } from "./tour.js";
+import { buildCaption, hostImages, waitForUrls, publishCarousel, checkInstagram } from "./instagram.js";
 import { loadCalendar, saveCalendar, pickTopic, findByContent, setMasterStatus, defaultPublishAt, recentTopics, now, channelFor, type Topic } from "./calendar.js";
 
 const program = new Command().name("editorial").description("콘텐츠 캘린더");
@@ -200,6 +210,74 @@ program.command("status").option(...brandOpt).action((o: { brand: string }) => {
   for (const ch of Object.keys(cal.channels)) console.log(`  ${cal.channels[ch]}: 남은 주제 ${cal.backlog.filter((t) => t.channel === ch && t.status === "todo").length}개`);
   for (const t of cal.backlog.filter((x) => x.status !== "todo")) console.log(`  ${t.id} ${t.status.padEnd(9)} ${t.date ?? ""} ${t.content_id ?? ""} ${t.topic}`);
 });
+
+program
+  .command("photos")
+  .argument("<keyword>")
+  .option(...brandOpt)
+  .option("--id <contentId>", "내려받을 폴더 이름 (없으면 목록만 보기)")
+  .option("--pick <list>", "목록 번호 중 내려받을 것 (예: 1,3,5). 없으면 앞에서 6장")
+  .action(async (keyword: string, o: { brand: string; id?: string; pick?: string }) => {
+    const photos = await searchPhotos(keyword);
+    if (!photos.length) {
+      console.log(`'${keyword}' 사진 없음 - 다른 검색어(지역명, 장소명)로 다시`);
+      return;
+    }
+    photos.forEach((p, i) => console.log(`${String(i + 1).padStart(2)}. ${p.title} · ${p.location} · ${p.month} · ${p.photographer}`));
+    if (!o.id) return;
+    const picks = o.pick ? o.pick.split(",").map((n) => photos[Number(n.trim()) - 1]).filter(Boolean) : photos.slice(0, 6);
+    const dir = path.join("data/images", o.brand, o.id);
+    const files = await downloadPhotos(picks, dir);
+    console.log(`\n✓ ${files.length}장 → ${dir}/ (image_source에 이 경로를 쓰고, 캡션 끝에 "${PHOTO_CREDIT}")`);
+    for (const f of files) console.log(`  ${f}`);
+  });
+
+program
+  .command("festivals")
+  .requiredOption("--from <date>", "YYYYMMDD")
+  .option("--to <date>", "YYYYMMDD")
+  .action(async (o: { from: string; to?: string }) => {
+    const list = await searchFestivals(o.from, o.to);
+    if (!list.length) console.log("해당 기간 행사 없음");
+    for (const f of list) console.log(`${f.start}~${f.end} · ${f.title} · ${f.addr}${f.tel ? ` · ${f.tel}` : ""} · contentid ${f.contentId}`);
+    console.log(`\n출처: 한국관광공사 국문 관광정보 (공식 일정은 주최 측 페이지로 한 번 더 확인)`);
+  });
+
+program.command("ig-check").option(...brandOpt).action(async (o: { brand: string }) => {
+  console.log(`✓ 인스타그램 연결 확인 (${o.brand}): ${await checkInstagram(o.brand)}`);
+});
+
+program
+  .command("publish")
+  .argument("<contentId>")
+  .option(...brandOpt)
+  .option("--dry-run", "이미지·캡션만 만들고 업로드하지 않음")
+  .option("--force", "승인(approved) 상태가 아니어도 발행")
+  .action(async (id: string, o: { brand: string; dryRun?: boolean; force?: boolean }) => {
+    const cal = loadCalendar(o.brand);
+    const t = findByContent(cal, id);
+    if (t.status === "published") throw new Error(`${id}는 이미 발행됨 (${t.published_at})`);
+    if (t.status !== "approved" && !o.force) throw new Error(`${id}는 승인 전 (상태 ${t.status}). 승인 후 발행`);
+    const store = loadStore();
+    const master = store.master.find((m) => m.content_id === id);
+    if (!master) throw new Error(`MASTER에 ${id} 없음`);
+    const caption = buildCaption(master.caption, master.hashtags);
+    const pkg = await exportPackage(renderContent(master, store.pages));
+    console.log(`JPEG ${pkg.images.length}장 · 캡션 ${caption.length}자`);
+    if (o.dryRun) {
+      console.log(`[dry-run] 업로드하지 않음 → ${pkg.dir}\n---\n${caption}`);
+      return;
+    }
+    const urls = hostImages(id, pkg.images);
+    await waitForUrls(urls);
+    console.log(`이미지 주소 준비 (${urls.length}장)`);
+    const mediaId = await publishCarousel(urls, caption, o.brand);
+    transition(id, o.brand, "published", "published", (x) => {
+      x.published_at = now(cal).toFormat("yyyy-MM-dd HH:mm");
+      x.note = `instagram media ${mediaId}`;
+    });
+    console.log(`✓ ${id} 인스타그램 발행 완료 (media ${mediaId})`);
+  });
 
 program.parseAsync().catch((e) => {
   console.error((e as Error).message);

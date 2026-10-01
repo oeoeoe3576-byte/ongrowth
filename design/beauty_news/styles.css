@@ -455,11 +455,4 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 .points.dark .item { background: rgba(255,255,255,.9); color: var(--plum); }
 /* P.S. 표시는 작게 (2026-10-01) */
 .ps .ps-mark { font-size: 110px; letter-spacing: -2px; margin-bottom: 10px; }
-.points.dark { padding-top: 520px; }
-.points.dark h2 { margin: 20px 0 30px; font-size: 64px; }
-.points.dark .items { gap: 14px; }
-.points.dark .item { padding: 22px 32px; grid-template-columns: 80px 1fr; }
-.points.dark .item h3 { margin-bottom: 4px; }
-.points.dark .item p { font-size: 25px; line-height: 1.5; }
-.bgimg.dark img { object-position: center 8%; }
-.bgimg.dark::after { background: linear-gradient(180deg, rgba(20,10,14,.35) 0%, rgba(20,10,14,0) 18%, rgba(20,10,14,0) 34%, rgba(20,10,14,.7) 52%, rgba(20,10,14,.9) 100%); }
+.bgimg.dark::after { background: linear-gradient(180deg, rgba(20,10,14,.72) 0%, rgba(20,10,14,.45) 30%, rgba(20,10,14,.45) 60%, rgba(20,10,14,.85) 100%); }

@@ -47,10 +47,10 @@
   "letter": "Color Letter",
   "kind": "뷰티 정보",
   "title": "올가을은 베이지, 내 톤엔 어떤 베이지?",
-  "why_now": "美的 11월호(9/24) 특집 '盛れるベージュ'",
+  "why_now": "가을 기본 컬러, 톤별 고르는 법",
   "personal_color": "웜/쿨 베이지 예시 컬러칩 (일반 기준)",
-  "source": "美的",
-  "url": "https://www.biteki.com/250139/",
+  "source": "",
+  "url": "",
   "purchase_needed": false,
   "image_source": "Pexels 배경",
   "published": ""
@@ -156,15 +156,15 @@
  {
   "date": "2026-10-07",
   "slot": "PM",
-  "letter": "Color Letter",
+  "letter": "미정",
   "kind": "뷰티 정보",
-  "title": "일본에서 뜨는 '백도(白桃) 치크', 2색으로 만드는 법",
-  "why_now": "일본 VOCE가 소개한 2색 베이비핑크 그라데이션 치크. 국내엔 아직 소개가 적은 해외 선행 소재",
-  "personal_color": "O (노란기·푸른기 핑크 조합 → 톤별)",
-  "source": "VOCE (일본)",
-  "url": "https://i-voce.jp/feed/5175918/",
+  "title": "미정 — 일본 출시·일정 위주 소재라 한국 소재로 교체",
+  "why_now": "",
+  "personal_color": "",
+  "source": "",
+  "url": "",
   "purchase_needed": "X",
-  "image_source": "제품 컷: 브랜드 공식",
+  "image_source": "",
   "published": "2026-09-30"
  },
  {
@@ -282,15 +282,15 @@
  {
   "date": "2026-10-12",
   "slot": "AM",
-  "letter": "New Letter",
+  "letter": "미정",
   "kind": "뷰티 아이템",
-  "title": "2026 홀리데이 코프레, 일본에서 먼저 공개된 것들",
-  "why_now": "일본 VOCE 크리스마스 코프레 속보(18개 브랜드). 국내 출시 전 미리보기",
-  "personal_color": "△",
-  "source": "VOCE (일본)",
-  "url": "https://i-voce.jp/feed/5193728/",
+  "title": "미정 — 일본 출시·일정 위주 소재라 한국 소재로 교체",
+  "why_now": "",
+  "personal_color": "",
+  "source": "",
+  "url": "",
   "purchase_needed": "X",
-  "image_source": "브랜드 공식 보도 이미지 (국내 출시 여부 확인 필요)",
+  "image_source": "",
   "published": "2026-09-30"
  },
  {
@@ -366,15 +366,15 @@
  {
   "date": "2026-10-15",
   "slot": "AM",
-  "letter": "New Letter",
+  "letter": "미정",
   "kind": "뷰티 아이템",
-  "title": "겔랑 2026 홀리데이, 10/15 일본 출시",
-  "why_now": "일본 VOCE 기준 10/1 선행·10/15 전국 출시. 국내 출시 일정은 확인 필요",
-  "personal_color": "△",
-  "source": "VOCE (일본)",
-  "url": "https://i-voce.jp/special/xmas_coffret/",
+  "title": "미정 — 일본 출시·일정 위주 소재라 한국 소재로 교체",
+  "why_now": "",
+  "personal_color": "",
+  "source": "",
+  "url": "",
   "purchase_needed": "X",
-  "image_source": "브랜드 공식 보도 이미지",
+  "image_source": "",
   "published": "2026-09-30 (특집 페이지)"
  },
  {
@@ -515,7 +515,8 @@
   "url": "https://stylehaus.jp/articles/31268/",
   "purchase_needed": "X",
   "image_source": "브랜드 공식 이미지",
-  "published": "2026-09-08"
+  "published": "2026-09-08",
+  "note": "코스모폴리탄·얼루어 코리아 등 국내 매체로 다시 확인"
  },
  {
   "date": "2026-10-20",
@@ -562,15 +563,15 @@
  {
   "date": "2026-10-22",
   "slot": "AM",
-  "letter": "Issue Letter",
+  "letter": "미정",
   "kind": "뷰티 정보",
-  "title": "일본에서 '윗눈꺼풀 그라데이션'이 다시 왔다",
-  "why_now": "VOCE: 음영 그라데이션 재유행. 일본발 트렌드",
-  "personal_color": "△",
-  "source": "VOCE (일본)",
-  "url": "https://i-voce.jp/feed/5167250/",
+  "title": "미정 — 일본 출시·일정 위주 소재라 한국 소재로 교체",
+  "why_now": "",
+  "personal_color": "",
+  "source": "",
+  "url": "",
   "purchase_needed": "X",
-  "image_source": "섀도 제품 컷",
+  "image_source": "",
   "published": "2026-09-26"
  },
  {
@@ -599,7 +600,8 @@
   "url": "https://prtimes.jp/main/html/rd/p/000000454.000032072.html",
   "purchase_needed": "X",
   "image_source": "브랜드 공식 보도 이미지",
-  "published": "2026-09 (검색 요약 기준, 본문 미확인)"
+  "published": "2026-09 (검색 요약 기준, 본문 미확인)",
+  "note": "한국 출시 확인 후 진행 (국내 매체·공식몰)"
  },
  {
   "date": "2026-10-23",
@@ -767,7 +769,8 @@
   "url": "https://stylehaus.jp/articles/31178/",
   "purchase_needed": "X",
   "image_source": "브랜드 공식 컷",
-  "published": "2026-08-25"
+  "published": "2026-08-25",
+  "note": "국내 매체·판매처로 다시 확인"
  },
  {
   "date": "2026-10-29",
@@ -795,20 +798,21 @@
   "url": "https://www.wwdjapan.com/articles/2506078",
   "purchase_needed": "X",
   "image_source": "헤라 공식 보도 이미지",
-  "published": "2026-09 (검색 요약 기준, 본문 미확인)"
+  "published": "2026-09 (검색 요약 기준, 본문 미확인)",
+  "note": "헤라 공식·국내 매체로 다시 확인"
  },
  {
   "date": "2026-10-30",
   "slot": "PM",
-  "letter": "New Letter",
+  "letter": "미정",
   "kind": "뷰티 아이템",
-  "title": "샤넬·RMK 홀리데이, 10/30 출시 모음",
-  "why_now": "VOCE 기준 샤넬 홀리데이 10/30(일본), RMK 10/30·11/13(일본). 국내 일정 확인 필요",
-  "personal_color": "△",
-  "source": "VOCE (일본)",
-  "url": "https://i-voce.jp/feed/5178999/",
+  "title": "미정 — 일본 출시·일정 위주 소재라 한국 소재로 교체",
+  "why_now": "",
+  "personal_color": "",
+  "source": "",
+  "url": "",
   "purchase_needed": "X",
-  "image_source": "브랜드 공식 보도 이미지",
+  "image_source": "",
   "published": "2026-10-01"
  },
  {
@@ -856,15 +860,15 @@
  {
   "date": "2026-11-01",
   "slot": "PM",
-  "letter": "Color Letter",
+  "letter": "미정",
   "kind": "뷰티 아이템",
-  "title": "홀리데이 립 컬러, 톤별 한 장 정리",
-  "why_now": "10월 말 쏟아진 홀리데이 신상을 퍼컬 기준으로 묶기",
-  "personal_color": "O (핵심)",
-  "source": "VOCE 홀리데이 특집 외",
-  "url": "https://i-voce.jp/special/xmas_coffret/",
+  "title": "미정 — 일본 출시·일정 위주 소재라 한국 소재로 교체",
+  "why_now": "",
+  "personal_color": "",
+  "source": "",
+  "url": "",
   "purchase_needed": "X",
-  "image_source": "브랜드 공식",
+  "image_source": "",
   "published": "2026-09-30 (특집 페이지)"
  },
  {

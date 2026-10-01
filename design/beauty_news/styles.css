@@ -253,3 +253,107 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 }
 .outro .wordmark { position: absolute; top: 64px; left: 0; right: 0; text-align: center; color: var(--white); }
 .outro .disclosure { position: absolute; bottom: 56px; left: var(--pad); right: var(--pad); font-size: 21px; color: rgba(255,255,255,.45); line-height: 1.5; }
+
+/* ═════════ 뷰티레터 컨셉 요소 ═════════ */
+
+/* 호수 표기 (표지 우측 상단) */
+.issue-mark { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 34px; color: var(--mauve); }
+.issue-mark b { font-style: normal; font-weight: 600; color: var(--rose); margin-left: 2px; }
+.cover-photo .issue-mark { color: rgba(255,255,255,.85); }
+.cover-photo .issue-mark b { color: var(--petal); }
+
+/* 카테고리 라벨: New Letter / Issue Letter / Color Letter / Sale Letter */
+.kicker .cat { font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 1.3em; letter-spacing: 0; margin-right: 2px; }
+.kicker .sep { opacity: .5; }
+
+/* 하단 레터 표기 */
+.letter-no { font-family: var(--serif); font-weight: 600; font-size: 24px; letter-spacing: 5px; color: var(--plum); }
+.letter-no i { font-weight: 500; letter-spacing: 1px; }
+.cover-photo .letter-no { color: var(--white); }
+
+/* 고정 2번째 장: 오늘의 요약 */
+.summary { background: var(--plum); color: var(--white); padding: 180px var(--pad) 0; }
+.summary .topbar .wordmark { color: var(--white); }
+.summary .pageno { color: rgba(255,255,255,.7); }
+.summary .pageno b { color: var(--petal); }
+.summary .kicker { color: var(--petal); }
+.summary h2 { font-size: 84px; font-weight: 800; letter-spacing: -2.5px; line-height: 1.15; margin: 24px 0 14px; }
+.summary .lead { font-size: 30px; color: rgba(255,255,255,.65); font-weight: 500; }
+.summary .rows { margin-top: 48px; display: grid; gap: 18px; }
+.summary .row { display: grid; grid-template-columns: 170px 1fr; align-items: center; gap: 30px; background: rgba(255,255,255,.07); border: 1.5px solid rgba(255,255,255,.12); border-radius: 26px; padding: 30px 40px; }
+.summary .row .q { font-family: var(--serif); font-style: italic; font-size: 44px; color: var(--petal); font-weight: 500; }
+.summary .row .a { font-size: 33px; font-weight: 700; line-height: 1.4; }
+.summary .row .a small { display: block; font-size: 23px; font-weight: 500; color: rgba(255,255,255,.6); margin-top: 6px; }
+.summary .chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.summary .chips span { font-size: 25px; font-weight: 700; border-radius: 999px; padding: 11px 22px; background: var(--petal); color: var(--plum); }
+
+/* 마지막 장: P.S. */
+.ps { background: var(--plum); color: var(--white); }
+.ps .wordmark { position: absolute; top: 64px; left: 0; right: 0; text-align: center; color: var(--white); }
+.ps .inner { position: absolute; left: var(--pad); right: var(--pad); top: 170px; }
+.ps .ps-mark { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 230px; line-height: .9; color: var(--petal); letter-spacing: -4px; }
+.ps .note {
+  margin-top: 26px; background: rgba(255,255,255,.07); border: 1.5px dashed rgba(248,191,203,.45);
+  border-radius: 26px; padding: 36px 42px;
+}
+.ps .note .label { font-size: 23px; font-weight: 800; letter-spacing: 0; color: var(--petal); margin-bottom: 14px; }
+.ps .note p { font-size: 31px; line-height: 1.6; font-weight: 500; color: rgba(255,255,255,.9); }
+.ps .note p b { color: var(--petal); font-weight: 700; }
+.ps .bye { margin-top: 64px; text-align: center; }
+.ps .bye h2 { font-size: 76px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; }
+.ps .bye h2 em { font-style: normal; color: var(--petal); }
+.ps .bye p { font-size: 29px; color: rgba(255,255,255,.65); margin-top: 18px; font-weight: 500; display: inline-flex; align-items: center; gap: 12px; }
+.ps .bye p i { width: 26px; height: 32px; background: var(--petal); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 74%, 0 100%); }
+.ps .follow { display: inline-block; margin-top: 34px; font-size: 30px; font-weight: 700; border: 2px solid rgba(255,255,255,.5); border-radius: 999px; padding: 18px 44px; }
+.ps .credit { position: absolute; bottom: 56px; left: var(--pad); right: var(--pad); font-size: 21px; color: rgba(255,255,255,.45); line-height: 1.5; }
+
+/* 사진 컬러칩 (발색 사진을 칩 자리에) */
+.swatches.photo .chip { height: auto; aspect-ratio: 1; overflow: hidden; box-shadow: none; }
+.swatches.photo .chip::after { display: none; }
+.swatches.photo .chip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.swatches.photo { gap: 20px; margin-bottom: 44px; }
+.swatches.photo .no { font-size: 46px; margin-top: 16px; }
+.swatches.photo .ko { font-size: 25px; font-weight: 700; margin-top: 2px; }
+.swatches.photo .desc { font-family: var(--serif); font-style: italic; font-size: 24px; }
+
+/* 선택 장 공통 */
+.opt { padding: 180px var(--pad) 0; }
+.opt h2 { font-size: 72px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 26px 0 26px; }
+.opt .lead { font-size: 30px; color: var(--mauve); font-weight: 500; line-height: 1.5; }
+.opt .src { position: absolute; left: var(--pad); right: var(--pad); bottom: 56px; font-size: 21px; color: var(--mauve); }
+
+/* 선택 장 A: 톤 온도계 */
+.thermo { position: relative; margin-top: 20px; height: 590px; }
+.t-bar {
+  position: absolute; left: 60px; right: 0; top: 290px; height: 40px; border-radius: 999px;
+  background: linear-gradient(90deg, #E9875A 0%, #F0B08F 30%, #EBD3CF 52%, #D9A6C2 72%, #A98BC9 100%);
+  box-shadow: inset 0 3px 8px rgba(0,0,0,.08);
+}
+.t-bulb { position: absolute; left: 0; top: 260px; width: 100px; height: 100px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #F6A27A, #DD6F45); box-shadow: 0 8px 20px rgba(221,111,69,.3); }
+.t-label { position: absolute; top: 548px; transform: translateX(-50%); font-size: 24px; font-weight: 800; letter-spacing: 2px; color: var(--mauve); }
+.pin { position: absolute; transform: translateX(-50%); text-align: center; width: 170px; }
+.pin img, .pin .dot { width: 116px; height: 116px; border-radius: 50%; object-fit: cover; border: 6px solid #fff; box-shadow: 0 10px 24px rgba(90,50,55,.18); display: block; margin: 0 auto; }
+.pin b { font-family: var(--serif); font-size: 38px; font-weight: 600; margin-right: 6px; }
+.pin span { font-size: 21px; font-weight: 700; color: var(--mauve); }
+.pin .lbl { margin-top: 6px; white-space: nowrap; }
+.pin.up { top: 50px; } .pin.up::after { content: ""; position: absolute; left: 50%; top: 182px; width: 2px; height: 58px; background: var(--plum); opacity: .35; }
+.pin.down { top: 350px; } .pin.down::before { content: ""; position: absolute; left: 50%; top: -18px; width: 2px; height: 18px; background: var(--plum); opacity: .35; }
+.legend { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.legend div { background: var(--white); border-radius: 20px; padding: 24px 30px; font-size: 26px; font-weight: 600; line-height: 1.45; }
+.legend b { color: var(--rose); }
+.legend small { color: var(--mauve); font-weight: 500; }
+
+/* 선택 장 B: 퍼스널컬러 매칭 */
+.seasons { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 60px; }
+.season { border-radius: 28px; padding: 38px 38px 34px; min-height: 330px; position: relative; }
+.season .name { font-size: 40px; font-weight: 800; letter-spacing: -1px; }
+.season .en { font-family: var(--serif); font-style: italic; font-size: 28px; opacity: .7; }
+.season .dots { display: flex; gap: 10px; margin: 18px 0 22px; }
+.season .dots i { width: 34px; height: 34px; border-radius: 50%; }
+.season .match { font-size: 28px; font-weight: 700; line-height: 1.45; }
+.season .match.none { font-weight: 500; opacity: .6; }
+.season .shade { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.75); border-radius: 999px; padding: 6px 18px 6px 6px; margin: 0 8px 10px 0; font-size: 24px; }
+.season .shade img, .season .shade .dot { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; display: inline-block; }
+.season .best { position: absolute; top: 30px; right: 30px; font-size: 20px; font-weight: 800; color: #fff; background: var(--rose); border-radius: 999px; padding: 6px 16px; }
+.spring { background: #FCE6D6; } .summer { background: #EDE3F1; } .autumn { background: #F1DCCB; } .winter { background: #E4E2EE; }

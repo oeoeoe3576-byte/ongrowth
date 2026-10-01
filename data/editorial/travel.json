@@ -132,9 +132,10 @@
       "channel": "course",
       "topic": "서울에서 2시간, 단풍 1박 2일 코스",
       "angle": "출발 시간·동선 중심. 붐비는 시간 피하기",
-      "status": "review",
+      "status": "approved",
       "date": "2026-10-02",
-      "content_id": "CN-20261001-042"
+      "content_id": "CN-20261001-042",
+      "publish_at": "2026-10-02 18:30"
     },
     {
       "id": "C02",

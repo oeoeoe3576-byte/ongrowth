@@ -23,7 +23,8 @@
     "time": "08:30",
     "folder": "design/beauty_news/letters/2026-10-03_am_bob",
     "title": "2026 베스트 오브 뷰티, 1~2만 원대 위너만 골랐어요",
-    "status": "review"
+    "status": "approved",
+    "approved_at": "2026-10-01"
   },
   {
     "no": 4,
@@ -31,6 +32,7 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-03_pm_beige",
     "title": "올가을은 베이지, 내 톤엔 어떤 베이지?",
-    "status": "review"
+    "status": "approved",
+    "approved_at": "2026-10-01"
   }
 ]

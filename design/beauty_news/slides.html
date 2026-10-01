@@ -7,7 +7,7 @@
   뷰티레터 (매주 받아보는 뷰티 편지) 카드뉴스 양식 (1080×1350, 인스타 4:5)
   - 슬라이드 하나 = .card 하나. render.mjs가 .card마다 PNG로 저장한다.
   - [data-slot="photo"] 영역은 실제 사진/제품 누끼로 교체하는 자리다 (지금은 자리 표시용 그라데이션).
-  - 고정: 표지(01 또는 02) → 오늘의 요약(03) → … → P.S.(08)
+  - 고정: 표지(01 또는 02) → … → 오늘의 요약(07) → P.S.(08)
   - 선택 장: opt_A 톤 온도계, opt_B 퍼스널컬러 매칭 (컬러 정보가 중요한 레터에만)
   - 핸들은 미정이라 @[핸들]로 비워둔다.
 -->
@@ -51,23 +51,8 @@
   <div class="footbar"><span class="letter-no">BEAUTY LETTER · <i>No.02</i></span><span>@[핸들]</span></div>
 </section>
 
-<!-- 03 오늘의 요약 (고정 2번째 장) -->
-<section class="card summary" data-name="03_summary">
-  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>02</b> / 08</div></div>
-  <div class="kicker">TODAY'S SUMMARY</div>
-  <h2>오늘의 요약</h2>
-  <p class="lead">바쁜 날엔 이 장만 보고 가도 괜찮아요.</p>
-  <div class="rows">
-    <div class="row"><div class="q">What</div><div class="a">무엇에 대한 레터인지 한 줄<small>브랜드, 출시, 콜라보 같은 보충 정보</small></div></div>
-    <div class="row"><div class="q">Point</div><div class="a">가장 중요한 특징 한 줄<small>공식 설명이나 확인된 사실로</small></div></div>
-    <div class="row"><div class="q">Who</div><div class="a">누구에게 맞는지 한 줄<small>피부 타입, 톤, 상황 등 (근거 표기)</small></div></div>
-    <div class="row"><div class="q">Price</div><div class="a">정가 ○○,○○○원<small>판매처·시기에 따라 달라질 수 있어요</small></div></div>
-  </div>
-  <div class="chips"><span>#키워드1</span><span>#키워드2</span><span>#키워드3</span></div>
-</section>
-
-<!-- 04 제품 소개 -->
-<section class="card product" data-name="04_product">
+<!-- 03 제품 소개 -->
+<section class="card product" data-name="03_product">
   <div class="stage">
     <div data-slot="photo" class="ph-soft"></div>
     <div class="floor"></div>
@@ -75,7 +60,7 @@
       <div class="lbl">COVER<br/>BB<small>SPF50+ PA++++</small></div></div>
     <div class="tag-float"><b>5,000</b><span>원</span></div>
   </div>
-  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>03</b> / 08</div></div>
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>02</b> / 08</div></div>
   <div class="caption-box">
     <div class="kicker">요즘 자주 보이는 그 제품</div>
     <h2>다이소 <span class="hl">커버 비비크림</span>,<br/>어떤 제품인지 정리했어요</h2>
@@ -83,9 +68,9 @@
   </div>
 </section>
 
-<!-- 05 스펙 · 컬러칩 -->
-<section class="card spec" data-name="05_spec_shade">
-  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>04</b> / 08</div></div>
+<!-- 04 스펙 · 컬러칩 -->
+<section class="card spec" data-name="04_spec_shade">
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>03</b> / 08</div></div>
   <div class="kicker">SHADE &amp; SPEC</div>
   <h2>내 피부엔 몇 호일까요?<br/>컬러부터 골라봐요</h2>
   <div class="swatches">
@@ -101,10 +86,10 @@
   <div class="footbar"><span>* 가격은 매장·시기에 따라 다를 수 있어요</span><span>@[핸들]</span></div>
 </section>
 
-<!-- 06 포인트 -->
-<section class="card point" data-name="06_point">
+<!-- 05 포인트 -->
+<section class="card point" data-name="05_point">
   <div class="photo-wrap"><div data-slot="photo" class="ph-mood"><div class="ph-label">MOOD PHOTO</div></div></div>
-  <div class="topbar" style="color:#fff"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno" style="color:rgba(255,255,255,.8)"><b style="color:var(--petal)">05</b> / 08</div></div>
+  <div class="topbar" style="color:#fff"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno" style="color:rgba(255,255,255,.8)"><b style="color:var(--petal)">04</b> / 08</div></div>
   <div class="num">01</div>
   <div class="body">
     <div class="label">TREND KEYWORD</div>
@@ -115,9 +100,9 @@
   <div class="footbar"><span></span><span>@[핸들]</span></div>
 </section>
 
-<!-- 07 에디터 리뷰 (직접 써봤을 때만) -->
-<section class="card review" data-name="07_review">
-  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>07</b> / 08</div></div>
+<!-- 06 에디터 리뷰 (직접 써봤을 때만) -->
+<section class="card review" data-name="06_review">
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>05</b> / 08</div></div>
   <div class="kicker">EDITOR'S REVIEW</div>
   <h2>2주 동안 써본<br/>솔직한 후기예요</h2>
   <div class="scores">
@@ -130,6 +115,21 @@
     <div class="pc bad"><h3>아쉬운 점</h3><ul><li>컬러 선택지 3개</li><li>건성은 보습 필수</li><li>품절이 잦아요</li></ul></div>
   </div>
   <div class="one-line">One line — <span>“이 가격이면 쟁여둘 만해요”</span></div>
+</section>
+
+<!-- 07 오늘의 요약 (고정, P.S. 바로 앞) -->
+<section class="card summary" data-name="07_summary">
+  <div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>06</b> / 08</div></div>
+  <div class="kicker">TODAY'S SUMMARY</div>
+  <h2>오늘의 요약</h2>
+  <p class="lead">끝까지 읽어줘서 고마워요. 오늘 레터를 한 장으로 정리했어요.</p>
+  <div class="rows">
+    <div class="row"><div class="q">What</div><div class="a">무엇에 대한 레터인지 한 줄<small>브랜드, 출시, 콜라보 같은 보충 정보</small></div></div>
+    <div class="row"><div class="q">Point</div><div class="a">가장 중요한 특징 한 줄<small>공식 설명이나 확인된 사실로</small></div></div>
+    <div class="row"><div class="q">Who</div><div class="a">누구에게 맞는지 한 줄<small>피부 타입, 톤, 상황 등 (근거 표기)</small></div></div>
+    <div class="row"><div class="q">Price</div><div class="a">정가 ○○,○○○원<small>판매처·시기에 따라 달라질 수 있어요</small></div></div>
+  </div>
+  <div class="chips"><span>#키워드1</span><span>#키워드2</span><span>#키워드3</span></div>
 </section>
 
 <!-- 08 P.S. (고정 마지막 장) -->

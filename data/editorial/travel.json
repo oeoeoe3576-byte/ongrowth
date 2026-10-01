@@ -130,15 +130,15 @@
       "channel": "course",
       "topic": "서울에서 2시간, 단풍 1박 2일 코스",
       "angle": "출발 시간·동선 중심. 붐비는 시간 피하기",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-02"
     },
     {
       "id": "C02",
       "channel": "course",
       "topic": "사진 잘 나오는 억새 명소 당일치기",
       "angle": "빛 좋은 시간대(해 질 녘) 안내",
-      "status": "reserved",
-      "date": "2026-10-02"
+      "status": "todo"
     },
     {
       "id": "C03",

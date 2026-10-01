@@ -97,4 +97,4 @@ ${T}.cn-l-PHOTO_COVER .cn-bg-shade { background: linear-gradient(180deg, rgba(0,
 
 export const trendTheme = makeTrendTheme("trend", { onPhoto: "#A6F2A2", highlight: "#C7F5D4", arrow: "#74E3A4", dot: "#D9F5E3", accent: "#1FAF6B", onAccent: "#0D2418" });
 export const trendSkyTheme = makeTrendTheme("trend-sky", { onPhoto: "#9FD8FF", highlight: "#CFE8FF", arrow: "#6CB8FF", dot: "#DDEEFF", accent: "#2C86E8", onAccent: "#FFFFFF" });
-export const trendAquaTheme = makeTrendTheme("trend-aqua", { onPhoto: "#86ECF2", highlight: "#C6F1F5", arrow: "#4CC9DB", dot: "#D6F3F6", accent: "#1597AE", onAccent: "#FFFFFF", button: "#2BB8D4" });
+export const trendAquaTheme = makeTrendTheme("trend-aqua", { onPhoto: "#86ECF2", highlight: "#C6F1F5", arrow: "#4CC9DB", dot: "#D6F3F6", accent: "#2BB8D4", onAccent: "#FFFFFF", button: "#2BB8D4" });

@@ -12,17 +12,17 @@ export const trendTheme: DesignTheme = extendTheme(defaultTheme, {
   color: {
     background: "#EEEEEE",
     surface: "#FFFFFF",
-    primary: "#141414",
+    primary: "#FFFFFF", // 표지·마무리 카드도 밝게 (레퍼런스처럼 어두운 면 없이)
     secondary: "#DADADA",
     text: "#111111",
-    textOnPrimary: "#FFFFFF",
+    textOnPrimary: "#111111",
     muted: "#4A4A4A",
-    mutedOnPrimary: "rgba(255,255,255,.82)",
+    mutedOnPrimary: "#4A4A4A",
     accent: "#13B48C",
     accentSoft: "rgba(62,232,192,.55)",
     line: "#D4D4D4",
     onAccent: "#0B1F19",
-    accentOnDark: MINT,
+    accentOnDark: "#13B48C",
     cardBg: "#FFFFFF",
     cardText: "#111111",
   },
@@ -34,7 +34,7 @@ export const trendTheme: DesignTheme = extendTheme(defaultTheme, {
 /* 상단 라벨·진행 막대는 숨기고 쪽수만 오른쪽 위 둥근 칩으로 (인스타 1/10 표시와 겹치지 않게 작게) */
 .cn-theme-trend .cn-brand { opacity: 0; }
 .cn-theme-trend .cn-pn { font-size: 24px; font-weight: 700; padding: 8px 20px; border-radius: 999px; background: rgba(0,0,0,.08); }
-.cn-theme-trend.cn-tone-photo .cn-pn, .cn-theme-trend.cn-tone-dark .cn-pn { background: rgba(0,0,0,.45); color: #fff; }
+.cn-theme-trend.cn-tone-photo .cn-pn { background: rgba(0,0,0,.45); color: #fff; }
 .cn-theme-trend .cn-pn-total { color: inherit; opacity: .7; }
 .cn-theme-trend .cn-progress { visibility: hidden; }
 .cn-theme-trend .cn-swipe { font-size: 0; }
@@ -43,11 +43,17 @@ export const trendTheme: DesignTheme = extendTheme(defaultTheme, {
 
 /* 본문 카드: 가운데 정렬 */
 .cn-theme-trend.cn-tone-light .cn-main { text-align: center; align-items: center; }
-.cn-theme-trend.cn-tone-light .cn-main > * { margin-left: auto; margin-right: auto; }
+.cn-theme-trend.cn-tone-light .cn-main > * { margin-left: auto; margin-right: auto; max-width: 100%; }
+/* 큰 숫자는 폭을 꽉 채운 채 가운데로 (넘치면 검수기가 잡도록) */
+.cn-theme-trend .cn-focus { align-self: stretch; justify-content: center; }
 .cn-theme-trend .cn-headline { font-weight: 900; }
 .cn-theme-trend .cn-sub { color: var(--c-muted); font-weight: 600; }
 .cn-theme-trend .cn-em { padding: 0 .12em; }
-.cn-theme-trend.cn-tone-dark .cn-em, .cn-theme-trend.cn-tone-photo .cn-em { color: ${MINT}; }
+.cn-theme-trend.cn-tone-photo .cn-em { color: ${MINT}; }
+/* "어두운" 역할 카드(표지·마무리)도 이 테마에선 흰 바탕: 강조는 형광펜 그대로 */
+.cn-theme-trend.cn-tone-dark { --c-line: #DDDDDD; --c-surface: #F4F4F4; }
+.cn-theme-trend.cn-tone-dark .cn-em { background: var(--em-bg); color: inherit; }
+.cn-theme-trend.cn-tone-dark .cn-pn { background: rgba(0,0,0,.08); }
 .cn-theme-trend .cn-image { border-radius: 4px; box-shadow: 0 2px 0 rgba(0,0,0,.08); }
 
 /* 표지: 작은 문구는 박스 라벨로 제목 위에, 제목은 아주 굵게 */
@@ -60,7 +66,8 @@ export const trendTheme: DesignTheme = extendTheme(defaultTheme, {
 .cn-theme-trend.cn-l-PHOTO_COVER .cn-tag, .cn-theme-trend.cn-l-BIG_TITLE .cn-kicker {
   order: -2; align-self: flex-start; background: ${MINT}; color: #0B1F19; border-radius: 0; padding: 6px 16px; font-size: 34px; font-weight: 800; letter-spacing: 0; text-transform: none;
 }
-.cn-theme-trend.cn-l-PHOTO_COVER .cn-display, .cn-theme-trend.cn-l-BIG_TITLE .cn-display { font-size: 112px; line-height: 1.14; letter-spacing: -0.05em; text-shadow: 0 4px 28px rgba(0,0,0,.35); }
-.cn-theme-trend.cn-l-BIG_TITLE.cn-tone-dark { background: radial-gradient(120% 90% at 70% 15%, #3a3d42 0%, #1b1c1f 55%, #0d0d0e 100%); }
+.cn-theme-trend.cn-l-PHOTO_COVER .cn-display, .cn-theme-trend.cn-l-BIG_TITLE .cn-display { font-size: 112px; line-height: 1.2; letter-spacing: -0.05em; }
+.cn-theme-trend.cn-l-PHOTO_COVER .cn-display { text-shadow: 0 4px 28px rgba(0,0,0,.35); }
+.cn-theme-trend.cn-l-FOLLOW .cn-profile { border: 2px solid #E2E2E2; }
 `,
 });

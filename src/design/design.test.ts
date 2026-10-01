@@ -50,7 +50,7 @@ const tests: [string, () => void | Promise<void>][] = [
     assert.equal(resolveTheme("marketing").theme.name, "default");
     assert.equal(resolveTheme("stay").theme.name, "life");
     assert.equal(resolveTheme("beauty").fallback, true);
-    for (const t of ["insight", "life", "campaign"]) assert.equal(resolveTheme(t).theme.name, t);
+    for (const t of ["insight", "life", "campaign", "trend"]) assert.equal(resolveTheme(t).theme.name, t);
     const beauty = extendTheme(defaultTheme, { name: "beauty", color: { accent: "#C2185B" } });
     assert.equal(beauty.color.accent, "#C2185B");
     assert.equal(beauty.color.background, defaultTheme.color.background);
@@ -122,10 +122,10 @@ const tests: [string, () => void | Promise<void>][] = [
       }
     }
   }],
-  ["계정 설정: ongrowth는 전 페이지 insight, coverTheme가 있으면 첫/마지막 장만 다르게, --theme를 주면 한 가지로", () => {
+  ["계정 설정: ongrowth는 전 페이지 trend, coverTheme가 있으면 첫/마지막 장만 다르게, --theme를 주면 한 가지로", () => {
     const c = renderContent(master("CN-20261001-001"), store.pages);
-    assert.ok(c.cards.every((k) => k.theme.name === "insight"));
-    assert.equal(c.designLabel, "insight");
+    assert.ok(c.cards.every((k) => k.theme.name === "trend"));
+    assert.equal(c.designLabel, "trend");
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "brand-"));
     const prev = process.cwd();
     fs.mkdirSync(path.join(tmp, "data/brands"), { recursive: true });

@@ -31,6 +31,6 @@ export const CtaTemplate: LayoutComponent = {
       ${text("cn-body", "body", p.body, 3, p.visualFocus)}
       ${p.cta ? `<div class="cn-cta-btn cn-on-accent cn-fit" style="--lines:2" data-fit data-field="cta">${rich(p.cta)} →</div>` : ""}
       ${hint ? `<div class="cn-cta-hint">${esc(hint)}</div>` : ""}
-      <div class="cn-handle">@${esc(ctx.master.brand)}</div>`);
+      <div class="cn-handle">@${esc(ctx.brand.handle)}</div>`);
   },
 };

@@ -60,6 +60,7 @@ npm run editorial -- photos "<검색어>" --brand travel --id <임시ID 또는 c
   - 사진 장은 `IMAGE_TEXT`, `image_source`에 `data/images/travel/<id>/NN.jpg`
   - 마지막 장 `FOLLOW`, 업로드 횟수(매주/매일)를 말하지 않는 멘트
   - 제목은 뜻 단위 줄바꿈(\n), 강조는 `**구절**`
+  - **제목은 카드 내용을 포괄하는 핵심만** 쓴다 (낚시·과장 문구, '이번 주말 여기 가면 됩니다' 같은 시점 수식 금지). 표지는 무엇의 모음인지, 장 제목은 그 장의 핵심 정보
   - 관광공사 사진을 썼으면 캡션 마지막 줄에 `사진: 한국관광공사 포토코리아`
 ```bash
 npm run planner -- plan --brand travel --topic "<주제>" --objective SAVE --category travel \

@@ -1,4 +1,20 @@
 [
-  { "no": 1, "date": "2026-10-02", "time": "08:30", "folder": "design/beauty_news/samples/2026-10_peripera_mood_glowy", "title": "페리페라 × CU 무드 글로이 틴트 신상 4컬러", "status": "review" },
-  { "no": 2, "date": "2026-10-02", "time": "20:30", "folder": "design/beauty_news/letters/2026-10-02_pm_purple", "title": "보라색 메이크업, 웜톤도 할 수 있어요", "status": "review" }
+  {
+    "no": 1,
+    "date": "2026-10-02",
+    "time": "08:30",
+    "folder": "design/beauty_news/samples/2026-10_peripera_mood_glowy",
+    "title": "페리페라 × CU 무드 글로이 틴트 신상 4컬러",
+    "status": "approved",
+    "approved_at": "2026-10-01"
+  },
+  {
+    "no": 2,
+    "date": "2026-10-02",
+    "time": "20:30",
+    "folder": "design/beauty_news/letters/2026-10-02_pm_purple",
+    "title": "보라색 메이크업, 웜톤도 할 수 있어요",
+    "status": "approved",
+    "approved_at": "2026-10-01"
+  }
 ]

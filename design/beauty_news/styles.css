@@ -396,3 +396,24 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 .cover-photo .sub { margin-top: 30px; font-size: 34px; line-height: 1.5; font-weight: 500; color: rgba(255,255,255,.88); }
 .cover-photo .photo-credit { position: absolute; right: var(--pad); bottom: 112px; z-index: 3; font-size: 18px; letter-spacing: .5px; color: rgba(255,255,255,.6); }
 .cover-photo .mini-cut { position: absolute; right: 70px; top: 150px; width: 230px; z-index: 2; transform: rotate(-6deg); filter: drop-shadow(0 24px 30px rgba(0,0,0,.35)); }
+
+/* 풍경 배경 + 제품 누끼 표지 (build.mjs cover.style = "scene")
+   얼굴 없는 감성 사진을 배경으로 깔고, 가운데에 제품 누끼를 크게 올린다. 메이크업을 보여줘야 할 때만 인물 사진(photo)을 쓴다. */
+.cover-scene { color: var(--white); background: var(--plum); }
+.cover-scene .bg { position: absolute; inset: -20px; width: calc(100% + 40px); height: calc(100% + 40px); object-fit: cover; filter: blur(6px) saturate(1.05); }
+.cover-scene .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,26,32,.30) 0%, rgba(42,26,32,0) 18%, rgba(42,26,32,0) 52%, rgba(42,26,32,.55) 72%, rgba(42,26,32,.88) 100%); }
+.cover-scene .cut { position: absolute; left: 50%; top: 150px; height: 680px; transform: translateX(-50%) rotate(-4deg); z-index: 2; filter: drop-shadow(0 34px 44px rgba(42,26,32,.38)); }
+.cover-scene .big-word { position: absolute; left: 0; right: 0; top: 230px; text-align: center; z-index: 1; font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 300px; line-height: 1; letter-spacing: -6px; color: rgba(255,255,255,.92); }
+.cover-scene .topbar .wordmark { color: var(--white); }
+.cover-scene .issue-mark { color: rgba(255,255,255,.9); }
+.cover-scene .issue-mark b { color: var(--white); }
+.cover-scene .body { position: absolute; left: var(--pad); right: var(--pad); bottom: 160px; z-index: 3; }
+.cover-scene .kicker { color: var(--petal); }
+.cover-scene .kicker::before { background: var(--petal); }
+.cover-scene h1 { font-size: 92px; line-height: 1.18; font-weight: 800; letter-spacing: -3px; margin-top: 26px; text-shadow: 0 4px 24px rgba(42,26,32,.35); }
+.cover-scene h1 .em { color: var(--petal); }
+.cover-scene .sub { margin-top: 24px; font-size: 32px; line-height: 1.5; font-weight: 500; color: rgba(255,255,255,.88); }
+.cover-scene .footbar { color: rgba(255,255,255,.75); z-index: 3; }
+.cover-scene .letter-no { color: var(--white); }
+.cover-scene .photo-credit { position: absolute; right: var(--pad); bottom: 112px; z-index: 3; font-size: 18px; color: rgba(255,255,255,.6); }
+.cover-scene .glow { position: absolute; left: 50%; top: 120px; width: 760px; height: 760px; transform: translateX(-50%); border-radius: 50%; z-index: 1; background: radial-gradient(circle, rgba(255,246,241,.75) 0%, rgba(255,246,241,.25) 45%, rgba(255,246,241,0) 70%); }

@@ -18,3 +18,5 @@
 ## 표지 배경 사진 (2026-10-01 추가)
 - img/cover_photo.jpg — Pexels 무료 사진 "Pretty Woman Applying a Lip Tint", 작가 Karolina Grabowska
   https://www.pexels.com/photo/pretty-woman-applying-a-lip-tint-7281706/ (Pexels 라이선스: 상업 사용 가능, 출처 표기 권장)
+- (이전 인물 표지 cover_photo.jpg는 사용 안 함)
+- img/cover_bg.jpg — Pexels 무료 사진 "Pink Flowers" https://www.pexels.com/photo/pink-flowers-139911/ (표지 배경, 흐림 처리)

@@ -5,13 +5,13 @@
   "category": "Color Letter",
   "brand": "PURPLE MAKEUP",
   "cover": {
-    "style": "photo",
+    "style": "scene",
+    "bg": "img/cover_bg.jpg",
+    "focus": "center 40%",
     "big": "Purple",
     "title": "보라색 메이크업,\n**웜톤도** 할 수 있어요",
     "sub": "올가을 퍼플 코어, 내 톤에 맞는 보라를\n고르는 법을 정리해 왔어요.",
-    "image": "img/cover_photo.jpg",
-    "focus": "center 30%",
-    "credit": "Photo · mehrab zahedbeigi / Pexels"
+    "credit": "Photo · Pexels"
   },
   "slides": [
     {

@@ -82,8 +82,9 @@
       "channel": "festival",
       "topic": "이번 주말 가볼 만한 가을 축제",
       "angle": "10월 둘째 주 주말 기준. 지역 고르게 3~5곳",
-      "status": "reserved",
-      "date": "2026-10-01"
+      "status": "review",
+      "date": "2026-10-01",
+      "content_id": "CN-20261001-003"
     },
     {
       "id": "F02",

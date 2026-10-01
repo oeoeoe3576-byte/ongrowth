@@ -34,3 +34,20 @@ CN-20261001-002,5,STEP,COMPARE,대상을 좁히세요,STEP 02,,,전: 블로그 �
 CN-20261001-002,6,STEP,THREE_COLUMN,끝에는 얻는 것을,STEP 03 · 읽고 나서 좋아지는 것,,,시간: 10분 만에 끝내는 | 방법: 따라 하는 3단계 | 결과: 문의로 이어지는,FALSE,,,,,,NOT_REQUIRED
 CN-20261001-002,7,SUMMARY,TEXT,제목 완성 공식,,"**키워드 + 대상 + 얻는 것.** 예: 블로그 제목 짓는 법, 1인 카페 사장님이 10분 만에 끝내는 3단계",,,FALSE,,,,,,NOT_REQUIRED
 CN-20261001-002,8,CTA,FOLLOW,매일 하나씩 **블로그 공식**을 알려드려요,,저장해두고 다음 글 제목을 지을 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
+CN-20261001-003,1,HOOK,PHOTO_COVER,"이번 주말,
+**어디 가지?**",🍂 지금 갈 수 있는 가을 축제 4곳,어디부터 가볼래?,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-003,2,INFORMATION,IMAGE_TEXT,"**핑크빛 코스모스**
+물결 속으로",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00 · 입장료 2,000원",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-003,3,INFORMATION,IMAGE_TEXT,"**정선의 소리**,
+끝없는 비상",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료 · 3일 시가지 퍼레이드",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-003,4,INFORMATION,IMAGE_TEXT,"도심이 통째로
+**춤판**이 되는 날",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-003,5,INFORMATION,IMAGE_TEXT,"남강 위에
+**유등**이 떠요",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료 · 드론쇼",,,TRUE,PHOTO,data/images/travel/tmp-F01/01.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-003,6,SUMMARY,NUMBER_LIST,이번 주말 **한눈에**,,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-003,7,CTA,FOLLOW,"저장하고
+**주말에 써먹기**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

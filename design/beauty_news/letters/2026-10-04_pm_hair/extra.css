@@ -1,0 +1,44 @@
+
+.hairp { padding: 170px var(--pad) 0; }
+.hairp h2 { font-size: 66px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 22px 0 36px; }
+.hairp .sw { text-align: center; }
+.hairp .sw i { display: block; width: 130px; height: 130px; border-radius: 50%; margin: 0 auto; box-shadow: inset 0 0 0 5px rgba(255,255,255,.35), 0 8px 16px rgba(60,30,30,.15); }
+.hairp .sw span { display: block; font-size: 21px; font-weight: 700; color: var(--plum); margin-top: 10px; }
+.hairp .tone { font-size: 26px; font-weight: 800; color: var(--rose); }
+.hairp p { font-size: 25px; line-height: 1.55; color: #4b3a40; }
+.hairp p b, .hairp p em { font-style: normal; color: var(--rose); font-weight: 700; }
+.hairp .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.hairp .side { background: var(--white); border-radius: 26px; padding: 34px 30px; }
+.hairp .side .sw { margin-bottom: 20px; }
+.hairp .side .tone { margin-bottom: 10px; }
+.hairp .warn { margin-top: 18px; font-size: 21px; line-height: 1.45; color: var(--mauve); background: var(--cream); border-radius: 14px; padding: 14px 16px; }
+.hairp .rr { display: grid; grid-template-columns: 170px 1fr; gap: 22px; align-items: center; background: var(--white); border-radius: 24px; padding: 18px 28px; margin-bottom: 14px; }
+.hairp .rr .sw i { width: 96px; height: 96px; }
+.hairp .rr .sw span { font-size: 20px; }
+.hairp .rr p { font-size: 24px; margin-top: 4px; }
+.hairp .tp { display: grid; grid-template-columns: 90px 1fr; gap: 20px; background: var(--white); border-radius: 24px; padding: 32px 32px; margin-bottom: 18px; }
+.hairp .tp .n { font-family: var(--serif); font-style: italic; font-size: 60px; font-weight: 600; color: var(--rose); line-height: .9; }
+.hairp .tp b { display: block; font-size: 34px; font-weight: 800; margin-bottom: 8px; }
+.hairp .trow { background: var(--white); border-radius: 24px; padding: 22px 30px; margin-bottom: 16px; }
+.hairp .trow .sws { display: flex; gap: 26px; margin: 12px 0; }
+.hairp .trow .sw i { width: 92px; height: 92px; }
+.hairp .trow .sw span { font-size: 19px; }
+.hairp .trow p { font-size: 24px; }
+.hairp .foot { position: absolute; left: var(--pad); right: var(--pad); bottom: 50px; font-size: 20px; color: var(--mauve); }
+.hairp .side { padding: 46px 34px; }
+.hairp .side .sw i { width: 180px; height: 180px; }
+.hairp .side .sw span { font-size: 24px; }
+.hairp .side p { font-size: 27px; }
+.hairp .tone { font-size: 29px; }
+.hairp .warn { font-size: 23px; }
+.hairp .rr { padding: 26px 30px; margin-bottom: 18px; }
+.hairp .rr .sw i { width: 112px; height: 112px; }
+.hairp .rr p { font-size: 26px; }
+.hairp .tp { padding: 40px 34px; margin-bottom: 22px; }
+.hairp .tp p { font-size: 27px; }
+.hairp .trow { padding: 28px 32px; margin-bottom: 20px; }
+.hairp .trow .sw i { width: 104px; height: 104px; }
+.hairp .trow p { font-size: 26px; }
+.hairp .trow { padding: 22px 30px; margin-bottom: 16px; }
+.hairp .trow .sw i { width: 92px; height: 92px; }
+.hairp .trow .lb { font-size: 28px; font-weight: 800; color: var(--rose); }

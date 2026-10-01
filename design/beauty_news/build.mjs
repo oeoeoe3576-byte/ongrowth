@@ -35,7 +35,7 @@ function cover() {
   const topbar = `<div class="topbar"><div class="wordmark">BEAUTY <i>letter</i></div><div class="issue-mark">No.<b>${no2}</b></div></div>`;
   if (c.style === "scene") {
     // 풍경 배경 + 누끼(image) 또는 큰 영문 단어(big). 얼굴 없는 사진용.
-    return `<section class="card cover-scene" data-name="01_cover"><img class="bg" src="${esc(c.bg)}" alt="" style="object-position:${esc(c.focus || "center")}" /><div class="veil"></div>
+    return `<section class="card cover-scene${c.soft ? " soft" : ""}" data-name="01_cover"><img class="bg" src="${esc(c.bg)}" alt="" style="object-position:${esc(c.focus || "center")}" /><div class="veil"></div>
   ${c.image ? `<div class="glow"></div><img class="cut" src="${esc(c.image)}" alt="" />` : `<div class="big-word">${esc(c.big || "")}</div>`}${topbar}
   <div class="body">${kicker}<h1>${md(c.title).replace(/class="hl"/g, 'class="em"')}</h1>${c.sub ? `<p class="sub">${md(c.sub)}</p>` : ""}</div>
   ${c.credit ? `<div class="photo-credit">${esc(c.credit)}</div>` : ""}${foot}</section>`;

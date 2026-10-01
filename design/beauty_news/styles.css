@@ -417,3 +417,9 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 .cover-scene .letter-no { color: var(--white); }
 .cover-scene .photo-credit { position: absolute; right: var(--pad); bottom: 112px; z-index: 3; font-size: 18px; color: rgba(255,255,255,.6); }
 .cover-scene .glow { position: absolute; left: 50%; top: 120px; width: 760px; height: 760px; transform: translateX(-50%); border-radius: 50%; z-index: 1; background: radial-gradient(circle, rgba(255,246,241,.75) 0%, rgba(255,246,241,.25) 45%, rgba(255,246,241,0) 70%); }
+/* 배경이 화려해서 제품이 묻힐 때: <section class="card cover-scene soft"> — 배경을 더 흐리고 연하게 */
+.cover-scene.soft .bg { filter: blur(14px) saturate(.6) brightness(1.08); }
+.cover-scene.soft .veil { background: linear-gradient(180deg, rgba(251,246,241,.55) 0%, rgba(251,246,241,.45) 45%, rgba(42,26,32,.35) 66%, rgba(42,26,32,.85) 100%); }
+.cover-scene.soft .topbar .wordmark { color: var(--plum); }
+.cover-scene.soft .issue-mark { color: var(--mauve); }
+.cover-scene.soft .issue-mark b { color: var(--rose); }

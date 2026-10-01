@@ -4,7 +4,7 @@ import { defaultTheme } from "./default.js";
 
 // 트렌드 (여행 계정용): 요즘 인스타 캐러셀 감성. 색 조합만 다른 버전을 makeTrendTheme로 만든다.
 // 표지 = 사진 전체 + 아주 굵은 흰 제목, 강조 단어는 포인트색 글자, 가운데에 검정 박스 한 줄(질문/훅), 제목 위 흰 한 줄.
-// 본문 = 흰 바탕 + 연한 땡땡이, 가운데 정렬, 굵은 검정 제목 → 얇은 테두리 사진 → 가운데 본문, 핵심 문장은 형광펜.
+// 본문 = 흰 바탕(포인트 장만 연한 땡땡이), 가운데 정렬, 굵은 검정 제목 → 얇은 테두리 사진 → 가운데 본문, 핵심 문장은 형광펜.
 // 쪽수는 인스타가 1/9로 보여주므로 카드에는 넣지 않고, 오른쪽 아래 화살표로 넘김을 알린다.
 export interface TrendPalette {
   onPhoto: string; // 사진 위 강조 글자
@@ -64,7 +64,8 @@ ${T} .cn-em { padding: 0 .1em; }
 ${T} .cn-rule { display: none; }
 ${T} .cn-image { border-radius: 0; border: 2px solid #2A2A2A; }
 ${T}.cn-tone-dark { --c-line: #DDDDDD; --c-surface: #F4F4F4; }
-${T}.cn-tone-light, ${T}.cn-tone-dark { background-color: #FFFFFF; background-image: ${dots(P.dot)}; }
+/* 땡땡이는 포인트 장에만: 사진이 들어간 장, 사진 없는 표지, 마무리(CTA·FOLLOW). 글자만 있는 장은 흰 바탕 그대로 */
+${T}.cn-l-IMAGE_TEXT, ${T}.cn-l-SCREENSHOT, ${T}.cn-l-BIG_TITLE, ${T}.cn-l-FOLLOW, ${T}.cn-l-CTA { background-image: ${dots(P.dot)}; }
 ${T}.cn-tone-dark .cn-em { background: var(--em-bg); color: inherit; }
 ${T}.cn-tone-photo .cn-em { background: none; color: ${P.onPhoto}; }
 ${T}.cn-l-FOLLOW .cn-profile { border: 2px solid #E2E2E2; }

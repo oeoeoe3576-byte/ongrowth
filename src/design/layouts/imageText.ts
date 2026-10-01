@@ -18,7 +18,7 @@ export const ImageTextTemplate: LayoutComponent = {
       <div class="cn-textblock">
         ${text("cn-headline", "headline", p.headline, 2, p.visualFocus)}
         ${text("cn-sub", "subheadline", p.subheadline, 2, p.visualFocus)}
-        ${text("cn-body", "body", p.body, 2)}
+        ${text("cn-body", "body", p.body, 3)}
       </div>`);
   },
 };

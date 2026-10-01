@@ -13,7 +13,8 @@
     "start:server": "tsx src/server/index.ts",
     "scheduler": "tsx src/scheduler/run.ts",
     "typecheck": "tsc --noEmit",
-    "test": "tsx src/test/run-all.ts"
+    "test": "tsx src/test/run-all.ts",
+    "beauty:publish": "tsx src/beauty/publish.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",

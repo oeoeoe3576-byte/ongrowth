@@ -387,3 +387,12 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 .swatchset .chip span { font-size: 20px; color: var(--mauve); line-height: 1.35; }
 .swatchset .note { background: var(--blush); border-radius: 22px; padding: 26px 34px; font-size: 26px; line-height: 1.55; font-weight: 500; color: #4b3a40; }
 .swatchset .note b { color: var(--rose); }
+
+/* 사진 배경 표지 (build.mjs cover.style = "photo") */
+.cover-photo h1 { margin: 30px 0 0; }
+.cover-photo h1 .em { color: var(--petal); }
+.cover-photo .kicker { color: var(--petal); }
+.cover-photo .kicker::before { background: var(--petal); }
+.cover-photo .sub { margin-top: 30px; font-size: 34px; line-height: 1.5; font-weight: 500; color: rgba(255,255,255,.88); }
+.cover-photo .photo-credit { position: absolute; right: var(--pad); bottom: 112px; z-index: 3; font-size: 18px; letter-spacing: .5px; color: rgba(255,255,255,.6); }
+.cover-photo .mini-cut { position: absolute; right: 70px; top: 150px; width: 230px; z-index: 2; transform: rotate(-6deg); filter: drop-shadow(0 24px 30px rgba(0,0,0,.35)); }

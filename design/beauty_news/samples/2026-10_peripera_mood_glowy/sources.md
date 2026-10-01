@@ -14,3 +14,7 @@
 - 톤 온도계(선택 장)의 웜·쿨 위치와 Who 줄은 상세페이지 COLOR CHART(Warm↔Cool 축) 위치를 그대로 옮겼습니다. 26·29는 웜, 28은 쿨 쪽, 30은 중앙(뉴트럴)에 가깝습니다.
 - '뮤트/로지' 분류는 상세페이지 COLOR CHART 섹션 구분(MUTE: 26·28·29, ROSY: 30)을 따랐습니다.
 - P.S. 팁(26호 섞어 쓰기, -01 베이스 활용)은 상세페이지 NOTICE와 TIP 내용을 옮긴 것입니다.
+
+## 표지 배경 사진 (2026-10-01 추가)
+- img/cover_photo.jpg — Pexels 무료 사진 "Pretty Woman Applying a Lip Tint", 작가 Karolina Grabowska
+  https://www.pexels.com/photo/pretty-woman-applying-a-lip-tint-7281706/ (Pexels 라이선스: 상업 사용 가능, 출처 표기 권장)

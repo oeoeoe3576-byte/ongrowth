@@ -92,6 +92,11 @@ ${T} .cn-cover-note {
 }
 ${T} .cn-cover-note .cn-em { color: inherit; background: none; }
 /* 이미지+글: 이름(축제명 등)을 연한 하늘색 박스 + 얇은 검정 테두리로 사진 아래에 */
+/* 번호 목록(한눈에 정리): 왼쪽 정렬 */
+${T}.cn-l-NUMBER_LIST .cn-main { text-align: left; align-items: flex-start; }
+${T}.cn-l-NUMBER_LIST .cn-main > * { margin-left: 0; margin-right: 0; }
+${T}.cn-l-NUMBER_LIST ol { width: 100%; }
+${T}.cn-l-NUMBER_LIST li { text-align: left; }
 ${T}.cn-l-TEXT .cn-sub { align-self: center; background: ${P.highlight}; color: #111; border: 2px solid #111; padding: 8px 26px; font-size: 44px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.35; }
 ${T}.cn-l-TEXT .cn-body { text-align: center; line-height: 1.7; }
 ${T}.cn-l-TEXT.cn-tone-photo .cn-main { justify-content: flex-end; text-align: left; align-items: flex-start; gap: 20px; padding-bottom: 60px; }

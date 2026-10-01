@@ -3,5 +3,6 @@
   "displayName": "요즘어디감",
   "theme": "trend-aqua",
   "categoryLabel": "",
-  "bio": []
+  "bio": [],
+  "logo": "data/brands/travel-logo.jpg"
 }

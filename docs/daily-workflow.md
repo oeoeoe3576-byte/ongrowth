@@ -89,7 +89,7 @@ git add -A && git commit -m "카드뉴스 <날짜> <주제ID> 검토 요청" && 
 ## 7. 발행 단계 (18:30)
 인스타그램 자동 발행 (환경 변수 `META_ACCESS_TOKEN`, `INSTAGRAM_ACCOUNT_ID` + 네트워크 허용 `graph.instagram.com` 필요):
 ```bash
-npm run editorial -- ig-check                 # 토큰 확인 (게시 안 함)
+npm run editorial -- ig-check [--brand travel] # 토큰 확인 (게시 안 함). 계정별 토큰: META_ACCESS_TOKEN_<브랜드>, INSTAGRAM_ACCOUNT_ID_<브랜드>
 npm run editorial -- publish <id>             # 승인 건만. JPEG를 data/publish/<id>/에 커밋·푸시 → 캐러셀 게시 → published 기록
 git add -A && git commit -m "카드뉴스 <id> 발행" && git push
 ```

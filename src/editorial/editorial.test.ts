@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { channelFor, pickTopic, recentTopics, type Calendar } from "./calendar.js";
 import { validatePlan } from "../planner/validatePlan.js";
 import fs from "node:fs";
-import { buildCaption } from "./instagram.js";
+import { buildCaption, igEnvNames } from "./instagram.js";
 import { graphBaseFor } from "../publishers/instagram/instagramClient.js";
 
 const base = (): Calendar => ({
@@ -26,6 +26,11 @@ const tests: [string, () => void][] = [
     assert.throws(() => buildCaption("가".repeat(2300), ""));
     assert.equal(graphBaseFor("IGAAxyz"), "https://graph.instagram.com");
     assert.equal(graphBaseFor("EAAxyz"), "https://graph.facebook.com");
+    process.env.META_ACCESS_TOKEN_TESTBRAND = "x";
+    assert.equal(igEnvNames("testbrand").token, "META_ACCESS_TOKEN_TESTBRAND");
+    assert.equal(igEnvNames("testbrand").account, "INSTAGRAM_ACCOUNT_ID_TESTBRAND");
+    assert.equal(igEnvNames("ongrowth").token, "META_ACCESS_TOKEN");
+    delete process.env.META_ACCESS_TOKEN_TESTBRAND;
   }],
   ["요일 → 채널: 평일만, 수요일은 인스타/스레드 격주, 주말은 쉬는 날", () => {
     const c = base();

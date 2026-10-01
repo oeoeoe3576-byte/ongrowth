@@ -1,7 +1,8 @@
 // 카드뉴스 → 인스타그램 캐러셀 자동 발행.
 // 인스타그램 API는 공개 HTTPS 이미지 URL만 받으므로, JPEG를 저장소(public)의 data/publish/<id>/에 커밋·푸시하고
 // raw.githubusercontent.com의 커밋 고정 주소를 넘긴다 (커밋 SHA 주소라 나중에 파일이 바뀌어도 그대로).
-// 토큰·계정 ID는 환경 변수(META_ACCESS_TOKEN, INSTAGRAM_ACCOUNT_ID)로만 읽는다.
+// 토큰·계정 ID는 환경 변수로만 읽는다. 계정별 변수(META_ACCESS_TOKEN_<브랜드>, INSTAGRAM_ACCOUNT_ID_<브랜드>)가
+// 있으면 그걸, 없으면 기본(META_ACCESS_TOKEN, INSTAGRAM_ACCOUNT_ID)을 쓴다. 예: travel → META_ACCESS_TOKEN_TRAVEL
 
 import fs from "node:fs";
 import path from "node:path";
@@ -14,11 +15,18 @@ const CAROUSEL_MAX = 10;
 const CAPTION_MAX = 2200;
 const HASHTAG_MAX = 30;
 
-export function igAuthFromEnv(): InstagramAuthConfig {
-  const accountId = process.env.INSTAGRAM_ACCOUNT_ID;
-  const accessToken = process.env.META_ACCESS_TOKEN;
+export function igEnvNames(brand?: string): { token: string; account: string } {
+  const suffix = brand ? `_${brand.toUpperCase().replace(/[^A-Z0-9]/g, "_")}` : "";
+  if (suffix && process.env[`META_ACCESS_TOKEN${suffix}`]) return { token: `META_ACCESS_TOKEN${suffix}`, account: `INSTAGRAM_ACCOUNT_ID${suffix}` };
+  return { token: "META_ACCESS_TOKEN", account: "INSTAGRAM_ACCOUNT_ID" };
+}
+
+export function igAuthFromEnv(brand?: string): InstagramAuthConfig {
+  const names = igEnvNames(brand);
+  const accountId = process.env[names.account];
+  const accessToken = process.env[names.token];
   if (!accountId || !accessToken) {
-    throw new Error("환경 변수 META_ACCESS_TOKEN / INSTAGRAM_ACCOUNT_ID가 없음 (환경 설정에 넣은 뒤 새 세션에서 실행)");
+    throw new Error(`환경 변수 ${names.token} / ${names.account}가 없음 (환경 설정에 넣은 뒤 새 세션에서 실행)`);
   }
   return { accountId, accessToken, graphApiVersion: process.env.META_GRAPH_API_VERSION || "v23.0" };
 }
@@ -67,8 +75,8 @@ export async function waitForUrls(urls: string[], tries = 10): Promise<void> {
   }
 }
 
-export async function publishCarousel(urls: string[], caption: string, log: (s: string) => void = console.log): Promise<string> {
-  const client = new InstagramClient(igAuthFromEnv());
+export async function publishCarousel(urls: string[], caption: string, brand?: string, log: (s: string) => void = console.log): Promise<string> {
+  const client = new InstagramClient(igAuthFromEnv(brand));
   const children: string[] = [];
   for (const [i, url] of urls.entries()) {
     children.push(await client.createCarouselItem(url));
@@ -80,8 +88,8 @@ export async function publishCarousel(urls: string[], caption: string, log: (s: 
   return client.publishContainer(container);
 }
 
-export async function checkInstagram(): Promise<string> {
-  const auth = igAuthFromEnv();
+export async function checkInstagram(brand?: string): Promise<string> {
+  const auth = igAuthFromEnv(brand);
   const me = await new InstagramClient(auth).me();
   const id = me.user_id ?? me.id;
   return `@${me.username ?? "?"} (id ${id})${id !== auth.accountId && me.id !== auth.accountId ? ` ⚠ INSTAGRAM_ACCOUNT_ID(${auth.accountId})와 다름` : ""}`;

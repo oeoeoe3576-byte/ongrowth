@@ -207,8 +207,8 @@ program.command("status").option(...brandOpt).action((o: { brand: string }) => {
   for (const t of cal.backlog.filter((x) => x.status !== "todo")) console.log(`  ${t.id} ${t.status.padEnd(9)} ${t.date ?? ""} ${t.content_id ?? ""} ${t.topic}`);
 });
 
-program.command("ig-check").action(async () => {
-  console.log(`✓ 인스타그램 연결 확인: ${await checkInstagram()}`);
+program.command("ig-check").option(...brandOpt).action(async (o: { brand: string }) => {
+  console.log(`✓ 인스타그램 연결 확인 (${o.brand}): ${await checkInstagram(o.brand)}`);
 });
 
 program
@@ -235,7 +235,7 @@ program
     const urls = hostImages(id, pkg.images);
     await waitForUrls(urls);
     console.log(`이미지 주소 준비 (${urls.length}장)`);
-    const mediaId = await publishCarousel(urls, caption);
+    const mediaId = await publishCarousel(urls, caption, o.brand);
     transition(id, o.brand, "published", "published", (x) => {
       x.published_at = now(cal).toFormat("yyyy-MM-dd HH:mm");
       x.note = `instagram media ${mediaId}`;

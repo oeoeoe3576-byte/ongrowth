@@ -122,10 +122,10 @@ const tests: [string, () => void | Promise<void>][] = [
       }
     }
   }],
-  ["계정 설정: ongrowth는 전 페이지 trend, coverTheme가 있으면 첫/마지막 장만 다르게, --theme를 주면 한 가지로", () => {
+  ["계정 설정: ongrowth는 전 페이지 insight, coverTheme가 있으면 첫/마지막 장만 다르게, --theme를 주면 한 가지로", () => {
     const c = renderContent(master("CN-20261001-001"), store.pages);
-    assert.ok(c.cards.every((k) => k.theme.name === "trend"));
-    assert.equal(c.designLabel, "trend");
+    assert.ok(c.cards.every((k) => k.theme.name === "insight"));
+    assert.equal(c.designLabel, "insight");
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "brand-"));
     const prev = process.cwd();
     fs.mkdirSync(path.join(tmp, "data/brands"), { recursive: true });

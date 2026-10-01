@@ -6,7 +6,7 @@
 
 - **평일만** 운영: 월·화·목·금 블로그, 수요일은 인스타그램/스레드 격주 (`data/editorial/ongrowth.json`의 `weekly`)
 - 검토 요청: 평일 오전 (약 9시) · 발행: 승인된 날 18:30 (KST)
-- 디자인: 트렌드(밝은 회색 + 민트 형광펜, 2026-10-01부터. 이전은 인사이트) — `data/brands/ongrowth.json`
+- 디자인: 인사이트(검정 + 초록) — `data/brands/ongrowth.json`
 - 원고 작성은 이 세션의 Claude가 직접 한다 (API 키 불필요, `--response` 방식)
 
 ## 1. 준비

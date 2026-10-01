@@ -82,7 +82,8 @@
       "channel": "festival",
       "topic": "이번 주말 가볼 만한 가을 축제",
       "angle": "10월 둘째 주 주말 기준. 지역 고르게 3~5곳",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-01"
     },
     {
       "id": "F02",
@@ -194,7 +195,8 @@
       "channel": "info",
       "topic": "10월 성수 팝업 모음",
       "angle": "기간·장소·예약 여부를 브랜드 공식 계정/사이트로 확인. 끝난 팝업 제외",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-03"
     },
     {
       "id": "I02",

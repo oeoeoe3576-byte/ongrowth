@@ -23,7 +23,8 @@ const md = (s = "") => esc(s).replace(/\*\*(.+?)\*\*/g, '<span class="hl">$1</sp
 const mdB = (s = "") => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br/>");
 const no2 = String(L.no).padStart(2, "0");
 
-const total = 1 + L.slides.length + 2;
+// 오늘의 요약 장은 2026-10-01부터 기본으로 넣지 않는다 (letter.json에 summary가 있을 때만)
+const total = 1 + L.slides.length + (L.summary ? 1 : 0) + 1;
 const pad = (n) => String(n).padStart(2, "0");
 const top = (n, dark) =>
   `<div class="topbar"><div class="wordmark" style="font-size:26px;letter-spacing:5px">BEAUTY <i>letter</i></div><div class="pageno"><b>${pad(n)}</b> / ${pad(total)}</div></div>`;
@@ -109,7 +110,7 @@ const html = `<!doctype html>
 </head><body><div class="sheet">
 ${cover()}
 ${L.slides.map(slide).join("\n")}
-${summary()}
+${L.summary ? summary() : ""}
 ${ps()}
 </div></body></html>
 `;

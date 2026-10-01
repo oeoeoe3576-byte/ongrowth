@@ -14,7 +14,7 @@ export interface CardCheck {
 }
 
 /** 보이는 글자 수 (강조 표시 ** 제외) */
-const len = (s: string) => [...s.replace(/\*\*([^*]+)\*\*/g, "$1")].length;
+const len = (s: string) => [...s.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/\n/g, "")].length;
 
 export const SPLIT_MESSAGE = "이 카드의 내용이 너무 많아 분리하는 것이 좋습니다.";
 

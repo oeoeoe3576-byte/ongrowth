@@ -75,44 +75,16 @@
       "foot": "* 일반적인 퍼스널컬러 기준의 예시 컬러예요. 같은 톤 안에서도 차이가 있어요."
     },
     {
-      "type": "points",
+      "type": "html",
       "name": "lip",
-      "kicker": "BEIGE LIP",
-      "title": "베이지 립,\n**톤별로** 이렇게 골라요",
-      "items": [
-        {
-          "h": "웜톤 · 코랄·카멜 베이지",
-          "p": "주황기가 살짝 도는 베이지가 얼굴을 따뜻하고 화사하게 밝혀줘요."
-        },
-        {
-          "h": "쿨톤 · 로즈·핑크 베이지",
-          "p": "분홍기가 섞인 베이지를 고르면 입술이 창백해 보이지 않아요."
-        },
-        {
-          "h": "공통 · 너무 하얀 누드는 피하기",
-          "p": "흰기가 많은 누드 베이지는 **입술이 떠 보이기 쉬워요.** 피부보다 한 톤 진하게 골라요."
-        }
-      ]
+      "cls": "cpage",
+      "html": "<div class=\"kicker\">BEIGE LIP</div><h2>베이지 립,<br/><span class=\"hl\">톤별로</span> 이렇게 골라요</h2><div class=\"crows\"><div class=\"cr\"><div class=\"chips2\"><span class=\"c\" style=\"background:#E2A98C\"><i>코랄 베이지</i></span><span class=\"c\" style=\"background:#C9946E\"><i>카멜 베이지</i></span></div><div class=\"tx\"><div class=\"lb\">웜톤</div><b>코랄·카멜 베이지</b><p>주황기가 살짝 도는 베이지가 얼굴을 따뜻하고 화사하게 밝혀줘요.</p></div></div><div class=\"cr\"><div class=\"chips2\"><span class=\"c\" style=\"background:#D29C9A\"><i>로즈 베이지</i></span><span class=\"c\" style=\"background:#E3B7B4\"><i>핑크 베이지</i></span></div><div class=\"tx\"><div class=\"lb\">쿨톤</div><b>로즈·핑크 베이지</b><p>분홍기가 섞인 베이지를 고르면 입술이 창백해 보이지 않아요.</p></div></div><div class=\"cr\"><div class=\"chips2\"><span class=\"c x\" style=\"background:#EFDCD0\"><i>피하기</i></span><span class=\"c\" style=\"background:#C98F82\"><i>추천</i></span></div><div class=\"tx\"><div class=\"lb\">공통</div><b>흰 누드 말고, 한 톤 진하게</b><p>흰기 많은 누드는 <b>입술이 떠 보이기 쉬워요.</b> 피부보다 한 톤 진하게 골라요.</p></div></div></div><div class=\"foot\">* 일반적인 퍼스널컬러 기준의 예시 컬러예요</div>"
     },
     {
-      "type": "points",
+      "type": "html",
       "name": "eye",
-      "kicker": "BEIGE EYE",
-      "title": "베이지 섀도,\n**한 끗 차이**는 여기서",
-      "items": [
-        {
-          "h": "웜톤 · 골드 베이지 + 브라운",
-          "p": "골드빛 베이지로 눈두덩을 채우고 **브라운**으로 눈꼬리만 살짝 눌러요."
-        },
-        {
-          "h": "쿨톤 · 그레이지 + 모브",
-          "p": "회색기 도는 **그레이지**를 베이스로, 음영은 모브 브라운으로 잡아요."
-        },
-        {
-          "h": "공통 · 펄은 눈 중앙에만",
-          "p": "베이지는 넓게 펴고, 펄은 **눈동자 위 중앙**에만 올려야 부어 보이지 않아요."
-        }
-      ]
+      "cls": "cpage",
+      "html": "<div class=\"kicker\">BEIGE EYE</div><h2>베이지 섀도,<br/><span class=\"hl\">한 끗 차이</span>는 여기서</h2><div class=\"crows\"><div class=\"cr\"><div class=\"chips2\"><span class=\"c\" style=\"background:#D2A877\"><i>골드 베이지</i></span><span class=\"c\" style=\"background:#8A5A3C\"><i>브라운</i></span></div><div class=\"tx\"><div class=\"lb\">웜톤</div><b>골드 베이지 + 브라운</b><p>골드빛 베이지로 눈두덩을 채우고 <b>브라운</b>으로 눈꼬리만 살짝 눌러요.</p></div></div><div class=\"cr\"><div class=\"chips2\"><span class=\"c\" style=\"background:#C8B8AE\"><i>그레이지</i></span><span class=\"c\" style=\"background:#8E6F76\"><i>모브</i></span></div><div class=\"tx\"><div class=\"lb\">쿨톤</div><b>그레이지 + 모브</b><p>회색기 도는 <b>그레이지</b>를 베이스로, 음영은 모브 브라운으로 잡아요.</p></div></div><div class=\"cr\"><div class=\"chips2\"><span class=\"c pearl\" style=\"background:radial-gradient(circle at 35% 30%, #fff 0%, #F3E2CC 35%, #D9BE9B 100%)\"><i>샴페인 펄</i></span></div><div class=\"tx\"><div class=\"lb\">공통</div><b>펄은 눈 중앙에만</b><p>베이지는 넓게 펴고, 펄은 <b>눈동자 위 중앙</b>에만 올려야 부어 보이지 않아요.</p></div></div></div><div class=\"foot\">* 일반적인 퍼스널컬러 기준의 예시 컬러예요</div>"
     }
   ],
   "ps": {

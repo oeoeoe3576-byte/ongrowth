@@ -775,3 +775,23 @@ CN-20261001-036,6,INFORMATION,TEXT,**남이섬**,은행나무길로 유명한 �
 CN-20261001-036,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
 CN-20261001-036,8,CTA,FOLLOW,"단풍 들면
 **다시 알려드려요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-037,1,HOOK,PHOTO_COVER,"서울 근교 단풍 명소
+**5곳 시기 미리보기**",이번주 단풍 어디감?,첫 단풍은 10월 중순부터 🍁,,,TRUE,PHOTO,data/images/travel/tmp-C01/cover.jpg,,,,NOT_REQUIRED
+CN-20261001-037,2,INFORMATION,TEXT,북한산국립공원,도심 속 단풍 산,"📍 서울 은평구 불광동·성북구 정릉동 일대
+📅 단풍 예상 10월 중순~11월 초
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-C01/p1-bukhan.jpg,,,https://www.newstravel.co.kr/news/article.html?no=27534,NEEDS_CHECK
+CN-20261001-037,3,INFORMATION,TEXT,남한산성도립공원,성곽 따라 단풍길,"📍 경기 광주시 남한산성면 남한산성로 731
+📅 10:00~18:00 · 월요일 휴무
+💰 공원 무료 (행궁 2,000원)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p2-namhan.jpg,,,https://m.tripinfo.co.kr/info.html?content_type_id=12&content_id=125449,NEEDS_CHECK
+CN-20261001-037,4,INFORMATION,TEXT,국립수목원(광릉),숲길 단풍 산책,"📍 경기 포천시 소흘읍 광릉수목원로 509
+📅 09:00~18:00 · 월요일 휴관
+🎫 차량은 사전 주차예약 필수",,,TRUE,PHOTO,data/images/travel/tmp-C01/p3-kna.jpg,,,https://kna.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?mn=UKNA_01_03_01&cmsId=FC_003267,NEEDS_CHECK
+CN-20261001-037,5,INFORMATION,TEXT,아침고요수목원,정원 속 단풍,"📍 경기 가평군 상면 수목원로 432
+📅 08:30~19:00
+💰 어른 11,000원",,,TRUE,PHOTO,data/images/travel/tmp-C01/p4-morning.jpg,,,https://www.gptour.go.kr/tour/tour_view.jsp?menu=tour&submenu=etc&paramidx=TL0000086,NEEDS_CHECK
+CN-20261001-037,6,INFORMATION,TEXT,남이섬,은행나무길로 유명한 섬,"📍 경기 가평군 가평읍 북한강변로 1024 (선착장)
+📅 08:00~21:00
+💰 19,000원 (배 포함)",,,TRUE,PHOTO,data/images/travel/tmp-C01/p5-nami.jpg,,,https://www.waug.com/ko/activities/116857,NEEDS_CHECK
+CN-20261001-037,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
+CN-20261001-037,8,CTA,FOLLOW,"단풍 들면
+**다시 알려드려요**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

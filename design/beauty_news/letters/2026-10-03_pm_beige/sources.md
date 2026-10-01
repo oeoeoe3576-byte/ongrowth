@@ -2,7 +2,7 @@
 
 | 항목 | 출처 |
 |---|---|
-| img/cover_photo.jpg | Pexels 무료 사진 "Coffee Cup and Autumn Leaves on a Sweater" (Ioana Motoc) https://www.pexels.com/photo/coffee-cup-and-autumn-leaves-on-a-sweater-14408237/ |
+| img/cover_photo.jpg | Topview AI 생성 이미지 (Nano Banana 2 Lite, 2026-10-01, 0.3크레딧). 브랜드 없는 베이지 스와치 플랫레이 |
 
 - 톤별 컬러칩은 일반적인 퍼스널컬러 기준의 예시 색 (공식 자료 아님) → 카드에 표기.
 - HOW TO 3가지와 P.S.는 에디터 일반 팁.

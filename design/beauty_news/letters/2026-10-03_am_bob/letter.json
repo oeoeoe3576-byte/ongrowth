@@ -10,21 +10,39 @@
     "bg": "img/cover_bg.jpg",
     "image": "img/hince_cut.png",
     "focus": "center",
-    "title": "2026 베스트 오브 뷰티,\n**1~2만 원대 위너**만 골랐어요",
-    "sub": "얼루어 코리아가 뽑은 올해의 메이크업 수상작이에요."
+    "title": "2026 베스트 오브 뷰티,\n**메이크업 위너** 다 모았어요",
+    "sub": "얼루어 코리아가 뽑은 올해의 수상작 9개.\n1~2만 원대도 많아요."
   },
   "slides": [
     {
       "type": "html",
-      "name": "budget",
-      "cls": "bob",
-      "html": "<div class=\"kicker\">UNDER 30,000</div><h2>부담 없이 사기 좋은<br/><span class=\"hl\">위너 4가지</span></h2>\n<div class=\"grid\">\n <div class=\"cell\"><div class=\"pic\"><img src=\"img/hince_cut.png\" alt=\"\"/></div><div class=\"aw\">Best Blusher</div><b>힌스 하프 문 치크</b><span class=\"sh\">#05 로지 문</span><p>크림과 파우더 장점을 합친 텍스처, 보송하게 픽싱돼요.</p><div class=\"pr\">1만9천원 <em>공식몰 16,100원</em></div></div>\n <div class=\"cell\"><div class=\"pic\"><img src=\"img/tcfs_cut.png\" alt=\"\" class=\"slim\"/></div><div class=\"aw\">Best Eye Makeup</div><b>투쿨포스쿨 프로타주 펜슬</b><span class=\"sh\">#22 허밍글로우</span><p>부드럽게 블렌딩, 섀도·블러셔로 멀티 사용.</p><div class=\"pr\">1만2천원 <em>공식몰 11,400원</em></div></div>\n <div class=\"cell nopic\"><div class=\"aw\">Best Matte Lips</div><b>컬러그램 누디 블러 스틱</b><span class=\"sh\">#02 너드샌드</span><p>블러 처리한 듯 매끈·보송한 매트 립, 오래 유지돼요.</p><div class=\"pr\">1만2천원</div></div>\n <div class=\"cell nopic\"><div class=\"aw\">Best Lash</div><b>올리오노 글루 믹스팩 플러스</b><span class=\"sh\">#스파이키</span><p>슬림한 A자형 + 곡선 밴드로 자연스러운 속눈썹.</p><div class=\"pr\">2만4천원 <em>48피스+트위저</em></div></div>\n</div>\n<div class=\"foot\">* 수상작·정가: 얼루어 코리아 (2026.10.01) · 할인가: 각 공식몰 10/1 기준 · 제품 사진: 힌스·투쿨포스쿨 공식몰</div>"
+      "name": "all",
+      "cls": "bob2",
+      "html": "<div class=\"kicker\">ALL WINNERS</div><h2>한눈에 보는<br/><span class=\"hl\">메이크업 위너 9</span></h2>\n<div class=\"list tight\">\n <div class=\"row\"><div class=\"aw\">Best Blusher</div><div><b>힌스 하프 문 치크 #05 로지 문</b></div><div class=\"pr\">1만9천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Eye Makeup</div><div><b>투쿨포스쿨 프로타주 펜슬 #22</b></div><div class=\"pr\">1만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Matte Lips</div><div><b>컬러그램 누디 블러 스틱 #02</b></div><div class=\"pr\">1만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Glossy Lips</div><div><b>맥 러스터글래스 스테인글래스 립 틴트</b></div><div class=\"pr\">3만8천원대</div></div>\n <div class=\"row\"><div class=\"aw\">Best Lash</div><div><b>올리오노 글루 믹스팩 플러스</b></div><div class=\"pr\">2만4천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Lens</div><div><b>하파크리스틴 캣티튜드 크리스틴</b></div><div class=\"pr\">2만5천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Base &amp; Prep</div><div><b>에스쁘아 메이크업 본딩 프라이머</b></div><div class=\"pr\">2만8천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Cushion</div><div><b>탈리다쿰 화이트 단델리온 심리스 쿠션</b></div><div class=\"pr\">6만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Foundation</div><div><b>나스 내추럴 매트 롱웨어 파운데이션</b></div><div class=\"pr\">8만2천원</div></div>\n</div>\n<div class=\"foot\">* 출처: 얼루어 코리아 2026 베스트 오브 뷰티 위너 '메이크업' (2026.10.01) · 정가 기준</div>"
     },
     {
       "type": "html",
-      "name": "rest",
-      "cls": "bob2",
-      "html": "<div class=\"kicker\">MORE WINNERS</div><h2>베이스까지 챙긴다면,<br/><span class=\"hl\">나머지 위너 5가지</span></h2>\n<div class=\"list\">\n <div class=\"row\"><div class=\"aw\">Best Base &amp; Prep</div><div><b>에스쁘아 메이크업 본딩 프라이머</b><p>피붓결 정돈 + 베이스 밀착력·지속력 UP</p></div><div class=\"pr\">2만8천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Lens</div><div><b>하파크리스틴 캣티튜드 크리스틴 #레이디 베이지</b><p>우아한 베이지 컬러, 한 달용 2개</p></div><div class=\"pr\">2만5천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Glossy Lips</div><div><b>맥 러스터글래스 스테인글래스 립 틴트 #씨 쉬어</b><p>풍부한 컬러 + 볼륨감</p></div><div class=\"pr\">3만8천원대</div></div>\n <div class=\"row\"><div class=\"aw\">Best Cushion</div><div><b>탈리다쿰 화이트 단델리온 심리스 쿠션 #21N</b><p>덧발라도 텁텁하지 않은 맑은 베이스</p></div><div class=\"pr\">6만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Foundation</div><div><b>나스 내추럴 매트 롱웨어 파운데이션 #몽블랑</b><p>가볍고 보송한 밀착, 결점 커버</p></div><div class=\"pr\">8만2천원</div></div>\n</div>\n<div class=\"foot\">* 출처: 얼루어 코리아 2026 베스트 오브 뷰티 위너 '메이크업' (2026.10.01)</div>"
+      "name": "hince",
+      "cls": "feat",
+      "html": "<div class=\"kicker\">EDITOR'S PICK</div>\n<div class=\"hero\"><img src=\"img/hince_cut.png\" alt=\"\" class=\"\"/></div>\n<div class=\"aw\">Best Blusher</div><h2>힌스 하프 문 치크</h2><div class=\"sh\">#05 로지 문</div>\n<p class=\"ds\">크림과 파우더의 장점을 합친 독특한 텍스처. 피부에 부드럽게 밀착된 뒤 <b>보송하게 픽싱</b>된대요.</p>\n<div class=\"prices\"><div><small>정가</small><b>1만9천원</b></div><div class=\"sale\"><small>공식몰 (10/1 기준)</small><b>16,100원</b></div></div>\n<div class=\"tip\"><span>TIP</span>손가락으로 톡톡 두드려 바르면 경계 없이 자연스럽게 퍼져요.</div>\n<div class=\"foot\">* 수상·설명: 얼루어 코리아 (2026.10.01) · 제품 사진·할인가: 브랜드 공식몰</div>"
+    },
+    {
+      "type": "html",
+      "name": "pencil",
+      "cls": "feat",
+      "html": "<div class=\"kicker\">EDITOR'S PICK</div>\n<div class=\"hero\"><img src=\"img/tcfs_cut.png\" alt=\"\" class=\"slim\"/></div>\n<div class=\"aw\">Best Eye Makeup</div><h2>투쿨포스쿨 프로타주 펜슬</h2><div class=\"sh\">#22 허밍글로우</div>\n<p class=\"ds\">부드럽게 블렌딩되고 풍부하게 발색돼요. <b>섀도·블러셔</b>로 같이 쓸 수 있는 멀티 펜슬이에요.</p>\n<div class=\"prices\"><div><small>정가</small><b>1만2천원</b></div><div class=\"sale\"><small>공식몰 (10/1 기준)</small><b>11,400원</b></div></div>\n<div class=\"tip\"><span>TIP</span>펜슬로 눈두덩에 긋고 손가락으로 펴면 섀도 브러시 없이도 끝나요.</div>\n<div class=\"foot\">* 수상·설명: 얼루어 코리아 (2026.10.01) · 제품 사진·할인가: 브랜드 공식몰</div>"
+    },
+    {
+      "type": "html",
+      "name": "lips",
+      "cls": "vs",
+      "html": "<div class=\"kicker\">LIP WINNERS</div><h2>매트 vs 글로시,<br/><span class=\"hl\">내 취향은?</span></h2>\n<div class=\"two\">\n <div class=\"side\"><div class=\"aw\">Best Matte Lips</div><b>컬러그램<br/>누디 블러 스틱</b><span class=\"sh\">#02 너드샌드</span><p>블러 처리한 듯 <em>매끈하고 보송한</em> 발색, 오래 유지되는 매트 립.</p><div class=\"pr\">1만2천원</div><div class=\"for\">이런 분께 · 하루 종일 덧바르기 귀찮은 분</div></div>\n <div class=\"side\"><div class=\"aw\">Best Glossy Lips</div><b>맥 러스터글래스<br/>스테인글래스 립 틴트</b><span class=\"sh\">#씨 쉬어</span><p>보이는 그대로 <em>풍부한 컬러</em>에 볼륨감까지 더해 주는 립 틴트.</p><div class=\"pr\">3만8천원대</div><div class=\"for\">이런 분께 · 도톰하고 촉촉한 입술 연출</div></div>\n</div>\n<div class=\"foot\">* 출처: 얼루어 코리아 (2026.10.01)</div>"
+    },
+    {
+      "type": "html",
+      "name": "base",
+      "cls": "steps",
+      "html": "<div class=\"kicker\">BASE WINNERS</div><h2>베이스 위너로<br/><span class=\"hl\">순서대로 쌓기</span></h2>\n<div class=\"st\"><div class=\"n\">01</div><div><div class=\"aw\">Best Base &amp; Prep</div><b>에스쁘아 메이크업 본딩 프라이머 · 2만8천원</b><p>피붓결을 매끈하게 정돈하고 요철 커버. 베이스 밀착력·지속력을 높여줘요.</p></div></div>\n<div class=\"st\"><div class=\"n\">02</div><div><div class=\"aw\">Best Cushion</div><b>탈리다쿰 심리스 쿠션 #21N · 6만2천원</b><p>여러 번 덧발라도 텁텁하지 않은 맑고 투명한 베이스. 촉촉한 피부라면 이쪽.</p></div></div>\n<div class=\"st\"><div class=\"n\">03</div><div><div class=\"aw\">Best Foundation</div><b>나스 내추럴 매트 롱웨어 #몽블랑 · 8만2천원</b><p>가볍고 보송하게 밀착, 결점을 자연스럽게 가려줘요. 유분이 고민이라면 이쪽.</p></div></div>\n<div class=\"foot\">* 제품 설명: 얼루어 코리아 (2026.10.01) · 피부 타입 추천은 에디터 의견</div>"
     }
   ],
   "ps": {

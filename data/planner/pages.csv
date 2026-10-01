@@ -85,3 +85,21 @@ CN-20261001-005,5,INFORMATION,IMAGE_TEXT,"남강 위 유등,
 CN-20261001-005,6,SUMMARY,NUMBER_LIST,축제 4곳 **날짜 한눈에**,,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
 CN-20261001-005,7,CTA,FOLLOW,"저장하고
 **주말에 써먹기**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261001-006,1,HOOK,PHOTO_COVER,"주말 약속 없다면
+**축제 4곳 중 픽**",🍂 코스모스·아리랑·춤판·유등 한 번에,이번 주말 어디 갈지 아직 못 정했다면? 👀,,,TRUE,PHOTO,data/images/travel/tmp-F01/02.jpg,,,,NOT_REQUIRED
+CN-20261001-006,2,INFORMATION,IMAGE_TEXT,"입장료 2,000원에
+**코스모스 28ha**",하동 북천 코스모스·메밀꽃 축제,"9/22~10/5 · 북천면 직전리 꽃단지
+10:00~18:00",,,TRUE,PHOTO,data/images/travel/tmp-F01/04.jpg,,,https://www.metroseoul.co.kr/article/20260921500604,NEEDS_CHECK
+CN-20261001-006,3,INFORMATION,IMAGE_TEXT,"토요일 정선 시내,
+**아리랑 퍼레이드**",정선아리랑제,"10/1~4 · 정선읍 일원
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/05.jpg,,,https://www.kwnews.co.kr/article/20260928500346,NEEDS_CHECK
+CN-20261001-006,4,INFORMATION,IMAGE_TEXT,"5일 내내 무료,
+**도심이 춤판**",천안흥타령춤축제,"10/1~5 · 삼거리공원·종합운동장
+10:00~22:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/06.jpg,,,https://www.joongdo.co.kr/web/view.php?key=20260921010006754,NEEDS_CHECK
+CN-20261001-006,5,INFORMATION,IMAGE_TEXT,"해 지면 더 예쁜
+**남강 유등**",진주남강유등축제,"10/3~18 · 진주성·남강 일원
+13:00~23:00 · 무료",,,TRUE,PHOTO,data/images/travel/tmp-F01/07.jpg,,,https://view.asiae.co.kr/article/2026092011502808545,NEEDS_CHECK
+CN-20261001-006,6,SUMMARY,NUMBER_LIST,"놓치기 전에
+**날짜 체크!**",,,,🌸 하동 코스모스 · ~10/5 | 🎶 정선아리랑제 · ~10/4 | 💃 천안흥타령춤축제 · ~10/5 | 🏮 진주남강유등축제 · 10/3~18,FALSE,,,,,,NEEDS_CHECK
+CN-20261001-006,7,CTA,FOLLOW,"저장하고
+**주말에 써먹기**",,✍️ 같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

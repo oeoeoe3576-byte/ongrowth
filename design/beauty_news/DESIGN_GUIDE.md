@@ -9,7 +9,7 @@
 - 마크: `BEAUTY letter` (BEAUTY 대문자 + letter 소문자 이탤릭). 하단 표기: `BEAUTY LETTER · No.01`.
 - 호수: 표지 우측 상단에 `No.01`처럼 넣고, 레터마다 1씩 올립니다.
 - 카테고리: 표지 헤드라인 위 라벨 앞에 붙입니다. `New Letter`(신상) / `Issue Letter`(이슈) / `Color Letter`(컬러) / `Sale Letter`(세일).
-- 핸들: 아직 미정이라 `@[핸들]`로 비워둡니다. 확정되면 일괄 치환합니다.
+- 핸들: `@from.beautyletter`
 
 ## 문구 톤
 - 카피는 친구에게 쓰는 편지처럼 다정하게 씁니다. 예: "이번 주엔 탱글한 틴트 소식을 담아 왔어요"
@@ -84,7 +84,6 @@
 협찬이 아닌 콘텐츠에서는 배지와 고지 문구를 둘 다 지웁니다.
 
 ## 바꿔야 할 것
-- 핸들(`@[핸들]`)이 정해지면 일괄 치환합니다.
 
 ## 폰트 라이선스
 Pretendard와 Cormorant Garamond는 둘 다 SIL Open Font License라서 상업적으로 써도 됩니다(`fonts/`).

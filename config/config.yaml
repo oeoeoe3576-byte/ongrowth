@@ -41,7 +41,7 @@ instagram:
     domestic_where:
       account_id_env: INSTAGRAM_ACCOUNT_ID
       access_token_env: META_ACCESS_TOKEN
-    beauty_news:                # 뷰티 계정 아이디 확정되면 이름만 바꾸면 됨
+    from.beautyletter:          # 뷰티레터 인스타 계정 (@from.beautyletter)
       account_id_env: INSTAGRAM_ACCOUNT_ID_BEAUTY
       access_token_env: META_ACCESS_TOKEN_BEAUTY
 

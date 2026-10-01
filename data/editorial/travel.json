@@ -42,7 +42,8 @@
       "channel": "stay",
       "topic": "단풍 명소 바로 옆, 가을에 묵기 좋은 숙소",
       "angle": "아침 일찍 단풍길을 걷기 좋은 위치 중심. 지역별 1곳씩",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-04"
     },
     {
       "id": "S02",
@@ -129,7 +130,8 @@
       "channel": "course",
       "topic": "서울에서 2시간, 단풍 1박 2일 코스",
       "angle": "출발 시간·동선 중심. 붐비는 시간 피하기",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-02"
     },
     {
       "id": "C02",

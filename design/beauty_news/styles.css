@@ -429,3 +429,14 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 .cover-photo .footbar, .cover-type .footbar, .cover-cut .footbar, .cover-scene .footbar { display: none; }
 .cover-photo .body, .cover-scene .body { bottom: 100px; }
 .cover-cut .body { bottom: 110px; }
+
+/* 배경 이미지 연하게 깔기 (2026-10-01): P.S.는 표지 이미지를 다시(수미상관), 본문 장은 남은 AI 컷 콜라주 */
+.card { isolation: isolate; }
+.bgimg { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.bgimg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ps .bgimg img { opacity: .26; filter: blur(3px) saturate(.9); }
+.ps .bgimg img.cut { inset: auto; left: 50%; top: 50%; width: auto; height: 62%; object-fit: contain; transform: translate(-50%,-50%) rotate(-4deg); opacity: .4; filter: blur(.5px); }
+.ps .bgimg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,26,32,.35), rgba(42,26,32,.55)); }
+.bgimg.collage { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+.bgimg.collage img { position: static; opacity: .16; filter: saturate(.8); }
+.bgimg.collage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(251,246,241,.55), rgba(251,246,241,.25) 40%, rgba(251,246,241,.55)); }

@@ -58,8 +58,9 @@ function cover() {
 
 function slide(s, i) {
   const n = i + 2, name = `${pad(n)}_${s.name || s.type}`;
+  const bg = s.bg ? `<div class="bgimg collage">${s.bg.map((u) => `<img src="${esc(u)}" alt="" />`).join("")}</div>` : "";
   if (s.type === "points") {
-    return `<section class="card points" data-name="${name}">${top(n)}<div class="kicker">${esc(s.kicker)}</div><h2>${md(s.title)}</h2>
+    return `<section class="card points" data-name="${name}">${bg}${top(n)}<div class="kicker">${esc(s.kicker)}</div><h2>${md(s.title)}</h2>
   <div class="items">${s.items.map((it, k) => `<div class="item"><div class="n">${pad(k + 1)}</div><div><h3>${md(it.h)}</h3><p>${mdB(it.p)}</p></div></div>`).join("")}</div>
   ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ""}</section>`;
   }
@@ -82,8 +83,10 @@ function summary() {
 }
 
 function ps() {
-  const p = L.ps;
-  return `<section class="card ps" data-name="${pad(total)}_ps"><div class="wordmark">BEAUTY <i>letter</i></div>
+  const p = L.ps, c = L.cover;
+  const bgSrc = p.bg !== undefined ? p.bg : c.style === "photo" ? c.image : c.bg;
+  const bg = bgSrc ? `<div class="bgimg"><img src="${esc(bgSrc)}" alt="" />${c.style === "scene" && c.image ? `<img class="cut" src="${esc(c.image)}" alt="" />` : ""}</div>` : "";
+  return `<section class="card ps" data-name="${pad(total)}_ps">${bg}<div class="wordmark">BEAUTY <i>letter</i></div>
   <div class="inner"><div class="ps-mark">P.S.</div><div class="note"><div class="label">${esc(p.label || "에디터의 한 줄 팁")}</div><p>${mdB(p.note)}</p></div>
   <div class="bye"><h2>다음 레터에서<br/><em>만나요</em></h2><p><i></i>저장해두고 쇼핑할 때 꺼내보세요</p><div><span class="follow">${HANDLE} 팔로우</span></div></div></div>
   <div class="credit">${md(p.credit || "")}</div></section>`;

@@ -34,6 +34,9 @@ export const trendTheme: DesignTheme = extendTheme(defaultTheme, {
   typography: { displaySize: 108, headlineSize: 74, subheadlineSize: 36, displayWeight: 900, headlineTracking: "-0.05em", bodySize: 36, bodyLineHeight: 1.6 },
   radius: { card: 0, box: 0, pill: 999 },
   css: `
+/* 줄바꿈: 제목은 줄 길이를 고르게(한 글자만 다음 줄로 떨어지지 않게), 본문은 마지막 줄이 너무 짧지 않게 */
+.cn-theme-trend .cn-display, .cn-theme-trend .cn-headline, .cn-theme-trend .cn-sub, .cn-theme-trend .cn-cover-note { text-wrap: balance; }
+.cn-theme-trend .cn-body { text-wrap: pretty; }
 /* 상단 라벨·쪽수·진행 막대 없음. 오른쪽 아래 연두 화살표 */
 .cn-theme-trend .cn-top { visibility: hidden; }
 .cn-theme-trend .cn-progress { visibility: hidden; }

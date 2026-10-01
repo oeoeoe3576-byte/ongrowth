@@ -42,7 +42,8 @@ const HOOK_LAYOUTS = ["BIG_TITLE", "BIG_NUMBER", "IMAGE_TEXT", "SCREENSHOT", "PH
 const CTA_LAYOUTS = ["CTA", "FOLLOW"];
 
 /** 보이는 글자 수 (강조 표시 ** 제외) */
-const len = (s: string) => [...stripEmphasis(s)].length;
+const len = (s: string) => [...stripEmphasis(s).replace(/\n/g, "")].length;
+const LINE_BREAK_FIELDS: string[] = ["headline", "subheadline", "body"];
 const norm = (s: string) => stripEmphasis(s).replace(/\s+/g, "");
 
 function isStr(v: unknown): v is string {
@@ -134,7 +135,10 @@ function validatePage(
       err("문자열이어야 함 (없으면 빈 문자열)", pg, f);
       continue;
     }
-    if (/[\r\n]/.test(p[f])) err("줄바꿈 금지 - 한 줄로", pg, f);
+    // 제목·부제·본문은 뜻 단위로 줄을 나누는 줄바꿈(\n)을 2개까지 허용. 나머지는 한 줄
+    const breaks = (p[f].match(/\n/g) ?? []).length;
+    if (/\r/.test(p[f]) || (breaks && !LINE_BREAK_FIELDS.includes(f))) err("줄바꿈 금지 - 한 줄로", pg, f);
+    else if (breaks > 2) err("줄바꿈은 2개까지", pg, f);
     if (FORMULA_START_RE.test(p[f])) err("=, +, -, @ 로 시작하면 시트가 수식으로 해석함", pg, f);
     if (p[f] !== p[f].trim()) warn("앞뒤 공백", pg, f);
     if ((p[f].match(/\*\*/g) ?? []).length % 2 !== 0) err("강조 표시 **가 짝이 맞지 않음", pg, f);

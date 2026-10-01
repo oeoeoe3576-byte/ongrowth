@@ -30,7 +30,8 @@ export function rich(text: string, focus = ""): string {
       }
       return esc(part);
     })
-    .join("");
+    .join("")
+    .replace(/\r?\n/g, "<br>"); // 원고의 줄바꿈은 그대로 줄바꿈
 }
 
 /** 강조 표시(**)를 뺀 글자 */

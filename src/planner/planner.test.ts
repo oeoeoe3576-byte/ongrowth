@@ -92,7 +92,7 @@ const tests: [string, () => void | Promise<void>][] = [
     q.pages[4].image_type = "CHART";
     assert.ok(hasError(q, /참고자료 없이 그래프/));
   }],
-  ["문구: 과장 표현, 페이지 간 반복, 글자 수, 줄바꿈 금지", () => {
+  ["문구: 과장 표현, 페이지 간 반복, 글자 수, 줄바꿈 (제목·부제·본문만 2개까지)", () => {
     const p = clone(monthly);
     p.pages[1].body = "무조건 이렇게 하세요.";
     assert.ok(hasError(p, /과장\/낚시성 표현 '무조건'/));
@@ -104,6 +104,11 @@ const tests: [string, () => void | Promise<void>][] = [
     assert.ok(hasError(r, /글자 수 초과 \(91\/90\)/));
     const s = clone(monthly);
     s.pages[1].body = "첫 줄\n둘째 줄";
+    assert.ok(!hasError(s, /줄바꿈/));
+    s.pages[1].body = "1\n2\n3\n4";
+    assert.ok(hasError(s, /줄바꿈은 2개까지/));
+    s.pages[1].body = "본문";
+    s.pages[1].cta = "첫 줄\n둘째 줄";
     assert.ok(hasError(s, /줄바꿈 금지/));
   }],
   ["엔진: 오류가 있으면 오류 목록을 AI에게 돌려주고 재시도", async () => {

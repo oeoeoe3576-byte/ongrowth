@@ -12,11 +12,15 @@
 //   npm run editorial -- status                         전체 현황
 //   npm run editorial -- ig-check                       인스타그램 토큰 확인 (게시 안 함)
 //   npm run editorial -- publish <contentId> [--dry-run] 인스타그램 캐러셀 자동 발행 (승인 건만)
+//   npm run editorial -- photos <검색어> --id <contentId> [--pick 1,3,5]   관광공사 사진 검색/내려받기 (data/images/<brand>/<id>/)
+//   npm run editorial -- festivals --from YYYYMMDD [--to YYYYMMDD]          관광공사 공식 행사·축제 목록
 
 import { Command } from "commander";
 import { loadStore } from "../planner/store.js";
 import { renderContent } from "../design/renderHtml.js";
 import { exportPackage } from "../design/exportPackage.js";
+import path from "node:path";
+import { searchPhotos, downloadPhotos, searchFestivals, PHOTO_CREDIT } from "./tour.js";
 import { buildCaption, hostImages, waitForUrls, publishCarousel, checkInstagram } from "./instagram.js";
 import { loadCalendar, saveCalendar, pickTopic, findByContent, setMasterStatus, defaultPublishAt, recentTopics, now, channelFor, type Topic } from "./calendar.js";
 
@@ -206,6 +210,38 @@ program.command("status").option(...brandOpt).action((o: { brand: string }) => {
   for (const ch of Object.keys(cal.channels)) console.log(`  ${cal.channels[ch]}: 남은 주제 ${cal.backlog.filter((t) => t.channel === ch && t.status === "todo").length}개`);
   for (const t of cal.backlog.filter((x) => x.status !== "todo")) console.log(`  ${t.id} ${t.status.padEnd(9)} ${t.date ?? ""} ${t.content_id ?? ""} ${t.topic}`);
 });
+
+program
+  .command("photos")
+  .argument("<keyword>")
+  .option(...brandOpt)
+  .option("--id <contentId>", "내려받을 폴더 이름 (없으면 목록만 보기)")
+  .option("--pick <list>", "목록 번호 중 내려받을 것 (예: 1,3,5). 없으면 앞에서 6장")
+  .action(async (keyword: string, o: { brand: string; id?: string; pick?: string }) => {
+    const photos = await searchPhotos(keyword);
+    if (!photos.length) {
+      console.log(`'${keyword}' 사진 없음 - 다른 검색어(지역명, 장소명)로 다시`);
+      return;
+    }
+    photos.forEach((p, i) => console.log(`${String(i + 1).padStart(2)}. ${p.title} · ${p.location} · ${p.month} · ${p.photographer}`));
+    if (!o.id) return;
+    const picks = o.pick ? o.pick.split(",").map((n) => photos[Number(n.trim()) - 1]).filter(Boolean) : photos.slice(0, 6);
+    const dir = path.join("data/images", o.brand, o.id);
+    const files = await downloadPhotos(picks, dir);
+    console.log(`\n✓ ${files.length}장 → ${dir}/ (image_source에 이 경로를 쓰고, 캡션 끝에 "${PHOTO_CREDIT}")`);
+    for (const f of files) console.log(`  ${f}`);
+  });
+
+program
+  .command("festivals")
+  .requiredOption("--from <date>", "YYYYMMDD")
+  .option("--to <date>", "YYYYMMDD")
+  .action(async (o: { from: string; to?: string }) => {
+    const list = await searchFestivals(o.from, o.to);
+    if (!list.length) console.log("해당 기간 행사 없음");
+    for (const f of list) console.log(`${f.start}~${f.end} · ${f.title} · ${f.addr}${f.tel ? ` · ${f.tel}` : ""} · contentid ${f.contentId}`);
+    console.log(`\n출처: 한국관광공사 국문 관광정보 (공식 일정은 주최 측 페이지로 한 번 더 확인)`);
+  });
 
 program.command("ig-check").option(...brandOpt).action(async (o: { brand: string }) => {
   console.log(`✓ 인스타그램 연결 확인 (${o.brand}): ${await checkInstagram(o.brand)}`);

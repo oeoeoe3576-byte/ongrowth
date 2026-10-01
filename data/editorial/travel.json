@@ -8,14 +8,20 @@
   "publishTime": "18:30",
   "timezone": "Asia/Seoul",
   "channels": {
+    "season": "시즌 소식",
     "stay": "숙소",
+    "course": "여행 코스",
     "festival": "축제·행사",
-    "course": "여행 코스"
+    "weekend": "이번 주말 소식 모음"
   },
   "weekly": {
+    "mon": "season",
     "tue": "stay",
+    "wed": "course",
     "thu": "festival",
-    "sat": "course"
+    "fri": "weekend",
+    "sat": "course",
+    "sun": "stay"
   },
   "rules": [
     "그 주·그 달 시즌에 맞는 내용만 쓴다 (지금 갈 수 있는 곳, 지금 볼 수 있는 것)",
@@ -153,6 +159,63 @@
       "topic": "11월 단풍 절정 코스",
       "angle": "남쪽으로 내려가는 늦가을 단풍",
       "status": "todo"
+    },
+    {
+      "id": "N01",
+      "channel": "season",
+      "topic": "지금 단풍 어디까지 왔을까",
+      "angle": "산·지역별 단풍 시작·절정 예상 시기. 기상청·산림청 등 공식 자료로 확인",
+      "status": "todo"
+    },
+    {
+      "id": "N02",
+      "channel": "season",
+      "topic": "10월에만 볼 수 있는 가을 풍경",
+      "angle": "핑크뮬리·억새·코스모스 등 지금 피는 것",
+      "status": "todo"
+    },
+    {
+      "id": "N03",
+      "channel": "season",
+      "topic": "새로 생긴 여행 핫플",
+      "angle": "최근 개장·재개장한 곳. 개장일 공식 확인",
+      "status": "todo"
+    },
+    {
+      "id": "N04",
+      "channel": "season",
+      "topic": "11월에 미리 알아둘 여행 정보",
+      "angle": "단풍 끝물·첫눈·온천 시즌 준비",
+      "status": "todo"
+    },
+    {
+      "id": "W01",
+      "channel": "weekend",
+      "topic": "이번 주말 여행 소식 3",
+      "angle": "축제 1 + 시즌 풍경 1 + 코스 1을 한 게시물에",
+      "status": "todo"
+    },
+    {
+      "id": "W02",
+      "channel": "weekend",
+      "topic": "이번 주말, 비 와도 갈 곳 3",
+      "angle": "주말 날씨에 맞게 실내·실외 섞어서",
+      "status": "todo"
+    },
+    {
+      "id": "W03",
+      "channel": "weekend",
+      "topic": "이번 주말 가볼 만한 곳 3",
+      "angle": "그 주 시즌 테마 중심",
+      "status": "todo"
+    },
+    {
+      "id": "W04",
+      "channel": "weekend",
+      "topic": "주말 당일치기 소식 3",
+      "angle": "서울·부산 등 대도시 출발 기준 고르게",
+      "status": "todo"
     }
-  ]
+  ],
+  "reviewNote": "주말분은 미리 검토: 목요일 아침에 목+토, 금요일 아침에 금+일"
 }

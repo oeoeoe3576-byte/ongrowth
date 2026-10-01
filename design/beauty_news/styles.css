@@ -423,3 +423,9 @@ body { background: #d9d2cf; font-family: var(--sans); color: var(--plum); word-b
 .cover-scene.soft .topbar .wordmark { color: var(--plum); }
 .cover-scene.soft .issue-mark { color: var(--mauve); }
 .cover-scene.soft .issue-mark b { color: var(--rose); }
+
+/* 2026-10-01 결정: 호수(No.xx)·하단 로고·넘겨보기·표지 사진 출처는 넣지 않는다. 표지는 상단 로고 + 제목만. */
+.issue-mark, .letter-no, .photo-credit { display: none !important; }
+.cover-photo .footbar, .cover-type .footbar, .cover-cut .footbar, .cover-scene .footbar { display: none; }
+.cover-photo .body, .cover-scene .body { bottom: 100px; }
+.cover-cut .body { bottom: 110px; }

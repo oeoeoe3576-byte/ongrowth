@@ -6,7 +6,7 @@ import { defaultTheme } from "./default.js";
 import { insightTheme } from "./insight.js";
 import { lifeTheme } from "./life.js";
 import { campaignTheme } from "./campaign.js";
-import { trendTheme } from "./trend.js";
+import { trendTheme, trendSkyTheme, trendAquaTheme } from "./trend.js";
 export { extendTheme } from "./extend.js";
 
 const THEMES: Record<string, DesignTheme> = {
@@ -16,6 +16,8 @@ const THEMES: Record<string, DesignTheme> = {
   life: lifeTheme,
   campaign: campaignTheme,
   trend: trendTheme,
+  "trend-sky": trendSkyTheme,
+  "trend-aqua": trendAquaTheme,
   // 분야 → 테마 기본 연결 (브랜드 설정의 theme가 있으면 그게 우선)
   travel: lifeTheme,
   stay: lifeTheme,

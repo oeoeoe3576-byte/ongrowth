@@ -29,3 +29,4 @@ npm run design -- sheet CN-20261001-001 --themes default,insight,life,campaign,b
 ```
 
 - `trend.png` — 트렌드 (여행 계정용): 사진 표지 + 굵은 흰 제목·연두 강조·검정 박스 한 줄, 본문은 흰 바탕 + 연민트 땡땡이, 가운데 정렬 + 연두 형광펜 (사진은 예시용 임시 이미지)
+- `trend-colors.png` — 트렌드 색 버전 비교: trend(민트) / trend-sky(하늘색) / trend-aqua(아쿠아)

@@ -75,7 +75,7 @@ ${P.button ? `${T}.cn-l-FOLLOW .cn-cta-line { color: ${P.button}; }` : ""}
 ${T}.cn-l-IMAGE_TEXT .cn-main { justify-content: center; gap: 36px; }
 ${T}.cn-l-IMAGE_TEXT .cn-textblock { display: contents; }
 ${T}.cn-l-IMAGE_TEXT .cn-headline { order: -1; }
-${T}.cn-l-IMAGE_TEXT .cn-image { flex: 0 1 auto; width: 74%; height: 520px; min-height: 0; }
+${T}.cn-l-IMAGE_TEXT .cn-image { flex: 0 1 auto; width: 74%; height: 480px; min-height: 0; }
 
 /* 표지: 제목 위 흰 한 줄, 가운데 검정 박스(질문), 아주 굵은 제목 */
 ${T}.cn-l-PHOTO_COVER .cn-main, ${T}.cn-l-BIG_TITLE .cn-main { position: relative; justify-content: flex-end; text-align: left; align-items: flex-start; gap: 18px; }
@@ -86,9 +86,11 @@ ${T}.cn-l-PHOTO_COVER .cn-display { text-shadow: 0 4px 30px rgba(0,0,0,.35); }
 ${T}.cn-l-PHOTO_COVER .cn-sub { text-shadow: 0 2px 14px rgba(0,0,0,.4); }
 ${T} .cn-cover-note {
   display: -webkit-box; position: absolute; left: 50%; top: 30%; transform: translateX(-50%); max-width: 100%; width: max-content;
-  background: #000; color: #fff; border: 2px solid #fff; padding: 8px 18px; font-size: 32px; font-weight: 700; letter-spacing: -0.06em; line-height: 1.4; text-align: center;
+  background: ${P.arrow}; color: #111; border: 2px solid #111; padding: 10px 22px; font-size: 36px; font-weight: 800; letter-spacing: -0.05em; line-height: 1.4; text-align: center;
 }
-${T} .cn-cover-note .cn-em { color: ${P.onPhoto}; background: none; }
+${T} .cn-cover-note .cn-em { color: inherit; background: none; }
+/* 이미지+글: 이름(축제명 등)을 파란 박스 + 얇은 검정 테두리로 제목 위에 크게 */
+${T}.cn-l-IMAGE_TEXT .cn-sub { order: -2; background: ${P.arrow}; color: #111; border: 2px solid #111; padding: 8px 26px; font-size: 48px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.35; }
 ${T}.cn-l-PHOTO_COVER .cn-tag, ${T}.cn-l-BIG_TITLE .cn-kicker { display: none; }
 ${T}.cn-l-PHOTO_COVER .cn-bg-shade { background: linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,.45) 75%, rgba(0,0,0,.7) 100%); }
 `,

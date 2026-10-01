@@ -16,12 +16,6 @@
   "slides": [
     {
       "type": "html",
-      "name": "all",
-      "cls": "bob2",
-      "html": "<div class=\"kicker\">ALL WINNERS</div><h2>한눈에 보는<br/><span class=\"hl\">메이크업 위너 9</span></h2>\n<div class=\"list tight\">\n <div class=\"row\"><div class=\"aw\">Best Blusher</div><div><b>힌스 하프 문 치크 #05 로지 문</b></div><div class=\"pr\">1만9천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Eye Makeup</div><div><b>투쿨포스쿨 프로타주 펜슬 #22</b></div><div class=\"pr\">1만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Matte Lips</div><div><b>컬러그램 누디 블러 스틱 #02</b></div><div class=\"pr\">1만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Glossy Lips</div><div><b>맥 러스터글래스 스테인글래스 립 틴트</b></div><div class=\"pr\">3만8천원대</div></div>\n <div class=\"row\"><div class=\"aw\">Best Lash</div><div><b>올리오노 글루 믹스팩 플러스</b></div><div class=\"pr\">2만4천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Lens</div><div><b>하파크리스틴 캣티튜드 크리스틴</b></div><div class=\"pr\">2만5천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Base &amp; Prep</div><div><b>에스쁘아 메이크업 본딩 프라이머</b></div><div class=\"pr\">2만8천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Cushion</div><div><b>탈리다쿰 화이트 단델리온 심리스 쿠션</b></div><div class=\"pr\">6만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Foundation</div><div><b>나스 내추럴 매트 롱웨어 파운데이션</b></div><div class=\"pr\">8만2천원</div></div>\n</div>\n<div class=\"foot\">* 출처: 얼루어 코리아 2026 베스트 오브 뷰티 위너 '메이크업' (2026.10.01) · 정가 기준</div>"
-    },
-    {
-      "type": "html",
       "name": "hince",
       "cls": "feat",
       "html": "<div class=\"kicker\">EDITOR'S PICK</div>\n<div class=\"hero\"><img src=\"img/hince_cut.png\" alt=\"\" class=\"\"/></div>\n<div class=\"aw\">Best Blusher</div><h2>힌스 하프 문 치크</h2><div class=\"sh\">#05 로지 문</div>\n<p class=\"ds\">크림과 파우더의 장점을 합친 독특한 텍스처. 피부에 부드럽게 밀착된 뒤 <b>보송하게 픽싱</b>된대요.</p>\n<div class=\"prices\"><div><small>정가</small><b>1만9천원</b></div><div class=\"sale\"><small>공식몰 (10/1 기준)</small><b>16,100원</b></div></div>\n<div class=\"tip\"><span>TIP</span>손가락으로 톡톡 두드려 바르면 경계 없이 자연스럽게 퍼져요.</div>\n<div class=\"foot\">* 수상·설명: 얼루어 코리아 (2026.10.01) · 제품 사진·할인가: 브랜드 공식몰</div>"
@@ -31,6 +25,12 @@
       "name": "pencil",
       "cls": "feat",
       "html": "<div class=\"kicker\">EDITOR'S PICK</div>\n<div class=\"hero\"><img src=\"img/tcfs_cut.png\" alt=\"\" class=\"slim\"/></div>\n<div class=\"aw\">Best Eye Makeup</div><h2>투쿨포스쿨 프로타주 펜슬</h2><div class=\"sh\">#22 허밍글로우</div>\n<p class=\"ds\">부드럽게 블렌딩되고 풍부하게 발색돼요. <b>섀도·블러셔</b>로 같이 쓸 수 있는 멀티 펜슬이에요.</p>\n<div class=\"prices\"><div><small>정가</small><b>1만2천원</b></div><div class=\"sale\"><small>공식몰 (10/1 기준)</small><b>11,400원</b></div></div>\n<div class=\"tip\"><span>TIP</span>펜슬로 눈두덩에 긋고 손가락으로 펴면 섀도 브러시 없이도 끝나요.</div>\n<div class=\"foot\">* 수상·설명: 얼루어 코리아 (2026.10.01) · 제품 사진·할인가: 브랜드 공식몰</div>"
+    },
+    {
+      "type": "html",
+      "name": "all",
+      "cls": "bob2",
+      "html": "<div class=\"kicker\">ALL WINNERS</div><h2>한눈에 보는<br/><span class=\"hl\">메이크업 위너 9</span></h2>\n<div class=\"list tight\">\n <div class=\"row\"><div class=\"aw\">Best Blusher</div><div><b>힌스 하프 문 치크 #05 로지 문</b></div><div class=\"pr\">1만9천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Eye Makeup</div><div><b>투쿨포스쿨 프로타주 펜슬 #22</b></div><div class=\"pr\">1만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Matte Lips</div><div><b>컬러그램 누디 블러 스틱 #02</b></div><div class=\"pr\">1만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Glossy Lips</div><div><b>맥 러스터글래스 스테인글래스 립 틴트</b></div><div class=\"pr\">3만8천원대</div></div>\n <div class=\"row\"><div class=\"aw\">Best Lash</div><div><b>올리오노 글루 믹스팩 플러스</b></div><div class=\"pr\">2만4천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Lens</div><div><b>하파크리스틴 캣티튜드 크리스틴</b></div><div class=\"pr\">2만5천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Base &amp; Prep</div><div><b>에스쁘아 메이크업 본딩 프라이머</b></div><div class=\"pr\">2만8천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Cushion</div><div><b>탈리다쿰 화이트 단델리온 심리스 쿠션</b></div><div class=\"pr\">6만2천원</div></div>\n <div class=\"row\"><div class=\"aw\">Best Foundation</div><div><b>나스 내추럴 매트 롱웨어 파운데이션</b></div><div class=\"pr\">8만2천원</div></div>\n</div>\n<div class=\"foot\">* 출처: 얼루어 코리아 2026 베스트 오브 뷰티 위너 '메이크업' (2026.10.01) · 정가 기준</div>"
     }
   ],
   "ps": {

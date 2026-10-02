@@ -1014,3 +1014,23 @@ CN-20261002-007,6,INFORMATION,TEXT,자연을담은집 독채 펜션,계곡 가�
 CN-20261002-007,7,SUMMARY,NUMBER_LIST,불멍 정보 **한눈에**,,,,르시엘풀빌라 · 개별 텐트 불멍 | 더스틸 펜션 · 개별 불멍·BBQ | 불멍캠프하우스 · 18~24시 이용 | 금빛하늘아래 · 캠프하우스 불멍 | 자연을담은집 · 입실 후~21시,FALSE,,,,,https://www.yeogi.com/domestic-accommodations/90202,NEEDS_CHECK
 CN-20261002-007,8,CTA,FOLLOW,"이번 주말
 **가평·양평 어때요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261002-008,1,HOOK,PHOTO_COVER,"서울 근교 불멍 숙소
+**5곳 모음**",이번 주말 어디감?,불멍하기 좋은 가을밤 🔥,,,TRUE,PHOTO,data/images/travel/tmp-S02/cover.jpg,,,,NOT_REQUIRED
+CN-20261002-008,2,INFORMATION,TEXT,르시엘풀빌라,개별 텐트에서 즐기는 불멍,"📍 경기 가평군 가평읍 태봉두밀로 421-74
+🔥 불멍 19:00부터 (우천·강풍 시 불가)
+💰 불멍 20,000원 (현장 결제)",,,TRUE,PHOTO,data/images/travel/tmp-S02/p1-lesiel.jpg,,,https://www.yeogi.com/domestic-accommodations/54213,NEEDS_CHECK
+CN-20261002-008,3,INFORMATION,TEXT,더스틸 펜션,개별 불멍·개별 BBQ,"📍 경기 가평군 상면 청우산2길 42-11
+🔥 불멍 1세트 이용 (현장 결제)
+💰 불멍 20,000원",,,TRUE,PHOTO,data/images/travel/tmp-S02/p2-still.jpg,,,https://www.yeogi.com/domestic-accommodations/87329,NEEDS_CHECK
+CN-20261002-008,4,INFORMATION,TEXT,불멍캠프하우스,자연 속 독채 감성 펜션,"📍 경기 가평군 상면 (주소는 숙소에 확인)
+🔥 불멍 18:00~24:00
+💰 불멍 1세트 20,000원",,,TRUE,PHOTO,data/images/travel/tmp-S02/p3-bulmeong.jpg,,,https://www.yeogi.com/domestic-accommodations/90202,NEEDS_CHECK
+CN-20261002-008,5,INFORMATION,TEXT,금빛하늘아래 한옥스테이,한옥에서 즐기는 불멍·바비큐,"📍 경기 양평군 서종면 화서로 1094
+🔥 불멍·바비큐 가능 (시간은 숙소 확인)
+💰 불멍 요금은 숙소에 확인",,,TRUE,PHOTO,data/images/travel/tmp-S02/p4-geumbit.jpg,,,https://www.yeogi.com/domestic-accommodations/80868,NEEDS_CHECK
+CN-20261002-008,6,INFORMATION,TEXT,자연을담은집,계곡 가까운 불멍·바비큐,"📍 경기 양평군 용문면 중원산로576번길 57
+🔥 불멍 입실 후~21:00 (사전 문의 필수)
+💰 불멍 요금은 숙소에 확인",,,TRUE,PHOTO,data/images/travel/tmp-S02/p5-nature.jpg,,,https://www.yeogi.com/domestic-accommodations/83429,NEEDS_CHECK
+CN-20261002-008,7,SUMMARY,NUMBER_LIST,불멍 정보 **한눈에**,,,,르시엘풀빌라 · 개별 텐트 불멍 | 더스틸 펜션 · 개별 불멍·BBQ | 불멍캠프하우스 · 18~24시 이용 | 금빛하늘아래 · 한옥·불멍·BBQ | 자연을담은집 · 입실 후~21시,FALSE,,,,,https://www.yeogi.com/domestic-accommodations/90202,NEEDS_CHECK
+CN-20261002-008,8,CTA,FOLLOW,"이번 주말
+**가평·양평 어때요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

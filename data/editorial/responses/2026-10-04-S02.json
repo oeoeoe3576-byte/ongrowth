@@ -2,16 +2,16 @@
   "category": "stay",
   "target": "주말·연휴에 국내 여행을 계획하는 20~30대",
   "content_type": "LIST",
-  "page_count": 6,
+  "page_count": 7,
   "planning_note": "서울 근교(가평) 불멍 가능 숙소 3곳을 사진 배경 정보 카드로 소개하는 리스트형. 표지 → 3곳 → 정리 → 팔로우 6장.",
-  "caption": "이번 주말 어디감? 🔥 쌀쌀해지는 10월, 불멍 하기 좋은 가평 숙소 3곳이에요.\n\n1) 르시엘풀빌라 (경기 가평군 가평읍 태봉두밀로 421-74) · 개별 텐트 불멍, 19:00부터, 20,000원(현장 결제)\n2) 더스틸 펜션 (경기 가평군 상면 청우산2길 42-11) · 개별 불멍·BBQ, 불멍 1세트 20,000원(현장 결제)\n3) 불멍캠프하우스 (경기 가평군 상면) · 불멍 18:00~24:00, 1세트 20,000원\n\n※ 불멍 요금·이용 시간·예약은 숙소 사정과 날씨(우천·강풍)에 따라 달라질 수 있어요. 예약 전에 숙소에 꼭 확인해 주세요.\n\n같이 갈 친구도 태그해요 👯\n\n사진: 각 숙소 제공 이미지",
+  "caption": "이번 주말 어디감? 🔥 쌀쌀해지는 10월, 불멍 하기 좋은 서울 근교 숙소 4곳이에요.\n\n1) 르시엘풀빌라 (경기 가평군 가평읍 태봉두밀로 421-74) · 개별 텐트 불멍, 19:00부터, 20,000원(현장 결제)\n2) 더스틸 펜션 (경기 가평군 상면 청우산2길 42-11) · 개별 불멍·BBQ, 불멍 1세트 20,000원(현장 결제)\n3) 불멍캠프하우스 (경기 가평군 상면) · 불멍 18:00~24:00, 1세트 20,000원\n4) 금빛하늘아래 한옥스테이 (경기 양평군 서종면 화서로 1094) · 한옥에서 불멍·바비큐, 이용 시간·요금은 숙소 확인\n\n※ 불멍 요금·이용 시간·예약은 숙소 사정과 날씨(우천·강풍)에 따라 달라질 수 있어요. 예약 전에 숙소에 꼭 확인해 주세요.\n\n같이 갈 친구도 태그해요 👯\n\n사진: 각 숙소 제공 이미지",
   "hashtags": "#가평숙소 #불멍숙소 #서울근교숙소 #감성숙소 #가평펜션 #불멍 #주말여행 #요즘어디감",
   "pages": [
     {
       "page_number": 1,
       "page_role": "HOOK",
       "layout_type": "PHOTO_COVER",
-      "headline": "가평 불멍 숙소\n**3곳 모음**",
+      "headline": "서울 근교 불멍 숙소\n**4곳 모음**",
       "subheadline": "이번 주말 어디감?",
       "body": "불멍하기 좋은 가을밤 🔥",
       "visual_focus": "",
@@ -77,6 +77,23 @@
     },
     {
       "page_number": 5,
+      "page_role": "INFORMATION",
+      "layout_type": "TEXT",
+      "headline": "금빛하늘아래 한옥스테이",
+      "subheadline": "한옥에서 즐기는 불멍·바비큐",
+      "body": "📍 경기 양평군 서종면 화서로 1094\n🔥 불멍·바비큐 가능 (시간은 숙소 확인)\n💰 불멍 요금은 숙소에 확인",
+      "visual_focus": "",
+      "items": [],
+      "image_required": true,
+      "image_type": "PHOTO",
+      "image_source": "data/images/travel/tmp-S02/p4-geumbit.jpg",
+      "image_prompt": "",
+      "cta": "",
+      "source": "https://www.yeogi.com/domestic-accommodations/80868",
+      "fact_check": "NEEDS_CHECK"
+    },
+    {
+      "page_number": 6,
       "page_role": "SUMMARY",
       "layout_type": "NUMBER_LIST",
       "headline": "불멍 정보 **한눈에**",
@@ -86,7 +103,8 @@
       "items": [
         "르시엘풀빌라 · 개별 텐트 불멍",
         "더스틸 펜션 · 개별 불멍·BBQ",
-        "불멍캠프하우스 · 18~24시 이용"
+        "불멍캠프하우스 · 18~24시 이용",
+        "금빛하늘아래 · 한옥·불멍·BBQ"
       ],
       "image_required": false,
       "image_type": "",
@@ -97,10 +115,10 @@
       "fact_check": "NEEDS_CHECK"
     },
     {
-      "page_number": 6,
+      "page_number": 7,
       "page_role": "CTA",
       "layout_type": "FOLLOW",
-      "headline": "이번 주말\n**가평 어때요?**",
+      "headline": "이번 주말\n**가평·양평 어때요?**",
       "subheadline": "",
       "body": "같이 갈 친구 @태그해요",
       "visual_focus": "",

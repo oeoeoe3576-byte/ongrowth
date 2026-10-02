@@ -43,7 +43,8 @@
     "time": "08:30",
     "folder": "design/beauty_news/letters/2026-10-04_am_nail",
     "title": "올가을 네일, 이 5가지 컬러면 끝",
-    "status": "review"
+    "status": "approved",
+    "approved_at": "2026-10-02"
   },
   {
     "no": 6,
@@ -51,6 +52,7 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-04_pm_hair",
     "title": "가을 염색, 내 톤엔 어떤 브라운?",
-    "status": "review"
+    "status": "approved",
+    "approved_at": "2026-10-02"
   }
 ]

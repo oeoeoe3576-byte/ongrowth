@@ -42,7 +42,8 @@
       "channel": "stay",
       "topic": "단풍 명소 바로 옆, 가을에 묵기 좋은 숙소",
       "angle": "아침 일찍 단풍길을 걷기 좋은 위치 중심. 지역별 1곳씩",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-06"
     },
     {
       "id": "S02",
@@ -99,7 +100,8 @@
       "channel": "festival",
       "topic": "억새·코스모스, 가을꽃 축제 모음",
       "angle": "10월 중순 개화 시기에 맞는 꽃 축제",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-08"
     },
     {
       "id": "F03",
@@ -146,7 +148,8 @@
       "channel": "course",
       "topic": "사진 잘 나오는 억새 명소 당일치기",
       "angle": "빛 좋은 시간대(해 질 녘) 안내",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-09"
     },
     {
       "id": "C03",
@@ -181,7 +184,8 @@
       "channel": "season",
       "topic": "지금 단풍 어디까지 왔을까",
       "angle": "산·지역별 단풍 시작·절정 예상 시기. 기상청·산림청 등 공식 자료로 확인",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-05"
     },
     {
       "id": "N02",
@@ -219,7 +223,8 @@
       "channel": "info",
       "topic": "지금 서울에서 볼 만한 전시 5곳",
       "angle": "전시 기간·휴관일·관람료 공식 확인",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-07"
     },
     {
       "id": "I03",

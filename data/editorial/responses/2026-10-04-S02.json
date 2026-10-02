@@ -103,8 +103,8 @@
       "items": [],
       "image_required": true,
       "image_type": "PHOTO",
-      "image_source": "",
-      "image_prompt": "자연을담은집 숙소 제공 사진 (불멍)",
+      "image_source": "data/images/travel/tmp-S02/p5-nature.jpg",
+      "image_prompt": "",
       "cta": "",
       "source": "https://www.yeogi.com/domestic-accommodations/83429",
       "fact_check": "NEEDS_CHECK"

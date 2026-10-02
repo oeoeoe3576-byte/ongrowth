@@ -42,3 +42,16 @@
 .hairp .trow { padding: 22px 30px; margin-bottom: 16px; }
 .hairp .trow .sw i { width: 92px; height: 92px; }
 .hairp .trow .lb { font-size: 28px; font-weight: 800; color: var(--rose); }
+
+.hairp .rr { padding: 26px 30px; margin-bottom: 18px; }
+.hairp .rr .sw i { width: 116px; height: 116px; }
+.hairp .rr .sw span { font-size: 21px; }
+.hairp .texture { margin-top: 22px; background: var(--blush); border-radius: 22px; padding: 28px 32px; }
+.hairp .texture b { display: block; font-size: 30px; font-weight: 800; margin-bottom: 8px; }
+.hairp .side .sw i { width: 150px; height: 150px; }
+
+.hairp .rr { padding: 34px 32px; margin-bottom: 22px; }
+.hairp .rr .nm { display: block; font-size: 34px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 4px; }
+.hairp .rr .tone { font-size: 23px; }
+.hairp .rr p { font-size: 25px; margin-top: 8px; }
+.hairp .rr .sw i { width: 124px; height: 124px; }

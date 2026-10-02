@@ -895,7 +895,7 @@ CN-20261001-042,6,INFORMATION,TEXT,남이섬,은행나무길로 유명한 섬,"�
 CN-20261001-042,7,SUMMARY,NUMBER_LIST,단풍 시기 **한눈에**,,,,설악산 첫 단풍 9/28 관측 | 서울·경기 첫 단풍 10월 중순 예상 | 서울·경기 절정 10월 말~11월 초 | 곳별 날짜는 단풍절정 검색서비스로,FALSE,,,,,https://www.jejutwn.com/news/article.html?no=460525,NEEDS_CHECK
 CN-20261001-042,8,CTA,FOLLOW,"단풍 구경
 **어디로 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
-CN-20261002-001,1,HOOK,PHOTO_COVER,글 하나에 키워드는 **하나만**,여러 개 넣을수록 오히려 안 읽히는 이유,,,,TRUE,PHOTO,data/photos/2026-10-02-B02-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
+CN-20261002-001,1,HOOK,PHOTO_COVER,키워드 많이 넣었는데 **왜 안 될까?**,해결은 간단해요: 글 하나에 키워드 하나,,,,TRUE,PHOTO,data/photos/2026-10-02-B02-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
 CN-20261002-001,2,PROBLEM,TEXT,키워드를 이것저것 넣고 있다면,,"'맛집, 카페, 데이트, 추천'을 한 글에 다 넣으면, **무슨 글인지** 읽는 사람도 검색하는 쪽도 헷갈립니다.",,,FALSE,,,,,,NOT_REQUIRED
 CN-20261002-001,3,OVERVIEW,TIMELINE,키워드 하나로 쓰는 3단계,,,,하나만 정하기 | 같은 자리에 반복하기 | 나머지는 다음 글로,FALSE,,,,,,NOT_REQUIRED
 CN-20261002-001,4,STEP,BIG_NUMBER,키워드를 **하나만** 정하세요,STEP 01,"이 글이 찾아져야 하는 검색어, 딱 하나만 고릅니다.",01,,FALSE,,,,,,NOT_REQUIRED

@@ -42,8 +42,7 @@
       "channel": "stay",
       "topic": "단풍 명소 바로 옆, 가을에 묵기 좋은 숙소",
       "angle": "아침 일찍 단풍길을 걷기 좋은 위치 중심. 지역별 1곳씩",
-      "status": "reserved",
-      "date": "2026-10-06"
+      "status": "todo"
     },
     {
       "id": "S02",
@@ -60,7 +59,8 @@
       "channel": "stay",
       "topic": "바다 보며 쉬는 가을 오션뷰 숙소",
       "angle": "사람 적은 가을 바다. 동해·남해·서해 고르게",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-06"
     },
     {
       "id": "S04",
@@ -100,15 +100,15 @@
       "channel": "festival",
       "topic": "억새·코스모스, 가을꽃 축제 모음",
       "angle": "10월 중순 개화 시기에 맞는 꽃 축제",
-      "status": "reserved",
-      "date": "2026-10-08"
+      "status": "todo"
     },
     {
       "id": "F03",
       "channel": "festival",
       "topic": "먹으러 가는 가을 먹거리 축제",
       "angle": "지역 특산물 축제. 날짜·장소 공식 확인",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-08"
     },
     {
       "id": "F04",
@@ -148,8 +148,7 @@
       "channel": "course",
       "topic": "사진 잘 나오는 억새 명소 당일치기",
       "angle": "빛 좋은 시간대(해 질 녘) 안내",
-      "status": "reserved",
-      "date": "2026-10-09"
+      "status": "todo"
     },
     {
       "id": "C03",
@@ -163,7 +162,8 @@
       "channel": "course",
       "topic": "경주 가을 1박 2일 코스",
       "angle": "걷기 좋은 동선, 야경 포함",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-09"
     },
     {
       "id": "C05",
@@ -184,8 +184,7 @@
       "channel": "season",
       "topic": "지금 단풍 어디까지 왔을까",
       "angle": "산·지역별 단풍 시작·절정 예상 시기. 기상청·산림청 등 공식 자료로 확인",
-      "status": "reserved",
-      "date": "2026-10-05"
+      "status": "todo"
     },
     {
       "id": "N02",
@@ -199,7 +198,8 @@
       "channel": "season",
       "topic": "새로 생긴 여행 핫플",
       "angle": "최근 개장·재개장한 곳. 개장일 공식 확인",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-05"
     },
     {
       "id": "N04",
@@ -223,8 +223,7 @@
       "channel": "info",
       "topic": "지금 서울에서 볼 만한 전시 5곳",
       "angle": "전시 기간·휴관일·관람료 공식 확인",
-      "status": "reserved",
-      "date": "2026-10-07"
+      "status": "todo"
     },
     {
       "id": "I03",
@@ -259,7 +258,8 @@
       "channel": "info",
       "topic": "10월 전국 불꽃축제 일정 모음",
       "angle": "부산 외에 다른 지역 불꽃축제도 날짜·장소 공식 확인해서 묶기",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-07"
     },
     {
       "id": "I08",

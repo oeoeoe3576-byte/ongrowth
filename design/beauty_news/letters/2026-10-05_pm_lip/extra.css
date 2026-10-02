@@ -1,0 +1,19 @@
+
+.mlip { padding: 170px var(--pad) 0; }
+.mlip h2 { font-size: 66px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 22px 0 30px; }
+.mlip .vis { display: flex; justify-content: space-around; align-items: flex-end; background: var(--white); border-radius: 28px; padding: 40px 20px 30px; }
+.mlip .vis > div { text-align: center; }
+.mlip .vis span { display: block; font-size: 22px; font-weight: 700; color: var(--plum); margin-top: 14px; }
+.mlip ol { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; }
+.mlip li { display: grid; grid-template-columns: 54px 1fr; gap: 16px; align-items: start; }
+.mlip li > b { width: 46px; height: 46px; border-radius: 50%; background: var(--rose); color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-style: italic; }
+.mlip li p { font-size: 27px; line-height: 1.5; color: #4b3a40; padding-top: 4px; }
+.mlip li p b { color: var(--rose); }
+.mlip .foot { position: absolute; left: var(--pad); right: var(--pad); bottom: 56px; font-size: 21px; color: var(--mauve); }
+.mlip .vis { padding: 60px 10px 44px; }
+.mlip .vis svg { width: 270px; height: auto; }
+.mlip .vis span { font-size: 25px; margin-top: 18px; }
+.mlip ol { gap: 22px; margin-top: 40px; }
+.mlip li { grid-template-columns: 60px 1fr; }
+.mlip li > b { width: 52px; height: 52px; font-size: 27px; }
+.mlip li p { font-size: 30px; }

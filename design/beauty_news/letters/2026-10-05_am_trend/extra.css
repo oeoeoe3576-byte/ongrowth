@@ -1,0 +1,37 @@
+
+.trend { padding: 170px var(--pad) 0; }
+.trend h2 { font-size: 68px; font-weight: 800; letter-spacing: -2px; line-height: 1.2; margin: 22px 0 34px; }
+.trend .vis { background: var(--white); border-radius: 30px; height: 400px; display: flex; align-items: center; justify-content: center; }
+.trend .cmp { display: flex; gap: 60px; align-items: center; }
+.trend .cmp > div, .trend .lips > div, .trend .skins > div, .trend .pastel > div { text-align: center; opacity: .5; }
+.trend .cmp > div.on, .trend .skins > div.on { opacity: 1; }
+.trend .lips > div, .trend .pastel > div { opacity: 1; }
+.trend .vis span { display: block; font-size: 24px; font-weight: 700; color: var(--plum); margin-top: 16px; }
+.trend .vis .on span { color: var(--rose); }
+.trend .lips { display: flex; gap: 30px; }
+.trend .face { width: 220px; height: 260px; border-radius: 50% 50% 46% 46%; background: linear-gradient(180deg,#F6DCCB,#EFCDB8); position: relative; margin: 0 auto; }
+.trend .face i { position: absolute; left: 22px; top: 140px; width: 70px; height: 46px; border-radius: 50%; background: radial-gradient(circle,#E8737E 0%, rgba(232,115,126,0) 70%); }
+.trend .face i.r { left: auto; right: 22px; }
+.trend .skins { display: flex; gap: 40px; }
+.trend .sk i { display: block; width: 190px; height: 190px; border-radius: 50%; background: #EFCDB8; margin: 0 auto; }
+.trend .sk i.matte { background: #EAC8B2; }
+.trend .sk i.semi { background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 32%), #EFCDB8; }
+.trend .sk i.dewy { background: radial-gradient(circle at 35% 28%, #fff 0%, rgba(255,255,255,.9) 12%, rgba(255,255,255,0) 40%), radial-gradient(circle at 65% 70%, rgba(255,255,255,.5) 0%, rgba(255,255,255,0) 25%), #F2D2BE; }
+.trend .pastel { display: flex; gap: 40px; }
+.trend .pastel i { display: block; width: 180px; height: 180px; border-radius: 50%; box-shadow: inset 0 0 0 6px rgba(255,255,255,.5); }
+.trend .ds { font-size: 30px; line-height: 1.6; color: #4b3a40; margin: 34px 0 26px; }
+.trend .ds b { color: var(--rose); }
+.trend .tip { font-size: 27px; line-height: 1.5; background: var(--blush); border-radius: 20px; padding: 22px 28px; color: var(--plum); }
+.trend .tip span { display: inline; font-size: inherit; font-weight: 800; color: var(--rose); margin: 0 12px 0 0; }
+.trend .foot { position: absolute; left: var(--pad); right: var(--pad); bottom: 56px; font-size: 21px; color: var(--mauve); }
+
+.trend .vis { height: 470px; }
+.trend .cmp svg { width: 300px; height: auto; }
+.trend .lips svg { width: 250px; height: auto; }
+.trend .lips { gap: 24px; }
+.trend .face { width: 250px; height: 300px; }
+.trend .face i { top: 165px; width: 84px; height: 54px; }
+.trend .sk i { width: 220px; height: 220px; }
+.trend .pastel i { width: 210px; height: 210px; }
+.trend .vis span { font-size: 26px; }
+.trend .ds { font-size: 31px; }

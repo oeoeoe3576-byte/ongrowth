@@ -1,0 +1,44 @@
+{
+  "no": 8,
+  "date": "2026-10-05",
+  "slot": "PM",
+  "category": "Issue Letter",
+  "brand": "MEOLMEOL LIP",
+  "cover": {
+    "style": "type",
+    "big": "Lip",
+    "title": "요즘 다들 바르는\n**'멀멀 립'** 만드는 법",
+    "sub": "펜슬, 틴트, 글로스까지 차곡차곡.\n4가지 방법을 담았어요."
+  },
+  "slides": [
+    {
+      "type": "html",
+      "name": "m1",
+      "cls": "mlip",
+      "html": "<div class=\"kicker\">METHOD 01 · BLUR + GLOSS</div><h2>블러 틴트 깔고,<br/><span class=\"hl\">채도는 낮추고</span></h2>\n<div class=\"vis\"><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#E9C9C3\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/><path d=\"M6 50 Q50 6 82 26 Q100 16 118 26 Q150 6 194 50 Q150 100 100 100 Q50 100 6 50 Z\" fill=\"none\" stroke=\"#9B6E7E\" stroke-width=\"5\"/></svg></div><span>모브 펜슬로 오버립</span></div><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#C98D86\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg></div><span>블러 틴트 베이스</span></div><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#CDA39D\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/><ellipse cx=\"100\" cy=\"68\" rx=\"34\" ry=\"7\" fill=\"rgba(255,255,255,.45)\"/></svg></div><span>글로스로 물먹립</span></div></div><ol><li><b>1</b><p><b>모브 톤 립 펜슬</b>로 입술 라인을 넓혀 원하는 오버립 윤곽을 잡아요.</p></li><li><b>2</b><p>주름을 메워주는 보송한 <b>블러 틴트</b>를 베이스로 넓게 깔아요.</p></li><li><b>3</b><p>색이 너무 쨍하면 <b>흰기 도는 투명한 립</b>을 덧발라 채도를 낮춰요.</p></li><li><b>4</b><p>마지막에 <b>바닐라 빛 볼륨 글로스</b>를 은은하게 얹어요.</p></li></ol><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.30)</div>"
+    },
+    {
+      "type": "html",
+      "name": "m2",
+      "cls": "mlip",
+      "html": "<div class=\"kicker\">METHOD 02 · FOR BEGINNER</div><h2>왕초보라면,<br/><span class=\"hl\">단정한 오버립</span></h2>\n<div class=\"vis\"><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#E8CFC8\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/><path d=\"M6 50 Q50 6 82 26 Q100 16 118 26 Q150 6 194 50 Q150 100 100 100 Q50 100 6 50 Z\" fill=\"none\" stroke=\"#A07A6E\" stroke-width=\"5\"/></svg></div><span>음영으로 형태 잡기</span></div><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#C9908A\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg></div><span>로지 컬러 채우기</span></div><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#C9908A\"/><ellipse cx=\"100\" cy=\"52\" rx=\"38\" ry=\"16\" fill=\"#B8606A\" opacity=\".85\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg></div><span>중앙만 생기</span></div></div><ol><li><b>1</b><p>바르기 전 <b>파우더로 립밤·유분</b>을 눌러 지속력을 높여요.</p></li><li><b>2</b><p>단단한 <b>음영 립 쉐이퍼</b>로 입술 아래·입술 산·입꼬리에 그림자를 줘요.</p></li><li><b>3</b><p>차분한 <b>로지 컬러</b>를 입술 전체에 발라 윤곽을 채워요.</p></li><li><b>4</b><p>필요하면 <b>입술 중앙에만</b> 생기 있는 컬러를 얹어요.</p></li></ol><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.30)</div>"
+    },
+    {
+      "type": "html",
+      "name": "m3",
+      "cls": "mlip",
+      "html": "<div class=\"kicker\">METHOD 03 · MIX</div><h2>안 쓰는 쨍한 립,<br/><span class=\"hl\">미지근하게 살리기</span></h2>\n<div class=\"vis\"><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#D9B2A8\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg></div><span>누드 핑크 베이스</span></div><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#D9B2A8\"/><ellipse cx=\"100\" cy=\"52\" rx=\"38\" ry=\"16\" fill=\"#D0364E\" opacity=\".85\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg></div><span>안쪽만 고채도</span></div><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#B4787A\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg></div><span>섞으면 미지근톤</span></div></div><ol><li><b>1</b><p><b>베이지 핑크·누드 핑크</b>를 베이스로 넓게 깔아요.</p></li><li><b>2</b><p>그 위 <b>입술 안쪽에만</b> 쨍한 립을 두드려 얹어요.</p></li><li><b>3</b><p>또는 회색빛 도는 <b>창백한 쿨톤 립</b>과 쨍한 립을 섞어 직접 조색해요.</p></li></ol><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.30)</div>"
+    },
+    {
+      "type": "html",
+      "name": "m4",
+      "cls": "mlip",
+      "html": "<div class=\"kicker\">METHOD 04 · MATTE</div><h2>가을엔 톡톡,<br/><span class=\"hl\">매트 오버립</span></h2>\n<div class=\"vis\"><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#E6CFC6\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/><path d=\"M6 50 Q50 6 82 26 Q100 16 118 26 Q150 6 194 50 Q150 100 100 100 Q50 100 6 50 Z\" fill=\"none\" stroke=\"#B07E62\" stroke-width=\"5\"/></svg></div><span>피치·브라운 펜슬</span></div><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#A8705C\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg></div><span>브라운 매트 톡톡</span></div><div><div class=\"l\"><svg viewBox=\"0 0 200 106\" width=\"200\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#A8705C\"/><ellipse cx=\"100\" cy=\"52\" rx=\"38\" ry=\"16\" fill=\"#8E5A48\" opacity=\".85\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg></div><span>도톰하면 안쪽만</span></div></div><ol><li><b>1</b><p>파운데이션으로 덮지 말고 <b>피치·브라운 펜슬</b>로 칙칙한 입술 라인부터 교정해요.</p></li><li><b>2</b><p><b>베이지·브라운 매트 립</b>을 손가락이나 브러시로 톡톡 얇게 밀착해요.</p></li><li><b>3</b><p>라인이 진해 보이지 않게 <b>펜슬로 경계를 한 번 더 풀어요.</b></p></li><li><b>4</b><p>입술이 도톰하면 <b>안쪽에만</b> 발라 여백을 남겨요.</p></li></ol><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.30)</div>"
+    }
+  ],
+  "ps": {
+    "label": "에디터의 한 줄 팁",
+    "note": "멀멀 립의 핵심은 **채도 낮추기.** 새로 사지 말고\n갖고 있는 쨍한 립에 누드 핑크를 섞어 먼저 만들어 보세요.",
+    "credit": "참고: 얼루어 코리아 (2026.09.30)"
+  }
+}

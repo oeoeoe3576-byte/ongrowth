@@ -54,5 +54,21 @@
     "title": "가을 염색, 내 톤엔 어떤 브라운?",
     "status": "approved",
     "approved_at": "2026-10-02"
+  },
+  {
+    "no": 7,
+    "date": "2026-10-05",
+    "time": "08:30",
+    "folder": "design/beauty_news/letters/2026-10-05_am_trend",
+    "title": "올가을 메이크업, 더하기보다 빼기",
+    "status": "review"
+  },
+  {
+    "no": 8,
+    "date": "2026-10-05",
+    "time": "20:30",
+    "folder": "design/beauty_news/letters/2026-10-05_pm_lip",
+    "title": "요즘 다들 바르는 '멀멀 립' 만드는 법",
+    "status": "review"
   }
 ]

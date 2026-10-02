@@ -16,8 +16,10 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-02_pm_purple",
     "title": "보라색 메이크업, 웜톤도 할 수 있어요",
-    "status": "approved",
-    "approved_at": "2026-10-01"
+    "status": "published",
+    "approved_at": "2026-10-01",
+    "media_id": "18489495232111703",
+    "published_at": "2026-10-02T11:27:17.975Z"
   },
   {
     "no": 3,

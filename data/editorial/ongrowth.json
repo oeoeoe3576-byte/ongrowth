@@ -45,8 +45,9 @@
       "channel": "blog",
       "topic": "글 하나에 키워드는 하나만",
       "angle": "한 글에 여러 키워드를 넣으면 생기는 문제와 한 키워드 집중법",
-      "status": "reserved",
-      "date": "2026-10-02"
+      "status": "review",
+      "date": "2026-10-02",
+      "content_id": "CN-20261002-001"
     },
     {
       "id": "B03",

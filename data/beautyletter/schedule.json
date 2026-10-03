@@ -38,8 +38,10 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-03_pm_beige",
     "title": "올가을은 베이지, 내 톤엔 어떤 베이지?",
-    "status": "approved",
-    "approved_at": "2026-10-01"
+    "status": "published",
+    "approved_at": "2026-10-01",
+    "media_id": "18121232752933908",
+    "published_at": "2026-10-03T11:26:44.537Z"
   },
   {
     "no": 5,

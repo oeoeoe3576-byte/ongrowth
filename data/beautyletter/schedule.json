@@ -49,8 +49,10 @@
     "time": "08:30",
     "folder": "design/beauty_news/letters/2026-10-04_am_nail",
     "title": "올가을 네일, 이 5가지 컬러면 끝",
-    "status": "approved",
-    "approved_at": "2026-10-02"
+    "status": "published",
+    "approved_at": "2026-10-02",
+    "media_id": "18117093994980045",
+    "published_at": "2026-10-03T23:26:55.975Z"
   },
   {
     "no": 6,

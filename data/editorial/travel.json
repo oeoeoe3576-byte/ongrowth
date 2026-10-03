@@ -213,10 +213,12 @@
       "channel": "info",
       "topic": "10월 성수 팝업 모음",
       "angle": "기간·장소·예약 여부를 브랜드 공식 계정/사이트로 확인. 끝난 팝업 제외",
-      "status": "approved",
+      "status": "published",
       "date": "2026-10-03",
       "content_id": "CN-20261001-033",
-      "publish_at": "2026-10-03 18:30"
+      "publish_at": "2026-10-03 18:30",
+      "published_at": "2026-10-03 18:32",
+      "note": "instagram media 18162901993430747"
     },
     {
       "id": "I02",

@@ -35,3 +35,10 @@
 .trend .pastel i { width: 210px; height: 210px; }
 .trend .vis span { font-size: 26px; }
 .trend .ds { font-size: 31px; }
+
+.trend .vis.photo { position: relative; overflow: hidden; padding: 0; }
+.trend .vis.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+.trend .vis.photo .chips { position: absolute; left: 24px; bottom: 22px; display: flex; gap: 12px; }
+.trend .vis.photo .chips > div { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,.92); border-radius: 999px; padding: 8px 18px 8px 8px; opacity: 1; }
+.trend .vis.photo .chips i { width: 34px; height: 34px; border-radius: 50%; display: block; }
+.trend .vis.photo .chips span { margin: 0; font-size: 22px; }

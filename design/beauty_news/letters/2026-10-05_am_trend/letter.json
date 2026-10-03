@@ -5,8 +5,9 @@
   "category": "Issue Letter",
   "brand": "FALL MAKEUP TREND",
   "cover": {
-    "style": "type",
-    "big": "Less",
+    "style": "photo",
+    "image": "img/cover_photo.jpg",
+    "focus": "center 35%",
     "title": "올가을 메이크업,\n**더하기보다 빼기**",
     "sub": "가을 메이크업 트렌드 5가지,\n이것만 기억하세요."
   },
@@ -21,7 +22,7 @@
       "type": "html",
       "name": "t2",
       "cls": "trend",
-      "html": "<div class=\"kicker\">TREND 02 · LIP</div><h2>가을엔 레드립?<br/>이젠 <span class=\"hl\">멀멀한 누드 립</span></h2>\n<div class=\"vis\"><div class=\"lips\"><div><svg viewBox=\"0 0 200 106\" width=\"190\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#C9967E\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg><span>베이지</span></div><div><svg viewBox=\"0 0 200 106\" width=\"190\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#8E5A45\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg><span>브라운</span></div><div><svg viewBox=\"0 0 200 106\" width=\"190\"><path d=\"M10 50 Q50 12 82 30 Q100 22 118 30 Q150 12 190 50 Q150 96 100 96 Q50 96 10 50 Z\" fill=\"#A9665F\"/><path d=\"M12 50 Q60 60 100 54 Q140 60 188 50\" stroke=\"rgba(60,20,30,.35)\" stroke-width=\"3\" fill=\"none\"/></svg><span>로즈 브라운</span></div></div></div><p class=\"ds\">베이지·브라운·로즈 브라운처럼 차분한 컬러. 존재감을 강하게 주장하지 않지만 <b>묘하게 기억에 남는</b> 색이에요.</p><div class=\"tip\"><span>TIP</span>생기가 살짝 느껴질 정도의 차분한 컬러를 고르세요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
+      "html": "<div class=\"kicker\">TREND 02 · LIP</div><h2>가을엔 레드립?<br/>이젠 <span class=\"hl\">멀멀한 누드 립</span></h2>\n<div class=\"vis photo\"><img src=\"img/lip_photo.jpg\" alt=\"\"/><div class=\"chips\"><div><i style=\"background:#C9967E\"></i><span>베이지</span></div><div><i style=\"background:#8E5A45\"></i><span>브라운</span></div><div><i style=\"background:#A9665F\"></i><span>로즈 브라운</span></div></div></div><p class=\"ds\">베이지·브라운·로즈 브라운처럼 차분한 컬러. 존재감을 강하게 주장하지 않지만 <b>묘하게 기억에 남는</b> 색이에요.</p><div class=\"tip\"><span>TIP</span>생기가 살짝 느껴질 정도의 차분한 컬러를 고르세요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
     },
     {
       "type": "html",

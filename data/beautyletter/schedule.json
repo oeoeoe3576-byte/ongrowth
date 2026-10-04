@@ -60,8 +60,10 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-04_pm_hair",
     "title": "가을 염색, 내 톤엔 어떤 브라운?",
-    "status": "approved",
-    "approved_at": "2026-10-02"
+    "status": "published",
+    "approved_at": "2026-10-02",
+    "media_id": "18123371288304530",
+    "published_at": "2026-10-04T11:27:05.806Z"
   },
   {
     "no": 7,

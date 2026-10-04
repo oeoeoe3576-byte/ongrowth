@@ -49,10 +49,12 @@
       "channel": "stay",
       "topic": "서울 근교 1박, 불멍 되는 감성 숙소",
       "angle": "2시간 안쪽, 저녁이 쌀쌀해지는 10월에 맞게",
-      "status": "approved",
+      "status": "published",
       "date": "2026-10-04",
       "content_id": "CN-20261002-013",
-      "publish_at": "2026-10-04 18:30"
+      "publish_at": "2026-10-04 18:30",
+      "published_at": "2026-10-04 18:32",
+      "note": "instagram media 18047758811818150"
     },
     {
       "id": "S03",

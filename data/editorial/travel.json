@@ -200,8 +200,9 @@
       "channel": "season",
       "topic": "새로 생긴 여행 핫플",
       "angle": "최근 개장·재개장한 곳. 개장일 공식 확인",
-      "status": "reserved",
-      "date": "2026-10-05"
+      "status": "planned",
+      "date": "2026-10-05",
+      "content_id": "CN-20261006-002"
     },
     {
       "id": "N04",

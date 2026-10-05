@@ -1134,7 +1134,8 @@ CN-20261002-013,6,INFORMATION,TEXT,자연을담은집,계곡 가까운 불멍·�
 CN-20261002-013,7,SUMMARY,NUMBER_LIST,불멍 정보 **한눈에**,,,,르시엘풀빌라 · 개별 텐트 불멍 | 더스틸 펜션 · 개별 불멍·BBQ | 불멍캠프하우스 · 18~24시 이용 | 금빛하늘아래 · 한옥·불멍·BBQ | 자연을담은집 · 입실 후~21시,FALSE,,,,,https://www.yeogi.com/domestic-accommodations/90202,NEEDS_CHECK
 CN-20261002-013,8,CTA,FOLLOW,"이번 주말
 **가평·양평 어때요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
-CN-20261006-001,1,HOOK,PHOTO_COVER,첫 문단에서 **독자가 나갑니다**,이탈을 막는 첫 문단 3단계,,,,TRUE,PHOTO,data/photos/2026-10-05-B03-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
+CN-20261006-001,1,HOOK,PHOTO_COVER,"첫 문단에서
+**독자가 나갑니다**",이탈을 막는 첫 문단 3단계,,,,TRUE,PHOTO,data/photos/2026-10-05-B03-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
 CN-20261006-001,2,PROBLEM,TEXT,인사말로 시작하고 있다면,,"'안녕하세요, 오늘은…'으로 시작하면 **찾던 답이 어디 있는지** 몰라 뒤로 가기를 누릅니다.",,,FALSE,,,,,,NOT_REQUIRED
 CN-20261006-001,3,OVERVIEW,TIMELINE,첫 문단 3단계,,,,고민을 한 줄로 | 답부터 말하기 | 아래 내용 예고하기,FALSE,,,,,,NOT_REQUIRED
 CN-20261006-001,4,STEP,BIG_NUMBER,고민을 **한 줄**로,STEP 01,찾아온 사람이 검색한 그 고민을 그대로 첫 줄에 씁니다.,01,,FALSE,,,,,,NOT_REQUIRED

@@ -7,3 +7,4 @@
 | img/lip_photo.jpg | Pexels "Close-up of Open Lipstick in Hands" https://www.pexels.com/photo/close-up-of-open-lipstick-in-hands-23103541/ |
 
 - 눈썹·입술·볼·피부 그림은 CSS/SVG로 직접 그린 예시. 셀럽 이름·사진은 쓰지 않음.
+- img/illu_*.jpg: Topview AI 생성 수채화 일러스트 (Nano Banana 2 Lite, 2026-10-06, 사용자 요청으로 SVG 예시 교체)

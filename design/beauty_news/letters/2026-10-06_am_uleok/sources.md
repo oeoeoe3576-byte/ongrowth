@@ -7,3 +7,4 @@
 | img/palette.jpg | Pexels "Make-up Brushes Beside the Eyeshadow Palette" https://www.pexels.com/photo/make-up-brushes-beside-the-eyeshadow-palette-7712437/ |
 
 - 톤별 컬러칩은 퍼스널컬러 일반 원리로 정리한 예시(기사 내용 아님). 얼굴·눈·입술 그림은 SVG 직접 제작. 셀럽·크리에이터 이름은 쓰지 않음.
+- img/illu_*.jpg: Topview AI 생성 수채화 일러스트 (Nano Banana 2 Lite, 2026-10-06, 사용자 요청으로 SVG 예시 교체)

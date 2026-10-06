@@ -16,7 +16,7 @@
       "type": "html",
       "name": "t1",
       "cls": "trend",
-      "html": "<div class=\"kicker\">TREND 01 · BROW</div><h2>가장 먼저 바꿀 건,<br/><span class=\"hl\">얇은 눈썹</span></h2>\n<div class=\"vis\"><div class=\"cmp\"><div><svg viewBox=\"0 0 200 60\" width=\"240\"><path d=\"M10 45 Q70 8 150 18 Q180 22 192 34 Q170 30 150 32 Q80 30 18 56 Z\" fill=\"#4A3428\"/></svg><span>이전 · 두껍고 일자</span></div><div class=\"on\"><svg viewBox=\"0 0 200 60\" width=\"240\"><path d=\"M14 48 Q80 2 190 30 Q90 14 16 52 Z\" fill=\"#4A3428\"/></svg><span>올가을 · 얇은 아치형</span></div></div></div><p class=\"ds\">90년대 무드의 가느다란 아치형 눈썹. 펜으로 그린 듯 얇은 눈썹이 <b>답답해 보이던 인상을 가볍게</b> 만들어줘요.</p><div class=\"tip\"><span>TIP</span>인상이 답답해 보였다면 눈썹부터 얇게 다듬어 보세요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
+      "html": "<div class=\"kicker\">TREND 01 · BROW</div><h2>가장 먼저 바꿀 건,<br/><span class=\"hl\">얇은 눈썹</span></h2>\n<div class=\"vis illu\"><img src=\"img/illu_t1.jpg\" alt=\"\"/><div class=\"lb\"><span>이전 · 두껍고 일자</span><span class=\"on\">올가을 · 얇은 아치형</span></div></div><p class=\"ds\">90년대 무드의 가느다란 아치형 눈썹. 펜으로 그린 듯 얇은 눈썹이 <b>답답해 보이던 인상을 가볍게</b> 만들어줘요.</p><div class=\"tip\"><span>TIP</span>인상이 답답해 보였다면 눈썹부터 얇게 다듬어 보세요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
     },
     {
       "type": "html",
@@ -28,19 +28,19 @@
       "type": "html",
       "name": "t3",
       "cls": "trend",
-      "html": "<div class=\"kicker\">TREND 03 · CHEEK</div><h2>치크는 빼거나,<br/><span class=\"hl\">아주 얇게</span></h2>\n<div class=\"vis\"><div class=\"cmp\"><div class=\"ck\"><div class=\"face\"><i style=\"opacity:0.75\"></i><i class=\"r\" style=\"opacity:0.75\"></i></div><span>여름 · 썬번 블러셔</span></div><div class=\"on\"><div class=\"ck\"><div class=\"face\"><i style=\"opacity:0.12\"></i><i class=\"r\" style=\"opacity:0.12\"></i></div><span>올가을 · 있는 듯 없는 듯</span></div></div></div></div><p class=\"ds\">여름의 썬번 메이크업과 정반대. 치크를 생략하거나 <b>있는 듯 없는 듯</b> 아주 얇게 올리는 안티 블러시예요.</p><div class=\"tip\"><span>TIP</span>치크를 빼는 대신 립이나 눈에 포인트를 주세요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
+      "html": "<div class=\"kicker\">TREND 03 · CHEEK</div><h2>치크는 빼거나,<br/><span class=\"hl\">아주 얇게</span></h2>\n<div class=\"vis illu\"><img src=\"img/illu_t3.jpg\" alt=\"\"/><div class=\"lb\"><span>여름 · 썬번 블러셔</span><span class=\"on\">올가을 · 있는 듯 없는 듯</span></div></div><p class=\"ds\">여름의 썬번 메이크업과 정반대. 치크를 생략하거나 <b>있는 듯 없는 듯</b> 아주 얇게 올리는 안티 블러시예요.</p><div class=\"tip\"><span>TIP</span>치크를 빼는 대신 립이나 눈에 포인트를 주세요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
     },
     {
       "type": "html",
       "name": "t4",
       "cls": "trend",
-      "html": "<div class=\"kicker\">TREND 04 · SKIN</div><h2>물광도 매트도 아닌,<br/><span class=\"hl\">세미 글로우</span></h2>\n<div class=\"vis\"><div class=\"skins\"><div class=\"sk\"><i class=\"matte\"></i><span>매트</span></div><div class=\"on\"><div class=\"sk\"><i class=\"semi\"></i><span>세미 글로우</span></div></div><div class=\"sk\"><i class=\"dewy\"></i><span>물광</span></div></div></div><p class=\"ds\">피부 결은 살리면서 은은한 유리알 광택. <b>어떤 룩에도 자연스럽게</b> 어울리는 게 장점이에요.</p><div class=\"tip\"><span>TIP</span>메이크업 전 보습을 충분히, 그다음 촉촉한 파운데이션을 올려요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
+      "html": "<div class=\"kicker\">TREND 04 · SKIN</div><h2>물광도 매트도 아닌,<br/><span class=\"hl\">세미 글로우</span></h2>\n<div class=\"vis illu\"><img src=\"img/illu_t4.jpg\" alt=\"\"/><div class=\"lb\"><span>매트</span><span class=\"on\">세미 글로우</span><span>물광</span></div></div><p class=\"ds\">피부 결은 살리면서 은은한 유리알 광택. <b>어떤 룩에도 자연스럽게</b> 어울리는 게 장점이에요.</p><div class=\"tip\"><span>TIP</span>메이크업 전 보습을 충분히, 그다음 촉촉한 파운데이션을 올려요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
     },
     {
       "type": "html",
       "name": "t5",
       "cls": "trend",
-      "html": "<div class=\"kicker\">TREND 05 · EYE</div><h2>포인트 하나는<br/><span class=\"hl\">파스텔 아이</span></h2>\n<div class=\"vis\"><div class=\"pastel\"><div><i style=\"background:radial-gradient(circle at 35% 30%, #fff 0%, #BFE8D8 45%, #8CCDB6 100%)\"></i><span>민트</span></div><div><i style=\"background:radial-gradient(circle at 35% 30%, #fff 0%, #DCC8EE 45%, #B79BD8 100%)\"></i><span>라일락</span></div><div><i style=\"background:radial-gradient(circle at 35% 30%, #fff 0%, #C6DDF5 45%, #93B9E4 100%)\"></i><span>파스텔 블루</span></div></div></div><p class=\"ds\">민트·라일락처럼 평소 잘 안 쓰는 컬러를 포인트로. <b>쉬머 텍스처</b>를 더하면 은은하게 빛나요.</p><div class=\"tip\"><span>TIP</span>처음이라면 눈 앞머리나 눈두덩에만 살짝 올려 시작해요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
+      "html": "<div class=\"kicker\">TREND 05 · EYE</div><h2>포인트 하나는<br/><span class=\"hl\">파스텔 아이</span></h2>\n<div class=\"vis illu\"><img src=\"img/illu_t5.jpg\" alt=\"\"/><div class=\"lb\"><span>민트</span><span>라일락</span><span>파스텔 블루</span></div></div><p class=\"ds\">민트·라일락처럼 평소 잘 안 쓰는 컬러를 포인트로. <b>쉬머 텍스처</b>를 더하면 은은하게 빛나요.</p><div class=\"tip\"><span>TIP</span>처음이라면 눈 앞머리나 눈두덩에만 살짝 올려 시작해요.</div><div class=\"foot\">* 출처: 얼루어 코리아 (2026.09.27)</div>"
     }
   ],
   "ps": {

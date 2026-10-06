@@ -17,3 +17,9 @@
 .mlip li { grid-template-columns: 60px 1fr; }
 .mlip li > b { width: 52px; height: 52px; font-size: 27px; }
 .mlip li p { font-size: 30px; }
+
+.card .vis.illu { display: block; padding: 0; height: auto; background: #FBF6EE; border-radius: 28px; overflow: hidden; }
+.card .vis.illu img { display: block; width: 100%; height: auto; }
+.card .vis.illu .lb { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; padding: 4px 10px 22px; text-align: center; opacity: 1; }
+.card .vis.illu .lb span { display: block; margin: 0; font-size: 25px; font-weight: 700; color: var(--plum); opacity: 1; }
+.card .vis.illu .lb span.on { color: var(--rose); }

@@ -8,3 +8,4 @@
 | img/salon.jpg | Pexels "Person Cutting Hair" https://www.pexels.com/photo/person-cutting-hair-3356170/ |
 
 - 앞머리·단발 그림은 SVG 직접 제작. 셀럽 이름·사진은 쓰지 않음.
+- img/illu_*.jpg: Topview AI 생성 수채화 일러스트 (Nano Banana 2 Lite, 2026-10-06, 사용자 요청으로 SVG 예시 교체)

@@ -111,5 +111,21 @@
     "archived_media_id": "18071587433752613",
     "archived_published_at": "2026-10-06T15:10:36.805Z",
     "note": "1차 발행분 보관 처리 후 재발행 (2026-10-07 사용자 지시)"
+  },
+  {
+    "no": 11,
+    "date": "2026-10-08",
+    "time": "20:30",
+    "folder": "design/beauty_news/letters/2026-10-08_pm_cheek",
+    "title": "눈밑 블러셔 끝? 요즘은 볼 중앙 치크",
+    "status": "review"
+  },
+  {
+    "no": 12,
+    "date": "2026-10-09",
+    "time": "08:30",
+    "folder": "design/beauty_news/letters/2026-10-09_am_brow",
+    "title": "우아한 '어른 여자' 눈썹, 꼬리 길이가 킥",
+    "status": "review"
   }
 ]

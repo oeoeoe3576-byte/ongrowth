@@ -1,0 +1,45 @@
+{
+ "no": 11,
+ "date": "2026-10-08",
+ "slot": "PM",
+ "category": "Issue Letter",
+ "brand": "CHEEK TREND",
+ "cover": {
+  "style": "photo",
+  "image": "img/cover_photo.jpg",
+  "focus": "center 15%",
+  "title": "눈밑 블러셔 끝?\n**요즘은 볼 중앙 치크**",
+  "sub": "콧등까지 채우던 블러셔가 내려왔어요.\n힘 뺀 생기, 이렇게 바르세요."
+ },
+ "slides": [
+  {
+   "type": "html",
+   "name": "pos",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">CHEEK POSITION</div><h2>블러셔 위치가<br/><span class=\"hl\">아래로 내려왔어요</span></h2><div class=\"vis illu\"><img src=\"img/illu_pos.jpg\" alt=\"\"/><div class=\"lb\"><span>이전 · 눈밑~콧등 가로로</span><span class=\"on\">요즘 · 볼 중앙, 살짝 아래</span></div></div><p class=\"ds\">중안부를 짧아 보이게 하려고 눈밑부터 콧등까지 넓게 쓸던 블러셔. 요즘은 <b>볼 중앙이나 살짝 아래</b>에 스며들듯 얹어요.</p><div class=\"tip\"><span>POINT</span>햇살을 받아 수줍게 상기된 듯, 인위적인 느낌을 빼는 게 핵심이에요.</div><div class=\"foot\">* 출처: 코스모폴리탄 코리아 (2026.09.18)</div>"
+  },
+  {
+   "type": "html",
+   "name": "mood",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">3 MOODS</div><h2>같은 볼 중앙도<br/><span class=\"hl\">느낌은 세 가지</span></h2><div class=\"vis illu\"><img src=\"img/illu_mood.jpg\" alt=\"\"/><div class=\"lb\"><span>맑은 토마토빛</span><span>톡톡 키치하게</span><span>은은한 로맨틱</span></div></div><ol><li><b>1</b><p><b>맑은 토마토빛</b> · 수채화처럼 볼 중앙과 아래쪽을 자연스럽게 연결해요.</p></li><li><b>2</b><p><b>톡톡 키치하게</b> · 볼 중앙 아래에 넓지 않게, 뭉치듯 얹어요.</p></li><li><b>3</b><p><b>은은한 로맨틱</b> · 볼 중앙부터 부드럽게 이어 시선이 볼에 머물게 해요.</p></li></ol><div class=\"foot\">* 출처: 코스모폴리탄 코리아 (2026.09.18)</div>"
+  },
+  {
+   "type": "html",
+   "name": "how",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">HOW TO</div><h2>볼 중앙 치크,<br/><span class=\"hl\">이렇게 바르세요</span></h2><div class=\"vis illu\"><img src=\"img/illu_how.jpg\" alt=\"\"/><div class=\"lb\"><span>통통한 중앙 찾기</span><span>톡톡 얹기</span><span>아래로 스며들게</span></div></div><ol><li><b>1</b><p>볼에서 <b>가장 통통한 중앙</b>을 찾아요.</p></li><li><b>2</b><p>과하게 붉지 않은 <b>소프트한 컬러</b>를 톡톡 얹어요.</p></li><li><b>3</b><p>경계 없이 <b>살짝 아래로</b> 스며들듯 풀어요. 눈밑·콧등은 비워 두세요.</p></li></ol><div class=\"foot\">* 출처: 코스모폴리탄 코리아 (2026.09.18)</div>"
+  },
+  {
+   "type": "html",
+   "name": "tone",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">PERSONAL COLOR TIP</div><h2>내 톤엔 어떤<br/><span class=\"hl\">치크 컬러?</span></h2><div class=\"tone\"><div><h3>쿨톤<small>푸른 기 도는 핑크</small></h3><div class=\"cs\"><div><i style=\"background:#E59AAE\"></i><span>로즈 핑크</span></div><div><i style=\"background:#C9677F\"></i><span>베리</span></div><div><i style=\"background:#C493A6\"></i><span>모브 핑크</span></div></div></div><div><h3>웜톤<small>노란 기 도는 코랄</small></h3><div class=\"cs\"><div><i style=\"background:#F0A18C\"></i><span>코랄</span></div><div><i style=\"background:#F3B79A\"></i><span>피치</span></div><div><i style=\"background:#E0775F\"></i><span>토마토</span></div></div></div></div><div class=\"tip\"><span>TIP</span>볼 중앙 치크는 <b>얇게 한 겹</b>이 기본. 진하면 홍조처럼 보일 수 있어요.</div><div class=\"foot\">* 컬러칩은 이해를 돕기 위한 예시예요</div>"
+  }
+ ],
+ "ps": {
+  "label": "에디터의 한 줄 팁",
+  "note": "콧등까지 채우던 블러셔를 **볼 중앙으로만** 옮겨 보세요.\n같은 블러셔로도 얼굴이 한결 홀가분해져요.",
+  "credit": "참고: 코스모폴리탄 코리아 (2026.09.18) · 컬러칩은 예시예요"
+ }
+}

@@ -1164,13 +1164,13 @@ CN-20261007-001,1,HOOK,PHOTO_COVER,"스레드 첫 문장,
 **이 3가지**만 쓰세요",그대로 가져다 쓰는 예시까지 정리했어요,,,,TRUE,PHOTO,data/photos/2026-10-07-T01-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
 CN-20261007-001,2,PROBLEM,IMAGE_TEXT,"인사로 시작하면
 **그냥 넘깁니다**","'안녕하세요, 오늘은…'은 멈출 이유가 안 돼요",,,,TRUE,ICON,data/photos/ill-bored-phone.png,,,직접 제작 일러스트,NOT_REQUIRED
-CN-20261007-001,3,STEP,COMPARE,질문형: 고민을 그대로 묻기,공식 · 독자의 고민 + 물음표,,,전: 오늘은 글쓰기 팁입니다 | 후: **왜 아무도 안 읽을까요?**,FALSE,,,,,,NOT_REQUIRED
-CN-20261007-001,4,STEP,BIG_NUMBER,숫자형: **줄 수**로 약속하기,공식 · 줄 수·시간 + 결과,'**3줄**이면 끝나는 블로그 첫 문장'처럼 읽는 데 드는 수고를 먼저 약속합니다.,3줄,,FALSE,,,,,,NOT_REQUIRED
-CN-20261007-001,5,STEP,COMPARE,반전형: 상식 뒤집기,공식 · 흔한 말 + 아닙니다,,,전: 키워드는 많이 넣으세요 | 후: **키워드는 하나만** 쓰세요,FALSE,,,,,,NOT_REQUIRED
-CN-20261007-001,6,INFORMATION,NUMBER_LIST,바로 쓰는 첫 문장 틀,빈칸만 바꿔서 쓰세요,,,"○○, 왜 ○○할까요? | ○○, 3줄이면 끝납니다 | ○○는 틀렸습니다",FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,3,STEP,COMPARE,질문형: 고민을 그대로 묻기,공식 · 독자의 고민 + 물음표,,,"전: 오늘 신메뉴를 소개합니다 | 후: **사장님, 매출이 왜 그대로일까요?**",FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,4,STEP,BIG_NUMBER,숫자형: **줄 수**로 약속하기,공식 · 줄 수·시간 + 결과,'**3줄**이면 끝나는 스레드 첫 줄'처럼 읽는 데 드는 수고를 먼저 약속합니다.,3줄,,FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,5,STEP,COMPARE,반전형: 상식 뒤집기,공식 · 흔한 말 + 아닙니다,,,전: 스레드는 길게 쓰세요 | 후: **한 줄이면 충분합니다**,FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,6,INFORMATION,NUMBER_LIST,바로 쓰는 첫 문장 틀,빈칸만 바꿔서 쓰세요,,,"사장님, 왜 ○○할까요? | ○○, 3줄이면 끝납니다 | ○○는 틀렸습니다",FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,7,SUMMARY,THREE_COLUMN,올리기 전 점검,3가지만 확인하세요,,,인사: 인사로 안 시작했나 | 한 줄: 한 가지만 말했나 | 궁금증: 다음 줄이 궁금한가,FALSE,,,,,,NOT_REQUIRED
-CN-20261007-001,8,CTA,FOLLOW,"매일 하나씩
-**블로그 공식**을 알려드려요",,저장해두고 첫 줄 쓸 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
+CN-20261007-001,8,CTA,FOLLOW,"스레드 **마케팅 공식**을
+알려드려요",,저장해두고 첫 줄 쓸 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
 CN-20261007-002,1,HOOK,PHOTO_COVER,"새로 연 여행 핫플
 **4곳 모음**",이번 주 어디감?,개장·재개장 날짜까지 확인 ✨,,,TRUE,PHOTO,data/images/travel/tmp-N03/06.jpg,,,,NOT_REQUIRED
 CN-20261007-002,2,INFORMATION,IMAGE_TEXT,영남루 별빛정원,밤에 걷는 빛과 미디어아트 정원,"📍 경남 밀양시 영남루 일대

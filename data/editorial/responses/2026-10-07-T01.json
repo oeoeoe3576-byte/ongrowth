@@ -50,8 +50,8 @@
       "body": "",
       "visual_focus": "",
       "items": [
-        "전: 오늘은 글쓰기 팁입니다",
-        "후: **왜 아무도 안 읽을까요?**"
+        "전: 오늘 신메뉴를 소개합니다",
+        "후: **사장님, 매출이 왜 그대로일까요?**"
       ],
       "image_required": false,
       "image_type": "",
@@ -67,7 +67,7 @@
       "layout_type": "BIG_NUMBER",
       "headline": "숫자형: **줄 수**로 약속하기",
       "subheadline": "공식 · 줄 수·시간 + 결과",
-      "body": "'**3줄**이면 끝나는 블로그 첫 문장'처럼 읽는 데 드는 수고를 먼저 약속합니다.",
+      "body": "'**3줄**이면 끝나는 스레드 첫 줄'처럼 읽는 데 드는 수고를 먼저 약속합니다.",
       "visual_focus": "3줄",
       "items": [],
       "image_required": false,
@@ -87,8 +87,8 @@
       "body": "",
       "visual_focus": "",
       "items": [
-        "전: 키워드는 많이 넣으세요",
-        "후: **키워드는 하나만** 쓰세요"
+        "전: 스레드는 길게 쓰세요",
+        "후: **한 줄이면 충분합니다**"
       ],
       "image_required": false,
       "image_type": "",
@@ -107,7 +107,7 @@
       "body": "",
       "visual_focus": "",
       "items": [
-        "○○, 왜 ○○할까요?",
+        "사장님, 왜 ○○할까요?",
         "○○, 3줄이면 끝납니다",
         "○○는 틀렸습니다"
       ],
@@ -144,7 +144,7 @@
       "page_number": 8,
       "page_role": "CTA",
       "layout_type": "FOLLOW",
-      "headline": "매일 하나씩\n**블로그 공식**을 알려드려요",
+      "headline": "스레드 **마케팅 공식**을\n알려드려요",
       "subheadline": "",
       "body": "저장해두고 첫 줄 쓸 때 꺼내 보세요.",
       "visual_focus": "",

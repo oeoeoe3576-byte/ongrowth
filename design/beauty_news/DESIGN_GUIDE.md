@@ -82,11 +82,15 @@
 매 레터를 아래 방식으로 만든다. 이 기본 세트는 **매번 따로 허락받지 않고 만들어도 된다** (사용자 상시 승인). 이 밖의 추가·재생성은 기존처럼 먼저 묻는다.
 - **표지 = AI 인물 클로즈업 1장** (Topview, Nano Banana 2 Lite, 4:5, 1K, 0.3크레딧)
   - 예쁜 20대 한국 여성, 얼굴이 크게 보이게 클로즈업. 35mm 필름 느낌, 자연광, 피부결이 살아 있는 사진(AI 티 줄이기: "real skin texture, not airbrushed, candid").
+  - **레터마다 구성이 확실히 달라야 한다** (2026-10-07 사용자 지시: 같은 느낌 반복이면 돈 쓸 의미가 없음). 만들기 전에 아래 '표지 기록'을 보고 직전 레터들과 **장소·각도·사람(헤어·분위기)·옷·조명** 중 최소 3가지를 바꾼다. 예: 카페 창가 정면 / 야외 공원 뒤돌아보기 / 스튜디오 측광 클로즈업 / 침대·거울 앞 셀피 느낌 / 위에서 내려다본 앵글 / 흑백·블루톤 등.
+  - 예쁜 인물 + AI 티 덜 나게: "beautiful like a Korean actress", "flyaway hairs, slight asymmetry, natural skin texture, shot on film, imperfect framing".
+  - 표지 기록(최근순): 10/9 눈썹=스튜디오·회색 배경·측광·묶은 머리·검정 터틀넥 / 10/8 치크=야외 단풍 공원·골든아워·뒤돌아보는 3/4 각도·갈색 웨이브 포니테일·흰 셔츠 / 10/6 단발=회색 벽 정면·처피뱅 단발·검정 니트 / 10/6 울먹=창가 턱 괴기·묶은 머리·크림 니트 / 10/5 립=입술 클로즈업·립펜슬 / 10/5 트렌드=카페 창가·생머리·크림 니트
   - 주제 메이크업·헤어가 얼굴에서 보여야 한다. 웃음보다 주제에 맞는 표정.
   - 제목이 입술·눈을 가리지 않게 얼굴이 화면 위쪽 절반에 오도록 잘라서 쓴다(필요하면 PIL로 크롭·확대). P.S. 배경은 표지 이미지가 자동으로 깔린다.
   - 헤어·메이크업처럼 사람이 필요 없는 주제(제품·네일 등)는 기존 규칙(풍경+누끼, 무료 사진)도 가능.
 - **본문 예시 그림 = 수채화 일러스트, 페이지당 1장** (Topview, Nano Banana 2 Lite, 16:9, 1K, 0.3크레딧)
   - 프롬프트 앞부분 고정: "Delicate watercolor and colored-pencil beauty illustration, soft fashion-magazine editorial style, warm cream paper background, muted dusty pink and beige palette, clean composition, evenly spaced panels." + 비교/단계 내용(왼쪽·가운데·오른쪽) + "Absolutely no text, no letters, no numbers, no labels."
+  - 컬러칩 줄은 카드 폭에 맞춰 **가운데 균등 정렬**(`.tone .cs {justify-content: space-around}`, 칩 124px)한다. 왼쪽으로 몰리지 않게.
   - 그림 안에는 글자를 넣지 않고, 아래에 HTML 라벨을 붙인다: `<div class="vis illu"><img src="img/illu_이름.jpg"/><div class="lb"><span>…</span><span class="on">…</span></div></div>` (CSS는 기존 레터 `extra.css`의 `.card .vis.illu` 블록 복사). 이미지는 위아래 7~9% 잘라서 저장.
   - SVG·CSS로 직접 그린 얼굴·입술·머리 그림은 쓰지 않는다 ("너무 구림").
 - Topview 동시 작업 한도가 있어 한 번에 4장 정도씩 나눠 제출한다. 여분 생성 금지(페이지당 1장).

@@ -1203,3 +1203,20 @@ CN-20261007-003,5,INFORMATION,TEXT,매헌시민의숲,51개 가을 정원 서울
 CN-20261007-003,6,SUMMARY,NUMBER_LIST,개장 날짜 **한눈에**,,,,영남루 별빛정원 · 10/1 정식 개장 | 오픈에어뮤지엄 · 9/14 개관 | 연인산 용추계곡 · 9/11 재개방 | 매헌시민의숲 · 10/1~10/27,FALSE,,,,,https://www.gukjenews.com/news/articleView.html?idxno=3704710,NEEDS_CHECK
 CN-20261007-003,7,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261007-004,1,HOOK,PHOTO_COVER,"새로 연 여행 핫플
+**4곳 모음**",이번 주 어디감?,개장·재개장 날짜까지 확인 ✨,,,TRUE,PHOTO,data/images/travel/tmp-N03/05.jpg,,,,NOT_REQUIRED
+CN-20261007-004,2,INFORMATION,TEXT,영남루 별빛정원,밤에 걷는 빛과 미디어아트 정원,"📍 경남 밀양시 영남루 일대
+📅 10/1 정식 개장 (~12/31)
+💰 성인 5,000원 · 청소년·어린이 3,000원",,,TRUE,PHOTO,data/images/travel/tmp-N03/06.jpg,,,https://www.gukjenews.com/news/articleView.html?idxno=3704710,NEEDS_CHECK
+CN-20261007-004,3,INFORMATION,TEXT,오픈에어뮤지엄 미디어월,탄광 문화를 실감형 콘텐츠로,"📍 강원 태백시 소도길 9-11
+📅 9/14 개관 · 평일 11:00~17:00 · 주말 09:00~17:00
+💰 요금은 시기별로 달라요",,,TRUE,PHOTO,data/images/travel/tmp-N03/ph3.jpg,,,https://www.ysshinmun.com/news/articleView.html?idxno=11497,NEEDS_CHECK
+CN-20261007-004,4,INFORMATION,TEXT,연인산 용추계곡,수해 복구 뒤 9.2km 전 구간 개방,"📍 경기 가평군 가평읍 용추로 229-41
+📅 9/11 전면 재개방
+💰 입장·주차 무료",,,TRUE,PHOTO,data/images/travel/tmp-N03/ph4.jpg,,,https://thetravelnews.co.kr/2026/09/gapyeong-yeoninsan-yongchu-valley-reopen-2026/,NEEDS_CHECK
+CN-20261007-004,5,INFORMATION,TEXT,매헌시민의숲,51개 가을 정원 서울국제정원박람회,"📍 서울 서초구 매헌로 99
+📅 10/1~10/27
+💰 무료",,,TRUE,PHOTO,data/images/travel/tmp-N03/ph5.jpg,,,https://www.asiatoday.co.kr/kn/view.php?key=20261001010000454,NEEDS_CHECK
+CN-20261007-004,6,SUMMARY,NUMBER_LIST,개장 날짜 **한눈에**,,,,영남루 별빛정원 · 10/1 정식 개장 | 오픈에어뮤지엄 · 9/14 개관 | 연인산 용추계곡 · 9/11 재개방 | 매헌시민의숲 · 10/1~10/27,FALSE,,,,,https://www.gukjenews.com/news/articleView.html?idxno=3704710,NEEDS_CHECK
+CN-20261007-004,7,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

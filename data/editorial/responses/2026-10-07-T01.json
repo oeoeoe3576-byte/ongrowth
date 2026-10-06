@@ -2,8 +2,8 @@
   "category": "marketing",
   "target": "블로그와 SNS로 직접 마케팅하는 1인 사업자·소상공인",
   "content_type": "INFO",
-  "page_count": 8,
-  "planning_note": "스레드 첫 문장 쓰는 법. 첫 줄 유형 3가지(질문·숫자·반전)를 방법 중심으로 소개. 수치·알고리즘 설명 없이 작성 방법만 다룸.",
+  "page_count": 6,
+  "planning_note": "내용이 짧아 6장으로 구성(내용에 맞춰 장수 조절). 첫 줄 3유형을 한 장에 정리하고 전/후 예시 한 장.",
   "caption": "스레드는 첫 문장에서 멈추느냐 넘기느냐가 갈립니다. 인사 대신 이 3가지로 시작해 보세요.\n\n1) 질문: 독자의 고민을 던지기\n2) 숫자: 개수로 약속하기\n3) 반전: 흔한 말 뒤집기\n\n저장해 두고 다음 스레드 첫 줄을 쓸 때 골라 써 보세요 📌",
   "hashtags": "#스레드마케팅 #스레드글쓰기 #첫문장 #SNS마케팅 #마케팅팁 #1인사업자",
   "pages": [
@@ -43,10 +43,10 @@
     },
     {
       "page_number": 3,
-      "page_role": "OVERVIEW",
-      "layout_type": "TIMELINE",
-      "headline": "첫 줄 3가지 유형",
-      "subheadline": "",
+      "page_role": "INFORMATION",
+      "layout_type": "THREE_COLUMN",
+      "headline": "첫 줄은 이 3가지로",
+      "subheadline": "질문 · 숫자 · 반전",
       "body": "",
       "visual_focus": "",
       "items": [
@@ -65,26 +65,9 @@
     {
       "page_number": 4,
       "page_role": "STEP",
-      "layout_type": "BIG_NUMBER",
-      "headline": "질문으로 **시작**하세요",
-      "subheadline": "STEP 01",
-      "body": "'블로그 글, 왜 아무도 안 읽을까요?' 독자가 속으로 답하게 만듭니다.",
-      "visual_focus": "01",
-      "items": [],
-      "image_required": false,
-      "image_type": "",
-      "image_source": "",
-      "image_prompt": "",
-      "cta": "",
-      "source": "",
-      "fact_check": "NOT_REQUIRED"
-    },
-    {
-      "page_number": 5,
-      "page_role": "STEP",
       "layout_type": "COMPARE",
-      "headline": "숫자로 약속하세요",
-      "subheadline": "STEP 02",
+      "headline": "숫자로 약속하면",
+      "subheadline": "이렇게 바꿔 보세요",
       "body": "",
       "visual_focus": "",
       "items": [
@@ -100,28 +83,7 @@
       "fact_check": "NOT_REQUIRED"
     },
     {
-      "page_number": 6,
-      "page_role": "STEP",
-      "layout_type": "THREE_COLUMN",
-      "headline": "반전으로 멈추게",
-      "subheadline": "STEP 03 · 흔한 말 뒤집기",
-      "body": "",
-      "visual_focus": "",
-      "items": [
-        "상식: 많이 넣어야 한다",
-        "반전: 하나만 넣으세요",
-        "다음 줄: 이유를 풀기"
-      ],
-      "image_required": false,
-      "image_type": "",
-      "image_source": "",
-      "image_prompt": "",
-      "cta": "",
-      "source": "",
-      "fact_check": "NOT_REQUIRED"
-    },
-    {
-      "page_number": 7,
+      "page_number": 5,
       "page_role": "SUMMARY",
       "layout_type": "TEXT",
       "headline": "한 줄 정리",
@@ -138,7 +100,7 @@
       "fact_check": "NOT_REQUIRED"
     },
     {
-      "page_number": 8,
+      "page_number": 6,
       "page_role": "CTA",
       "layout_type": "FOLLOW",
       "headline": "매일 하나씩 **블로그 공식**을 알려드려요",

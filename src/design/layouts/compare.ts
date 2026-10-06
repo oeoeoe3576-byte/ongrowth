@@ -31,7 +31,7 @@ export const CompareTemplate: LayoutComponent = {
 .cn-l-COMPARE .cn-side.right { background: var(--c-accent); color: var(--c-on-accent); }
 .cn-l-COMPARE .cn-side-label { font-size: 48px; font-weight: var(--w-heavy); letter-spacing: .02em; padding-bottom: 20px; border-bottom: var(--bw) solid currentColor; opacity: .9; }
 .cn-l-COMPARE .cn-side ul { list-style: none; display: flex; flex-direction: column; gap: 32px; }
-.cn-l-COMPARE .cn-side li { font-size: 40px; font-weight: var(--w-bold); line-height: 1.4; letter-spacing: -0.015em; }
+.cn-l-COMPARE .cn-side li { text-wrap: balance; font-size: 48px; font-weight: var(--w-bold); line-height: 1.4; letter-spacing: -0.015em; }
 .cn-l-COMPARE .cn-side.left li { color: var(--c-muted); }
 .cn-l-COMPARE .cn-vs-badge { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 84px; height: 84px; border-radius: 50%; background: var(--c-bg); color: var(--c-text); display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: var(--w-heavy); border: var(--bw) solid var(--c-text); }
 .cn-l-COMPARE .cn-body { color: var(--c-muted); }`,

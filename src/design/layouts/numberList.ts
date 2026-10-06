@@ -9,9 +9,9 @@ export const NumberListTemplate: LayoutComponent = {
   css: `
 .cn-l-NUMBER_LIST .cn-main { gap: 28px; padding-top: calc(var(--sp-section) * 1.4); }
 .cn-l-NUMBER_LIST ol { list-style: none; margin: auto 0; border-top: var(--bw) solid var(--c-text); min-height: 0; overflow: hidden; }
-.cn-l-NUMBER_LIST li { display: grid; grid-template-columns: 112px 1fr; align-items: baseline; padding: calc(var(--sp-item) * 1.6) 0; border-bottom: var(--bw) solid var(--c-line); }
+.cn-l-NUMBER_LIST li { display: grid; grid-template-columns: 112px 1fr; align-items: baseline; padding: calc(var(--sp-item) * 2.4) 0; border-bottom: var(--bw) solid var(--c-line); }
 .cn-l-NUMBER_LIST .cn-num { font-size: 52px; }
-.cn-l-NUMBER_LIST .cn-li-text { font-size: calc(var(--fs-item) * 1.17); font-weight: var(--w-bold); line-height: 1.4; }
+.cn-l-NUMBER_LIST .cn-li-text { font-size: calc(var(--fs-item) * 1.45); font-weight: var(--w-bold); line-height: 1.4; }
 .cn-l-NUMBER_LIST .cn-body { color: var(--c-muted); }`,
   render(p, ctx) {
     const items = p.items

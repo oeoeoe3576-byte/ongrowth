@@ -71,7 +71,10 @@
     "time": "08:30",
     "folder": "design/beauty_news/letters/2026-10-05_am_trend",
     "title": "올가을 메이크업, 더하기보다 빼기",
-    "status": "review"
+    "status": "published",
+    "approved_at": "2026-10-07",
+    "media_id": "17906224959563776",
+    "published_at": "2026-10-06T15:08:07.753Z"
   },
   {
     "no": 8,
@@ -79,7 +82,10 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-05_pm_lip",
     "title": "요즘 다들 바르는 '멀멀 립' 만드는 법",
-    "status": "review"
+    "status": "published",
+    "approved_at": "2026-10-07",
+    "media_id": "18147502432565170",
+    "published_at": "2026-10-06T15:09:03.583Z"
   },
   {
     "no": 9,
@@ -87,7 +93,10 @@
     "time": "08:30",
     "folder": "design/beauty_news/letters/2026-10-06_am_uleok",
     "title": "우는 것도 예쁘게, '울먹' 메이크업",
-    "status": "review"
+    "status": "published",
+    "approved_at": "2026-10-07",
+    "media_id": "18415521010159924",
+    "published_at": "2026-10-06T15:09:57.961Z"
   },
   {
     "no": 10,
@@ -95,6 +104,9 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-06_pm_bang",
     "title": "올가을 앞머리·단발, 끝선이 다 했다",
-    "status": "review"
+    "status": "published",
+    "approved_at": "2026-10-07",
+    "media_id": "18071587433752613",
+    "published_at": "2026-10-06T15:10:36.805Z"
   }
 ]

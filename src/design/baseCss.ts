@@ -32,10 +32,11 @@ export const BASE_CSS = `
   padding: calc(var(--sp-page) * 0.72) var(--sp-page) calc(var(--sp-page) * 0.66);
   font-family: var(--font); font-weight: var(--w-regular);
   background: var(--c-bg); color: var(--c-text);
-  word-break: keep-all; overflow-wrap: anywhere;
+  word-break: keep-all; overflow-wrap: anywhere; text-wrap: pretty;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
   border-radius: var(--r-card);
 }
+.cn-display, .cn-headline, .cn-sub, .cn-col-title, .cn-cell-title { text-wrap: balance; }
 .cn-card.cn-tone-dark { background: var(--c-primary); color: var(--c-text-on-primary); --c-accent: var(--c-accent-dark); --c-muted: var(--c-muted-on-primary); --c-line: rgba(255,255,255,.16); --c-surface: rgba(255,255,255,.06); }
 
 /* 상단 / 하단 공통 */

@@ -51,7 +51,7 @@
       "visual_focus": "",
       "items": [
         "질문: 독자 고민을 먼저 던져요",
-        "숫자: 몇 줄이면 끝나는지 알려요",
+        "숫자: 줄 수로 약속해요",
         "반전: 흔한 상식을 뒤집어요"
       ],
       "image_required": false,
@@ -72,7 +72,7 @@
       "visual_focus": "",
       "items": [
         "전: 블로그 잘 쓰는 법",
-        "후: **3줄이면 끝나는** 첫 문장"
+        "후: **3줄로 끝내는 법**"
       ],
       "image_required": false,
       "image_type": "",
@@ -88,7 +88,7 @@
       "layout_type": "TEXT",
       "headline": "한 줄 정리",
       "subheadline": "",
-      "body": "**질문, 숫자, 반전.** 인사는 빼고 첫 줄에서 멈추게 하세요.",
+      "body": "**질문, 숫자, 반전.**\n인사는 빼고, 첫 줄에서 멈추게 하세요.",
       "visual_focus": "",
       "items": [],
       "image_required": false,
@@ -103,7 +103,7 @@
       "page_number": 6,
       "page_role": "CTA",
       "layout_type": "FOLLOW",
-      "headline": "매일 하나씩 **블로그 공식**을 알려드려요",
+      "headline": "매일 하나씩\n**블로그 공식**을 알려드려요",
       "subheadline": "",
       "body": "저장해두고 첫 줄 쓸 때 꺼내 보세요.",
       "visual_focus": "",

@@ -17,7 +17,7 @@ export const defaultTheme: DesignTheme = {
     accentSoft: "#E3E8FC",
     line: "#DCD7CC",
     onAccent: "#FFFFFF",
-    accentOnDark: "#7D95FF",
+    accentOnDark: "#3D6BFF",
     cardBg: "#FFFFFF",
     cardText: "#15161A",
   },

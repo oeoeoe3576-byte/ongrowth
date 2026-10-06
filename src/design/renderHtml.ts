@@ -7,6 +7,8 @@ import { themeToCssVars, type DesignTheme } from "./tokens.js";
 import { staticChecks, type CardCheck } from "./checks.js";
 import { toRenderPage, type BrandProfile, type RenderContext, type RenderPage } from "./types.js";
 import { loadBrand, toImageSrc } from "./brand.js";
+import fs from "node:fs";
+import path from "node:path";
 import type { MasterRow, PageRow } from "../planner/types.js";
 
 export interface RenderedCard {
@@ -30,14 +32,26 @@ export interface RenderedContent {
   cards: RenderedCard[];
 }
 
+/** 콘텐츠별 색 테마 지정: data/planner/theme-overrides.json { "<content_id>": "<테마>" } (계정 기본보다 우선) */
+function themeOverride(contentId: string): string | undefined {
+  try {
+    const file = path.join(process.cwd(), "data/planner/theme-overrides.json");
+    const map = JSON.parse(fs.readFileSync(file, "utf8")) as Record<string, string>;
+    return map[contentId];
+  } catch {
+    return undefined;
+  }
+}
+
 /**
  * themeName을 주면 모든 장을 그 테마로 (비교용).
  * 안 주면 계정 설정을 따른다: brand.theme(본문) + brand.coverTheme(첫 장·마지막 장).
  */
 export function renderContent(master: MasterRow, pageRows: PageRow[], themeName?: string): RenderedContent {
   const brand = loadBrand(master.brand);
-  const { theme, fallback } = resolveTheme(themeName ?? brand.theme ?? master.category);
-  const cover = !themeName && brand.coverTheme ? resolveTheme(brand.coverTheme).theme : theme;
+  const override = themeOverride(master.content_id);
+  const { theme, fallback } = resolveTheme(themeName ?? override ?? brand.theme ?? master.category);
+  const cover = !themeName && !override && brand.coverTheme ? resolveTheme(brand.coverTheme).theme : theme;
   const pages = pageRows
     .filter((r) => r.content_id === master.content_id)
     .map(toRenderPage)

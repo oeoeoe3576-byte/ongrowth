@@ -12,7 +12,7 @@ export const PhotoCoverTemplate: LayoutComponent = {
 .cn-l-PHOTO_COVER .cn-tag { align-self: flex-start; font-size: var(--fs-caption); font-weight: var(--w-heavy); letter-spacing: .04em; padding: 10px 24px; border-radius: var(--r-pill); background: var(--c-card-bg); color: var(--c-card-text); }
 .cn-l-PHOTO_COVER .cn-display { font-size: calc(var(--fs-display) * 1.02); text-shadow: 0 2px 24px rgba(0,0,0,.25); }
 .cn-l-PHOTO_COVER .cn-sub { color: var(--c-muted); font-weight: var(--w-regular); font-size: calc(var(--fs-sub) * 1.02); }
-.cn-theme-insight.cn-l-PHOTO_COVER .cn-bg-shade { background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.1) 18%, rgba(0,0,0,.2) 32%, rgba(0,0,0,.78) 55%, rgba(0,0,0,.94) 78%, rgba(0,0,0,.98) 100%); }
+.cn-theme-insight.cn-l-PHOTO_COVER .cn-bg-shade, .cn-theme-default.cn-l-PHOTO_COVER .cn-bg-shade { background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.1) 18%, rgba(0,0,0,.2) 32%, rgba(0,0,0,.78) 55%, rgba(0,0,0,.94) 78%, rgba(0,0,0,.98) 100%); }
 .cn-cover-note { display: none; } /* 본문 한 줄(질문/훅): 이를 쓰는 테마(trend)에서만 보인다 */`,
   render(p, ctx) {
     const bg = p.imageSource

@@ -57,9 +57,10 @@
       "channel": "blog",
       "topic": "첫 문단에서 이탈을 막는 법",
       "angle": "검색해서 들어온 사람이 바로 답을 찾게 하는 첫 문단 구성",
-      "status": "review",
+      "status": "approved",
       "date": "2026-10-05",
-      "content_id": "CN-20261006-001"
+      "content_id": "CN-20261006-001",
+      "publish_at": "2026-10-07 18:30"
     },
     {
       "id": "B04",

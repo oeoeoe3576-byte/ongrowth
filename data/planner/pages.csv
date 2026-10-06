@@ -1162,8 +1162,8 @@ CN-20261006-002,7,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
 CN-20261007-001,1,HOOK,PHOTO_COVER,"스레드, **첫 문장**에서
 갈립니다",피드에서 멈추게 하는 첫 줄 3가지,,,,TRUE,PHOTO,data/photos/2026-10-07-T01-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
-CN-20261007-001,2,PROBLEM,TEXT,첫 줄이 인사라면,,"'안녕하세요, 오늘은…'으로 시작하면 **피드에서 그냥 지나갑니다.**",,,FALSE,,,,,,NOT_REQUIRED
-CN-20261007-001,3,INFORMATION,THREE_COLUMN,첫 줄은 이 3가지로,질문 · 숫자 · 반전,,,질문: 독자 고민 던지기 | 숫자: 개수로 약속하기 | 반전: 흔한 말 뒤집기,FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,2,PROBLEM,BIG_TITLE,인사로 시작하면 **그냥 넘깁니다**,"'안녕하세요, 오늘은…'은 멈출 이유가 안 돼요",,,,FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,3,INFORMATION,THREE_COLUMN,첫 줄은 이 3가지로,질문 · 숫자 · 반전,,,질문: 독자 고민을 먼저 던져요 | 숫자: 몇 줄이면 끝나는지 알려요 | 반전: 흔한 상식을 뒤집어요,FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,4,STEP,COMPARE,숫자로 약속하면,이렇게 바꿔 보세요,,,전: 블로그 잘 쓰는 법 | 후: **3줄이면 끝나는** 첫 문장,FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,5,SUMMARY,TEXT,한 줄 정리,,"**질문, 숫자, 반전.** 인사는 빼고 첫 줄에서 멈추게 하세요.",,,FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,6,CTA,FOLLOW,매일 하나씩 **블로그 공식**을 알려드려요,,저장해두고 첫 줄 쓸 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED

@@ -7,12 +7,12 @@ export const ThreeColumnTemplate: LayoutComponent = {
   label: "3단 구성",
   limits: { headline: 20, subheadline: 30, body: 40, itemChars: 22, itemsMin: 3, itemsMax: 3 },
   css: `
-.cn-l-THREE_COLUMN .cn-main { gap: 28px; padding-top: calc(var(--sp-section) * 1.4); }
-.cn-l-THREE_COLUMN .cn-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; flex: 1 1 auto; max-height: 720px; min-height: 0; }
-.cn-l-THREE_COLUMN .cn-col { background: var(--c-surface); border: var(--bw) solid var(--c-line); border-radius: var(--r-box); padding: 36px 28px; display: flex; flex-direction: column; gap: 18px; overflow: hidden; }
-.cn-l-THREE_COLUMN .cn-col .cn-num { font-size: 48px; }
-.cn-l-THREE_COLUMN .cn-col-title { font-size: 42px; font-weight: var(--w-heavy); line-height: 1.25; letter-spacing: -0.02em; margin-top: auto; }
-.cn-l-THREE_COLUMN .cn-col-desc { font-size: 30px; line-height: 1.5; color: var(--c-muted); }
+.cn-l-THREE_COLUMN .cn-main { gap: 28px; padding-top: calc(var(--sp-section) * 1.4); justify-content: center; }
+.cn-l-THREE_COLUMN .cn-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; flex: 0 0 auto; align-items: stretch; }
+.cn-l-THREE_COLUMN .cn-col { background: var(--c-surface); border: var(--bw) solid var(--c-line); border-radius: var(--r-box); padding: 48px 26px 56px; display: flex; flex-direction: column; gap: 28px; overflow: hidden; }
+.cn-l-THREE_COLUMN .cn-col .cn-num { font-size: 60px; }
+.cn-l-THREE_COLUMN .cn-col-title { font-size: 58px; font-weight: var(--w-heavy); line-height: 1.25; letter-spacing: -0.02em; }
+.cn-l-THREE_COLUMN .cn-col-desc { font-size: 38px; line-height: 1.5; color: var(--c-muted); }
 .cn-l-THREE_COLUMN .cn-body { color: var(--c-muted); }`,
   render(p, ctx) {
     const cols = p.items.slice(0, 3).map((it, i) => {

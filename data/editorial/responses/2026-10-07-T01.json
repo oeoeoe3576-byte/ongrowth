@@ -27,10 +27,10 @@
     {
       "page_number": 2,
       "page_role": "PROBLEM",
-      "layout_type": "TEXT",
-      "headline": "첫 줄이 인사라면",
-      "subheadline": "",
-      "body": "'안녕하세요, 오늘은…'으로 시작하면 **피드에서 그냥 지나갑니다.**",
+      "layout_type": "BIG_TITLE",
+      "headline": "인사로 시작하면 **그냥 넘깁니다**",
+      "subheadline": "'안녕하세요, 오늘은…'은 멈출 이유가 안 돼요",
+      "body": "",
       "visual_focus": "",
       "items": [],
       "image_required": false,
@@ -50,9 +50,9 @@
       "body": "",
       "visual_focus": "",
       "items": [
-        "질문: 독자 고민 던지기",
-        "숫자: 개수로 약속하기",
-        "반전: 흔한 말 뒤집기"
+        "질문: 독자 고민을 먼저 던져요",
+        "숫자: 몇 줄이면 끝나는지 알려요",
+        "반전: 흔한 상식을 뒤집어요"
       ],
       "image_required": false,
       "image_type": "",

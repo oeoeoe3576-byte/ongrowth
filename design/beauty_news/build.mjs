@@ -32,19 +32,21 @@ const top = (n, dark) =>
 function cover() {
   const c = L.cover;
   const kicker = `<div class="kicker"><span class="cat">${esc(L.category)}</span><span class="sep">·</span><span>${esc(L.brand)}</span></div>`;
+  // 표지에는 작은 글씨(카테고리 라벨·서브 문구)를 넣지 않는다 (2026-10-07 사용자 결정). 꼭 필요하면 cover.small: true
+  const small = c.small === true;
   const foot = ""; // 표지 하단 바(로고·넘겨보기)는 넣지 않는다 (2026-10-01 사용자 결정)
   const topbar = `<div class="topbar"><div class="wordmark">BEAUTY <i>letter</i></div></div>`;
   if (c.style === "scene") {
     // 풍경 배경 + 누끼(image) 또는 큰 영문 단어(big). 얼굴 없는 사진용.
     return `<section class="card cover-scene${c.soft ? " soft" : ""}" data-name="01_cover"><img class="bg" src="${esc(c.bg)}" alt="" style="object-position:${esc(c.focus || "center")}" /><div class="veil"></div>
   ${c.image ? `<div class="glow"></div><img class="cut" src="${esc(c.image)}" alt="" />` : `<div class="big-word">${esc(c.big || "")}</div>`}${topbar}
-  <div class="body">${kicker}<h1>${md(c.title).replace(/class="hl"/g, 'class="em"')}</h1>${c.sub ? `<p class="sub">${md(c.sub)}</p>` : ""}</div>
+  <div class="body">${small ? kicker : ""}<h1>${md(c.title).replace(/class="hl"/g, 'class="em"')}</h1>${small && c.sub ? `<p class="sub">${md(c.sub)}</p>` : ""}</div>
   ${foot}</section>`;
   }
   if (c.style === "photo") {
     // 사진 배경 표지: 사진 위에 어두운 그라데이션을 깔고 흰 글씨를 올린다. credit은 사진 출처(작가·사이트 또는 AI 생성 표기).
     return `<section class="card cover-photo" data-name="01_cover"><div data-slot="photo"><img src="${esc(c.image)}" alt="" style="object-position:${esc(c.focus || "center")}" /></div><div class="shade"></div>${topbar}
-  <div class="body">${kicker}<h1>${md(c.title).replace(/class="hl"/g, 'class="em"')}</h1>${c.sub ? `<p class="sub">${md(c.sub)}</p>` : ""}</div>
+  <div class="body">${small ? kicker : ""}<h1>${md(c.title).replace(/class="hl"/g, 'class="em"')}</h1>${small && c.sub ? `<p class="sub">${md(c.sub)}</p>` : ""}</div>
   ${foot}</section>`;
   }
   if (c.style === "cut") {

@@ -27,18 +27,18 @@
     {
       "page_number": 2,
       "page_role": "PROBLEM",
-      "layout_type": "BIG_TITLE",
+      "layout_type": "IMAGE_TEXT",
       "headline": "인사로 시작하면\n**그냥 넘깁니다**",
       "subheadline": "'안녕하세요, 오늘은…'은 멈출 이유가 안 돼요",
       "body": "",
       "visual_focus": "",
       "items": [],
-      "image_required": false,
-      "image_type": "",
-      "image_source": "",
+      "image_required": true,
+      "image_type": "ICON",
+      "image_source": "data/photos/ill-bored-phone.png",
       "image_prompt": "",
       "cta": "",
-      "source": "",
+      "source": "직접 제작 일러스트",
       "fact_check": "NOT_REQUIRED"
     },
     {

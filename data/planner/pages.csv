@@ -1162,8 +1162,8 @@ CN-20261006-002,7,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
 CN-20261007-001,1,HOOK,PHOTO_COVER,"스레드 첫 문장,
 **이 3가지**만 쓰세요",그대로 가져다 쓰는 예시까지 정리했어요,,,,TRUE,PHOTO,data/photos/2026-10-07-T01-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
-CN-20261007-001,2,PROBLEM,BIG_TITLE,"인사로 시작하면
-**그냥 넘깁니다**","'안녕하세요, 오늘은…'은 멈출 이유가 안 돼요",,,,FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,2,PROBLEM,IMAGE_TEXT,"인사로 시작하면
+**그냥 넘깁니다**","'안녕하세요, 오늘은…'은 멈출 이유가 안 돼요",,,,TRUE,ICON,data/photos/ill-bored-phone.png,,,직접 제작 일러스트,NOT_REQUIRED
 CN-20261007-001,3,STEP,COMPARE,질문형: 고민을 그대로 묻기,공식 · 독자의 고민 + 물음표,,,전: 오늘은 글쓰기 팁입니다 | 후: **왜 아무도 안 읽을까요?**,FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,4,STEP,BIG_NUMBER,숫자형: **줄 수**로 약속하기,공식 · 줄 수·시간 + 결과,'**3줄**이면 끝나는 블로그 첫 문장'처럼 읽는 데 드는 수고를 먼저 약속합니다.,3줄,,FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,5,STEP,COMPARE,반전형: 상식 뒤집기,공식 · 흔한 말 + 아닙니다,,,전: 키워드는 많이 넣으세요 | 후: **키워드는 하나만** 쓰세요,FALSE,,,,,,NOT_REQUIRED

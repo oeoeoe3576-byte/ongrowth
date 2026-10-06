@@ -82,11 +82,13 @@
     "time": "08:30",
     "folder": "design/beauty_news/letters/2026-10-05_pm_lip",
     "title": "요즘 다들 바르는 '멀멀 립' 만드는 법",
-    "status": "approved",
+    "status": "published",
     "approved_at": "2026-10-07",
     "archived_media_id": "18147502432565170",
     "archived_published_at": "2026-10-06T15:09:03.583Z",
-    "note": "1차 발행분 보관 처리 후 재발행 (2026-10-07 사용자 지시)"
+    "note": "1차 발행분 보관 처리 후 재발행 (2026-10-07 사용자 지시)",
+    "media_id": "18005437665006292",
+    "published_at": "2026-10-06T23:27:08.254Z"
   },
   {
     "no": 9,

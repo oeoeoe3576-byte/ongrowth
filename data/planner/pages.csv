@@ -1222,3 +1222,17 @@ CN-20261007-004,5,INFORMATION,TEXT,매헌시민의숲,51개 가을 정원 서울
 CN-20261007-004,6,SUMMARY,NUMBER_LIST,개장 날짜 **한눈에**,,,,영남루 별빛정원 · 10/1 정식 개장 | 오픈에어뮤지엄 · 9/14 개관 | 연인산 용추계곡 · 9/11 재개방 | 매헌시민의숲 · 10/1~10/27,FALSE,,,,,https://www.gukjenews.com/news/articleView.html?idxno=3704710,NEEDS_CHECK
 CN-20261007-004,7,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261007-005,1,HOOK,PHOTO_COVER,"남은 가을 불꽃축제
+**3곳 일정 모음**",이번 주 어디감?,10/31 · 11/7 · 11/19 날짜 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I07/01.jpg,,,,NOT_REQUIRED
+CN-20261007-005,2,INFORMATION,TEXT,여수밤바다 불꽃축제,섬을 주제로 한 해외 팀 초청 불꽃쇼,"📍 전남 여수시 박람회길 1 여수세계박람회장 일원
+📅 10/31(토)
+🎫 운영 시간은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I07/ph1.jpg,,,https://news.lghellovision.net/news/articleView.html?idxno=553368,NEEDS_CHECK
+CN-20261007-005,3,INFORMATION,TEXT,부산불꽃축제,광안리 밤바다를 채우는 대표 불꽃축제,"📍 부산 수영구 광안해변로 219 광안리해수욕장 일원
+📅 11/7(토)
+🎫 운영 시간은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I07/02.jpg,,,https://korean.visitkorea.or.kr/ (관광공사 축제 목록),NEEDS_CHECK
+CN-20261007-005,4,INFORMATION,TEXT,포항국제불빛축제,영일대해수욕장 불빛 퍼레이드와 불꽃,"📍 경북 포항시 북구 해안로 48 영일대해수욕장 외 포항시 일원
+📅 11/19~11/21
+🎫 운영 시간은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I07/03.jpg,,,https://korean.visitkorea.or.kr/kfes/detail/fstvlDetail.do?fstvlCntntsId=1a7b7f32-e5a4-47b1-9e35-4a87499eccd8,NEEDS_CHECK
+CN-20261007-005,5,SUMMARY,NUMBER_LIST,불꽃축제 날짜 **한눈에**,,,,여수밤바다 불꽃축제 · 10/31 | 부산불꽃축제 · 11/7 | 포항국제불빛축제 · 11/19~21,FALSE,,,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261007-005,6,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

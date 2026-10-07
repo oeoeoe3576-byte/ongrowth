@@ -227,6 +227,20 @@
   "date": "2026-10-10",
   "slot": "AM",
   "letter": "Issue Letter",
+  "kind": "뷰티 정보",
+  "title": "파리에서 '한국식 히메 커트'가 유행 중",
+  "why_now": "보그가 다룬 해외 역유행 소재(K-헤어가 파리에서) (10/7: 체크 패턴 원문이 제품 크레딧뿐이라 순서 교체)",
+  "personal_color": "X",
+  "source": "보그 코리아",
+  "url": "https://www.vogue.co.kr/2026/09/17/%ec%98%ac%ea%b0%80%ec%9d%84-%ed%8c%8c%eb%a6%ac%ec%97%90%ec%84%9c-%ed%95%9c%ea%b5%ad%ec%8b%9d-%ed%9e%88%eb%a9%94-%ec%bb%a4%ed%8a%b8%ea%b0%80-%ec%9c%a0%ed%96%89%ed%95%98%ea%b3%a0-%ec%9e%88%ec%8a%b5/",
+  "purchase_needed": "X",
+  "image_source": "일러스트/도식",
+  "published": "2026-09-17"
+ },
+ {
+  "date": "2026-10-10",
+  "slot": "PM",
+  "letter": "Issue Letter",
   "kind": "패션",
   "title": "체크 패턴, 올가을 이거 하나면 끝",
   "why_now": "가을 체크 패턴 쇼핑 큐레이션",
@@ -236,20 +250,6 @@
   "purchase_needed": "X",
   "image_source": "브랜드 공식 제품 컷",
   "published": "2026-09-24"
- },
- {
-  "date": "2026-10-10",
-  "slot": "PM",
-  "letter": "Issue Letter",
-  "kind": "뷰티 정보",
-  "title": "파리에서 '한국식 히메 커트'가 유행 중",
-  "why_now": "보그가 다룬 해외 역유행 소재(K-헤어가 파리에서)",
-  "personal_color": "X",
-  "source": "보그 코리아",
-  "url": "https://www.vogue.co.kr/2026/09/17/%ec%98%ac%ea%b0%80%ec%9d%84-%ed%8c%8c%eb%a6%ac%ec%97%90%ec%84%9c-%ed%95%9c%ea%b5%ad%ec%8b%9d-%ed%9e%88%eb%a9%94-%ec%bb%a4%ed%8a%b8%ea%b0%80-%ec%9c%a0%ed%96%89%ed%95%98%ea%b3%a0-%ec%9e%88%ec%8a%b5/",
-  "purchase_needed": "X",
-  "image_source": "일러스트/도식",
-  "published": "2026-09-17"
  },
  {
   "date": "2026-10-11",

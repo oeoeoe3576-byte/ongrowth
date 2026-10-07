@@ -1,0 +1,50 @@
+{
+ "no": 13,
+ "date": "2026-10-09",
+ "slot": "PM",
+ "category": "Issue Letter",
+ "brand": "LOAFER",
+ "cover": {
+  "style": "photo",
+  "image": "img/cover_photo.jpg",
+  "focus": "center 20%",
+  "title": "가을에 손이 자주 갈 신발\n**결국 로퍼**"
+ },
+ "slides": [
+  {
+   "type": "html",
+   "name": "jeans",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">STYLE 01 · SHIRT & DENIM</div><h2>셔츠에 연청 데님<br/><span class=\"hl\">로퍼로 힘 빼기</span></h2><div class=\"vis illu\"><img src=\"img/illu_jeans.jpg\" alt=\"\"/><div class=\"lb\"><span>컬러 셔츠 + 연청 데님 + 레더 로퍼</span></div></div><p class=\"ds\">컬러감 있는 <b>오버사이즈 셔츠</b>에 연청 데님, 심플한 레더 로퍼. 나머지는 최대한 간결하게 정리하면 산뜻한 캐주얼 룩이 돼요.</p><div class=\"foot\">* 출처: 엘르 코리아</div>"
+  },
+  {
+   "type": "html",
+   "name": "skirt",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">STYLE 02 · SKIRT</div><h2>스커트에 따라<br/><span class=\"hl\">분위기가 달라져요</span></h2><div class=\"vis illu\"><img src=\"img/illu_skirt.jpg\" alt=\"\"/><div class=\"lb\"><span>성숙하게 · 미디스커트</span><span>쿨하게 · 미니스커트</span></div></div><ol><li><b>1</b><p><b>브이넥 니트 + 미디스커트</b>에 장식 있는 로퍼. 목걸이는 간결하게 하나만.</p></li><li><b>2</b><p><b>붙는 상의 + 미니스커트</b>에 체크 재킷을 걸치면 가을 분위기가 살아나요.</p></li></ol><div class=\"foot\">* 출처: 엘르 코리아</div>"
+  },
+  {
+   "type": "html",
+   "name": "anorak",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">STYLE 03 · CHECK ANORAK</div><h2>스포티한 아노락에도<br/><span class=\"hl\">의외로 찰떡</span></h2><div class=\"vis illu\"><img src=\"img/illu_anorak.jpg\" alt=\"\"/><div class=\"lb\"><span>체크 아노락 + 벌룬 팬츠 + 레드 백</span></div></div><p class=\"ds\">브라운·베이지로 <b>컬러를 맞추면</b> 단정한 데일리 룩. 벌룬 팬츠와 헤어밴드를 더하고, <b>선명한 레드 백</b> 하나로 생기를 줘요.</p><div class=\"foot\">* 출처: 엘르 코리아</div>"
+  },
+  {
+   "type": "html",
+   "name": "black",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">STYLE 04 · ALL BLACK & BOAT SHOES</div><h2>올블랙으로 시크하게<br/><span class=\"hl\">보트 슈즈로 산뜻하게</span></h2><div class=\"vis illu\"><img src=\"img/illu_black.jpg\" alt=\"\"/><div class=\"lb\"><span>올블랙 + 블랙 로퍼</span><span>화이트 원피스 + 보트 슈즈</span></div></div><ol><li><b>1</b><p>크롭 봄버 재킷에 워싱 데님, <b>이너·양말까지 블랙</b>으로 통일하고 장식 없는 블랙 로퍼.</p></li><li><b>2</b><p>레이스 디테일 <b>화이트 원피스</b>에 오버사이즈 데님 재킷, 발끝엔 보트 슈즈.</p></li></ol><div class=\"foot\">* 출처: 엘르 코리아</div>"
+  },
+  {
+   "type": "html",
+   "name": "tone",
+   "cls": "lt",
+   "html": "<div class=\"kicker\">PERSONAL COLOR TIP</div><h2>내 톤엔 어떤<br/><span class=\"hl\">로퍼 컬러?</span></h2><div class=\"tone\"><div><h3>쿨톤<small>차갑고 선명한 색</small></h3><div class=\"cs\"><div><i style=\"background:#1F1C1E\"></i><span>블랙</span></div><div><i style=\"background:#6B2333\"></i><span>버건디</span></div><div><i style=\"background:#5B5A5E\"></i><span>차콜</span></div></div></div><div><h3>웜톤<small>따뜻하고 부드러운 색</small></h3><div class=\"cs\"><div><i style=\"background:#6E4A33\"></i><span>초콜릿 브라운</span></div><div><i style=\"background:#B07A4F\"></i><span>카멜</span></div><div><i style=\"background:#C9A27C\"></i><span>탄</span></div></div></div></div><div class=\"tip\"><span>TIP</span>얼굴에서 먼 신발도 <b>가방·벨트와 색을 맞추면</b> 톤이 정돈돼 보여요.</div><div class=\"foot\">* 컬러칩은 이해를 돕기 위한 예시예요</div>"
+  }
+ ],
+ "ps": {
+  "label": "에디터의 한 줄 팁",
+  "note": "로퍼를 신는 날엔 청바지 밑단을 **발목이 살짝 보이게** 접어 보세요.\n훨씬 가볍고 가을다워 보여요.",
+  "credit": "참고: 엘르 코리아 · 컬러칩은 예시예요"
+ }
+}

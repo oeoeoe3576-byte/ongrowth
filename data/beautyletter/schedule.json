@@ -120,7 +120,8 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-08_pm_cheek",
     "title": "눈밑 블러셔 끝? 요즘은 볼 중앙 치크",
-    "status": "review"
+    "status": "approved",
+    "approved_at": "2026-10-07"
   },
   {
     "no": 12,
@@ -128,6 +129,7 @@
     "time": "08:30",
     "folder": "design/beauty_news/letters/2026-10-09_am_brow",
     "title": "우아한 '어른 여자' 눈썹, 꼬리 길이가 킥",
-    "status": "review"
+    "status": "approved",
+    "approved_at": "2026-10-07"
   }
 ]

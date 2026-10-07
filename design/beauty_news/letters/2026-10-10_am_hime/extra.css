@@ -59,3 +59,7 @@
 .lt .tone .cs i { width: 124px; height: 124px; margin-bottom: 14px; }
 .lt .tone .cs span { font-size: 25px; }
 .lt .tone + .tip { margin-top: 34px; }
+
+/* 일러스트 배경을 페이지 배경과 하나로 (박스·종이색 경계 없애기, 2026-10-07) */
+.card .vis.illu { background: transparent; border-radius: 0; overflow: visible; }
+.card .vis.illu img { mix-blend-mode: multiply; -webkit-mask-image: radial-gradient(ellipse 72% 78% at 50% 50%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 72% 78% at 50% 50%, #000 62%, transparent 100%); }

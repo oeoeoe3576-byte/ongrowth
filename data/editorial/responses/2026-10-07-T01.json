@@ -2,8 +2,8 @@
   "category": "marketing",
   "target": "블로그와 SNS로 직접 마케팅하는 1인 사업자·소상공인",
   "content_type": "INFO",
-  "page_count": 8,
-  "planning_note": "내용이 빈약하다는 피드백 반영: 한 줄 정리 삭제, 유형별 공식+전/후 예시, 복붙용 틀, 올리기 전 점검 추가(8장).",
+  "page_count": 6,
+  "planning_note": "장수는 줄이고 한 장에 더 담기: 공식 3가지 한 장, 전/후 3쌍 한 장, 틀+점검 한 장 (8장→6장).",
   "caption": "스레드는 첫 문장에서 멈추느냐 넘기느냐가 갈립니다. 인사 대신 이 3가지로 시작해 보세요.\n\n1) 질문형: 독자의 고민을 그대로 묻기\n2) 숫자형: 줄 수·시간으로 약속하기\n3) 반전형: 흔한 상식 뒤집기\n\n빈칸만 바꿔 쓰는 첫 문장 틀까지 정리했어요. 저장해 두고 다음 스레드 쓸 때 꺼내 보세요 📌",
   "hashtags": "#스레드마케팅 #스레드글쓰기 #첫문장 #SNS마케팅 #마케팅팁 #1인사업자",
   "pages": [
@@ -43,15 +43,16 @@
     },
     {
       "page_number": 3,
-      "page_role": "STEP",
-      "layout_type": "COMPARE",
-      "headline": "질문형: 고민을 그대로 묻기",
-      "subheadline": "공식 · 독자의 고민 + 물음표",
+      "page_role": "OVERVIEW",
+      "layout_type": "NUMBER_LIST",
+      "headline": "첫 줄 공식 3가지",
+      "subheadline": "질문 · 숫자 · 반전",
       "body": "",
       "visual_focus": "",
       "items": [
-        "전: 오늘 신메뉴를 소개합니다",
-        "후: **사장님, 매출이 왜 그대로일까요?**"
+        "질문: 고민 + 물음표",
+        "숫자: 줄 수 + 결과",
+        "반전: 흔한 말 + 아닙니다"
       ],
       "image_required": false,
       "image_type": "",
@@ -64,30 +65,17 @@
     {
       "page_number": 4,
       "page_role": "STEP",
-      "layout_type": "BIG_NUMBER",
-      "headline": "숫자형: **줄 수**로 약속하기",
-      "subheadline": "공식 · 줄 수·시간 + 결과",
-      "body": "'**3줄**이면 끝나는 스레드 첫 줄'처럼 읽는 데 드는 수고를 먼저 약속합니다.",
-      "visual_focus": "3줄",
-      "items": [],
-      "image_required": false,
-      "image_type": "",
-      "image_source": "",
-      "image_prompt": "",
-      "cta": "",
-      "source": "",
-      "fact_check": "NOT_REQUIRED"
-    },
-    {
-      "page_number": 5,
-      "page_role": "STEP",
       "layout_type": "COMPARE",
-      "headline": "반전형: 상식 뒤집기",
-      "subheadline": "공식 · 흔한 말 + 아닙니다",
+      "headline": "이렇게 바뀝니다",
+      "subheadline": "전 → 후, 3가지 한눈에",
       "body": "",
       "visual_focus": "",
       "items": [
+        "전: 오늘 신메뉴를 소개합니다",
+        "전: 스레드 잘 쓰는 법",
         "전: 스레드는 길게 쓰세요",
+        "후: **사장님, 매출이 왜 그대로일까요?**",
+        "후: **3줄이면 끝나는 첫 줄**",
         "후: **한 줄이면 충분합니다**"
       ],
       "image_required": false,
@@ -99,12 +87,12 @@
       "fact_check": "NOT_REQUIRED"
     },
     {
-      "page_number": 6,
-      "page_role": "INFORMATION",
+      "page_number": 5,
+      "page_role": "SUMMARY",
       "layout_type": "NUMBER_LIST",
-      "headline": "바로 쓰는 첫 문장 틀",
-      "subheadline": "빈칸만 바꿔서 쓰세요",
-      "body": "",
+      "headline": "바로 쓰는 첫 줄 틀",
+      "subheadline": "빈칸만 바꿔 쓰세요",
+      "body": "올리기 전 확인: 인사 빼기, 한 가지만, 궁금하게",
       "visual_focus": "",
       "items": [
         "사장님, 왜 ○○할까요?",
@@ -120,28 +108,7 @@
       "fact_check": "NOT_REQUIRED"
     },
     {
-      "page_number": 7,
-      "page_role": "SUMMARY",
-      "layout_type": "THREE_COLUMN",
-      "headline": "올리기 전 점검",
-      "subheadline": "3가지만 확인하세요",
-      "body": "",
-      "visual_focus": "",
-      "items": [
-        "인사: 인사로 안 시작했나",
-        "한 줄: 한 가지만 말했나",
-        "궁금증: 다음 줄이 궁금한가"
-      ],
-      "image_required": false,
-      "image_type": "",
-      "image_source": "",
-      "image_prompt": "",
-      "cta": "",
-      "source": "",
-      "fact_check": "NOT_REQUIRED"
-    },
-    {
-      "page_number": 8,
+      "page_number": 6,
       "page_role": "CTA",
       "layout_type": "FOLLOW",
       "headline": "스레드 **마케팅 공식**을\n알려드려요",

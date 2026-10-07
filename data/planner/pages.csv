@@ -1235,3 +1235,37 @@ CN-20261007-005,4,INFORMATION,TEXT,포항국제불빛축제,영일대해수욕�
 CN-20261007-005,5,SUMMARY,NUMBER_LIST,불꽃축제 날짜 **한눈에**,,,,여수밤바다 불꽃축제 · 10/31 | 부산불꽃축제 · 11/7 | 포항국제불빛축제 · 11/19~21,FALSE,,,,,관광공사 축제 목록,NEEDS_CHECK
 CN-20261007-005,6,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261008-001,1,HOOK,PHOTO_COVER,"먹으러 가는
+**가을 축제 4곳**",이번 주 어디감?,맥주·젓갈·사과·김치 날짜 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-F03c/01.jpg,,,,NOT_REQUIRED
+CN-20261008-001,2,INFORMATION,TEXT,독일마을 맥주축제,남해 바다 보며 마시는 맥주,"📍 경남 남해군 삼동면 독일로 89-7 남해독일마을
+📅 10/9(금)~10/11(일)
+💰 입장 무료",,,TRUE,PHOTO,data/images/travel/tmp-F03a/01.jpg,,,https://www.trvlogue.com/ko/namhae-german-beer-festival,NEEDS_CHECK
+CN-20261008-001,3,INFORMATION,TEXT,강경젓갈축제,국내 젓갈 시장이 서는 금강 둔치,"📍 충남 논산시 강경읍 황산리 198 강경 금강둔치 일원
+📅 10/15(목)~10/18(일)
+💰 입장 무료",,,TRUE,PHOTO,data/images/travel/tmp-F03b/02.jpg,,,https://www.mcst.go.kr/site/s_culture/festival/festivalView.jsp?pSeq=12853,NEEDS_CHECK
+CN-20261008-001,4,INFORMATION,TEXT,문경사과축제,문경새재에서 만나는 가을 사과,"📍 경북 문경시 문경읍 새재로 932 문경새재 일원
+📅 10/17(토)~11/1(일)
+💰 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F03c/02.jpg,,,https://kbmaeil.com/article/20260928500243,NEEDS_CHECK
+CN-20261008-001,5,INFORMATION,TEXT,광주김치축제,김치와 김장 문화를 한자리에서,"📍 광주 서구 내방로 111 김대중컨벤션센터
+📅 10/23(금)~10/25(일)
+💰 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F03d/02.jpg,,,https://www.ktriptips.com/kor/festival/604097,NEEDS_CHECK
+CN-20261008-001,6,SUMMARY,NUMBER_LIST,축제 날짜 **한눈에**,,,,독일마을 맥주축제 · 10/9~11 | 강경젓갈축제 · 10/15~18 | 문경사과축제 · 10/17~11/1 | 광주김치축제 · 10/23~25,FALSE,,,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261008-001,7,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261008-002,1,HOOK,PHOTO_COVER,"먹으러 가는
+**가을 축제 4곳**",이번 주 어디감?,맥주·젓갈·사과·김치 날짜 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-F03a/02.jpg,,,,NOT_REQUIRED
+CN-20261008-002,2,INFORMATION,TEXT,독일마을 맥주축제,남해 바다 보며 마시는 맥주,"📍 경남 남해군 삼동면 독일로 89-7 남해독일마을
+📅 10/9(금)~10/11(일)
+💰 입장 무료",,,TRUE,PHOTO,data/images/travel/tmp-F03a/01.jpg,,,https://www.trvlogue.com/ko/namhae-german-beer-festival,NEEDS_CHECK
+CN-20261008-002,3,INFORMATION,TEXT,강경젓갈축제,국내 젓갈 시장이 서는 금강 둔치,"📍 충남 논산시 강경읍 황산리 198 강경 금강둔치 일원
+📅 10/15(목)~10/18(일)
+💰 입장 무료",,,TRUE,PHOTO,data/images/travel/tmp-F03b/02.jpg,,,https://www.mcst.go.kr/site/s_culture/festival/festivalView.jsp?pSeq=12853,NEEDS_CHECK
+CN-20261008-002,4,INFORMATION,TEXT,문경사과축제,문경새재에서 만나는 가을 사과,"📍 경북 문경시 문경읍 새재로 932 문경새재 일원
+📅 10/17(토)~11/1(일)
+💰 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F03c/02.jpg,,,https://kbmaeil.com/article/20260928500243,NEEDS_CHECK
+CN-20261008-002,5,INFORMATION,TEXT,광주김치축제,김치와 김장 문화를 한자리에서,"📍 광주 서구 내방로 111 김대중컨벤션센터
+📅 10/23(금)~10/25(일)
+💰 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F03d/02.jpg,,,https://www.ktriptips.com/kor/festival/604097,NEEDS_CHECK
+CN-20261008-002,6,SUMMARY,NUMBER_LIST,축제 날짜 **한눈에**,,,,독일마을 맥주축제 · 10/9~11 | 강경젓갈축제 · 10/15~18 | 문경사과축제 · 10/17~11/1 | 광주김치축제 · 10/23~25,FALSE,,,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261008-002,7,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

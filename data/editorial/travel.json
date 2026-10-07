@@ -109,8 +109,9 @@
       "channel": "festival",
       "topic": "먹으러 가는 가을 먹거리 축제",
       "angle": "지역 특산물 축제. 날짜·장소 공식 확인",
-      "status": "reserved",
-      "date": "2026-10-08"
+      "status": "planned",
+      "date": "2026-10-08",
+      "content_id": "CN-20261008-002"
     },
     {
       "id": "F04",

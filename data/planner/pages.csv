@@ -1164,8 +1164,9 @@ CN-20261007-001,1,HOOK,PHOTO_COVER,"스레드 첫 문장,
 **이 3가지**만 쓰세요",그대로 가져다 쓰는 예시까지 정리했어요,,,,TRUE,PHOTO,data/photos/2026-10-07-T01-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
 CN-20261007-001,2,PROBLEM,IMAGE_TEXT,"열심히 쓴 스레드,
 **왜 안 읽힐까요?**",범인은 '안녕하세요'로 시작한 첫 줄,,,,TRUE,ICON,data/photos/ill-bored-phone.png,,,직접 제작 일러스트,NOT_REQUIRED
-CN-20261007-001,3,OVERVIEW,NUMBER_LIST,첫 줄 공식 3가지,질문 · 숫자 · 반전,,,질문: 고민 + 물음표 | 숫자: 줄 수 + 결과 | 반전: 흔한 말 + 아닙니다,FALSE,,,,,,NOT_REQUIRED
-CN-20261007-001,4,STEP,COMPARE,이렇게 바뀝니다,"전 → 후, 3가지 한눈에",,,"전: 오늘 신메뉴를 소개합니다 | 전: 스레드 잘 쓰는 법 | 전: 스레드는 길게 쓰세요 | 후: **사장님, 매출이 왜 그대로일까요?** | 후: **3줄이면 끝나는 첫 줄** | 후: **한 줄이면 충분합니다**",FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,3,OVERVIEW,NUMBER_LIST,첫 줄 공식 3가지,질문 · 숫자 · 반전,,,질문: 왜 그대로일까요? | 숫자: 3줄이면 끝나는 첫 줄 | 반전: 한 줄이면 충분합니다,FALSE,,,,,,NOT_REQUIRED
+CN-20261007-001,4,STEP,IMAGE_TEXT,"첫 줄만 바꾸면
+이렇게 달라 보여요","전 → 후, 같은 내용 다른 첫 줄",,,,TRUE,SCREENSHOT,data/photos/threads-mock.png,,,직접 제작 예시 화면,NOT_REQUIRED
 CN-20261007-001,5,SUMMARY,NUMBER_LIST,바로 쓰는 첫 줄 틀,빈칸만 바꿔 쓰세요,"올리기 전 확인: 인사 빼기, 한 가지만, 궁금하게",,"사장님, 왜 ○○할까요? | ○○, 3줄이면 끝납니다 | ○○는 틀렸습니다",FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,6,CTA,FOLLOW,"스레드 **마케팅 공식**을
 알려드려요",,저장해두고 첫 줄 쓸 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED

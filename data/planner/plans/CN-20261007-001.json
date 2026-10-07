@@ -53,9 +53,9 @@
         "body": "",
         "visual_focus": "",
         "items": [
-          "질문: 고민 + 물음표",
-          "숫자: 줄 수 + 결과",
-          "반전: 흔한 말 + 아닙니다"
+          "질문: 왜 그대로일까요?",
+          "숫자: 3줄이면 끝나는 첫 줄",
+          "반전: 한 줄이면 충분합니다"
         ],
         "image_required": false,
         "image_type": "",
@@ -68,25 +68,18 @@
       {
         "page_number": 4,
         "page_role": "STEP",
-        "layout_type": "COMPARE",
-        "headline": "이렇게 바뀝니다",
-        "subheadline": "전 → 후, 3가지 한눈에",
+        "layout_type": "IMAGE_TEXT",
+        "headline": "첫 줄만 바꾸면\n이렇게 달라 보여요",
+        "subheadline": "전 → 후, 같은 내용 다른 첫 줄",
         "body": "",
         "visual_focus": "",
-        "items": [
-          "전: 오늘 신메뉴를 소개합니다",
-          "전: 스레드 잘 쓰는 법",
-          "전: 스레드는 길게 쓰세요",
-          "후: **사장님, 매출이 왜 그대로일까요?**",
-          "후: **3줄이면 끝나는 첫 줄**",
-          "후: **한 줄이면 충분합니다**"
-        ],
-        "image_required": false,
-        "image_type": "",
-        "image_source": "",
+        "items": [],
+        "image_required": true,
+        "image_type": "SCREENSHOT",
+        "image_source": "data/photos/threads-mock.png",
         "image_prompt": "",
         "cta": "",
-        "source": "",
+        "source": "직접 제작 예시 화면",
         "fact_check": "NOT_REQUIRED"
       },
       {

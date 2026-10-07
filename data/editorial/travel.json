@@ -263,8 +263,9 @@
       "channel": "info",
       "topic": "10월 전국 불꽃축제 일정 모음",
       "angle": "부산 외에 다른 지역 불꽃축제도 날짜·장소 공식 확인해서 묶기",
-      "status": "reserved",
-      "date": "2026-10-07"
+      "status": "planned",
+      "date": "2026-10-07",
+      "content_id": "CN-20261007-005"
     },
     {
       "id": "I08",

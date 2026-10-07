@@ -67,7 +67,8 @@
       "channel": "blog",
       "topic": "블로그 글 뼈대 템플릿",
       "angle": "문제 → 해결 → 근거 → 행동 4단 구조",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-08"
     },
     {
       "id": "B05",

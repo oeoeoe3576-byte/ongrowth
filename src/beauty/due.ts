@@ -32,36 +32,36 @@ if (args.includes("--list")) {
   process.exit(0);
 }
 
-// 발행 시각이 지난 지 LATE_MIN분이 넘은 승인 레터는 늦게 올리지 않고 다음 빈 시간(08:30/20:30)으로 미룬다.
-// 한 번 실행에 최대 1개만 올린다 (한꺼번에 여러 개 올리기 금지, 2026-10-07 사용자 지시).
+// 발행 시각을 LATE_MIN분 넘게 놓친 레터가 있으면, 늦게 올리지 않고 아직 안 올라간 레터 전체를
+// 순서 그대로 한 칸씩 뒤로 민다(08:30/20:30 슬롯을 하나도 건너뛰지 않음). 실행 1번에 최대 1개만 올린다.
+// (2026-10-07 사용자 지시: 한 번에 여러 개 금지, 밀리면 뒤 일정도 한 칸씩)
 const LATE_MIN = 60;
 const SLOTS = ["08:30", "20:30"];
-const taken = new Set(items.filter((x) => x.status !== "published").map((x) => `${x.date} ${x.time}`));
-function nextFreeSlot(after: Date): [string, string] {
-  const d = new Date(after.getTime());
-  for (let i = 0; i < 60; i++) {
-    const day = new Date(d.getTime() + i * 86400000).toISOString().slice(0, 10);
-    for (const t of SLOTS) {
-      const at = new Date(`${day}T${t}:00Z`);
-      if (at.getTime() - EARLY_MIN * 60000 <= after.getTime()) continue;
-      if (taken.has(`${day} ${t}`)) continue;
-      taken.add(`${day} ${t}`);
-      return [day, t];
+function slotAt(day: string, t: string): Date { return new Date(`${day}T${t}:00Z`); }
+// 지금 올릴 수 있는 슬롯(발행 10분 전 ~ 60분 후) 또는 그 다음 슬롯부터 차례로
+function* slotsFrom(t: Date) {
+  for (let i = -1; i < 400; i++) {
+    const day = new Date(t.getTime() + i * 86400000).toISOString().slice(0, 10);
+    for (const s of SLOTS) {
+      const at = slotAt(day, s);
+      if (t.getTime() - at.getTime() > LATE_MIN * 60000) continue;
+      yield [day, s] as [string, string];
     }
   }
-  throw new Error("빈 발행 시간을 찾지 못함");
 }
-let moved = false;
-for (const it of [...items].sort((a, b) => dueAt(a).getTime() - dueAt(b).getTime())) {
-  if (it.status !== "approved") continue;
-  if (now.getTime() - dueAt(it).getTime() > LATE_MIN * 60000) {
-    taken.delete(`${it.date} ${it.time}`);
-    const [d, t] = nextFreeSlot(now);
-    console.log(`시간 지나서 미룸: No.${it.no} ${it.date} ${it.time} → ${d} ${t} ${it.title}`);
-    it.date = d; it.time = t; moved = true;
+const pending = items.filter((x) => x.status === "approved" || x.status === "review").sort((a, b) => dueAt(a).getTime() - dueAt(b).getTime());
+const missed = pending.some((x) => x.status === "approved" && now.getTime() - dueAt(x).getTime() > LATE_MIN * 60000);
+if (missed) {
+  const gen = slotsFrom(now);
+  for (const it of pending) {
+    const [d, t] = gen.next().value as [string, string];
+    if (it.date !== d || it.time !== t) {
+      console.log(`한 칸 미룸: No.${it.no} ${it.date} ${it.time} → ${d} ${t} ${it.title}`);
+      it.date = d; it.time = t;
+    }
   }
+  if (!args.includes("--dry-run")) fs.writeFileSync(FILE, JSON.stringify(items, null, 2) + "\n");
 }
-if (moved && !args.includes("--dry-run")) fs.writeFileSync(FILE, JSON.stringify(items, null, 2) + "\n");
 
 const due = items
   .filter((it) => it.status === "approved" && dueAt(it).getTime() - EARLY_MIN * 60000 <= now.getTime())

@@ -124,8 +124,10 @@
     "time": "08:30",
     "folder": "design/beauty_news/letters/2026-10-08_pm_cheek",
     "title": "눈밑 블러셔 끝? 요즘은 볼 중앙 치크",
-    "status": "approved",
-    "approved_at": "2026-10-07"
+    "status": "published",
+    "approved_at": "2026-10-07",
+    "media_id": "18488700364108953",
+    "published_at": "2026-10-08T23:27:42.046Z"
   },
   {
     "no": 12,

@@ -110,11 +110,13 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-06_pm_bang",
     "title": "올가을 앞머리·단발, 끝선이 다 했다",
-    "status": "approved",
+    "status": "published",
     "approved_at": "2026-10-07",
     "archived_media_id": "18071587433752613",
     "archived_published_at": "2026-10-06T15:10:36.805Z",
-    "note": "1차 발행분 보관 처리 후 재발행 (2026-10-07 사용자 지시)"
+    "note": "1차 발행분 보관 처리 후 재발행 (2026-10-07 사용자 지시)",
+    "media_id": "18136030471643946",
+    "published_at": "2026-10-08T11:27:48.713Z"
   },
   {
     "no": 11,

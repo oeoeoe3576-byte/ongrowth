@@ -42,7 +42,7 @@
       "channel": "stay",
       "topic": "단풍 명소 바로 옆, 가을에 묵기 좋은 숙소",
       "angle": "아침 일찍 단풍길을 걷기 좋은 위치 중심. 지역별 1곳씩",
-      "status": "todo"
+      "status": "pending"
     },
     {
       "id": "S02",
@@ -61,8 +61,9 @@
       "channel": "stay",
       "topic": "바다 보며 쉬는 가을 오션뷰 숙소",
       "angle": "사람 적은 가을 바다. 동해·남해·서해 고르게",
-      "status": "reserved",
-      "date": "2026-10-06"
+      "status": "planned",
+      "date": "2026-10-11",
+      "content_id": "CN-20261009-001"
     },
     {
       "id": "S04",
@@ -165,8 +166,9 @@
       "channel": "course",
       "topic": "경주 가을 1박 2일 코스",
       "angle": "걷기 좋은 동선, 야경 포함",
-      "status": "reserved",
-      "date": "2026-10-09"
+      "status": "planned",
+      "date": "2026-10-09",
+      "content_id": "CN-20261009-005"
     },
     {
       "id": "C05",
@@ -229,7 +231,9 @@
       "channel": "info",
       "topic": "지금 서울에서 볼 만한 전시 5곳",
       "angle": "전시 기간·휴관일·관람료 공식 확인",
-      "status": "todo"
+      "status": "planned",
+      "date": "2026-10-10",
+      "content_id": "CN-20261009-006"
     },
     {
       "id": "I03",

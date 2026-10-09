@@ -1269,3 +1269,122 @@ CN-20261008-002,5,INFORMATION,TEXT,광주김치축제,김치와 김장 문화를
 CN-20261008-002,6,SUMMARY,NUMBER_LIST,축제 날짜 **한눈에**,,,,독일마을 맥주축제 · 10/9~11 | 강경젓갈축제 · 10/15~18 | 문경사과축제 · 10/17~11/1 | 광주김치축제 · 10/23~25,FALSE,,,,,관광공사 축제 목록,NEEDS_CHECK
 CN-20261008-002,7,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261009-001,1,HOOK,PHOTO_COVER,"바다가 보이는
+**가을 오션뷰 숙소 3곳**",이번 주 어디감?,동해 · 서해 · 남해 한 곳씩 📌,,,TRUE,PHOTO,data/images/travel/tmp-S03/ri1.jpg,,,,NOT_REQUIRED
+CN-20261009-001,2,INFORMATION,TEXT,씨마크호텔,경포 앞바다를 마주한 호텔,"📍 강원 강릉시 해안로406번길 2
+🗓 동해 · 강릉
+💡 객실·가격은 변동될 수 있어요",,,TRUE,PHOTO,data/images/travel/tmp-S03g/01.jpg,,,https://www.seamarqhotel.com/,NEEDS_CHECK
+CN-20261009-001,3,INFORMATION,TEXT,아일랜드 리솜,꽃지 앞바다 일몰을 보는 리조트,"📍 충남 태안군 안면읍 꽃지해안로 204
+🗓 서해 · 안면도
+💡 객실·가격은 변동될 수 있어요",,,TRUE,PHOTO,data/images/travel/tmp-S03/ri0.jpg,,,https://nol.yanolja.com/stay/domestic/10054607,NEEDS_CHECK
+CN-20261009-001,4,INFORMATION,TEXT,남해 은모래펜션,상주은모래비치 바로 앞 숙소,"📍 경남 남해군 상주면 남해대로701번길 21
+🗓 남해 · 상주
+💡 객실·가격은 변동될 수 있어요",,,TRUE,PHOTO,data/images/travel/tmp-S03/eg3.jpg,,,http://www.enmorae.co.kr/21,NEEDS_CHECK
+CN-20261009-001,5,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261009-002,1,HOOK,PHOTO_COVER,"경주 가을 1박 2일
+**동선 그대로 6곳**",이번 주 어디감?,1일차 3곳 · 2일차 2곳 + 야경 📌,,,TRUE,PHOTO,data/images/travel/tmp-C04e/01.jpg,,,,NOT_REQUIRED
+CN-20261009-002,2,INFORMATION,TEXT,교촌마을,한옥 골목으로 시작하는 1일차,"📍 경북 경주시 교동 일대
+🗓 1일차 · 점심 이후
+🚶 고택과 한옥 골목 산책",,,TRUE,PHOTO,data/images/travel/tmp-C04a/01.jpg,,,https://www.gyeongju.go.kr/webzine/GJstory/vol163/html/post/4206.html,NEEDS_CHECK
+CN-20261009-002,3,INFORMATION,TEXT,대릉원,고분 사이를 걷는 산책길,"📍 경북 경주시 계림로 9
+🗓 1일차 · 오후
+🚶 천마총 · 미추왕릉 등 고분 23기",,,TRUE,PHOTO,data/images/travel/tmp-C04b/01.jpg,,,https://kbmaeil.com/article/202306040363667,NEEDS_CHECK
+CN-20261009-002,4,INFORMATION,TEXT,첨성대,대릉원에서 걸어서 이어지는 코스,"📍 경북 경주시 첨성로 169
+🗓 1일차 · 해 지기 전
+🚶 대릉원과 같은 동선",,,TRUE,PHOTO,data/images/travel/tmp-C04c/01.jpg,,,https://kbmaeil.com/article/202402070384222,NEEDS_CHECK
+CN-20261009-002,5,INFORMATION,TEXT,동궁과 월지,밤에 더 예쁜 신라 별궁 연못,"📍 경북 경주시 원화로 102
+🗓 1일차 · 저녁 야경
+💡 야간 조명은 운영 시간 확인",,,TRUE,PHOTO,data/images/travel/tmp-C04d/02.jpg,,,https://kbmaeil.com/article/201907310257200,NEEDS_CHECK
+CN-20261009-002,6,INFORMATION,TEXT,불국사,"2일차 아침, 단풍 물드는 천년 사찰","📍 경북 경주시 불국로 385
+🗓 2일차 · 오전
+🍁 다보탑 · 청운교 · 백운교",,,TRUE,PHOTO,data/images/travel/tmp-C04g/01.jpg,,,https://www.gyeongju.go.kr/webzine/GJstory/vol151/html/sub1-3.html,NEEDS_CHECK
+CN-20261009-002,7,INFORMATION,TEXT,보문호,마지막은 호수 산책으로,"📍 경북 경주시 신평동 보문관광단지
+🗓 2일차 · 오후
+🚶 호수 둘레 천천히 걷기",,,TRUE,PHOTO,data/images/travel/tmp-C04f/01.jpg,,,https://korean.visitkorea.or.kr/,NEEDS_CHECK
+CN-20261009-002,8,SUMMARY,NUMBER_LIST,경주 1박 2일 **동선 한눈에**,,,,1일차 · 교촌 → 대릉원 → 첨성대 → 월지 | 2일차 · 불국사 → 보문호,FALSE,,,,,관광공사 포토코리아,NEEDS_CHECK
+CN-20261009-002,9,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261009-003,1,HOOK,PHOTO_COVER,"지금 서울에서
+**볼 만한 전시 5곳**",이번 주 어디감?,종료일까지 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I02c/01.jpg,,,,NOT_REQUIRED
+CN-20261009-003,2,INFORMATION,TEXT,서도호 개인전,국립현대미술관 서울관 대규모 회고전,"📍 서울 종로구 삼청로 30 국립현대미술관 서울관
+📅 ~2027/2/9
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02e/01.jpg,,,https://mobile.newsis.com/view/NISX20260105_0003465960,NEEDS_CHECK
+CN-20261009-003,3,INFORMATION,TEXT,구정아 우스모스,리움미술관 참여형 대형 설치,"📍 서울 용산구 이태원로55길 60-16 리움미술관
+📅 ~12/27
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02f/01.jpg,,,https://www.frieze.com/ko/article/must-see-museum-exhibitions-seoul-during-frieze-week-2026,NEEDS_CHECK
+CN-20261009-003,4,INFORMATION,TEXT,웨인 티보 전,DDP 뮤지엄 The Order of Things,"📍 서울 중구 을지로 281 동대문디자인플라자
+📅 ~2027/2/21
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02d/01.jpg,,,https://mediahub.seoul.go.kr/archives/2015428,NEEDS_CHECK
+CN-20261009-003,5,INFORMATION,TEXT,유영국: 산은 내 안에 있다,서울시립미술관 서소문본관,"📍 서울 중구 덕수궁길 61 서울시립미술관
+📅 ~10/25
+⏰ 곧 끝나요",,,TRUE,PHOTO,data/images/travel/tmp-I02a/01.jpg,,,https://sema.seoul.go.kr/,NEEDS_CHECK
+CN-20261009-003,6,INFORMATION,TEXT,우리들의 밥상,국립중앙박물관 특별전,"📍 서울 용산구 서빙고로 137 국립중앙박물관
+📅 ~10/25
+⏰ 곧 끝나요",,,TRUE,PHOTO,data/images/travel/tmp-I02b/02.jpg,,,https://www.museum.go.kr/MUSEUM/contents/M0202010000.do?menuId=current,NEEDS_CHECK
+CN-20261009-003,7,SUMMARY,NUMBER_LIST,전시 종료일 **한눈에**,,,,유영국 · 10/25 종료 | 우리들의 밥상 · 10/25 종료 | 구정아 우스모스 · 12/27 종료 | 서도호 · 2027/2/9 종료 | 웨인 티보 · 2027/2/21 종료,FALSE,,,,,각 기관 공식 안내,NEEDS_CHECK
+CN-20261009-003,8,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261009-004,1,HOOK,PHOTO_COVER,"지금 서울에서
+**볼 만한 전시 5곳**",이번 주 어디감?,종료일까지 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I02c/01.jpg,,,,NOT_REQUIRED
+CN-20261009-004,2,INFORMATION,TEXT,서도호 개인전,국립현대미술관 서울관 대규모 회고전,"📍 서울 종로구 삼청로 30 국립현대미술관 서울관
+📅 ~2027/2/9
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02e/01.jpg,,,https://mobile.newsis.com/view/NISX20260105_0003465960,NEEDS_CHECK
+CN-20261009-004,3,INFORMATION,TEXT,구정아 우스모스,리움미술관 참여형 대형 설치,"📍 서울 용산구 이태원로55길 60-16 리움미술관
+📅 ~12/27
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02f/01.jpg,,,https://www.frieze.com/ko/article/must-see-museum-exhibitions-seoul-during-frieze-week-2026,NEEDS_CHECK
+CN-20261009-004,4,INFORMATION,TEXT,웨인 티보 전,DDP 뮤지엄 The Order of Things,"📍 서울 중구 을지로 281 동대문디자인플라자
+📅 ~2027/2/21
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02d/01.jpg,,,https://mediahub.seoul.go.kr/archives/2015428,NEEDS_CHECK
+CN-20261009-004,5,INFORMATION,TEXT,유영국: 산은 내 안에 있다,서울시립미술관 서소문본관,"📍 서울 중구 덕수궁길 61 서울시립미술관
+📅 ~10/25
+⏰ 곧 끝나요",,,TRUE,PHOTO,data/images/travel/tmp-I02a/01.jpg,,,https://sema.seoul.go.kr/,NEEDS_CHECK
+CN-20261009-004,6,INFORMATION,TEXT,우리들의 밥상,국립중앙박물관 특별전,"📍 서울 용산구 서빙고로 137 국립중앙박물관
+📅 ~10/25
+⏰ 곧 끝나요",,,TRUE,PHOTO,data/images/travel/tmp-I02b/02.jpg,,,https://www.museum.go.kr/MUSEUM/contents/M0202010000.do?menuId=current,NEEDS_CHECK
+CN-20261009-004,7,SUMMARY,NUMBER_LIST,종료일 **한눈에**,,,,유영국 · 10/25 | 우리들의 밥상 · 10/25 | 구정아 · 12/27 | 서도호 · 2/9 | 웨인 티보 · 2/21,FALSE,,,,,각 기관 공식 안내,NEEDS_CHECK
+CN-20261009-004,8,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261009-005,1,HOOK,PHOTO_COVER,"경주 가을 1박 2일
+**동선 그대로 6곳**",이번 주 어디감?,1일차 4곳 · 2일차 2곳 📌,,,TRUE,PHOTO,data/images/travel/tmp-C04e/01.jpg,,,,NOT_REQUIRED
+CN-20261009-005,2,INFORMATION,TEXT,교촌마을,한옥 골목으로 시작하는 1일차,"📍 경북 경주시 교동 일대
+🗓 1일차 · 점심 이후
+🚶 고택과 한옥 골목 산책",,,TRUE,PHOTO,data/images/travel/tmp-C04a/01.jpg,,,https://www.gyeongju.go.kr/webzine/GJstory/vol163/html/post/4206.html,NEEDS_CHECK
+CN-20261009-005,3,INFORMATION,TEXT,대릉원,고분 사이를 걷는 산책길,"📍 경북 경주시 계림로 9
+🗓 1일차 · 오후
+🚶 천마총 · 미추왕릉 등 고분 23기",,,TRUE,PHOTO,data/images/travel/tmp-C04b/01.jpg,,,https://kbmaeil.com/article/202306040363667,NEEDS_CHECK
+CN-20261009-005,4,INFORMATION,TEXT,첨성대,대릉원에서 걸어서 이어지는 코스,"📍 경북 경주시 첨성로 169
+🗓 1일차 · 해 지기 전
+🚶 대릉원과 같은 동선",,,TRUE,PHOTO,data/images/travel/tmp-C04c/01.jpg,,,https://kbmaeil.com/article/202402070384222,NEEDS_CHECK
+CN-20261009-005,5,INFORMATION,TEXT,동궁과 월지,밤에 더 예쁜 신라 별궁 연못,"📍 경북 경주시 원화로 102
+🗓 1일차 · 저녁 야경
+💡 야간 조명은 운영 시간 확인",,,TRUE,PHOTO,data/images/travel/tmp-C04d/02.jpg,,,https://kbmaeil.com/article/201907310257200,NEEDS_CHECK
+CN-20261009-005,6,INFORMATION,TEXT,불국사,"2일차 아침, 천년 사찰 산책","📍 경북 경주시 불국로 385
+🗓 2일차 · 오전
+🚶 다보탑 · 청운교 · 백운교",,,TRUE,PHOTO,data/images/travel/tmp-C04g/01.jpg,,,https://www.gyeongju.go.kr/webzine/GJstory/vol151/html/sub1-3.html,NEEDS_CHECK
+CN-20261009-005,7,INFORMATION,TEXT,보문호,마지막은 호수 산책으로,"📍 경북 경주시 신평동 보문관광단지
+🗓 2일차 · 오후
+🚶 호수 둘레 천천히 걷기",,,TRUE,PHOTO,data/images/travel/tmp-C04f/01.jpg,,,https://korean.visitkorea.or.kr/,NEEDS_CHECK
+CN-20261009-005,8,SUMMARY,NUMBER_LIST,경주 1박 2일 **동선 한눈에**,,,,1일차 · 교촌 → 대릉원 → 첨성대 → 월지 | 2일차 · 불국사 → 보문호,FALSE,,,,,관광공사 포토코리아,NEEDS_CHECK
+CN-20261009-005,9,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261009-006,1,HOOK,PHOTO_COVER,"지금 서울에서
+**볼 만한 전시 5곳**",이번 주 어디감?,종료일까지 저장 📌,,,TRUE,PHOTO,data/images/travel/tmp-I02c/01.jpg,,,,NOT_REQUIRED
+CN-20261009-006,2,INFORMATION,TEXT,서도호 개인전,국립현대미술관 서울관 대규모 회고전,"📍 서울 종로구 삼청로 30 국립현대미술관 서울관
+📅 ~2027/2/9
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02e/01.jpg,,,https://mobile.newsis.com/view/NISX20260105_0003465960,NEEDS_CHECK
+CN-20261009-006,3,INFORMATION,TEXT,구정아 우스모스,리움미술관 참여형 대형 설치,"📍 서울 용산구 이태원로55길 60-16 리움미술관
+📅 ~12/27
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02f/01.jpg,,,https://www.frieze.com/ko/article/must-see-museum-exhibitions-seoul-during-frieze-week-2026,NEEDS_CHECK
+CN-20261009-006,4,INFORMATION,TEXT,웨인 티보 전,DDP 뮤지엄 The Order of Things,"📍 서울 중구 을지로 281 동대문디자인플라자
+📅 ~2027/2/21
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I02h/01.jpg,,,https://mediahub.seoul.go.kr/archives/2015428,NEEDS_CHECK
+CN-20261009-006,5,INFORMATION,TEXT,유영국: 산은 내 안에 있다,서울시립미술관 서소문본관,"📍 서울 중구 덕수궁길 61 서울시립미술관
+📅 ~10/25
+⏰ 곧 끝나요",,,TRUE,PHOTO,data/images/travel/tmp-I02a/01.jpg,,,https://sema.seoul.go.kr/,NEEDS_CHECK
+CN-20261009-006,6,INFORMATION,TEXT,우리들의 밥상,국립중앙박물관 특별전,"📍 서울 용산구 서빙고로 137 국립중앙박물관
+📅 ~10/25
+⏰ 곧 끝나요",,,TRUE,PHOTO,data/images/travel/tmp-I02b/02.jpg,,,https://www.museum.go.kr/MUSEUM/contents/M0202010000.do?menuId=current,NEEDS_CHECK
+CN-20261009-006,7,SUMMARY,NUMBER_LIST,종료일 **한눈에**,,,,유영국·우리들의 밥상 · 10/25 | 구정아 · 12/27 | 서도호 · 내년 2/9 | 웨인 티보 · 내년 2/21,FALSE,,,,,각 기관 공식 안내,NEEDS_CHECK
+CN-20261009-006,8,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

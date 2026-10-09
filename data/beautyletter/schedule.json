@@ -135,8 +135,10 @@
     "time": "20:30",
     "folder": "design/beauty_news/letters/2026-10-09_am_brow",
     "title": "우아한 '어른 여자' 눈썹, 꼬리 길이가 킥",
-    "status": "approved",
-    "approved_at": "2026-10-07"
+    "status": "published",
+    "approved_at": "2026-10-07",
+    "media_id": "17904530973665986",
+    "published_at": "2026-10-09T11:28:24.663Z"
   },
   {
     "no": 13,

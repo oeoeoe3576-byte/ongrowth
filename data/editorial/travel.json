@@ -189,7 +189,9 @@
       "channel": "season",
       "topic": "지금 단풍 어디까지 왔을까",
       "angle": "산·지역별 단풍 시작·절정 예상 시기. 기상청·산림청 등 공식 자료로 확인",
-      "status": "todo"
+      "status": "planned",
+      "date": "2026-10-12",
+      "content_id": "CN-20261012-001"
     },
     {
       "id": "N02",

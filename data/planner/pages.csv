@@ -1389,3 +1389,20 @@ CN-20261009-006,6,INFORMATION,TEXT,우리들의 밥상,국립중앙박물관 특
 CN-20261009-006,7,SUMMARY,NUMBER_LIST,종료일 **한눈에**,,,,유영국·우리들의 밥상 · 10/25 | 구정아 · 12/27 | 서도호 · 내년 2/9 | 웨인 티보 · 내년 2/21,FALSE,,,,,각 기관 공식 안내,NEEDS_CHECK
 CN-20261009-006,8,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261012-001,1,HOOK,PHOTO_COVER,"단풍 절정 예측
+**대표 4곳 날짜순**",이번 주 어디감?,산림청 예측 · 10/20부터 📌,,,TRUE,PHOTO,data/images/travel/tmp-N01c/01.jpg,,,,NOT_REQUIRED
+CN-20261012-001,2,INFORMATION,TEXT,설악산,전국에서 가장 먼저 절정,"📍 강원 속초·인제·양양 설악산국립공원
+📅 절정 예상 10/20
+💡 산림청 기준, 잎 50%가 물든 때",,,TRUE,PHOTO,data/images/travel/tmp-N01a/02.jpg,,,https://www.youngnong.co.kr/news/articleView.html?idxno=70540,NEEDS_CHECK
+CN-20261012-001,3,INFORMATION,TEXT,속리산,법주사 단풍이 유명한 중부권,"📍 충북 보은군 속리산면 속리산국립공원
+📅 절정 예상 10/28
+💡 산림청 기준, 잎 50%가 물든 때",,,TRUE,PHOTO,data/images/travel/tmp-N01b/01.jpg,,,https://www.youngnong.co.kr/news/articleView.html?idxno=70540,NEEDS_CHECK
+CN-20261012-001,4,INFORMATION,TEXT,내장산,우화정 단풍으로 알려진 남부권,"📍 전북 정읍시·순창군 내장산국립공원
+📅 절정 예상 11/4
+💡 산림청 기준, 잎 50%가 물든 때",,,TRUE,PHOTO,data/images/travel/tmp-N01c/02.jpg,,,https://www.youngnong.co.kr/news/articleView.html?idxno=70540,NEEDS_CHECK
+CN-20261012-001,5,INFORMATION,TEXT,한라산,가장 늦게 물드는 제주 단풍,"📍 제주 제주시·서귀포시 한라산국립공원
+📅 절정 예상 11/6
+💡 산림청 기준, 잎 50%가 물든 때",,,TRUE,PHOTO,data/images/travel/tmp-N01d/01.jpg,,,https://www.youngnong.co.kr/news/articleView.html?idxno=70540,NEEDS_CHECK
+CN-20261012-001,6,SUMMARY,NUMBER_LIST,절정 예상일 **한눈에**,,,,설악산 · 10/20 | 속리산 · 10/28 | 내장산 · 11/4 | 한라산 · 11/6,FALSE,,,,,https://www.youngnong.co.kr/news/articleView.html?idxno=70540,NEEDS_CHECK
+CN-20261012-001,7,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

@@ -189,9 +189,10 @@
       "channel": "threads",
       "topic": "스레드 첫 문장 쓰는 법",
       "angle": "피드에서 멈추게 하는 첫 줄 유형",
-      "status": "review",
+      "status": "approved",
       "date": "2026-10-07",
-      "content_id": "CN-20261007-001"
+      "content_id": "CN-20261007-001",
+      "publish_at": "2026-10-11 18:30"
     },
     {
       "id": "T02",

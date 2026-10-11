@@ -83,7 +83,8 @@
       "channel": "blog",
       "topic": "블로그 카테고리 설계하는 법",
       "angle": "주제 3~5개로 카테고리를 나누는 기준",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-12"
     },
     {
       "id": "B07",

@@ -1142,7 +1142,8 @@ CN-20261006-001,4,STEP,BIG_NUMBER,고민을 **한 줄**로,STEP 01,찾아온 사
 CN-20261006-001,5,STEP,COMPARE,인사 말고 답부터,STEP 02,,,"전: 안녕하세요, 오늘은 제목을… | 후: **제목은 키워드부터 씁니다.**",FALSE,,,,,,NOT_REQUIRED
 CN-20261006-001,6,STEP,THREE_COLUMN,마지막은 예고로,STEP 03 · 첫 문단 끝에 넣을 것,,,순서: 아래 3가지 | 이유: 왜 필요한지 | 방법: 바로 따라 하기,FALSE,,,,,,NOT_REQUIRED
 CN-20261006-001,7,SUMMARY,TEXT,한 줄 정리,,"**고민 → 답 → 예고.** 첫 문단은 이 순서로, 인사는 그다음에 쓰세요.",,,FALSE,,,,,,NOT_REQUIRED
-CN-20261006-001,8,CTA,FOLLOW,매일 하나씩 **블로그 공식**을 알려드려요,,저장해두고 첫 문단 쓸 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
+CN-20261006-001,8,CTA,FOLLOW,"블로그 **공식**을
+하나씩 알려드려요",,저장해두고 첫 문단 쓸 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
 CN-20261006-002,1,HOOK,PHOTO_COVER,"새로 연 여행 핫플
 **4곳 모음**",이번 주 어디감?,개장·재개장 날짜까지 확인 ✨,,,TRUE,PHOTO,data/images/travel/tmp-N03/06.jpg,,,,NOT_REQUIRED
 CN-20261006-002,2,INFORMATION,TEXT,영남루 별빛정원,밤에 걷는 빛과 미디어아트 정원,"📍 경남 밀양시 영남루 일대
@@ -1163,13 +1164,13 @@ CN-20261006-002,7,CTA,FOLLOW,"이번 주
 CN-20261007-001,1,HOOK,PHOTO_COVER,"스레드 첫 문장,
 **이 3가지**만 쓰세요",그대로 가져다 쓰는 예시까지 정리했어요,,,,TRUE,PHOTO,data/photos/2026-10-07-T01-cover.jpg,,,Unsplash 무료 라이선스,NOT_REQUIRED
 CN-20261007-001,2,PROBLEM,IMAGE_TEXT,"열심히 쓴 스레드,
-**왜 안 읽힐까요?**",범인은 '안녕하세요'로 시작한 첫 줄,,,,TRUE,ICON,data/photos/ill-bored-phone.png,,,직접 제작 일러스트,NOT_REQUIRED
+**왜 안 읽힐까요?**",범인은 '안녕하세요'로 시작한 첫 줄,,,,TRUE,SCREENSHOT,data/photos/threads-mock-bad.png,,,직접 제작 예시 화면,NOT_REQUIRED
 CN-20261007-001,3,OVERVIEW,NUMBER_LIST,첫 줄 공식 3가지,질문 · 숫자 · 반전,,,질문: 왜 그대로일까요? | 숫자: 3줄이면 끝나는 첫 줄 | 반전: 한 줄이면 충분합니다,FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,4,STEP,IMAGE_TEXT,"첫 줄만 바꾸면
 이렇게 달라 보여요","전 → 후, 같은 내용 다른 첫 줄",,,,TRUE,SCREENSHOT,data/photos/threads-mock.png,,,직접 제작 예시 화면,NOT_REQUIRED
 CN-20261007-001,5,SUMMARY,NUMBER_LIST,바로 쓰는 첫 줄 틀,빈칸만 바꿔 쓰세요,"올리기 전 확인: 인사 빼기, 한 가지만, 궁금하게",,"사장님, 왜 ○○할까요? | ○○, 3줄이면 끝납니다 | ○○는 틀렸습니다",FALSE,,,,,,NOT_REQUIRED
 CN-20261007-001,6,CTA,FOLLOW,"스레드 **마케팅 공식**을
-알려드려요",,저장해두고 첫 줄 쓸 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
+하나씩 알려드려요",,저장해두고 첫 줄 쓸 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
 CN-20261007-002,1,HOOK,PHOTO_COVER,"새로 연 여행 핫플
 **4곳 모음**",이번 주 어디감?,개장·재개장 날짜까지 확인 ✨,,,TRUE,PHOTO,data/images/travel/tmp-N03/06.jpg,,,,NOT_REQUIRED
 CN-20261007-002,2,INFORMATION,IMAGE_TEXT,영남루 별빛정원,밤에 걷는 빛과 미디어아트 정원,"📍 경남 밀양시 영남루 일대

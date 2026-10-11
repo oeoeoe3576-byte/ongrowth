@@ -34,11 +34,11 @@
       "visual_focus": "",
       "items": [],
       "image_required": true,
-      "image_type": "ICON",
-      "image_source": "data/photos/ill-bored-phone.png",
+      "image_type": "SCREENSHOT",
+      "image_source": "data/photos/threads-mock-bad.png",
       "image_prompt": "",
       "cta": "",
-      "source": "직접 제작 일러스트",
+      "source": "직접 제작 예시 화면",
       "fact_check": "NOT_REQUIRED"
     },
     {
@@ -104,7 +104,7 @@
       "page_number": 6,
       "page_role": "CTA",
       "layout_type": "FOLLOW",
-      "headline": "스레드 **마케팅 공식**을\n알려드려요",
+      "headline": "스레드 **마케팅 공식**을\n하나씩 알려드려요",
       "subheadline": "",
       "body": "저장해두고 첫 줄 쓸 때 꺼내 보세요.",
       "visual_focus": "",

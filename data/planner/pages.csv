@@ -1440,3 +1440,26 @@ CN-20261012-003,5,INFORMATION,TEXT,도톤보리 강 따라 걷기,야경 산책�
 CN-20261012-003,6,SUMMARY,NUMBER_LIST,도톤보리 **체크리스트**,,,,글리코 간판 인증샷 | 타코야키 먹기 | 돈키호테 쇼핑 | 도톤보리 강 산책,FALSE,,,,,,NOT_REQUIRED
 CN-20261012-003,7,CTA,FOLLOW,"다음 일본 여행
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261012-004,1,HOOK,PHOTO_COVER,"일본 돈키호테
+**쇼핑 리스트 6개**",일본 여행 어디감?,가기 전에 저장 🛒,,,TRUE,PHOTO,data/images/travel/tmp-J02/cover.jpg,,,,NOT_REQUIRED
+CN-20261012-004,2,INFORMATION,TEXT,킷캣,일본 한정 맛이 많은 초콜릿,"🛒 일본 돈키호테 매장
+🏷 네슬레
+💡 한정 맛은 매장마다 달라요",,,TRUE,PHOTO,data/images/travel/tmp-J02/p1.jpg,,,,NEEDS_CHECK
+CN-20261012-004,3,INFORMATION,TEXT,푸칭 푸딩,컵에 담긴 푸딩 간식,"🛒 일본 돈키호테 매장
+🏷 글리코
+💡 냉장 코너에서 찾아요",,,TRUE,PHOTO,data/images/travel/tmp-J02/p2.jpg,,,,NEEDS_CHECK
+CN-20261012-004,4,INFORMATION,TEXT,베이크 치즈타르트,치즈 타르트 과자,"🛒 일본 돈키호테 매장
+🏷 모리나가
+💡 선물용으로 많이 사요",,,TRUE,PHOTO,data/images/travel/tmp-J02/p3.jpg,,,,NEEDS_CHECK
+CN-20261012-004,5,INFORMATION,TEXT,피노 헤어마스크,집에서 쓰는 헤어 케어,"🛒 일본 돈키호테 매장
+🏷 시세이도
+💡 용량은 제품마다 달라요",,,TRUE,PHOTO,data/images/travel/tmp-J02/p4.jpg,,,,NEEDS_CHECK
+CN-20261012-004,6,INFORMATION,TEXT,살론파스,붙이는 파스,"🛒 일본 돈키호테 매장
+🏷 히사미쓰
+💡 의약품 반입 규정은 확인해요",,,TRUE,PHOTO,data/images/travel/tmp-J02/p5.jpg,,,,NEEDS_CHECK
+CN-20261012-004,7,INFORMATION,TEXT,캔메이크 치크,가볍게 쓰는 일본 화장품,"🛒 일본 돈키호테 매장
+🏷 캔메이크
+💡 색상은 매장마다 달라요",,,TRUE,PHOTO,data/images/travel/tmp-J02/p6.jpg,,,,NEEDS_CHECK
+CN-20261012-004,8,SUMMARY,NUMBER_LIST,돈키호테 **체크리스트**,,,,킷캣 · 푸칭 푸딩 | 베이크 치즈타르트 | 피노 헤어마스크 | 살론파스 · 캔메이크 치크,FALSE,,,,,,NOT_REQUIRED
+CN-20261012-004,9,CTA,FOLLOW,"다음 일본 여행
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

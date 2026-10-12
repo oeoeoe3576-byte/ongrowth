@@ -54,6 +54,7 @@ export const LAYOUTS = {
   CTA: "행동 유도",
   PHOTO_COVER: "사진이 카드 전체를 덮고 아래에 큰 제목 (image_type PHOTO/AI_IMAGE)",
   FOLLOW: "프로필 카드 + 팔로우 버튼 (마지막 CTA 페이지용)",
+  NOTE_BOXES: "질감 배경 + 흰 글 상자 여러 개 (items 2개 이상, '★ '로 시작하면 검정 요점 상자)",
 } as const;
 export type Layout = keyof typeof LAYOUTS;
 

@@ -195,6 +195,7 @@ function validatePage(
   if (p.layout_type === "THREE_COLUMN" && !need(3, 3)) err("THREE_COLUMN은 items 정확히 3개", pg, "items");
   if (p.layout_type === "GRID" && !need(4)) err("GRID는 items 4개 이상", pg, "items");
   if (p.layout_type === "COMPARE" && !need(2)) err("COMPARE는 items 2개 이상", pg, "items");
+  if (p.layout_type === "NOTE_BOXES" && !need(2)) err("NOTE_BOXES는 items 2개 이상", pg, "items");
   if (p.layout_type === "TIMELINE" && !need(3)) err("TIMELINE은 items 3개 이상", pg, "items");
   if (p.layout_type === "IMAGE_TEXT" && p.image_required !== true) err("IMAGE_TEXT는 image_required=true", pg, "image_required");
   if (p.layout_type === "SCREENSHOT" && (p.image_required !== true || p.image_type !== "SCREENSHOT")) err("SCREENSHOT 레이아웃은 image_type=SCREENSHOT", pg, "image_type");

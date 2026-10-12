@@ -16,6 +16,7 @@ import { ResultTemplate } from "./result.js";
 import { CtaTemplate } from "./cta.js";
 import { PhotoCoverTemplate } from "./photoCover.js";
 import { FollowTemplate } from "./follow.js";
+import { NoteBoxesTemplate } from "./noteBoxes.js";
 
 export const LAYOUT_COMPONENTS: Record<Layout, LayoutComponent> = {
   BIG_TITLE: BigTitleTemplate,
@@ -33,6 +34,7 @@ export const LAYOUT_COMPONENTS: Record<Layout, LayoutComponent> = {
   CTA: CtaTemplate,
   PHOTO_COVER: PhotoCoverTemplate,
   FOLLOW: FollowTemplate,
+  NOTE_BOXES: NoteBoxesTemplate,
 };
 
 /** 모르는 layout_type이면 TEXT로 대신 그리고 fallback=true */

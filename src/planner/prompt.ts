@@ -37,6 +37,7 @@ ${list(PAGE_ROLES)}
 ${list(LAYOUTS)}
 - HOOK 페이지는 BIG_TITLE, BIG_NUMBER, IMAGE_TEXT, SCREENSHOT, PHOTO_COVER 중 하나. CTA 페이지는 CTA 또는 FOLLOW 레이아웃.
 - PHOTO_COVER는 사진이 주인공인 표지. image_required=true, image_type PHOTO 또는 AI_IMAGE.
+- NOTE_BOXES는 질감 배경에 흰 글 상자를 어긋나게 쌓는 대화체 설명 장 (items 2~6개, 항목이 "★ "로 시작하면 검정 요점 상자, **구절**은 형광펜). 정보 설명·문제 제기·정리 장에 적합.
 - FOLLOW는 계정 프로필 카드로 팔로우를 유도하는 마지막 장 (목적이 팔로우일 때 적합).
 - BIG_NUMBER는 숫자가 든 visual_focus 필요. RESULT도 visual_focus 필요.
 - GRAPH, image_type GRAPH/CHART는 참고자료에 실제 수치가 있을 때만.

@@ -1423,3 +1423,20 @@ CN-20261012-002,5,INFORMATION,TEXT,한라산,가장 늦게 물드는 제주 단�
 CN-20261012-002,6,SUMMARY,NUMBER_LIST,절정 예상일 **한눈에**,,,,설악산 · 10/20 | 속리산 · 10/28 | 내장산 · 11/4 | 한라산 · 11/6,FALSE,,,,,https://www.youngnong.co.kr/news/articleView.html?idxno=70540,NEEDS_CHECK
 CN-20261012-002,7,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261012-003,1,HOOK,PHOTO_COVER,"오사카 도톤보리
+**꼭 해볼 것 4가지**",일본 여행 어디감?,먹고 · 사고 · 찍고 📌,,,TRUE,PHOTO,data/images/travel/tmp-J01/cover.jpg,,,,NOT_REQUIRED
+CN-20261012-003,2,INFORMATION,TEXT,글리코 간판 인증샷,도톤보리의 상징 러닝맨 간판,"📍 오사카 도톤보리 에비스바시 일대
+🕘 밤 조명이 켜진 뒤가 더 예뻐요
+💡 다리 위는 사람이 많아요",,,TRUE,PHOTO,data/images/travel/tmp-J01/01.jpg,,,,NEEDS_CHECK
+CN-20261012-003,3,INFORMATION,TEXT,타코야키 먹기,골목마다 가게가 이어져요,"📍 오사카 도톤보리 일대
+🕘 줄이 긴 곳이 많아요
+💡 갓 나온 건 뜨거우니 조심",,,TRUE,PHOTO,data/images/travel/tmp-J01/02.jpg,,,,NEEDS_CHECK
+CN-20261012-003,4,INFORMATION,TEXT,돈키호테 쇼핑,간식·화장품을 한 번에,"📍 오사카 도톤보리 일대 돈키호테
+🕘 매장마다 운영 시간이 달라요
+💡 면세 가능 여부는 매장에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-J01/03.jpg,,,,NEEDS_CHECK
+CN-20261012-003,5,INFORMATION,TEXT,도톤보리 강 따라 걷기,야경 산책으로 마무리,"📍 오사카 도톤보리강 변
+🕘 해 진 뒤 조명이 켜져요
+💡 크루즈 운항은 공식 안내 확인",,,TRUE,PHOTO,data/images/travel/tmp-J01/04.jpg,,,,NEEDS_CHECK
+CN-20261012-003,6,SUMMARY,NUMBER_LIST,도톤보리 **체크리스트**,,,,글리코 간판 인증샷 | 타코야키 먹기 | 돈키호테 쇼핑 | 도톤보리 강 산책,FALSE,,,,,,NOT_REQUIRED
+CN-20261012-003,7,CTA,FOLLOW,"다음 일본 여행
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

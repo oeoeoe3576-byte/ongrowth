@@ -1,0 +1,29 @@
+[
+  {
+    "file": "01.jpg",
+    "title": "서울역",
+    "location": "서울특별시 용산구",
+    "photographer": "안영관",
+    "month": "202406",
+    "url": "https://tong.visitkorea.or.kr/cms2/website/20/3344120.jpg",
+    "credit": "사진: 한국관광공사 포토코리아"
+  },
+  {
+    "file": "02.jpg",
+    "title": "서울역",
+    "location": "서울특별시 용산구",
+    "photographer": "안영관",
+    "month": "202406",
+    "url": "https://tong.visitkorea.or.kr/cms2/website/19/3344119.jpg",
+    "credit": "사진: 한국관광공사 포토코리아"
+  },
+  {
+    "file": "03.jpg",
+    "title": "서울역",
+    "location": "서울특별시 용산구",
+    "photographer": "안영관",
+    "month": "202406",
+    "url": "https://tong.visitkorea.or.kr/cms2/website/00/3344100.jpg",
+    "credit": "사진: 한국관광공사 포토코리아"
+  }
+]

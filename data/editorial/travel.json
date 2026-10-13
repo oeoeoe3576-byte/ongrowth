@@ -242,7 +242,9 @@
       "channel": "info",
       "topic": "기차 여행 전에 알면 좋은 예매 꿀팁",
       "angle": "코레일 공식 안내 기준. 할인 제도는 확인된 것만",
-      "status": "todo"
+      "status": "planned",
+      "date": "2026-10-14",
+      "content_id": "CN-20261014-002"
     },
     {
       "id": "I04",

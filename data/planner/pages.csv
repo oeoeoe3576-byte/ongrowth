@@ -1472,3 +1472,20 @@ CN-20261014-001,5,STEP,NOTE_BOXES,이름은 이렇게 지어요,,,,'일상'이�
 CN-20261014-001,6,SUMMARY,NOTE_BOXES,정리하면,,,,카테고리는 **3~5개** | 이름은 방문자의 검색어로 | ★ 글이 쌓여도 **개수는 그대로**,FALSE,,,,,,NOT_REQUIRED
 CN-20261014-001,7,CTA,FOLLOW,"블로그 **공식**을
 하나씩 알려드려요",,저장해두고 카테고리 정리할 때 꺼내 보세요.,,,FALSE,,,,저장하고 팔로우하기,,NOT_REQUIRED
+CN-20261014-002,1,HOOK,PHOTO_COVER,"기차 여행 전
+**예매 꿀팁 4가지**",이번 주 어디감?,코레일 기준 · 저장해 두세요 🚆,,,TRUE,PHOTO,data/images/travel/tmp-I03c/02.jpg,,,,NOT_REQUIRED
+CN-20261014-002,2,INFORMATION,TEXT,출발 1개월 전 7시,승차권 예매가 열리는 때,"🗓 출발일 1개월 전 오전 7시부터
+🎫 열차 출발 전까지 구매 가능
+💡 가고 싶은 날은 일찍 확인",,,TRUE,PHOTO,data/images/travel/tmp-I03b/01.jpg,,,https://www.korail.com/ticket/reserve/guide/pay,NEEDS_CHECK
+CN-20261014-002,3,INFORMATION,TEXT,예매할 수 있는 곳,앱·홈페이지·역에서 가능,"📱 코레일톡(앱)
+🌐 코레일 홈페이지
+🏢 역 창구·자동발매기·판매대리점",,,TRUE,PHOTO,data/images/travel/tmp-I03a/03.jpg,,,https://www.korail.com/ticket/reserve/guide/pay,NEEDS_CHECK
+CN-20261014-002,4,INFORMATION,TEXT,비회원도 예매 가능,간편인증으로 결제까지,"✅ 네이버·카카오 등 간편인증
+💳 인증 뒤 결제·발권 가능
+💡 회원가입 전에도 이용할 수 있어요",,,TRUE,PHOTO,data/images/travel/tmp-I03a/04.jpg,,,https://www.korail.com/ticket/reserve/guide/pay,NEEDS_CHECK
+CN-20261014-002,5,INFORMATION,TEXT,할인 제도 확인,해당되는지 먼저 보세요,"👤 청소년·청년
+👪 임산부·다자녀
+💡 대상과 조건은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-I03c/01.jpg,,,https://www.korail.com/ticket/reserve/guide/faq,NEEDS_CHECK
+CN-20261014-002,6,SUMMARY,NUMBER_LIST,예매 **체크리스트**,,,,1개월 전 오전 7시 열림 | 앱·홈페이지·역에서 구매 | 비회원도 간편인증 가능 | 해당되는 할인 확인,FALSE,,,,,https://www.korail.com/ticket/reserve/guide/pay,NEEDS_CHECK
+CN-20261014-002,7,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

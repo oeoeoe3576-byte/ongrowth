@@ -1,0 +1,154 @@
+{
+  "provider": "file:data/editorial/responses/2026-10-14-B06.json",
+  "attempts": 1,
+  "plan": {
+    "category": "marketing",
+    "target": "블로그와 SNS로 직접 마케팅하는 1인 사업자·소상공인",
+    "content_type": "INFO",
+    "page_count": 7,
+    "planning_note": "카테고리 설계 기준 콘텐츠. 메모 상자 스타일(NOTE_BOXES)로 대화체 설명: 문제 → 기준 → 예시 → 이름 짓기 → 팔로우. 수치·알고리즘 설명 없이 방법만 다룸.",
+    "caption": "카테고리가 열 개 넘게 늘어나 있다면, 방문자는 어디부터 읽어야 할지 모릅니다.\n\n1) 자주 쓰는 주제를 세어 보기\n2) 3~5개로 묶기\n3) 이름은 방문자가 검색할 말로\n\n카페 사장님 예시까지 정리했어요. 저장해 두고 블로그 카테고리 정리할 때 꺼내 보세요 📌",
+    "hashtags": "#블로그마케팅 #블로그카테고리 #네이버블로그 #블로그운영 #마케팅팁 #1인사업자",
+    "pages": [
+      {
+        "page_number": 1,
+        "page_role": "HOOK",
+        "layout_type": "PHOTO_COVER",
+        "headline": "블로그 카테고리,\n**이렇게** 나누세요",
+        "subheadline": "3~5개면 충분해요",
+        "body": "",
+        "visual_focus": "",
+        "items": [],
+        "image_required": true,
+        "image_type": "PHOTO",
+        "image_source": "data/photos/2026-10-14-B06-cover.jpg",
+        "image_prompt": "",
+        "cta": "",
+        "source": "Unsplash 무료 라이선스",
+        "fact_check": "NOT_REQUIRED"
+      },
+      {
+        "page_number": 2,
+        "page_role": "PROBLEM",
+        "layout_type": "NOTE_BOXES",
+        "headline": "카테고리가 너무 많다면",
+        "subheadline": "",
+        "body": "",
+        "visual_focus": "",
+        "items": [
+          "글을 쓸 때마다 카테고리를 새로 만들었더니",
+          "어느새 열 개가 넘어가 버렸어요",
+          "★ 방문자는 **어디부터 읽을지** 모릅니다"
+        ],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "",
+        "fact_check": "NOT_REQUIRED"
+      },
+      {
+        "page_number": 3,
+        "page_role": "INFORMATION",
+        "layout_type": "NOTE_BOXES",
+        "headline": "나누는 기준은 하나예요",
+        "subheadline": "",
+        "body": "",
+        "visual_focus": "",
+        "items": [
+          "내가 **자주 쓰는 주제**가 몇 개인지 세어 보세요",
+          "그 주제들을 3~5개로 묶어요",
+          "★ 한 글은 **카테고리 하나**에만"
+        ],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "",
+        "fact_check": "NOT_REQUIRED"
+      },
+      {
+        "page_number": 4,
+        "page_role": "STEP",
+        "layout_type": "NUMBER_LIST",
+        "headline": "카페 사장님이라면",
+        "subheadline": "이렇게 나눠 보세요",
+        "body": "",
+        "visual_focus": "",
+        "items": [
+          "메뉴 이야기",
+          "매장 이야기",
+          "주문·예약 안내"
+        ],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "",
+        "fact_check": "NOT_REQUIRED"
+      },
+      {
+        "page_number": 5,
+        "page_role": "STEP",
+        "layout_type": "NOTE_BOXES",
+        "headline": "이름은 이렇게 지어요",
+        "subheadline": "",
+        "body": "",
+        "visual_focus": "",
+        "items": [
+          "'일상'이나 '기타'처럼 모호한 이름은 빼고",
+          "방문자의 **검색어**를 그대로 쓰세요",
+          "★ 예) '기타'보다 **'성수 카페 메뉴'**"
+        ],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "",
+        "fact_check": "NOT_REQUIRED"
+      },
+      {
+        "page_number": 6,
+        "page_role": "SUMMARY",
+        "layout_type": "NOTE_BOXES",
+        "headline": "정리하면",
+        "subheadline": "",
+        "body": "",
+        "visual_focus": "",
+        "items": [
+          "카테고리는 **3~5개**",
+          "이름은 방문자의 검색어로",
+          "★ 글이 쌓여도 **개수는 그대로**"
+        ],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "",
+        "source": "",
+        "fact_check": "NOT_REQUIRED"
+      },
+      {
+        "page_number": 7,
+        "page_role": "CTA",
+        "layout_type": "FOLLOW",
+        "headline": "블로그 **공식**을\n하나씩 알려드려요",
+        "subheadline": "",
+        "body": "저장해두고 카테고리 정리할 때 꺼내 보세요.",
+        "visual_focus": "",
+        "items": [],
+        "image_required": false,
+        "image_type": "",
+        "image_source": "",
+        "image_prompt": "",
+        "cta": "저장하고 팔로우하기",
+        "source": "",
+        "fact_check": "NOT_REQUIRED"
+      }
+    ]
+  }
+}

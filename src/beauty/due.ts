@@ -54,7 +54,7 @@ const missed = pending.some((x) => x.status === "approved" && now.getTime() - du
 // 맨 앞 레터가 승인 대기인데 발행 시간이 됐으면: 이번 시간은 비우고 그 레터부터 전부 한 칸씩 뒤로 (2026-10-09)
 const headWaiting = pending.length > 0 && pending[0].status === "review" && dueAt(pending[0]).getTime() - EARLY_MIN * 60000 <= now.getTime();
 if (missed || headWaiting) {
-  const gen = slotsFrom(headWaiting ? new Date(dueAt(pending[0]).getTime() + (LATE_MIN + 1) * 60000) : now);
+  const gen = slotsFrom(headWaiting ? new Date(Math.max(dueAt(pending[0]).getTime(), now.getTime() + EARLY_MIN * 60000) + (LATE_MIN + 1) * 60000) : now);
   for (const it of pending) {
     const [d, t] = gen.next().value as [string, string];
     if (it.date !== d || it.time !== t) {

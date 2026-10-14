@@ -1489,3 +1489,37 @@ CN-20261014-002,5,INFORMATION,TEXT,할인 제도 확인,해당되는지 먼저 �
 CN-20261014-002,6,SUMMARY,NUMBER_LIST,예매 **체크리스트**,,,,1개월 전 오전 7시 열림 | 앱·홈페이지·역에서 구매 | 비회원도 간편인증 가능 | 해당되는 할인 확인,FALSE,,,,,https://www.korail.com/ticket/reserve/guide/pay,NEEDS_CHECK
 CN-20261014-002,7,CTA,FOLLOW,"이번 주
 **어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261015-001,1,HOOK,PHOTO_COVER,"가을꽃·억새·갈대
+**축제 4곳 일정**",이번 주 어디감?,10/15부터 순서대로 📌,,,TRUE,PHOTO,data/images/travel/tmp-F02c/03.jpg,,,,NOT_REQUIRED
+CN-20261015-001,2,INFORMATION,TEXT,광주서창억새축제,서창둑에서 만나는 억새,"📍 광주 서구 서창둑길 377
+📅 10/15(목)~10/18(일)
+🎫 운영 시간은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F02d/01.jpg,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-001,3,INFORMATION,TEXT,화순 고인돌 가을꽃 축제,세계문화유산 고인돌 유적지,"📍 전남 화순군 도곡면 고인돌1로 180
+📅 10/16(금)~10/25(일)
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F02a/01.jpg,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-001,4,INFORMATION,TEXT,연천 국화축제,경기 북부에서 만나는 국화,"📍 경기 연천군 전곡읍 양연로 1510
+📅 10/16(금)~10/25(일)
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F02b/01.jpg,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-001,5,INFORMATION,TEXT,강진만 춤추는 갈대축제,강진만 생태공원 갈대밭,"📍 전남 강진군 강진읍 생태공원길 47
+📅 10/24(토)~11/1(일)
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F02c/01.jpg,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-001,6,SUMMARY,NUMBER_LIST,축제 날짜 **한눈에**,,,,서창억새축제 · 10/15~18 | 화순 가을꽃 · 10/16~25 | 연천 국화축제 · 10/16~25 | 강진만 갈대 · 10/24~11/1,FALSE,,,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-001,7,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED
+CN-20261015-002,1,HOOK,PHOTO_COVER,"가을꽃·억새·갈대
+**축제 4곳 일정**",이번 주 어디감?,10/15부터 순서대로 📌,,,TRUE,PHOTO,data/images/travel/tmp-F02b/02.jpg,,,,NOT_REQUIRED
+CN-20261015-002,2,INFORMATION,TEXT,광주서창억새축제,서창둑에서 만나는 억새,"📍 광주 서구 서창둑길 377
+📅 10/15(목)~10/18(일)
+🎫 운영 시간은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F02d/01.jpg,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-002,3,INFORMATION,TEXT,화순 고인돌 가을꽃 축제,세계문화유산 고인돌 유적지,"📍 전남 화순군 도곡면 고인돌1로 180
+📅 10/16(금)~10/25(일)
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F02a/01.jpg,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-002,4,INFORMATION,TEXT,연천 국화축제,경기 북부에서 만나는 국화,"📍 경기 연천군 전곡읍 양연로 1510
+📅 10/16(금)~10/25(일)
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F02b/01.jpg,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-002,5,INFORMATION,TEXT,강진만 춤추는 갈대축제,강진만 생태공원 갈대밭,"📍 전남 강진군 강진읍 생태공원길 47
+📅 10/24(토)~11/1(일)
+🎫 요금은 공식 안내에서 확인",,,TRUE,PHOTO,data/images/travel/tmp-F02c/02.jpg,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-002,6,SUMMARY,NUMBER_LIST,축제 날짜 **한눈에**,,,,서창억새축제 · 10/15~18 | 화순 가을꽃 · 10/16~25 | 연천 국화축제 · 10/16~25 | 강진만 갈대 · 10/24~11/1,FALSE,,,,,관광공사 축제 목록,NEEDS_CHECK
+CN-20261015-002,7,CTA,FOLLOW,"이번 주
+**어디 갈까요?**",,같이 갈 친구 @태그해요,,,FALSE,,,,팔로우하고 다음 장소도 받기,,NOT_REQUIRED

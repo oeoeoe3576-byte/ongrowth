@@ -10,21 +10,30 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const htmlPath = process.argv[2] ? path.resolve(process.argv[2]) : path.join(dir, "slides.html");
-const outDir = process.argv[2] ? path.join(path.dirname(htmlPath), "output") : path.join(dir, "preview");
+// --reel: 장 높이를 1920으로 늘려 릴스(9:16)용 JPEG를 output/reel/ 에 저장한다.
+const reel = process.argv.includes("--reel");
+const args = process.argv.slice(2).filter((a) => a !== "--reel");
+const htmlPath = args[0] ? path.resolve(args[0]) : path.join(dir, "slides.html");
+const outDir = args[0] ? path.join(path.dirname(htmlPath), "output", reel ? "reel" : "") : path.join(dir, "preview");
 await mkdir(outDir, { recursive: true });
-const jpgDir = process.argv[2] ? path.join(outDir, "jpg") : null;
+const jpgDir = args[0] && !reel ? path.join(outDir, "jpg") : null;
 if (jpgDir) await mkdir(jpgDir, { recursive: true });
 
 const browser = await chromium
   .launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_PATH || "/opt/pw-browsers/chromium" })
   .catch(() => chromium.launch());
 try {
-  const page = await browser.newPage({ viewport: { width: 1200, height: 1500 }, deviceScaleFactor: 2 });
+  const page = await browser.newPage({ viewport: { width: 1200, height: reel ? 2100 : 1500 }, deviceScaleFactor: 2 });
   await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "load" });
   await page.evaluate(() => document.fonts.ready);
+  if (reel) await page.addStyleTag({ content: ".card { height: 1920px !important; } .card.lt, .card.points, .card.swatchset { display: flex !important; flex-direction: column; justify-content: center; padding-top: 60px !important; padding-bottom: 60px !important; } .card.lt > *, .card.points > *, .card.swatchset > * { flex: none; } .ps .inner { top: 50% !important; transform: translateY(-50%); }" });
   for (const card of await page.$$(".card")) {
     const name = await card.getAttribute("data-name");
+    if (reel) {
+      await card.screenshot({ path: path.join(outDir, `${name.slice(0, 2)}.jpg`), type: "jpeg", quality: 92 });
+      console.log(`saved reel ${name}`);
+      continue;
+    }
     await card.screenshot({ path: path.join(outDir, `${name}.png`) });
     // 인스타 그래프 API는 JPEG만 받는다. 파일명 앞 두 자리(장 번호)로 순서를 고정한다.
     if (jpgDir) await card.screenshot({ path: path.join(jpgDir, `${name.slice(0, 2)}.jpg`), type: "jpeg", quality: 92 });

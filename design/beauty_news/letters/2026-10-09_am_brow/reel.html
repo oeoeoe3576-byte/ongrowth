@@ -45,32 +45,59 @@
 .rs.why .who { margin-top: 64px; background: #fff; border-radius: 34px; padding: 40px 46px; }
 .rs.why .who small { display: block; font-size: 32px; font-weight: 800; color: var(--rose); margin-bottom: 14px; }
 .rs.why .who p { font-size: 46px; font-weight: 700; letter-spacing: -1.2px; line-height: 1.45; }
-</style></head>
+</style><style>
+/* 상황 공감 */
+.rs.sit { background: var(--cream); color: var(--plum); }
+.rs.sit .bl-mark { color: var(--plum); }
+.rs.sit .box { position: absolute; left: 80px; right: 80px; top: 50%; transform: translateY(-58%); }
+.rs.sit h2 { font-size: 96px; font-weight: 800; letter-spacing: -3px; line-height: 1.2; margin-bottom: 56px; }
+.rs.sit h2 em { font-style: normal; color: var(--rose); }
+.rs.sit .q { display: flex; gap: 22px; align-items: flex-start; font-size: 50px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.4; margin-top: 34px; background: #fff; border-radius: 30px; padding: 30px 38px; }
+.rs.sit .q i { flex: none; font-style: normal; color: var(--rose); }
+/* 원인 → 변화 (사진 위) */
+.rs .cause, .rs .fix { position: absolute; left: 80px; right: 80px; top: 1280px; transform: translateY(-50%); }
+.rs .cause { z-index: 0; } .rs .fix { z-index: 2; }
+.rs .cause small, .rs .fix small { display: block; font-size: 36px; font-weight: 700; color: rgba(255,255,255,.85); margin-bottom: 16px; }
+.rs .cause h2, .rs .fix h2 { font-size: 84px; font-weight: 800; letter-spacing: -2.5px; line-height: 1.2; text-shadow: 0 4px 30px rgba(0,0,0,.3); }
+.rs .cause h2 em, .rs .fix h2 em { font-style: normal; color: var(--petal); }
+.rs .cause p, .rs .fix p { margin-top: 24px; font-size: 40px; font-weight: 600; line-height: 1.45; color: rgba(255,255,255,.92); }
+.rs.why .who + .who { margin-top: 28px; }
+</style>
+</head>
 <body>
 <section class="card rs" data-name="01_hook">
-  <img class="ph static kb" src="img/reel_after.jpg" alt="" />
+  <img class="ph static kb" src="img/reel_before.jpg" alt="" />
   <div class="dim static"></div>
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
-  <div class="ttl"><h1>눈썹 꼬리 하나로<br/><em>분위기가 바뀌어요</em></h1></div>
+  <div class="ttl"><h1>눈썹 다 그렸는데<br/><em>왜 얼굴이 더 커 보이지?</em></h1></div>
 </section>
-<section class="card rs" data-name="02_compare">
-  <img class="ph static" src="img/reel_before.jpg" alt="" />
-  <div class="dim static"></div>
-  <div class="tag bf whole"><b>Before</b>뭉툭하게 끊은 꼬리</div>
-  <div class="wipe"><img src="img/reel_after.jpg" alt="" /><div class="dim"></div></div>
-  <div class="tag af whole"><b>After</b>관자놀이 쪽으로 길게</div>
-</section>
-<section class="card rs why" data-name="03_why">
+<section class="card rs sit" data-name="02_situation">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
   <div class="box">
-    <h2>왜 하필<br/><em>꼬리일까?</em></h2>
-    <div class="ln whole">꼬리를 길게 빼면 <b>시선이 옆으로</b> 퍼져요</div>
-    <div class="ar whole">↓</div>
-    <div class="ln whole">얼굴 옆 여백이 <b>슬림해 보여요</b></div>
-    <div class="who whole"><small>이런 얼굴에 특히</small><p>둥근 얼굴 · 옆 광대가 넓은 얼굴<br/>눈썹이 짧고 뭉툭한 편</p></div>
+    <h2>이런 적<br/><em>있지 않아요?</em></h2>
+    <div class="q whole"><i>✓</i>정면 셀카에서 얼굴이 유독 동그래 보일 때</div>
+    <div class="q whole"><i>✓</i>눈썹만 둥둥 떠서 따로 노는 느낌</div>
+    <div class="q whole"><i>✓</i>진하게 그렸더니 인상만 세 보일 때</div>
   </div>
 </section>
-<section class="card rs how" data-name="04_how">
+<section class="card rs" data-name="03_cause">
+  <img class="ph static" src="img/reel_before.jpg" alt="" />
+  <div class="dim static"></div>
+  <div class="cause"><small>범인은 여기</small><h2>눈꼬리 앞에서<br/><em>뚝 끊긴 눈썹 꼬리</em></h2><p>꼬리가 짧으면 얼굴 옆이 텅 비어<br/>얼굴이 더 넓고 동그래 보여요</p></div>
+  <div class="wipe"><img src="img/reel_after.jpg" alt="" /><div class="dim"></div>
+    <div class="fix"><small>꼬리만 바꿨어요</small><h2>관자놀이 쪽으로<br/><em>살짝 길게</em></h2><p>시선이 옆으로 이어져서<br/>얼굴 옆이 채워지고 슬림해 보여요</p></div>
+  </div>
+</section>
+<section class="card rs why" data-name="04_who">
+  <div class="bl-mark static">BEAUTY <i>letter</i></div>
+  <div class="box">
+    <h2>이런 분은<br/><em>꼭 해 보세요</em></h2>
+    <div class="who whole"><small>얼굴형</small><p>둥근 얼굴 · 옆 광대가 넓은 얼굴</p></div>
+    <div class="who whole"><small>눈썹</small><p>짧고 뭉툭하게 끝나는 눈썹</p></div>
+    <div class="who whole"><small>원하는 분위기</small><p>세지 않고 우아한 '어른 여자'</p></div>
+  </div>
+</section>
+<section class="card rs how" data-name="05_how">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
   <div class="box">
     <h2>이렇게<br/><em>따라 해 보세요</em></h2>
@@ -79,7 +106,7 @@
     <div class="st whole"><i>3</i>브러시로 경계 풀기</div>
   </div>
 </section>
-<section class="card rs end" data-name="05_end">
+<section class="card rs end" data-name="06_end">
   <img class="ph static" src="img/reel_after.jpg" alt="" />
   <div class="ttl"><h1>저장해 두고<br/><em>따라 해 보세요</em></h1><div class="fl whole">@from.beautyletter</div></div>
 </section>

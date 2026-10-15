@@ -88,9 +88,11 @@ function prepCard(idx, opt) {
         }
         if (ch.matches(".wipe")) {
           // 비포→애프터: 왼쪽에서 오른쪽으로 덮어 가며 바뀐다
-          t += 500;
+          t += 1800; // 비포 문구를 읽을 시간
+          const before = card.querySelector(".cause");
+          if (before) { items.push({ el: before, at: t - 350, dur: 350, out: true }); }
           items.push({ el: ch, at: t, dur: 1100, wipe: true });
-          t += 1300;
+          t += 2800; // 덮인 뒤 애프터 문구를 읽을 시간
           continue;
         }
         if (ch.matches(BLOCK) && !ch.querySelector("h1,h2,p,li")) {
@@ -137,6 +139,10 @@ function setTime(ms, total) {
     const p = Math.max(0, Math.min(1, (ms - it.at) / it.dur));
     const e = ease(p);
     it.el.style.opacity = e;
+    if (it.out) {
+      it.el.style.opacity = 1 - p;
+      continue;
+    }
     if (it.wipe) {
       it.el.style.clipPath = `inset(0 ${(1 - p * p * (3 - 2 * p)) * 100}% 0 0)`;
       continue;

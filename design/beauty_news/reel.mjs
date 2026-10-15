@@ -20,7 +20,9 @@ const BLOCK_FADE = 450; // 그림·칩 같은 덩어리가 나타나는 시간
 const htmlPath = path.resolve(process.argv[2]);
 const outDir = path.join(path.dirname(htmlPath), "output");
 await mkdir(outDir, { recursive: true });
-const outFile = path.join(outDir, "reel.mp4");
+// slides.html → output/reel_full.mp4, reel.html(릴스 전용 짧은 버전) → output/reel.mp4
+const base = path.basename(htmlPath, ".html");
+const outFile = path.join(outDir, base === "slides" ? "reel_full.mp4" : `${base}.mp4`);
 
 // 세로 화면 전용 배치. 4:5 장을 늘리는 대신 글자·그림 크기와 위치를 9:16에 맞춘다.
 // 위 220px·아래 340px는 릴스 화면의 계정명·캡션·버튼에 가려지는 자리라 비워 둔다.
@@ -57,6 +59,7 @@ html body .card.cur { position: fixed !important; top: 0 !important; left: 0 !im
 .ps .credit { bottom: 300px !important; }
 
 /* 애니메이션 단위 */
+.wipe { clip-path: inset(0 100% 0 0); }
 r-w { display: inline-block; white-space: nowrap; }
 r-c { display: inline-block; opacity: 0; will-change: opacity, transform; }
 .rb { opacity: 0; will-change: opacity, transform; }
@@ -67,7 +70,7 @@ function prepCard(idx, opt) {
   const cards = [...document.querySelectorAll(".card")];
   cards.forEach((c, i) => c.classList.toggle("cur", i === idx));
   const card = cards[idx];
-  const SKIP = ".topbar, .foot, .credit, .pageno, .wordmark, [data-slot], .shade, .bgimg, .glow";
+  const SKIP = ".topbar, .foot, .credit, .pageno, .wordmark, [data-slot], .shade, .bgimg, .glow, .static";
   const BLOCK = "img, .vis, .cs > div, .tone > div, .chips, .follow";
   let t = 300; // 장이 바뀌고 0.3초 뒤부터 시작
   const items = [];
@@ -76,6 +79,20 @@ function prepCard(idx, opt) {
     for (const ch of [...node.childNodes]) {
       if (ch.nodeType === 1) {
         if (ch.matches(SKIP)) continue;
+        if (ch.matches(".whole")) {
+          // 라벨·단계처럼 짧은 덩어리는 통째로 나타난다
+          ch.classList.add("rb");
+          items.push({ el: ch, at: t, dur: opt.BLOCK_FADE, block: true });
+          t += 550;
+          continue;
+        }
+        if (ch.matches(".wipe")) {
+          // 비포→애프터: 왼쪽에서 오른쪽으로 덮어 가며 바뀐다
+          t += 500;
+          items.push({ el: ch, at: t, dur: 1100, wipe: true });
+          t += 1300;
+          continue;
+        }
         if (ch.matches(BLOCK) && !ch.querySelector("h1,h2,p,li")) {
           // 그림·칩: 통째로 나타나고, 안의 글자는 뒤이어 한 자씩
           ch.classList.add("rb");
@@ -110,7 +127,7 @@ function prepCard(idx, opt) {
   // 제목 다음, 본문 시작 전에 살짝 쉼
   const end = t + opt.CHAR_FADE;
   window.__items = items;
-  window.__cover = card.querySelector('[data-slot="photo"] img');
+  window.__cover = card.querySelector('[data-slot="photo"] img, .kb');
   return end;
 }
 
@@ -120,6 +137,10 @@ function setTime(ms, total) {
     const p = Math.max(0, Math.min(1, (ms - it.at) / it.dur));
     const e = ease(p);
     it.el.style.opacity = e;
+    if (it.wipe) {
+      it.el.style.clipPath = `inset(0 ${(1 - p * p * (3 - 2 * p)) * 100}% 0 0)`;
+      continue;
+    }
     it.el.style.transform = `translateY(${(1 - e) * (it.block ? 30 : 18)}px)`;
   }
   // 표지 사진은 아주 천천히 확대

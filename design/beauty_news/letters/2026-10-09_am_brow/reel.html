@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8" /><title>뷰티레터 No.12 릴스</title>
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+/* 릴스 전용 짧은 버전: 장마다 한 문장, 사진 위주 */
+.rs { width: 1080px; height: 1920px; position: relative; overflow: hidden; color: #fff; background: var(--plum); }
+.rs .ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.rs .dim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,26,32,0) 40%, rgba(42,26,32,.55) 75%, rgba(42,26,32,.7) 100%); }
+.rs .bl-mark { position: absolute; top: 230px; left: 0; right: 0; text-align: center; font-family: var(--serif); font-size: 34px; letter-spacing: 7px; font-weight: 600; z-index: 3; }
+.rs .bl-mark i { font-weight: 500; letter-spacing: 1px; }
+/* 제목: 3분할 아래 교차점(높이 2/3) */
+.rs .ttl { position: absolute; left: 80px; right: 80px; top: 1280px; transform: translateY(-50%); z-index: 3; }
+.rs h1 { font-size: 100px; line-height: 1.18; font-weight: 800; letter-spacing: -3px; text-shadow: 0 4px 30px rgba(0,0,0,.25); }
+.rs h1 em { font-style: normal; color: var(--petal); }
+/* 비포·애프터 */
+.rs .wipe { position: absolute; inset: 0; z-index: 1; }
+.rs .wipe img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.rs .wipe::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 6px; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,.3); }
+.rs .tag { position: absolute; z-index: 3; left: 80px; font-size: 44px; font-weight: 800; letter-spacing: -1px; }
+.rs .tag b { display: inline-block; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 40px; letter-spacing: 1px; padding: 6px 26px 10px; border-radius: 999px; margin-right: 18px; }
+.rs .tag.bf { top: 1180px; } .rs .tag.bf b { background: rgba(255,255,255,.9); color: var(--plum); }
+.rs .tag.af { top: 1300px; } .rs .tag.af b { background: var(--rose); color: #fff; }
+/* 따라 하기 */
+.rs.how { background: var(--cream); color: var(--plum); }
+.rs.how .bl-mark { color: var(--plum); }
+.rs.how .box { position: absolute; left: 80px; right: 80px; top: 50%; transform: translateY(-58%); }
+.rs.how h2 { font-size: 92px; font-weight: 800; letter-spacing: -3px; line-height: 1.2; margin-bottom: 70px; }
+.rs.how h2 em { font-style: normal; color: var(--rose); }
+.rs.how .st { display: flex; align-items: center; gap: 30px; font-size: 54px; font-weight: 700; letter-spacing: -1.5px; margin-top: 44px; }
+.rs.how .st i { flex: none; width: 84px; height: 84px; border-radius: 50%; background: var(--rose); color: #fff; font-family: var(--serif); font-size: 46px; display: flex; align-items: center; justify-content: center; }
+/* 마무리 */
+.rs.end .ttl { top: 50%; text-align: center; }
+.rs.end h1 { font-size: 92px; }
+.rs.end .fl { display: inline-block; margin-top: 50px; font-size: 40px; font-weight: 700; border: 3px solid rgba(255,255,255,.7); border-radius: 999px; padding: 22px 56px; }
+.rs.end .ph { filter: blur(6px) brightness(.55); transform: scale(1.06); }
+</style></head>
+<body>
+<section class="card rs" data-name="01_hook">
+  <img class="ph static kb" src="img/reel_after.jpg" alt="" />
+  <div class="dim static"></div>
+  <div class="bl-mark static">BEAUTY <i>letter</i></div>
+  <div class="ttl"><h1>눈썹 꼬리 하나로<br/><em>분위기가 바뀌어요</em></h1></div>
+</section>
+<section class="card rs" data-name="02_compare">
+  <img class="ph static" src="img/reel_before.jpg" alt="" />
+  <div class="dim static"></div>
+  <div class="tag bf whole"><b>Before</b>뭉툭하게 끊은 꼬리</div>
+  <div class="wipe"><img src="img/reel_after.jpg" alt="" /><div class="dim"></div></div>
+  <div class="tag af whole"><b>After</b>관자놀이 쪽으로 길게</div>
+</section>
+<section class="card rs how" data-name="03_how">
+  <div class="bl-mark static">BEAUTY <i>letter</i></div>
+  <div class="box">
+    <h2>이렇게<br/><em>따라 해 보세요</em></h2>
+    <div class="st whole"><i>1</i>얇은 펜슬로 짧게</div>
+    <div class="st whole"><i>2</i>끝은 바늘처럼 얇게</div>
+    <div class="st whole"><i>3</i>브러시로 경계 풀기</div>
+  </div>
+</section>
+<section class="card rs end" data-name="04_end">
+  <img class="ph static" src="img/reel_after.jpg" alt="" />
+  <div class="ttl"><h1>저장해 두고<br/><em>따라 해 보세요</em></h1><div class="fl whole">@from.beautyletter</div></div>
+</section>
+</body></html>

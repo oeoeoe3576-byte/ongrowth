@@ -2,135 +2,90 @@
 <html lang="ko"><head><meta charset="utf-8" /><title>뷰티레터 No.12 릴스</title>
 <link rel="stylesheet" href="../../styles.css" />
 <style>
-/* 릴스 전용 짧은 버전: 장마다 한 문장, 사진 위주 */
-.rs { width: 1080px; height: 1920px; position: relative; overflow: hidden; color: #fff; background: var(--plum); }
+/* 릴스 전용 짧은 버전: 글자는 가운데, 짧게 / 사진은 크게 */
+.rs { width: 1080px; height: 1920px; position: relative; overflow: hidden; color: #fff; background: var(--plum); text-align: center; }
+.rs em { font-style: normal; }
 .rs .ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .rs .dim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,26,32,0) 40%, rgba(42,26,32,.55) 75%, rgba(42,26,32,.7) 100%); }
-.rs .bl-mark { position: absolute; top: 230px; left: 0; right: 0; text-align: center; font-family: var(--serif); font-size: 34px; letter-spacing: 7px; font-weight: 600; z-index: 3; }
+.rs .bl-mark { position: absolute; top: 230px; left: 0; right: 0; font-family: var(--serif); font-size: 34px; letter-spacing: 7px; font-weight: 600; z-index: 3; }
 .rs .bl-mark i { font-weight: 500; letter-spacing: 1px; }
-/* 제목: 3분할 아래 교차점(높이 2/3) */
-.rs .ttl { position: absolute; left: 80px; right: 80px; top: 1280px; transform: translateY(-50%); z-index: 3; }
-.rs h1 { font-size: 100px; line-height: 1.18; font-weight: 800; letter-spacing: -3px; text-shadow: 0 4px 30px rgba(0,0,0,.25); }
-.rs h1 em { font-style: normal; color: var(--petal); }
-/* 비포·애프터 */
-.rs .wipe { position: absolute; inset: 0; z-index: 1; }
-.rs .wipe img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.rs .wipe::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 6px; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,.3); }
-.rs .tag { position: absolute; z-index: 3; left: 80px; font-size: 44px; font-weight: 800; letter-spacing: -1px; }
-.rs .tag b { display: inline-block; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 40px; letter-spacing: 1px; padding: 6px 26px 10px; border-radius: 999px; margin-right: 18px; }
-.rs .tag.bf { top: 1180px; } .rs .tag.bf b { background: rgba(255,255,255,.9); color: var(--plum); }
-.rs .tag.af { top: 1300px; } .rs .tag.af b { background: var(--rose); color: #fff; }
+.rs.light { background: var(--cream); color: var(--plum); }
+.rs h1 { font-size: 104px; line-height: 1.18; font-weight: 800; letter-spacing: -3px; text-shadow: 0 4px 30px rgba(0,0,0,.25); }
+.rs h1 em { color: var(--petal); }
+.rs h2 { font-size: 92px; line-height: 1.18; font-weight: 800; letter-spacing: -3px; }
+.rs h2 em { color: var(--rose); }
+.rs small { display: block; font-size: 38px; font-weight: 800; color: var(--rose); margin-bottom: 14px; }
+
+/* 사진 위 제목: 높이 2/3 */
+.rs .ttl { position: absolute; left: 60px; right: 60px; top: 1280px; transform: translateY(-50%); z-index: 3; }
+/* 가운데 묶음 */
+.rs .box { position: absolute; left: 70px; right: 70px; top: 50%; transform: translateY(-55%); }
+.rs .q { font-size: 54px; font-weight: 700; letter-spacing: -1.5px; margin-top: 30px; background: #fff; border-radius: 999px; padding: 30px 40px; }
+.rs .q i { font-style: normal; color: var(--rose); margin-right: 14px; }
+
+/* 눈썹 확대 사진: 크게, 화면 폭 꽉 */
+.rs .hd { position: absolute; left: 60px; right: 60px; top: 330px; }
+.rs .strip { position: absolute; left: 0; right: 0; background-size: 1404px 2496px; background-position: -162px -620px; }
+.rs .strip .lb { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 46px; padding: 4px 34px 10px; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--plum); }
+.rs .strip .lb.on { background: var(--rose); color: #fff; }
+.rs .ring { position: absolute; width: 200px; height: 130px; border: 7px solid var(--rose); border-radius: 50%; z-index: 2; }
+.rs .ring b { position: absolute; left: 50%; top: -70px; transform: translateX(-50%); white-space: nowrap; font-size: 36px; font-weight: 800; color: #fff; background: var(--rose); border-radius: 999px; padding: 6px 24px; }
+.rs .under { position: absolute; left: 60px; right: 60px; font-size: 56px; font-weight: 800; letter-spacing: -1.5px; }
+.rs .under em { color: var(--rose); }
+
 /* 따라 하기 */
-.rs.how { background: var(--cream); color: var(--plum); }
-.rs.how .bl-mark { color: var(--plum); }
-.rs.how .box { position: absolute; left: 80px; right: 80px; top: 50%; transform: translateY(-58%); }
-.rs.how h2 { font-size: 92px; font-weight: 800; letter-spacing: -3px; line-height: 1.2; margin-bottom: 70px; }
-.rs.how h2 em { font-style: normal; color: var(--rose); }
-.rs.how .st { display: flex; align-items: center; gap: 30px; font-size: 54px; font-weight: 700; letter-spacing: -1.5px; margin-top: 44px; }
-.rs.how .st i { flex: none; width: 84px; height: 84px; border-radius: 50%; background: var(--rose); color: #fff; font-family: var(--serif); font-size: 46px; display: flex; align-items: center; justify-content: center; }
+.rs .st { font-size: 56px; font-weight: 700; letter-spacing: -1.5px; margin-top: 30px; }
+.rs .st i { font-style: normal; display: inline-flex; width: 72px; height: 72px; border-radius: 50%; background: var(--rose); color: #fff; font-family: var(--serif); font-size: 40px; align-items: center; justify-content: center; margin-right: 18px; vertical-align: middle; }
+
 /* 마무리 */
-.rs.end .ttl { top: 50%; text-align: center; }
-.rs.end h1 { font-size: 92px; }
-.rs.end .fl { display: inline-block; margin-top: 50px; font-size: 40px; font-weight: 700; border: 3px solid rgba(255,255,255,.7); border-radius: 999px; padding: 22px 56px; }
+.rs.end .ttl { top: 50%; }
+.rs.end .fl { display: inline-block; margin-top: 50px; font-size: 42px; font-weight: 700; border: 3px solid rgba(255,255,255,.7); border-radius: 999px; padding: 22px 56px; }
 .rs.end .ph { filter: blur(6px) brightness(.55); transform: scale(1.06); }
-/* 왜·누구에게 */
-.rs.why { background: var(--cream); color: var(--plum); }
-.rs.why .bl-mark { color: var(--plum); }
-.rs.why .box { position: absolute; left: 80px; right: 80px; top: 50%; transform: translateY(-58%); }
-.rs.why h2 { font-size: 92px; font-weight: 800; letter-spacing: -3px; line-height: 1.2; margin-bottom: 60px; }
-.rs.why h2 em { font-style: normal; color: var(--rose); }
-.rs.why .ln { font-size: 50px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.45; margin-top: 30px; }
-.rs.why .ln b { color: var(--rose); }
-.rs.why .ar { font-size: 50px; color: var(--rose); margin: 14px 0 0 6px; }
-.rs.why .who { margin-top: 64px; background: #fff; border-radius: 34px; padding: 40px 46px; }
-.rs.why .who small { display: block; font-size: 32px; font-weight: 800; color: var(--rose); margin-bottom: 14px; }
-.rs.why .who p { font-size: 46px; font-weight: 700; letter-spacing: -1.2px; line-height: 1.45; }
-</style><style>
-/* 상황 공감 */
-.rs.sit { background: var(--cream); color: var(--plum); }
-.rs.sit .bl-mark { color: var(--plum); }
-.rs.sit .box { position: absolute; left: 80px; right: 80px; top: 50%; transform: translateY(-58%); }
-.rs.sit h2 { font-size: 96px; font-weight: 800; letter-spacing: -3px; line-height: 1.2; margin-bottom: 56px; }
-.rs.sit h2 em { font-style: normal; color: var(--rose); }
-.rs.sit .q { display: flex; gap: 22px; align-items: flex-start; font-size: 50px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.4; margin-top: 34px; background: #fff; border-radius: 30px; padding: 30px 38px; }
-.rs.sit .q i { flex: none; font-style: normal; color: var(--rose); }
-/* 원인 → 변화 (사진 위) */
-.rs .cause, .rs .fix { position: absolute; left: 80px; right: 80px; top: 1280px; transform: translateY(-50%); }
-.rs .cause { z-index: 0; } .rs .fix { z-index: 2; }
-.rs .cause small, .rs .fix small { display: block; font-size: 36px; font-weight: 700; color: rgba(255,255,255,.85); margin-bottom: 16px; }
-.rs .cause h2, .rs .fix h2 { font-size: 84px; font-weight: 800; letter-spacing: -2.5px; line-height: 1.2; text-shadow: 0 4px 30px rgba(0,0,0,.3); }
-.rs .cause h2 em, .rs .fix h2 em { font-style: normal; color: var(--petal); }
-.rs .cause p, .rs .fix p { margin-top: 24px; font-size: 40px; font-weight: 600; line-height: 1.45; color: rgba(255,255,255,.92); }
-.rs.why .who + .who { margin-top: 28px; }
-</style>
-<style>
-/* 눈썹 확대 비교 장 (표지와 다른 배치) */
-.rs.zoom { background: var(--cream); color: var(--plum); }
-.rs.zoom .bl-mark { color: var(--plum); }
-.rs.zoom .hd { position: absolute; left: 80px; right: 80px; top: 330px; }
-.rs.zoom .hd small { display: block; font-size: 36px; font-weight: 800; color: var(--rose); margin-bottom: 14px; }
-.rs.zoom .hd h2 { font-size: 84px; font-weight: 800; letter-spacing: -2.5px; line-height: 1.18; }
-.rs.zoom .hd h2 em { font-style: normal; color: var(--rose); }
-.rs.zoom .strip { position: absolute; left: 0; right: 0; height: 360px; background-size: 1080px 1920px; background-position: 0 -490px; }
-.rs.zoom .strip.s1 { top: 640px; } .rs.zoom .strip.s2 { top: 1010px; }
-.rs.zoom .strip .lb { position: absolute; left: 40px; top: 28px; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 40px; padding: 4px 26px 8px; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--plum); }
-.rs.zoom .strip .lb.on { background: var(--rose); color: #fff; }
-.rs.zoom .ring { position: absolute; width: 190px; height: 120px; border: 6px solid var(--rose); border-radius: 50%; }
-.rs.zoom .ring b { position: absolute; left: 50%; top: -64px; transform: translateX(-50%); white-space: nowrap; font-size: 34px; font-weight: 800; color: #fff; background: var(--rose); border-radius: 999px; padding: 6px 22px; }
-.rs.zoom .tx { position: absolute; left: 80px; right: 80px; font-size: 44px; font-weight: 700; line-height: 1.5; letter-spacing: -1px; }
-.rs.zoom .tx b { color: var(--rose); }
-</style>
-</head>
+</style></head>
 <body>
 <section class="card rs" data-name="01_hook">
   <img class="ph static kb" src="img/reel_before.jpg" alt="" />
   <div class="dim static"></div>
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
-  <div class="ttl"><h1>눈썹 진하게 그렸는데<br/><em>왜 인상만 세 보이지?</em></h1></div>
+  <div class="ttl"><h1>왜 내 눈썹만<br/><em>세 보일까?</em></h1></div>
 </section>
-<section class="card rs sit" data-name="02_situation">
+
+<section class="card rs light" data-name="02_situation">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
   <div class="box">
-    <h2>이런 적<br/><em>있지 않아요?</em></h2>
-    <div class="q whole"><i>✓</i>화장했는데 "오늘 화났어?" 소리 들을 때</div>
-    <div class="q whole"><i>✓</i>눈썹만 진하고 얼굴이 답답해 보일 때</div>
-    <div class="q whole"><i>✓</i>눈썹 끝이 뭉툭하게 뚝 끊겨 있을 때</div>
+    <h2>이런 적<br/><em>있죠?</em></h2>
+    <div class="q whole"><i>✓</i>"오늘 화났어?"</div>
+    <div class="q whole"><i>✓</i>눈썹만 둥둥 떠 보일 때</div>
   </div>
 </section>
-<section class="card rs zoom" data-name="03_cause">
+
+<section class="card rs light" data-name="03_cause">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
-  <div class="hd"><small>범인은 여기</small><h2>뭉툭하게 끊긴<br/><em>눈썹 꼬리</em></h2></div>
-  <div class="strip s1 whole" style="background-image:url(img/reel_before.jpg)"><span class="lb">Before</span></div>
-  <div class="ring whole" style="left:765px; top:720px"><b>여기서 뚝</b></div>
-  <div class="tx" style="top:1080px">꼬리가 눈꼬리 앞에서 <b>각지게 끊기면</b><br/>눈썹이 짧고 무거워 보여<br/><b>인상이 세져요</b></div>
+  <div class="hd"><small>범인은</small><h2>뚝 끊긴 <em>꼬리</em></h2></div>
+  <div class="strip whole" style="top:620px; height:640px; background-image:url(img/reel_before.jpg)"></div>
+  <div class="ring whole" style="left:836px; top:754px"><b>여기서 뚝</b></div>
+  <div class="under whole" style="top:1340px">짧고 각지면 <em>인상이 세져요</em></div>
 </section>
-<section class="card rs zoom" data-name="04_change">
+
+<section class="card rs light" data-name="04_change">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
-  <div class="hd"><small>꼬리만 바꿨어요</small><h2>가늘게<br/><em>관자놀이 쪽으로</em></h2></div>
-  <div class="strip s1 static" style="background-image:url(img/reel_before.jpg)"><span class="lb">Before</span></div>
-  <div class="strip s2 whole" style="background-image:url(img/reel_after.jpg)"><span class="lb on">After</span></div>
-  <div class="ring whole" style="left:785px; top:1095px"><b>가늘게 쭉</b></div>
-  <div class="tx" style="top:1420px">선이 옆으로 부드럽게 이어져<br/>같은 얼굴도 <b>순하고 우아해 보여요</b></div>
+  <div class="hd"><small>꼬리만 바꿨어요</small><h2>가늘게, <em>길게</em></h2></div>
+  <div class="strip static" style="top:540px; height:500px; background-position:-162px -640px; background-image:url(img/reel_before.jpg)"><span class="lb">Before</span></div>
+  <div class="strip whole" style="top:1050px; height:500px; background-position:-162px -640px; background-image:url(img/reel_after.jpg)"><span class="lb on">After</span></div>
+  <div class="ring whole" style="left:856px; top:1170px"><b>가늘게 쭉</b></div>
 </section>
-<section class="card rs why" data-name="05_who">
+
+<section class="card rs light" data-name="05_how">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
-  <div class="box">
-    <h2>이런 분은<br/><em>꼭 해 보세요</em></h2>
-    <div class="who whole"><small>눈썹</small><p>짧고 뭉툭하게 끝나는 눈썹</p></div>
-    <div class="who whole"><small>이런 말 들을 때</small><p>"인상 세 보인다"는 말 자주 듣는 분</p></div>
-    <div class="who whole"><small>원하는 분위기</small><p>세지 않고 우아한 '어른 여자'</p></div>
-  </div>
-</section>
-<section class="card rs how" data-name="06_how">
-  <div class="bl-mark static">BEAUTY <i>letter</i></div>
-  <div class="box">
-    <h2>이렇게<br/><em>따라 해 보세요</em></h2>
+  <div class="strip static" style="top:330px; height:560px; background-position:-162px -630px; background-image:url(img/reel_after.jpg)"></div>
+  <div class="box" style="top:1250px; transform:translateY(-50%)">
     <div class="st whole"><i>1</i>얇은 펜슬로 짧게</div>
-    <div class="st whole"><i>2</i>끝은 바늘처럼 얇게</div>
-    <div class="st whole"><i>3</i>브러시로 경계 풀기</div>
+    <div class="st whole"><i>2</i>끝은 바늘처럼</div>
+    <div class="st whole"><i>3</i>브러시로 풀기</div>
   </div>
 </section>
-<section class="card rs end" data-name="07_end">
+
+<section class="card rs end" data-name="06_end">
   <img class="ph static" src="img/reel_after.jpg" alt="" />
   <div class="ttl"><h1>저장해 두고<br/><em>따라 해 보세요</em></h1><div class="fl whole">@from.beautyletter</div></div>
 </section>

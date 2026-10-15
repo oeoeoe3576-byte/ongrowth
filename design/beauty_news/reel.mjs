@@ -171,6 +171,14 @@ try {
   let total = 0;
   for (let i = 0; i < n; i++) {
     const end = await page.evaluate(([idx, opt]) => window.__prep(idx, opt), [i, { TITLE_MS, BODY_MS, CHAR_FADE, BLOCK_FADE }]);
+    // data-thumb 장은 영상에 넣지 않고, 글자가 다 나온 정지 이미지(릴스 썸네일)로만 저장한다
+    if (await page.evaluate((idx) => document.querySelectorAll(".card")[idx].hasAttribute("data-thumb"), i)) {
+      await page.evaluate((m) => window.__set(m, 1e9), end + 1000);
+      const thumb = outFile.replace(/\.mp4$/, "_thumb.jpg");
+      await page.screenshot({ path: thumb, type: "jpeg", quality: 95 });
+      console.log(`썸네일 → ${thumb}`);
+      continue;
+    }
     const dur = end + HOLD * 1000;
     const frames = Math.round((dur / 1000) * FPS);
     for (let f = 0; f < frames; f++) {

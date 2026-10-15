@@ -63,41 +63,65 @@
 .rs .cause p, .rs .fix p { margin-top: 24px; font-size: 40px; font-weight: 600; line-height: 1.45; color: rgba(255,255,255,.92); }
 .rs.why .who + .who { margin-top: 28px; }
 </style>
+<style>
+/* 눈썹 확대 비교 장 (표지와 다른 배치) */
+.rs.zoom { background: var(--cream); color: var(--plum); }
+.rs.zoom .bl-mark { color: var(--plum); }
+.rs.zoom .hd { position: absolute; left: 80px; right: 80px; top: 330px; }
+.rs.zoom .hd small { display: block; font-size: 36px; font-weight: 800; color: var(--rose); margin-bottom: 14px; }
+.rs.zoom .hd h2 { font-size: 84px; font-weight: 800; letter-spacing: -2.5px; line-height: 1.18; }
+.rs.zoom .hd h2 em { font-style: normal; color: var(--rose); }
+.rs.zoom .strip { position: absolute; left: 0; right: 0; height: 360px; background-size: 1080px 1920px; background-position: 0 -490px; }
+.rs.zoom .strip.s1 { top: 640px; } .rs.zoom .strip.s2 { top: 1010px; }
+.rs.zoom .strip .lb { position: absolute; left: 40px; top: 28px; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 40px; padding: 4px 26px 8px; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--plum); }
+.rs.zoom .strip .lb.on { background: var(--rose); color: #fff; }
+.rs.zoom .ring { position: absolute; width: 190px; height: 120px; border: 6px solid var(--rose); border-radius: 50%; }
+.rs.zoom .ring b { position: absolute; left: 50%; top: -64px; transform: translateX(-50%); white-space: nowrap; font-size: 34px; font-weight: 800; color: #fff; background: var(--rose); border-radius: 999px; padding: 6px 22px; }
+.rs.zoom .tx { position: absolute; left: 80px; right: 80px; font-size: 44px; font-weight: 700; line-height: 1.5; letter-spacing: -1px; }
+.rs.zoom .tx b { color: var(--rose); }
+</style>
 </head>
 <body>
 <section class="card rs" data-name="01_hook">
   <img class="ph static kb" src="img/reel_before.jpg" alt="" />
   <div class="dim static"></div>
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
-  <div class="ttl"><h1>눈썹 다 그렸는데<br/><em>왜 얼굴이 더 커 보이지?</em></h1></div>
+  <div class="ttl"><h1>눈썹 진하게 그렸는데<br/><em>왜 인상만 세 보이지?</em></h1></div>
 </section>
 <section class="card rs sit" data-name="02_situation">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
   <div class="box">
     <h2>이런 적<br/><em>있지 않아요?</em></h2>
-    <div class="q whole"><i>✓</i>정면 셀카에서 얼굴이 유독 동그래 보일 때</div>
-    <div class="q whole"><i>✓</i>눈썹만 둥둥 떠서 따로 노는 느낌</div>
-    <div class="q whole"><i>✓</i>진하게 그렸더니 인상만 세 보일 때</div>
+    <div class="q whole"><i>✓</i>화장했는데 "오늘 화났어?" 소리 들을 때</div>
+    <div class="q whole"><i>✓</i>눈썹만 진하고 얼굴이 답답해 보일 때</div>
+    <div class="q whole"><i>✓</i>눈썹 끝이 뭉툭하게 뚝 끊겨 있을 때</div>
   </div>
 </section>
-<section class="card rs" data-name="03_cause">
-  <img class="ph static" src="img/reel_before.jpg" alt="" />
-  <div class="dim static"></div>
-  <div class="cause"><small>범인은 여기</small><h2>눈꼬리 앞에서<br/><em>뚝 끊긴 눈썹 꼬리</em></h2><p>꼬리가 짧으면 얼굴 옆이 텅 비어<br/>얼굴이 더 넓고 동그래 보여요</p></div>
-  <div class="wipe"><img src="img/reel_after.jpg" alt="" /><div class="dim"></div>
-    <div class="fix"><small>꼬리만 바꿨어요</small><h2>관자놀이 쪽으로<br/><em>살짝 길게</em></h2><p>시선이 옆으로 이어져서<br/>얼굴 옆이 채워지고 슬림해 보여요</p></div>
-  </div>
+<section class="card rs zoom" data-name="03_cause">
+  <div class="bl-mark static">BEAUTY <i>letter</i></div>
+  <div class="hd"><small>범인은 여기</small><h2>뭉툭하게 끊긴<br/><em>눈썹 꼬리</em></h2></div>
+  <div class="strip s1 whole" style="background-image:url(img/reel_before.jpg)"><span class="lb">Before</span></div>
+  <div class="ring whole" style="left:765px; top:720px"><b>여기서 뚝</b></div>
+  <div class="tx" style="top:1080px">꼬리가 눈꼬리 앞에서 <b>각지게 끊기면</b><br/>눈썹이 짧고 무거워 보여<br/><b>인상이 세져요</b></div>
 </section>
-<section class="card rs why" data-name="04_who">
+<section class="card rs zoom" data-name="04_change">
+  <div class="bl-mark static">BEAUTY <i>letter</i></div>
+  <div class="hd"><small>꼬리만 바꿨어요</small><h2>가늘게<br/><em>관자놀이 쪽으로</em></h2></div>
+  <div class="strip s1 static" style="background-image:url(img/reel_before.jpg)"><span class="lb">Before</span></div>
+  <div class="strip s2 whole" style="background-image:url(img/reel_after.jpg)"><span class="lb on">After</span></div>
+  <div class="ring whole" style="left:785px; top:1095px"><b>가늘게 쭉</b></div>
+  <div class="tx" style="top:1420px">선이 옆으로 부드럽게 이어져<br/>같은 얼굴도 <b>순하고 우아해 보여요</b></div>
+</section>
+<section class="card rs why" data-name="05_who">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
   <div class="box">
     <h2>이런 분은<br/><em>꼭 해 보세요</em></h2>
-    <div class="who whole"><small>얼굴형</small><p>둥근 얼굴 · 옆 광대가 넓은 얼굴</p></div>
     <div class="who whole"><small>눈썹</small><p>짧고 뭉툭하게 끝나는 눈썹</p></div>
+    <div class="who whole"><small>이런 말 들을 때</small><p>"인상 세 보인다"는 말 자주 듣는 분</p></div>
     <div class="who whole"><small>원하는 분위기</small><p>세지 않고 우아한 '어른 여자'</p></div>
   </div>
 </section>
-<section class="card rs how" data-name="05_how">
+<section class="card rs how" data-name="06_how">
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
   <div class="box">
     <h2>이렇게<br/><em>따라 해 보세요</em></h2>
@@ -106,7 +130,7 @@
     <div class="st whole"><i>3</i>브러시로 경계 풀기</div>
   </div>
 </section>
-<section class="card rs end" data-name="06_end">
+<section class="card rs end" data-name="07_end">
   <img class="ph static" src="img/reel_after.jpg" alt="" />
   <div class="ttl"><h1>저장해 두고<br/><em>따라 해 보세요</em></h1><div class="fl whole">@from.beautyletter</div></div>
 </section>

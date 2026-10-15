@@ -1,0 +1,56 @@
+/* 릴스 공통 스타일: 각 레터 폴더의 reel.html에서 ../../reel.css로 불러 쓴다 */
+/* 릴스 전용 짧은 버전: 글자는 가운데, 짧게 / 사진은 크게 */
+.rs { width: 1080px; height: 1920px; position: relative; overflow: hidden; color: #fff; background: var(--plum); text-align: center; }
+.rs em { font-style: normal; }
+.rs .ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.rs .dim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,26,32,0) 40%, rgba(42,26,32,.55) 75%, rgba(42,26,32,.7) 100%); }
+.rs .bl-mark { position: absolute; top: 230px; left: 0; right: 0; font-family: var(--serif); font-size: 34px; letter-spacing: 7px; font-weight: 600; z-index: 3; }
+.rs .bl-mark i { font-weight: 500; letter-spacing: 1px; }
+.rs.light { background: var(--cream); color: var(--plum); }
+.rs h1 { font-size: 104px; line-height: 1.18; font-weight: 800; letter-spacing: -3px; text-shadow: 0 4px 30px rgba(0,0,0,.25); }
+.rs h1 em { color: var(--petal); }
+.rs h2 { font-size: 92px; line-height: 1.18; font-weight: 800; letter-spacing: -3px; }
+.rs h2 em { color: var(--rose); }
+.rs small { display: block; font-size: 38px; font-weight: 800; color: var(--rose); margin-bottom: 14px; }
+
+/* 사진 위 제목: 높이 2/3 */
+.rs .ttl { position: absolute; left: 60px; right: 60px; top: 1280px; transform: translateY(-50%); z-index: 3; }
+/* 가운데 묶음 */
+.rs .box { position: absolute; left: 70px; right: 70px; top: 50%; transform: translateY(-55%); }
+.rs .q { font-size: 54px; font-weight: 700; letter-spacing: -1.5px; margin-top: 30px; background: #fff; border-radius: 999px; padding: 30px 40px; }
+.rs .q i { font-style: normal; color: var(--rose); margin-right: 14px; }
+
+/* 눈썹 확대 사진: 크게, 화면 폭 꽉 */
+.rs .hd { position: absolute; left: 60px; right: 60px; top: 330px; }
+.rs .strip { position: absolute; left: 0; right: 0; background-size: 1404px 2496px; background-position: -162px -620px; }
+.rs .strip .lb { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 46px; padding: 4px 34px 10px; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--plum); }
+.rs .strip .lb.on { background: var(--rose); color: #fff; }
+.rs .ring { position: absolute; width: 200px; height: 130px; border: 7px solid var(--rose); border-radius: 50%; z-index: 2; }
+.rs .ring b { position: absolute; left: 50%; top: -70px; transform: translateX(-50%); white-space: nowrap; font-size: 36px; font-weight: 800; color: #fff; background: var(--rose); border-radius: 999px; padding: 6px 24px; }
+.rs .under { position: absolute; left: 60px; right: 60px; font-size: 56px; font-weight: 800; letter-spacing: -1.5px; }
+.rs .under em { color: var(--rose); }
+
+/* 따라 하기 */
+.rs .st { font-size: 56px; font-weight: 700; letter-spacing: -1.5px; margin-top: 30px; }
+.rs .st i { font-style: normal; display: inline-flex; width: 72px; height: 72px; border-radius: 50%; background: var(--rose); color: #fff; font-family: var(--serif); font-size: 40px; align-items: center; justify-content: center; margin-right: 18px; vertical-align: middle; }
+
+/* 마무리 */
+.rs.end .ttl { top: 50%; }
+.rs.end .fl { display: inline-block; margin-top: 50px; font-size: 42px; font-weight: 700; border: 3px solid rgba(255,255,255,.7); border-radius: 999px; padding: 22px 56px; }
+.rs.end .ph { filter: blur(6px) brightness(.55); transform: scale(1.06); }
+
+/* 전체 화면 사진 + 확대 */
+.rs .zbg { position: absolute; inset: 0; background-size: 1350px 2400px; background-position: -135px -40px; }
+.rs .dimc { position: absolute; inset: 0; background: rgba(42,26,32,.45); }
+.rs .dimb { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,26,32,0) 45%, rgba(42,26,32,.6) 70%, rgba(42,26,32,.75) 100%); }
+.rs .low { position: absolute; left: 60px; right: 60px; top: 1300px; transform: translateY(-50%); z-index: 3; }
+.rs .low small { color: var(--petal); }
+.rs .low h2 { color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,.3); }
+.rs .low h2 em { color: var(--petal); }
+.rs .low p { margin-top: 24px; font-size: 48px; font-weight: 700; letter-spacing: -1px; color: rgba(255,255,255,.92); }
+.rs .low p em { color: var(--petal); }
+.rs .tagtop { position: absolute; top: 330px; left: 50%; transform: translateX(-50%); z-index: 3; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 52px; padding: 6px 40px 12px; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--plum); }
+.rs .tagtop.on { background: var(--rose); color: #fff; }
+.rs .q2 { font-size: 56px; font-weight: 700; letter-spacing: -1.5px; margin-top: 28px; color: #fff; }
+.rs .q2 i { font-style: normal; color: var(--petal); margin-right: 12px; }
+.rs .st { color: #fff; }

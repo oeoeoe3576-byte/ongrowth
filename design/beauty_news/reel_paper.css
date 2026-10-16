@@ -76,3 +76,10 @@ html, body { margin: 0; padding: 0; }
 .pp .nail.french::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 32%; background: #F7EFE6; border-bottom: 3px solid rgba(42,26,32,.15); }
 .pp .nlabel { position: absolute; left: 60px; right: 60px; display: flex; justify-content: center; gap: 34px; }
 .pp .nlabel span { width: 150px; text-align: center; font-size: 30px; font-weight: 700; letter-spacing: -0.04em; }
+
+/* 코드로 그린 도식(입술·얼굴) */
+.pp .diag { position: absolute; left: 80px; right: 80px; display: flex; justify-content: center; gap: 30px; }
+.pp .diag figure { margin: 0; text-align: center; }
+.pp .diag figcaption { font-size: 32px; font-weight: 800; letter-spacing: -0.04em; margin-top: 10px; }
+.pp .chips.x span { position: relative; opacity: .55; }
+.pp .chips.x span i::after { content: ""; position: absolute; left: 50%; top: 4px; width: 6px; height: 124px; background: var(--ink); transform: translateX(-50%) rotate(45deg); }

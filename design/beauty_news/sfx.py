@@ -4,7 +4,7 @@ reel.mjs가 만든 output/<이름>_sfx.json(장 넘김·박스·사진 등장 �
 <이름>_sfx.mp4로 저장한다.
 
 원칙: 적당히, 다양하게
-- 장마다 효과음은 최대 2개: 장 넘김 1개 + 그 장의 대표 등장 1개(사진 > 강조 박스 > 일반 박스 순)
+- 장 넘김 소리 1개 + 사진·강조 박스가 뜨는 장에만 등장 소리 1개(일반 흰 박스는 소리 없음)
 - 글자마다 소리 내지 않는다
 - 장 넘김 소리는 종이 넘김 / 휙 / 부드러운 바람을 돌아가며, 마지막 장은 반짝 소리
 - 등장 소리도 장마다 다른 음(카메라 셔터, 맑은 띵, 물방울 톡, 나무 똑)으로 바꿔 가며
@@ -136,7 +136,7 @@ def main(mp4):
         elif n > 0:  # 첫 장은 넘김 소리 없이 시작
             put(pg["t"], PAGE[n % len(PAGE)]())
         # 그 장의 대표 등장 하나만
-        for kind in ("whoosh", "photo", "accent", "box"):
+        for kind in ("whoosh", "photo", "accent"):
             hit = next((e for e in mine if e["k"] == kind), None)
             if hit:
                 s = {"whoosh": whoosh, "photo": shutter,

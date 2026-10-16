@@ -41,3 +41,7 @@ design/beauty_news/letters/2026-10-10_am_hime/output/stills/01.jpg
 design/beauty_news/letters/2026-10-10_am_hime/img/user_photo.jpg
 design/beauty_news/letters/2026-10-10_am_hime/output/reel2.mp4
 design/beauty_news/letters/2026-10-10_am_hime/output/stills/
+
+# 사용자가 준 사진은 user_*로 저장하고 커밋하지 않음 (그 사진이 들어간 결과물도)
+design/beauty_news/letters/*/img/user_*
+design/beauty_news/letters/2026-10-17_hukbal/output/

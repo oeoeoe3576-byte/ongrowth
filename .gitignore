@@ -33,3 +33,8 @@ data/queue.json
 data/calendar.json
 
 .DS_Store
+
+# 사용자가 직접 준 사진(공개 저장소에 올리지 않음)
+design/beauty_news/letters/2026-10-10_am_hime/img/reel_thumb_photo.jpg
+design/beauty_news/letters/2026-10-10_am_hime/output/reel2_thumb.jpg
+design/beauty_news/letters/2026-10-10_am_hime/output/stills/01.jpg

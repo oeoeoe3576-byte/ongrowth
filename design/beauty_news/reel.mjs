@@ -139,7 +139,13 @@ function prepCard(idx, opt) {
   const end = t + opt.CHAR_FADE;
   window.__items = items;
   // 효과음 타이밍: 제목 글자=tick, 박스·사진 등장=pop, 비포→애프터=whoosh
-  window.__ev = items.filter((it) => !it.out).map((it) => ({ t: it.at, k: it.wipe ? "whoosh" : it.block ? "pop" : it.head ? "tick" : null })).filter((e) => e.k);
+  window.__ev = items.filter((it) => !it.out).map((it) => {
+    if (it.wipe) return { t: it.at, k: "whoosh" };
+    if (!it.block) return null;
+    const el = it.el;
+    const k = el.matches(".ph, .pic, img") ? "photo" : el.matches(".rb, .follow") ? "accent" : "box";
+    return { t: it.at, k };
+  }).filter(Boolean);
   window.__cover = card.querySelector('[data-slot="photo"] img, .kb');
   return end;
 }
@@ -199,8 +205,8 @@ try {
       ff.stdin.write(await page.screenshot({ type: "jpeg", quality: 92 }));
     }
     const ev = await page.evaluate(() => window.__ev);
-    sfx.push({ t: total / 1000, k: "swish" });
-    for (const e of ev) sfx.push({ t: (total + e.t) / 1000, k: e.k });
+    sfx.push({ t: total / 1000, k: "page", p: i, last: i === n - 1 });
+    for (const e of ev) sfx.push({ t: (total + e.t) / 1000, k: e.k, p: i });
     total += dur;
     console.log(`장 ${i + 1}/${n}: ${(dur / 1000).toFixed(1)}초`);
   }

@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8" /><title>히메 커트 릴스 (종이 스타일)</title>
 <link rel="stylesheet" href="../../styles.css" />
+<link rel="stylesheet" href="../../reel.css" />
 <link rel="stylesheet" href="../../reel_paper.css" />
 </head>
 <body>
 
-<!-- 1. 썸네일 -->
-<section class="card pp" data-name="01_thumb" data-thumb>
-  <div class="mark">BEAUTY <i>letter</i></div>
-  <div class="ph" style="left:150px; top:320px; width:780px; height:880px; background-image:url(img/reel_after.jpg); background-position:center 28%"></div>
-  <div class="big" style="top:1250px">파리 언니들이<br/><em>따라 하는 한국 머리</em></div>
-  <div class="hl" style="left:70px; top:1530px">히메 커트, 한 번에 정리해 왔어요</div>
+<!-- 1. 썸네일 (기존 릴스 방식: 전체 화면 사진 + 높이 2/3 제목) -->
+<section class="card rs" data-name="01_thumb" data-thumb>
+  <img class="ph static kb" src="img/reel_after.jpg" alt="" />
+  <div class="dim static"></div>
+  <div class="bl-mark static">BEAUTY <i>letter</i></div>
+  <div class="ttl"><h1>요즘 파리에서<br/><em>따라 하는 한국 머리</em></h1></div>
 </section>
 
 <!-- 2. 정의 -->
@@ -120,10 +121,10 @@
   <div class="note" style="left:70px; top:1360px">*컬러 추천은 퍼스널컬러 일반 원리 예시 · 흑발 트렌드: 얼루어 코리아 (2026.10.15)</div>
 </section>
 
-<!-- 10. 저장 -->
-<section class="card pp" data-name="10_save">
+<!-- 10. 저장 (가운데 정렬) -->
+<section class="card pp center" data-name="10_save">
   <div class="big" style="top:600px">미용실 갈 때<br/><em>이 영상 보여 주세요</em></div>
-  <div class="wb" style="left:70px; top:1000px">저장해 두면 주문할 때 편해요</div>
-  <div class="bb" style="left:70px; top:1200px; padding:30px 44px"><p style="margin:0; font-size:44px"><em>@from.beautyletter</em> 팔로우</p></div>
+  <div class="wb cx" style="top:1000px">저장해 두면 주문할 때 편해요</div>
+  <div class="bb cx" style="top:1190px; padding:30px 44px"><p style="margin:0; font-size:44px"><em>@from.beautyletter</em> 팔로우</p></div>
 </section>
 </body></html>

@@ -52,3 +52,27 @@ html, body { margin: 0; padding: 0; }
 .pp .big { position: absolute; left: 60px; right: 60px; text-align: center; font-family: var(--m); font-weight: 800; font-size: 112px; line-height: 1.15; letter-spacing: -0.07em; }
 .pp .cx { left: 50% !important; transform: translateX(-50%); white-space: nowrap; }
 .pp .follow { position: absolute; background: var(--ink); color: #fff; padding: 26px 48px; font-size: 44px; font-weight: 700; border-radius: 999px; }
+
+/* 썸네일 사진 자리(사용자가 줄 사진) */
+.rs.thumbslot { background: repeating-linear-gradient(45deg, #EFE7E9 0 30px, #E3D6DA 30px 60px); }
+.rs.thumbslot .slot { position: absolute; left: 0; right: 0; top: 700px; text-align: center; font-size: 44px; font-weight: 800; color: #7A6268; font-family: "Pretendard", sans-serif; }
+/* 네일 일러스트(코드로 그림) */
+.pp .nails { position: absolute; left: 80px; right: 80px; display: flex; justify-content: center; gap: 34px; }
+.pp .nail { width: 150px; height: 250px; border-radius: 75px 75px 34px 34px / 120px 120px 34px 34px; border: 4px solid var(--ink); position: relative; overflow: hidden; }
+.pp .nail.dots::after { content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 30% 22%, #F4E6D2 0 9px, transparent 10px),
+    radial-gradient(circle at 68% 36%, #F4E6D2 0 6px, transparent 7px),
+    radial-gradient(circle at 40% 52%, #F4E6D2 0 11px, transparent 12px),
+    radial-gradient(circle at 74% 66%, #F4E6D2 0 8px, transparent 9px),
+    radial-gradient(circle at 28% 78%, #F4E6D2 0 6px, transparent 7px),
+    radial-gradient(circle at 58% 86%, #F4E6D2 0 9px, transparent 10px); }
+.pp .nail.dots2::after { content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 62% 20%, #F4E6D2 0 8px, transparent 9px),
+    radial-gradient(circle at 30% 40%, #F4E6D2 0 10px, transparent 11px),
+    radial-gradient(circle at 70% 58%, #F4E6D2 0 6px, transparent 7px),
+    radial-gradient(circle at 38% 74%, #F4E6D2 0 9px, transparent 10px); }
+.pp .nail.french::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 32%; background: #F7EFE6; border-bottom: 3px solid rgba(42,26,32,.15); }
+.pp .nlabel { position: absolute; left: 60px; right: 60px; display: flex; justify-content: center; gap: 34px; }
+.pp .nlabel span { width: 150px; text-align: center; font-size: 30px; font-weight: 700; letter-spacing: -0.04em; }

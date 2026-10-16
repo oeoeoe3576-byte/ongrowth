@@ -62,7 +62,7 @@ html body .card.cur { position: fixed !important; top: 0 !important; left: 0 !im
 .wipe { clip-path: inset(0 100% 0 0); }
 r-w { display: inline-block; white-space: nowrap; }
 r-c { display: inline-block; opacity: 0; will-change: opacity, transform; }
-.rb { opacity: 0; will-change: opacity, transform; }
+.r-b { opacity: 0; will-change: opacity, transform; }
 `;
 
 // 페이지 안에서 장 하나를 준비한다: 글자를 쪼개고, 각 글자·덩어리의 등장 시각을 정한다.
@@ -70,7 +70,7 @@ function prepCard(idx, opt) {
   const cards = [...document.querySelectorAll(".card")];
   cards.forEach((c, i) => c.classList.toggle("cur", i === idx));
   const card = cards[idx];
-  const SKIP = ".topbar, .foot, .credit, .pageno, .wordmark, [data-slot], .shade, .bgimg, .glow, .static";
+  const SKIP = ".topbar, .foot, .credit, .pageno, .wordmark, [data-slot], .shade, .bgimg, .glow, .static, .pg";
   const BLOCK = "img, .vis, .cs > div, .tone > div, .chips, .follow";
   let t = 300; // 장이 바뀌고 0.3초 뒤부터 시작
   const items = [];
@@ -81,8 +81,8 @@ function prepCard(idx, opt) {
         if (ch.matches(SKIP)) continue;
         if (ch.matches(".whole")) {
           // 라벨·단계처럼 짧은 덩어리는 통째로 나타난다
-          ch.classList.add("rb");
-          items.push({ el: ch, at: t, dur: opt.BLOCK_FADE, block: true });
+          ch.classList.add("r-b");
+          items.push({ el: ch, at: t, dur: opt.BLOCK_FADE, block: true, base: (getComputedStyle(ch).transform || 'none').replace('none', '') });
           t += 550;
           continue;
         }
@@ -95,10 +95,18 @@ function prepCard(idx, opt) {
           t += 2800; // 덮인 뒤 애프터 문구를 읽을 시간
           continue;
         }
-        if (ch.matches(BLOCK) && !ch.querySelector("h1,h2,p,li")) {
+        // 종이 스타일: 박스·사진·띠는 먼저 통째로 나타나고, 안의 글자가 이어서 한 자씩
+        const BOX = ".pp .wb, .pp .rb, .pp .hl, .pp .ph, .pp .follow, .pp .chips span";
+        if (ch.matches(".pp .ph, .pp .chips span")) {
+          ch.classList.add("r-b");
+          items.push({ el: ch, at: t, dur: opt.BLOCK_FADE, block: true, base: "" });
+          t += 300;
+          continue;
+        }
+        if (ch.matches(BOX) || (ch.matches(BLOCK) && !ch.querySelector("h1,h2,p,li"))) {
           // 그림·칩: 통째로 나타나고, 안의 글자는 뒤이어 한 자씩
-          ch.classList.add("rb");
-          items.push({ el: ch, at: t, dur: opt.BLOCK_FADE, block: true });
+          ch.classList.add("r-b");
+          items.push({ el: ch, at: t, dur: opt.BLOCK_FADE, block: true, base: (getComputedStyle(ch).transform || 'none').replace('none', '') });
           t += 220;
           walk(ch);
           continue;
@@ -147,7 +155,7 @@ function setTime(ms, total) {
       it.el.style.clipPath = `inset(0 ${(1 - p * p * (3 - 2 * p)) * 100}% 0 0)`;
       continue;
     }
-    it.el.style.transform = `translateY(${(1 - e) * (it.block ? 30 : 18)}px)`;
+    it.el.style.transform = `${it.base || ''} translateY(${(1 - e) * (it.block ? 30 : 18)}px)`;
   }
   // 표지 사진은 아주 천천히 확대
   if (window.__cover) window.__cover.style.transform = `scale(${1 + 0.06 * (ms / total)})`;

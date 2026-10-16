@@ -3,27 +3,33 @@
 <link rel="stylesheet" href="../../styles.css" />
 <link rel="stylesheet" href="../../reel.css" />
 <link rel="stylesheet" href="../../reel_paper.css" />
+<style>
+/* 밤비 썸네일 콜라주: 메인 네일 사진 + 점선 액자 사진 + 반짝이 낙서 */
+.rs .main { position: absolute; inset: 0; background: url(img/nail_main.jpg) 30% 58% / 150% no-repeat; }
+.rs .pic { position: absolute; border: 5px dotted rgba(255,255,255,.95); box-shadow: 0 10px 30px rgba(0,0,0,.25); background: #ccc center / cover no-repeat; z-index: 2; }
+.rs .doodle { position: absolute; z-index: 3; color: #fff; font-size: 64px; line-height: 1; text-shadow: 0 2px 8px rgba(0,0,0,.25); }
+</style>
 </head>
 <body>
 
 <!-- 썸네일: 사용자가 줄 사진 -->
-<section class="card rs thumbslot" data-name="01_thumb" data-thumb>
-  <div class="slot">썸네일 사진 자리<br/>(밤비 네일 사진을 주세요)</div>
+<section class="card rs" data-name="01_thumb" data-thumb>
+  <div class="main static kb"></div>
   <div class="dim static"></div>
+  <div class="pic static" style="left:70px; top:290px; width:330px; height:440px; background-image:url(img/nail_main.jpg); background-size:330%; background-position:44% 54%; transform:rotate(-3deg)"></div>
+  <div class="pic static" style="right:70px; top:330px; width:370px; height:370px; background-image:url(img/fawn.jpg); background-position:center 40%; transform:rotate(3deg)"></div>
+  <div class="doodle static" style="left:360px; top:250px">✦</div>
+  <div class="doodle static" style="right:400px; top:640px; font-size:44px">✧</div>
+  <div class="doodle static" style="right:60px; top:270px; font-size:40px">✦</div>
   <div class="bl-mark static">BEAUTY <i>letter</i></div>
   <div class="ttl"><h1>검색량 950%↑<br/><em>올가을 밤비 네일</em></h1></div>
 </section>
 
-<!-- 생김새 -->
+<!-- 본문 첫 장: 썸네일 사진 한 번 더 -->
 <section class="card pp" data-name="02_look">
   <div class="ttl2">이게 요즘 난리 난<br/><em>밤비 네일</em></div>
-  <div class="nails" style="top:680px">
-    <div class="nail dots" style="background:#8A5A3B"></div>
-    <div class="nail dots2" style="background:#B07A4F"></div>
-    <div class="nail dots" style="background:#D9B99B"></div>
-    <div class="nail dots2 french" style="background:#8A5A3B"></div>
-  </div>
-  <div class="say" style="top:1010px">아기 사슴 털 무늬처럼<br/><em>브라운 위에 크림 도트</em></div>
+  <div class="ph" style="left:190px; top:620px; width:700px; height:840px; background-image:url(img/nail_main.jpg); background-size:150%; background-position:30% 45%"></div>
+  <div class="say" style="top:1490px; font-size:42px">아기 사슴 털 무늬처럼 <em>브라운 위에 크림 도트</em></div>
 </section>
 
 <!-- 뭐냐면 -->

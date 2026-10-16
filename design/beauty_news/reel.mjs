@@ -6,7 +6,7 @@
 
 import { chromium } from "playwright";
 import { spawn } from "node:child_process";
-import { mkdir } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -114,6 +114,7 @@ function prepCard(idx, opt) {
         walk(ch);
       } else if (ch.nodeType === 3 && ch.textContent.trim()) {
         const isTitle = !!ch.parentElement.closest("h1, h2, .ps-mark, .bye h2");
+        const isHead = !!ch.parentElement.closest("h1, h2, .ttl2, .big"); // 효과음: 제목 글자만 타자 소리
         const step = isTitle ? opt.TITLE_MS : opt.BODY_MS;
         const frag = document.createDocumentFragment();
         for (const part of ch.textContent.split(/(\s+)/)) {
@@ -124,7 +125,7 @@ function prepCard(idx, opt) {
             const s = document.createElement("r-c");
             s.textContent = c;
             w.append(s);
-            items.push({ el: s, at: t, dur: opt.CHAR_FADE });
+            items.push({ el: s, at: t, dur: opt.CHAR_FADE, head: isHead });
             t += step;
           }
           frag.append(w);
@@ -137,6 +138,8 @@ function prepCard(idx, opt) {
   // 제목 다음, 본문 시작 전에 살짝 쉼
   const end = t + opt.CHAR_FADE;
   window.__items = items;
+  // 효과음 타이밍: 제목 글자=tick, 박스·사진 등장=pop, 비포→애프터=whoosh
+  window.__ev = items.filter((it) => !it.out).map((it) => ({ t: it.at, k: it.wipe ? "whoosh" : it.block ? "pop" : it.head ? "tick" : null })).filter((e) => e.k);
   window.__cover = card.querySelector('[data-slot="photo"] img, .kb');
   return end;
 }
@@ -177,6 +180,7 @@ try {
   const n = await page.$$eval(".card", (c) => c.length);
   await page.addScriptTag({ content: `window.__prep = ${prepCard.toString()}; window.__set = ${setTime.toString()};` });
   let total = 0;
+  const sfx = []; // 효과음 이벤트(초)
   for (let i = 0; i < n; i++) {
     const end = await page.evaluate(([idx, opt]) => window.__prep(idx, opt), [i, { TITLE_MS, BODY_MS, CHAR_FADE, BLOCK_FADE }]);
     // data-thumb 장은 영상에 넣지 않고, 글자가 다 나온 정지 이미지(릴스 썸네일)로만 저장한다
@@ -194,10 +198,14 @@ try {
       await page.evaluate(([m, d]) => window.__set(m, d), [ms, dur]);
       ff.stdin.write(await page.screenshot({ type: "jpeg", quality: 92 }));
     }
+    const ev = await page.evaluate(() => window.__ev);
+    sfx.push({ t: total / 1000, k: "swish" });
+    for (const e of ev) sfx.push({ t: (total + e.t) / 1000, k: e.k });
     total += dur;
     console.log(`장 ${i + 1}/${n}: ${(dur / 1000).toFixed(1)}초`);
   }
   console.log(`총 ${(total / 1000).toFixed(1)}초 → ${outFile}`);
+  await writeFile(outFile.replace(/\.mp4$/, "_sfx.json"), JSON.stringify({ duration: total / 1000, events: sfx }));
 } finally {
   ff.stdin.end();
   await browser.close();

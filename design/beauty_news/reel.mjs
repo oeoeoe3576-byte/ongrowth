@@ -70,7 +70,7 @@ function prepCard(idx, opt) {
   const cards = [...document.querySelectorAll(".card")];
   cards.forEach((c, i) => c.classList.toggle("cur", i === idx));
   const card = cards[idx];
-  const SKIP = ".topbar, .foot, .credit, .pageno, .wordmark, [data-slot], .shade, .bgimg, .glow, .static, .pg";
+  const SKIP = ".topbar, .foot, .credit, .pageno, .wordmark, [data-slot], .shade, .bgimg, .glow, .static, .pg, .note"; // 출처(.note)는 애니메이션 없이 처음부터 보임
   const BLOCK = "img, .vis, .cs > div, .tone > div, .chips, .follow";
   let t = 300; // 장이 바뀌고 0.3초 뒤부터 시작
   const items = [];

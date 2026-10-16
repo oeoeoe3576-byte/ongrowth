@@ -33,10 +33,10 @@ html, body { margin: 0; padding: 0; }
 .pp .rb b { font-weight: 800; }
 .pp .rb small { display: block; font-size: 36px; font-weight: 600; opacity: .9; margin-bottom: 8px; }
 
-/* 형광펜 띠 · 가운데 문장 · 출처(.note: 항상 오른쪽 아래. 오른쪽 150px은 릴스 좋아요·댓글 버튼 자리라 비움) */
+/* 형광펜 띠 · 가운데 문장 · 출처(.note: 화면 맨 오른쪽 아래 구석) */
 .pp .hl { position: absolute; background: var(--pink); color: var(--ink); padding: 12px 26px; font-size: 38px; font-weight: 800; letter-spacing: -0.04em; }
 .pp .say { position: absolute; left: 60px; right: 60px; text-align: center; font-size: 50px; font-weight: 800; line-height: 1.45; letter-spacing: -0.05em; }
-.pp .note { position: absolute; left: auto !important; right: 150px !important; top: auto !important; bottom: 300px !important; text-align: right !important; max-width: 780px; font-size: 28px; line-height: 1.4; font-weight: 600; letter-spacing: -0.03em; color: var(--sub); }
+.pp .note { position: absolute; left: auto !important; right: 60px !important; top: auto !important; bottom: 50px !important; text-align: right !important; max-width: 780px; font-size: 28px; line-height: 1.4; font-weight: 600; letter-spacing: -0.03em; color: var(--sub); }
 
 /* 사진 */
 .pp .ph { position: absolute; border: 4px solid var(--ink); background: #ccc center / cover no-repeat; }

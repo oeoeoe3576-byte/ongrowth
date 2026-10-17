@@ -92,3 +92,5 @@ html, body { margin: 0; padding: 0; }
 .pp.pf .note { color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.55); }
 .pp.pf .wb, .pp.pf .rb { box-shadow: 0 10px 30px rgba(0,0,0,.18); }
 .pp .wb small { display: block; font-size: 34px; font-weight: 700; color: var(--sub); margin-bottom: 6px; }
+/* 사진형 장의 박스는 글자 길이에 맞춤 */
+.pp.pf .wb, .pp.pf .rb { width: fit-content; max-width: 920px; padding: 24px 34px; }

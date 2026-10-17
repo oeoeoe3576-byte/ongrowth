@@ -83,3 +83,12 @@ html, body { margin: 0; padding: 0; }
 .pp .diag figcaption { font-size: 32px; font-weight: 800; letter-spacing: -0.04em; margin-top: 10px; }
 .pp .chips.x span { position: relative; opacity: .55; }
 .pp .chips.x span i::after { content: ""; position: absolute; left: 50%; top: 4px; width: 6px; height: 124px; background: var(--ink); transform: translateX(-50%) rotate(45deg); }
+
+/* 사진형 장(.pp.pf): 사진을 화면 전체에, 설명은 박스로 아래쪽에. 큰 제목 없음 */
+.pp .full { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: #ccc center / cover no-repeat; }
+.pp .full.todo { background: repeating-linear-gradient(45deg, #F6EEF0 0 22px, #EBDDE1 22px 44px); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 40px; font-weight: 700; color: var(--sub); line-height: 1.5; }
+.pp .full.half { bottom: auto; height: 960px; }
+.pp .full.half2 { top: 960px; bottom: 0; border-top: 6px solid #fff; }
+.pp.pf .note { color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.55); }
+.pp.pf .wb, .pp.pf .rb { box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+.pp .wb small { display: block; font-size: 34px; font-weight: 700; color: var(--sub); margin-bottom: 6px; }

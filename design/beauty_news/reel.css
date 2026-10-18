@@ -54,3 +54,7 @@
 .rs .q2 { font-size: 56px; font-weight: 700; letter-spacing: -1.5px; margin-top: 28px; color: #fff; }
 .rs .q2 i { font-style: normal; color: var(--petal); margin-right: 12px; }
 .rs .st { color: #fff; }
+/* 릴스 썸네일(data-thumb)은 왼쪽 정렬 (2026-10-18) */
+.rs[data-thumb] { text-align: left; }
+.rs[data-thumb] .ttl { left: 80px; right: 80px; }
+.rs[data-thumb] .bl-mark { left: 80px; right: auto; }

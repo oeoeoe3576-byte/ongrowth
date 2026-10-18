@@ -62,3 +62,6 @@
 .rs[data-thumb] .kicker { color: var(--petal); font-size: 30px; margin-bottom: 30px; }
 .rs[data-thumb] .kicker::before { background: var(--petal); }
 .rs[data-thumb] .sub { margin-top: 34px; font-size: 38px; line-height: 1.5; font-weight: 500; color: rgba(255,255,255,.9); text-shadow: 0 2px 14px rgba(0,0,0,.3); }
+.rs[data-thumb] .kicker { text-shadow: 0 2px 10px rgba(0,0,0,.7), 0 0 2px rgba(0,0,0,.6); }
+.rs[data-thumb] .kicker .cat { color: #fff; }
+.rs[data-thumb] .kicker span { text-shadow: 0 2px 12px rgba(0,0,0,.85), 0 0 3px rgba(0,0,0,.7); }

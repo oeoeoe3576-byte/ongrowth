@@ -58,3 +58,7 @@
 .rs[data-thumb] { text-align: left; }
 .rs[data-thumb] .ttl { left: 80px; right: 80px; }
 .rs[data-thumb] .bl-mark { left: 80px; right: auto; }
+/* 썸네일 꾸밈: 제목 위 라벨(— Color Letter · 영문 키워드) + 제목 아래 두 줄 소개 (예전 카드뉴스 표지 방식) */
+.rs[data-thumb] .kicker { color: var(--petal); font-size: 30px; margin-bottom: 30px; }
+.rs[data-thumb] .kicker::before { background: var(--petal); }
+.rs[data-thumb] .sub { margin-top: 34px; font-size: 38px; line-height: 1.5; font-weight: 500; color: rgba(255,255,255,.9); text-shadow: 0 2px 14px rgba(0,0,0,.3); }

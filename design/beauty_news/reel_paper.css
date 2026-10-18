@@ -94,3 +94,13 @@ html, body { margin: 0; padding: 0; }
 .pp .wb small { display: block; font-size: 34px; font-weight: 700; color: var(--sub); margin-bottom: 6px; }
 /* 사진형 장의 박스는 글자 길이에 맞춤 */
 .pp.pf .wb, .pp.pf .rb { width: fit-content; max-width: 920px; padding: 24px 34px; }
+
+/* 제품 누끼 모음: 제품 이야기를 할 땐 배경 지운 제품 사진을 여러 개 */
+.pp .prods { position: absolute; left: 60px; right: 60px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 20px; }
+.pp .prods.c2 { grid-template-columns: repeat(2, 1fr); }
+.pp .prods figure { margin: 0; text-align: center; }
+.pp .prods .im { height: 330px; background: center bottom / contain no-repeat; filter: drop-shadow(0 18px 20px rgba(42,26,32,.2)); }
+.pp .prods.big .im { height: 520px; }
+.pp .prods figcaption { margin-top: 16px; font-size: 30px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.3; color: var(--ink); }
+.pp .prods figcaption small { display: block; margin-top: 4px; font-size: 24px; font-weight: 600; color: var(--sub); }
+.pp .prods figcaption em { color: var(--rose); }

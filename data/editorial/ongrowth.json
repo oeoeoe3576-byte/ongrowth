@@ -206,7 +206,8 @@
       "channel": "threads",
       "topic": "스레드 답글로 대화 이어가기",
       "angle": "답글 루틴과 대화형 글 구조",
-      "status": "todo"
+      "status": "reserved",
+      "date": "2026-10-21"
     },
     {
       "id": "T03",

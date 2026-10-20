@@ -11,10 +11,13 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 const FPS = 30;
-const HOLD = 1.6; // 마지막 글자가 나온 뒤 멈춰 있는 시간(초)
-const TITLE_MS = 55; // 제목 글자 간격
-const BODY_MS = 16; // 본문 글자 간격
-const CHAR_FADE = 260; // 글자 하나가 나타나는 데 걸리는 시간
+// 2026-10-20 조회수 분석 반영: 첫 장면이 빈 종이라 3초 안에 70%가 넘김 → 썸네일 장면으로 바로 시작, 글자는 빠르게
+const HOLD = 1.4; // 마지막 글자가 나온 뒤 멈춰 있는 시간(초)
+const TITLE_MS = 22; // 제목 글자 간격
+const BODY_MS = 7; // 본문 글자 간격
+const CHAR_FADE = 170; // 글자 하나가 나타나는 데 걸리는 시간
+const HOOK = 1.8; // 첫 장면(썸네일 사진+제목이 처음부터 다 보이는 상태) 길이(초). --no-hook이면 예전처럼 영상에서 뺀다
+const USE_HOOK = !process.argv.includes("--no-hook");
 const BLOCK_FADE = 450; // 그림·칩 같은 덩어리가 나타나는 시간
 
 const htmlPath = path.resolve(process.argv[2]);
@@ -72,7 +75,7 @@ function prepCard(idx, opt) {
   const card = cards[idx];
   const SKIP = ".topbar, .foot, .credit, .pageno, .wordmark, [data-slot], .shade, .bgimg, .glow, .static, .pg, .note"; // 출처(.note)는 애니메이션 없이 처음부터 보임
   const BLOCK = "img, .vis, .cs > div, .tone > div, .chips, .follow";
-  let t = 300; // 장이 바뀌고 0.3초 뒤부터 시작
+  let t = 120; // 장이 바뀌고 0.12초 뒤부터 시작
   const items = [];
 
   const walk = (node) => {
@@ -195,6 +198,16 @@ try {
       const thumb = outFile.replace(/\.mp4$/, "_thumb.jpg");
       await page.screenshot({ path: thumb, type: "jpeg", quality: 95 });
       console.log(`썸네일 → ${thumb}`);
+      if (!USE_HOOK) continue;
+      // 첫 장면: 썸네일 그대로(글자 다 보임) + 사진만 천천히 확대. 빈 화면 없이 0초부터 내용이 보이게
+      const hf = Math.round(HOOK * FPS);
+      for (let f = 0; f < hf; f++) {
+        await page.evaluate((k) => { if (window.__cover) window.__cover.style.transform = `scale(${1 + 0.04 * k})`; }, f / hf);
+        ff.stdin.write(await page.screenshot({ type: "jpeg", quality: 92 }));
+      }
+      sfx.push({ t: total / 1000, k: "page", p: i, last: false });
+      total += HOOK * 1000;
+      console.log(`장 ${i + 1}/${n}: 첫 장면 ${HOOK}초`);
       continue;
     }
     const dur = end + HOLD * 1000;

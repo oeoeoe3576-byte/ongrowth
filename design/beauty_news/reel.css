@@ -67,3 +67,6 @@
 .rs[data-thumb] .kicker span { text-shadow: 0 2px 12px rgba(0,0,0,.85), 0 0 3px rgba(0,0,0,.7); }
 /* 썸네일 위 제품 누끼 (대표 제품 1~2개) */
 .rs .tprod { position: absolute; z-index: 3; background: center / contain no-repeat; filter: drop-shadow(0 14px 22px rgba(0,0,0,.35)); }
+/* 인스타 그리드에서 왼쪽이 잘려 보이지 않게 썸네일 글을 조금 오른쪽으로 (2026-10-20) */
+.rs[data-thumb] .ttl { left: 120px; right: 70px; }
+.rs[data-thumb] .bl-mark { left: 120px; }

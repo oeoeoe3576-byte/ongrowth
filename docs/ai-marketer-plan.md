@@ -18,3 +18,8 @@
 ## 비용 통제
 - 시작 잔액 477.67 크레딧. 첫 시험(사진 1장 + 10초 영상)으로 실제 소모량 확인 → 이후 영상당 소모량을 기록하고 예산 안에서만 진행.
 - 영상은 주제당 1개, 30~40초 이내.
+
+## 진행 기록
+- 기준 얼굴(고정): `data/avatar/marketer-face.png` (Topview fileId `a3b94d81d18f4d70b1d12270241e23e2`, Nano Banana 2 Lite 1K, 0.3 크레딧). **이 얼굴만 계속 사용, 재생성 금지.**
+- 목소리: 🇰🇷 Eunji (`kKTntBsdDuheAZ0N6LTEVkDrAlQL7icT`, minimax-v2.5)
+- 시험 영상 task: `b4ba2344f93b4d35ac979011efa20a83` (avatar4Fast, offPeak). 크레딧은 완료 시 차감.

@@ -109,3 +109,14 @@ html, body { margin: 0; padding: 0; }
 /* 마무리 한 줄(.say)이 가운데인 종이 장은 박스 글도 가운데 (목록 박스는 제외) */
 .pp:not(.pf):has(.say) .wb:not(:has(ol)), .pp:not(.pf):has(.say) .rb { text-align: center; }
 .pp .wb.free, .pp .rb.free { text-align: left; }
+
+/* 단계별 하우투: 왼쪽 제품 누끼 + 오른쪽 설명 */
+.pp .steps { position: absolute; left: 70px; right: 70px; display: flex; flex-direction: column; gap: 22px; }
+.pp .steps .st { display: grid; grid-template-columns: 150px 1fr; gap: 26px; align-items: center; background: #fff; border: 4px solid var(--ink); padding: 18px 26px; }
+.pp .steps .st .im { height: 130px; background: center / contain no-repeat; }
+.pp .steps .st p { margin: 0; font-size: 38px; font-weight: 700; line-height: 1.4; letter-spacing: -0.04em; }
+.pp .steps .st p i { font-style: normal; color: var(--rose); font-weight: 800; margin-right: 10px; }
+.pp .steps .st p small { display: block; font-size: 28px; font-weight: 600; color: var(--sub); margin-top: 4px; }
+.pp .steps .st p b { color: var(--rose); }
+/* 그림 설명 */
+.pp .figbox { position: absolute; left: 70px; right: 70px; background: #fff; border: 4px solid var(--ink); }

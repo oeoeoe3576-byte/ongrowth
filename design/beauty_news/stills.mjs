@@ -14,7 +14,7 @@ try {
   await p.evaluate(() => document.fonts.ready);
   // 글자 겹침·화면 밖 검사: 겹치면 경고를 찍는다(시안 확인 전에 꼭 본다)
   const warn = await p.evaluate(() => {
-    const SEL = ".wb, .rb, .hl, .say, .ttl2, .big, .follow, .note, .prods figure, .rs .ttl";
+    const SEL = ".wb, .rb, .hl, .say, .ttl2, .big, .follow, .note, .prods figure, .rs .ttl, .steps .st, .figbox";
     const out = [];
     for (const card of document.querySelectorAll(".card")) {
       card.style.display = "block";

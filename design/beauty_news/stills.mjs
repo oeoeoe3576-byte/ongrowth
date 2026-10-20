@@ -32,6 +32,14 @@ try {
           if (w > 2 && h > 2) out.push(`${name}: 겹침 → [${label(e)}] / [${label(els[j])}]`);
         }
       });
+      // 정렬 검사: 컬러칩·제품 모음처럼 가운데 정렬된 장에선 박스 글·띠도 가운데여야 한다
+      if (!card.classList.contains("pf") && card.querySelector(".chips, .prods")) {
+        for (const e of card.querySelectorAll(".wb, .rb, .hl")) {
+          const st = getComputedStyle(e), rr = e.getBoundingClientRect();
+          if (!e.matches(".hl") && st.textAlign !== "center" && !e.querySelector("ol")) out.push(`${name}: 정렬 → 박스 글이 가운데가 아님 [${label(e)}]`);
+          if (Math.abs((rr.left + rr.right) / 2 - (cr.left + cr.right) / 2) > 6) out.push(`${name}: 정렬 → 박스가 가운데가 아님 [${label(e)}]`);
+        }
+      }
       card.style.display = "";
     }
     return out;

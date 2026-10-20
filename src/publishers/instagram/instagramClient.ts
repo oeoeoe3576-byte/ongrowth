@@ -96,6 +96,20 @@ export class InstagramClient {
     return json.id as string;
   }
 
+  /** 릴스(영상) 컨테이너를 만든다. videoUrl·coverUrl은 공개 HTTPS 주소여야 한다. 영상 처리는 몇 분 걸릴 수 있다. */
+  async createReelContainer(videoUrl: string, caption: string, coverUrl?: string): Promise<string> {
+    const params: Record<string, string> = {
+      media_type: "REELS",
+      video_url: videoUrl,
+      caption,
+      share_to_feed: "true",
+      access_token: this.auth.accessToken,
+    };
+    if (coverUrl) params.cover_url = coverUrl;
+    const json = await graphPost(this.endpoint(`${this.auth.accountId}/media`), params);
+    return json.id as string;
+  }
+
   /**
    * 컨테이너를 실제로 게시한다.
    * 처리 완료(FINISHED) 직후에도 'Media ID is not available'(code 9007)이 나올 수 있다 (아직 게시 준비 전).

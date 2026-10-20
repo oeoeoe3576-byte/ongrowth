@@ -63,6 +63,35 @@ export function hostImages(contentId: string, jpegs: string[]): string[] {
   return names.map((n) => `https://raw.githubusercontent.com/${repo}/${sha}/${rel.split(path.sep).join("/")}/${n}`);
 }
 
+/** 파일(영상·커버 등)을 data/publish/<id>/로 복사해 커밋·푸시하고, 커밋 고정 raw URL 목록을 돌려준다 */
+export function hostFiles(id: string, files: string[]): string[] {
+  if (!files.length) throw new Error("올릴 파일이 없음");
+  const dir = path.join(IMAGE_DIR, id);
+  fs.rmSync(dir, { recursive: true, force: true });
+  fs.mkdirSync(dir, { recursive: true });
+  const names = files.map((f) => {
+    fs.copyFileSync(f, path.join(dir, path.basename(f)));
+    return path.basename(f);
+  });
+  const rel = path.relative(process.cwd(), dir);
+  git("add", rel);
+  if (git("status", "--porcelain", "--", rel)) git("commit", "-m", `발행 파일 ${id}`, "--", rel);
+  const branch = git("rev-parse", "--abbrev-ref", "HEAD");
+  git("push", "-u", "origin", branch);
+  const sha = git("rev-parse", "HEAD");
+  const repo = git("remote", "get-url", "origin").replace(/^https:\/\/github\.com\//, "").replace(/\.git$/, "").replace(/^git@github\.com:/, "");
+  return names.map((n) => `https://raw.githubusercontent.com/${repo}/${sha}/${rel.split(path.sep).join("/")}/${n}`);
+}
+
+/** 릴스 발행: 영상 처리가 끝날 때까지 기다린 뒤 게시한다 (영상은 최대 약 10분) */
+export async function publishReel(videoUrl: string, caption: string, coverUrl?: string, brand?: string, log: (s: string) => void = console.log): Promise<string> {
+  const client = new InstagramClient(igAuthFromEnv(brand));
+  const container = await client.createReelContainer(videoUrl, caption, coverUrl);
+  log(`  릴스 컨테이너 ${container} 처리 중`);
+  await client.waitUntilReady(container, 120, 5000);
+  return client.publishContainer(container);
+}
+
 /** raw URL이 실제로 열리는지 (푸시 직후 잠깐 404일 수 있음) */
 export async function waitForUrls(urls: string[], tries = 10): Promise<void> {
   for (const url of urls) {

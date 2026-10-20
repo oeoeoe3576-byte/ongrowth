@@ -106,3 +106,6 @@ html, body { margin: 0; padding: 0; }
 .pp .prods figcaption em { color: var(--rose); }
 /* 가운데 정렬 장(컬러칩·제품 모음)의 박스는 글도 가운데 */
 .pp:has(.chips) .wb, .pp:has(.chips) .rb, .pp:has(.prods) .wb, .pp:has(.prods) .rb { text-align: center; }
+/* 마무리 한 줄(.say)이 가운데인 종이 장은 박스 글도 가운데 (목록 박스는 제외) */
+.pp:not(.pf):has(.say) .wb:not(:has(ol)), .pp:not(.pf):has(.say) .rb { text-align: center; }
+.pp .wb.free, .pp .rb.free { text-align: left; }

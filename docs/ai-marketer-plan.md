@@ -23,3 +23,5 @@
 - 기준 얼굴(고정): `data/avatar/marketer-face.png` (Topview fileId `a3b94d81d18f4d70b1d12270241e23e2`, Nano Banana 2 Lite 1K, 0.3 크레딧). **이 얼굴만 계속 사용, 재생성 금지.**
 - 목소리: 🇰🇷 Eunji (`kKTntBsdDuheAZ0N6LTEVkDrAlQL7icT`, minimax-v2.5)
 - 시험 영상 task: `b4ba2344f93b4d35ac979011efa20a83` (avatar4Fast, offPeak). 크레딧은 완료 시 차감.
+- 시험 결과: 첫 시도 실패(TTS 오류, 0.2 크레딧 차감 의심) → `voiceSettings`(stability 50, similarity 75, styleExaggeration 0, volume 100)를 반드시 지정해 재시도 성공. 대본 약 55자 영상 1개 = 1.0 크레딧(477.17 → 476.17). 사진 0.3 포함 시험 총 약 1.5 크레딧.
+- 영상 파일은 용량(약 9MB) 때문에 저장소에 올리지 않고 `data/avatar/*.mp4`는 .gitignore.

@@ -33,3 +33,4 @@ data/queue.json
 data/calendar.json
 
 .DS_Store
+data/avatar/*.mp4

@@ -40,6 +40,14 @@ try {
           if (Math.abs((rr.left + rr.right) / 2 - (cr.left + cr.right) / 2) > 6) out.push(`${name}: 정렬 → 박스가 가운데가 아님 [${label(e)}]`);
         }
       }
+      // 인스타 UI 검사: 사진 장 박스는 가운데, 화면 높이 75% 위에 (아래 왼쪽은 프로필·리포스트·캡션, 오른쪽은 버튼에 가림)
+      if (card.classList.contains("pf")) {
+        for (const e of card.querySelectorAll(".wb, .rb")) {
+          const rr = e.getBoundingClientRect();
+          if (rr.bottom - cr.top > cr.height * 0.75) out.push(`${name}: 인스타 UI → 박스가 너무 아래 [${label(e)}]`);
+          if (Math.abs((rr.left + rr.right) / 2 - (cr.left + cr.right) / 2) > 6) out.push(`${name}: 인스타 UI → 사진 장 박스는 가운데로 [${label(e)}]`);
+        }
+      }
       card.style.display = "";
     }
     return out;

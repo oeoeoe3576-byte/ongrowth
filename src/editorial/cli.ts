@@ -19,9 +19,10 @@ import { Command } from "commander";
 import { loadStore } from "../planner/store.js";
 import { renderContent } from "../design/renderHtml.js";
 import { exportPackage } from "../design/exportPackage.js";
+import fs from "node:fs";
 import path from "node:path";
 import { searchPhotos, downloadPhotos, searchFestivals, PHOTO_CREDIT } from "./tour.js";
-import { buildCaption, hostImages, waitForUrls, publishCarousel, checkInstagram } from "./instagram.js";
+import { buildCaption, hostImages, hostFiles, waitForUrls, publishCarousel, publishReel, checkInstagram } from "./instagram.js";
 import { loadCalendar, saveCalendar, pickTopic, findByContent, setMasterStatus, defaultPublishAt, recentTopics, now, channelFor, type Topic } from "./calendar.js";
 
 const program = new Command().name("editorial").description("콘텐츠 캘린더");
@@ -277,6 +278,35 @@ program
       x.note = `instagram media ${mediaId}`;
     });
     console.log(`✓ ${id} 인스타그램 발행 완료 (media ${mediaId})`);
+  });
+
+program
+  .command("reel")
+  .description("릴스(영상) 발행. 기본은 점검만(dry-run), 사용자 승인 후 --confirm으로 실제 발행")
+  .argument("<name>", "data/reels/<name>/ 폴더 (video.mp4, cover.jpg, caption.txt)")
+  .option(...brandOpt)
+  .option("--confirm", "점검만 하지 않고 실제로 인스타그램에 발행 (사용자 승인 뒤에만)")
+  .action(async (name: string, o: { brand: string; confirm?: boolean }) => {
+    const dir = path.resolve("data/reels", name);
+    const video = path.join(dir, "video.mp4");
+    const cover = path.join(dir, "cover.jpg");
+    const capFile = path.join(dir, "caption.txt");
+    for (const f of [video, capFile]) if (!fs.existsSync(f)) throw new Error(`파일 없음: ${f}`);
+    const caption = fs.readFileSync(capFile, "utf8").trim();
+    if (caption.length > 2200) throw new Error(`캡션 ${caption.length}자 (2200자 초과)`);
+    const size = fs.statSync(video).size;
+    if (size > 300 * 1024 * 1024) throw new Error("영상이 300MB 초과");
+    console.log(`영상 ${(size / 1024 / 1024).toFixed(1)}MB · 커버 ${fs.existsSync(cover) ? "있음" : "없음"} · 캡션 ${caption.length}자`);
+    if (!o.confirm) {
+      console.log(`[점검만] 업로드하지 않음\n---\n${caption}\n---\n실제 발행은 승인 후: npm run editorial -- reel ${name} --brand ${o.brand} --confirm`);
+      return;
+    }
+    const files = fs.existsSync(cover) ? [video, cover] : [video];
+    const urls = hostFiles(`reel-${name}`, files);
+    await waitForUrls(urls);
+    console.log("파일 주소 준비");
+    const mediaId = await publishReel(urls[0], caption, urls[1], o.brand);
+    console.log(`✓ 릴스 ${name} 인스타그램 발행 완료 (media ${mediaId})`);
   });
 
 program.parseAsync().catch((e) => {

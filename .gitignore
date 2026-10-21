@@ -34,3 +34,4 @@ data/calendar.json
 
 .DS_Store
 data/avatar/*.mp4
+data/avatar/cand/

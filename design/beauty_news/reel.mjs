@@ -200,17 +200,20 @@ try {
       console.log(`썸네일 → ${thumb}`);
       if (!USE_HOOK) continue;
       // 첫 장면: 썸네일 그대로(글자 다 보임) + 사진만 천천히 확대. 빈 화면 없이 0초부터 내용이 보이게
-      const hf = Math.round(HOOK * FPS);
+      const hookSec = (await page.evaluate((idx) => parseFloat(document.querySelectorAll(".card")[idx].dataset.hook), i)) || HOOK;
+      const hf = Math.round(hookSec * FPS);
       for (let f = 0; f < hf; f++) {
         await page.evaluate((k) => { if (window.__cover) window.__cover.style.transform = `scale(${1 + 0.04 * k})`; }, f / hf);
         ff.stdin.write(await page.screenshot({ type: "jpeg", quality: 92 }));
       }
       sfx.push({ t: total / 1000, k: "page", p: i, last: false });
-      total += HOOK * 1000;
-      console.log(`장 ${i + 1}/${n}: 첫 장면 ${HOOK}초`);
+      total += hookSec * 1000;
+      console.log(`장 ${i + 1}/${n}: 첫 장면 ${hookSec}초`);
       continue;
     }
-    const dur = end + HOLD * 1000;
+    // data-hold="초"가 있으면 그 장만 멈춤 시간을 바꾼다(내레이션 길이에 맞출 때)
+    const hold = await page.evaluate((idx) => parseFloat(document.querySelectorAll(".card")[idx].dataset.hold), i);
+    const dur = end + (Number.isFinite(hold) ? hold : HOLD) * 1000;
     const frames = Math.round((dur / 1000) * FPS);
     for (let f = 0; f < frames; f++) {
       const ms = (f / FPS) * 1000;

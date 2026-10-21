@@ -28,3 +28,5 @@
 - 피드백(10/21): AI 티·나이·배경·노트북 화면·입모양 문제 → 얼굴 재선정. 조건: 20대 중후반, 현실적 피부결, 가슴 위 클로즈업, 배경 최소, 입 다문 표정(입모양 동기화 유리), 노트북 없음. Nano Banana 2.1 3장(평범/나이 들어 보임) → Seedream 5.0 Pro 3장(1.2 크레딧)이 조건에 맞음. 후보 중 사용자 선택 후 `data/avatar/marketer-face.png` 교체.
 - **얼굴 확정(10/21): Seedream F를 가슴 위 구도로 편집한 G** — `data/avatar/marketer-face.png`, Topview fileId `a44d9e69c4bd4cbf8f2f3040a96c8b64`. 이후 영상은 이 fileId만 사용. 목소리는 젊은 톤 🇰🇷 Harin(`LlEOaCUAuXRJLVGeVZ7ekyY6sD66UsSG`)으로 변경 시험 중.
 - 크레딧: 구도 편집 2장 0.5.
+- **얼굴 최종 확정(10/21): 방 안 J** — `data/avatar/marketer-face.png`, Topview fileId `0644f4df56fe432994091dcedc7c3fb6`. 방 안 책상에 앉은 웹캠 느낌, 편한 니트, 어깨 전체 보이는 구도. 이후 모든 영상은 이 fileId만 사용. (이전 G·F 얼굴은 폐기)
+- 크레딧 누계(10/21 기준): 약 8 (잔액 469.73).

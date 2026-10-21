@@ -30,3 +30,11 @@
 - 크레딧: 구도 편집 2장 0.5.
 - **얼굴 최종 확정(10/21): 방 안 J** — `data/avatar/marketer-face.png`, Topview fileId `0644f4df56fe432994091dcedc7c3fb6`. 방 안 책상에 앉은 웹캠 느낌, 편한 니트, 어깨 전체 보이는 구도. 이후 모든 영상은 이 fileId만 사용. (이전 G·F 얼굴은 폐기)
 - 크레딧 누계(10/21 기준): 약 8 (잔액 469.73).
+
+## 2026-10-21 진행 기록 (머그잔 컷 · 1편 영상)
+- 손이 가만히 있어 어색하다는 피드백 → J 사진에 머그잔을 두 손으로 든 컷으로 수정 (fileId `8bf74eeb888b4d71b4d191eef4afa7d4`, 0.5크레딧). 이후 영상은 이 사진을 기준으로 한다.
+- 말투가 과하다는 피드백 → 음성 안정성 85, 움직임은 작은 고개·깜빡임·손가락만 지정.
+- 시험 음성(`topview_generate_voice`, 0.1)은 오디오 파일 ID를 주지 않아 영상에 못 씀 → 영상은 텍스트 모드(`scriptMode: text`)로 제작.
+- 테스트 영상 0.48, 1편(약 40초, avatar4Fast) 1.62크레딧. 누적 2.7크레딧.
+- 1편 릴스 발행 준비: `data/reels/ongrowth-ep1/` (caption.txt, video.mp4는 gitignore). 점검만 완료, 사용자 승인 전이라 미발행.
+- 릴스 발행은 `npm run editorial -- reel <폴더> --brand ongrowth [--confirm]`로 이미 연결되어 있음 (`ig-check` 통과).

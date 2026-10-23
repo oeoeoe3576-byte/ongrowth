@@ -105,6 +105,29 @@ def cover(t: Theme, script: str, title: str, sub_en: str, desc: str) -> Image.Im
     return im
 
 
+def thumb(t: Theme, script: str, title: str, sub: str, cuts: list[Image.Image]) -> Image.Image:
+    """뷰티 정보 글 썸네일. 연한 배경 + 위 제목 + 아래 빛나는 타원 위 제품 라인업.
+    (컬러칩 띠 표지 cover는 퍼스널컬러 시리즈 전용)"""
+    im = Image.new("RGB", (S, S), t.tint)
+    glow = Image.new("L", (S, S), 0)
+    ImageDraw.Draw(glow).ellipse((90, 470, 910, 1060), fill=255)
+    glow = glow.filter(ImageFilter.GaussianBlur(40))
+    im = Image.composite(Image.new("RGB", (S, S), "#FFFFFF"), im, glow)
+    d = ImageDraw.Draw(im)
+    _c(d, 70, script, _f(F_SCRIPT, 60), t.point)
+    tf = _f(F_DISPLAY, 136 if len(title) <= 6 else 112)
+    _c(d, 150, title, tf, t.ink)
+    sf = sans(32, 600)
+    w = d.textlength(sub, font=sf) + 64
+    d.rounded_rectangle(((S - w) / 2, 325, (S + w) / 2, 385), radius=30, fill=t.point)
+    _c(d, 334, sub, sf, "#FFFFFF")
+    n = len(cuts)
+    slot = 760 / n
+    for i, c in enumerate(cuts):
+        _place_product(im, c, 120 + slot * (i + 0.5), 690, slot - 70, 400)
+    return im
+
+
 def point_list(t: Theme, script: str, title: str, items: list[str], stripes: bool = True) -> Image.Image:
     """포인트 정리 카드. 번호 동그라미 + 한 줄 항목 (기존 '메이크업 POINT' 카드)."""
     im = Image.new("RGB", (S, S), "#FFFFFF")

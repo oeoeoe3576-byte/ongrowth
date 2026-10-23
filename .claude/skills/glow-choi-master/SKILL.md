@@ -1959,7 +1959,8 @@ PART 59. 디자인 템플릿 (본문 서식 + 이미지 카드)
 
 1.
 이미지 카드는 tools/glowchoi/cards.py 로 만든다.
-표지(cover) / 체크·루틴·선택 포인트(point_list) / 한눈에 보기(overview) / 제품(product) / 팔레트(palette).
+썸네일(thumb) / 체크·루틴·선택 포인트(point_list) / 한눈에 보기(overview) / 제품(product) / 팔레트(palette).
+컬러칩 띠 표지(cover)는 퍼스널컬러 시리즈 전용이다. 일반 뷰티 글 썸네일은 thumb을 쓴다.
 
 2.
 한 글에 THEMES 중 하나만 고른다.

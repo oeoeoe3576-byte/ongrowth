@@ -38,3 +38,8 @@
 - 테스트 영상 0.48, 1편(약 40초, avatar4Fast) 1.62크레딧. 누적 2.7크레딧.
 - 1편 릴스 발행 준비: `data/reels/ongrowth-ep1/` (caption.txt, video.mp4는 gitignore). 점검만 완료, 사용자 승인 전이라 미발행.
 - 릴스 발행은 `npm run editorial -- reel <폴더> --brand ongrowth [--confirm]`로 이미 연결되어 있음 (`ig-check` 통과).
+
+## 2026-10-23 일러스트 방향 시험
+- 사용자 제안(일러스트 설명형)으로 시험. J를 2D 플랫 일러스트로 변환: fileId `0ef28d2502f54066a4b6eeb39ac0d06e`, `data/avatar/marketer-illust.png` (0.25크레딧).
+- 2편 아바타 영상(avatar4, 2.6크레딧)은 비용 지적으로 중단·미사용. 새 생성은 사전 비용 안내 후 승인받고만 한다.
+- 영상 후처리는 `npm run shorts-compose` (제목·말 자막, 크레딧 없음).

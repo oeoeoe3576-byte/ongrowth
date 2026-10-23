@@ -20,7 +20,8 @@ import { launchBrowser } from "../design/renderPng.js";
 const require = createRequire(import.meta.url);
 
 export interface Caption { from: number; to: number; text: string }
-export interface Scene { image: string; seconds: number }
+/** align: 그림이 한쪽 가장자리에서 잘린 구도일 때 그쪽에 붙여 잘린 모서리가 보이지 않게 한다 */
+export interface Scene { image: string; seconds: number; align?: "left" | "center" | "right" }
 export interface Spec {
   video?: string;
   scenes?: Scene[];
@@ -33,6 +34,8 @@ export interface Spec {
   theme?: "dark" | "light";
   out: string;
   headline?: { line1: string; line2: string; from?: number; to?: number };
+  /** 구간마다 다른 제목 (headline과 함께 쓸 수 있다) */
+  headlines?: Array<{ line1: string; line2: string; from: number; to: number }>;
   captions?: Caption[];
   captionsAuto?: string[];
 }
@@ -98,7 +101,8 @@ export function buildScenes(spec: Spec, outFile: string): void {
     const z = i % 2 === 0 ? "1+0.0009*on" : "1.1-0.0009*on";
     const motion = spec.zoom ? `scale=2160:3840,zoompan=z='${z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=25,` : "";
     // 그림을 줄여서 아래쪽 가운데에 붙인다 (그림 아래가 잘린 구도라 아래에 붙여야 어색하지 않다)
-    const fit = k < 1 ? `scale=${w}:${h},pad=1080:1920:(1080-${w})/2:(1920-${h}):color=${bg},` : "";
+    const px = sc.align === "left" ? 0 : sc.align === "right" ? 1080 - w : (1080 - w) / 2;
+    const fit = k < 1 ? `scale=${w}:${h},pad=1080:1920:${px}:(1920-${h}):color=${bg},` : "";
     chain += `[${i}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,${fit}${motion}fps=25,setsar=1[s${i}];`;
   });
   chain += scenes.map((_, i) => `[s${i}]`).join("") + `concat=n=${scenes.length}:v=1:a=0,format=yuv420p[v]`;
@@ -128,9 +132,9 @@ export async function compose(spec: Spec): Promise<{ out: string; captions: numb
       await page.screenshot({ path: f, omitBackground: true });
       return f;
     };
-    if (spec.headline) {
-      const h = spec.headline;
-      layers.push({ png: await shot(`<div class="head"><div class="l1">${esc(h.line1)}</div><div class="l2">${esc(h.line2)}</div></div>`, "head.png"), from: h.from ?? 0, to: h.to ?? info.seconds });
+    const heads = [...(spec.headline ? [{ ...spec.headline, from: spec.headline.from ?? 0, to: spec.headline.to ?? info.seconds }] : []), ...(spec.headlines ?? [])];
+    for (const [i, h] of heads.entries()) {
+      layers.push({ png: await shot(`<div class="head"><div class="l1">${esc(h.line1)}</div><div class="l2">${esc(h.line2)}</div></div>`, `head${i}.png`), from: h.from, to: h.to });
     }
     for (const [i, c] of caps.entries()) layers.push({ png: await shot(`<div class="cap"><span>${esc(c.text)}</span></div>`, `cap${i}.png`), from: c.from, to: c.to });
   } finally {

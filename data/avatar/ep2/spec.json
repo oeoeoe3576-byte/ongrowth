@@ -1,0 +1,136 @@
+{
+ "theme": "light",
+ "sceneScale": 0.78,
+ "zoom": false,
+ "out": "data/avatar/ep2-full.mp4",
+ "audio": "data/avatar/ep2/voice.mp3",
+ "scenes": [
+  {
+   "image": "data/avatar/ep2/scene1.png",
+   "seconds": 1,
+   "align": "center"
+  },
+  {
+   "image": "data/avatar/ep2/scene2.png",
+   "seconds": 0.9,
+   "align": "center"
+  },
+  {
+   "image": "data/avatar/ep2/scene3.png",
+   "seconds": 1.4,
+   "align": "center"
+  },
+  {
+   "image": "data/avatar/ep2/scene4.png",
+   "seconds": 1.59,
+   "align": "center"
+  },
+  {
+   "image": "data/avatar/ep2/b1.png",
+   "seconds": 3.96,
+   "align": "center"
+  },
+  {
+   "image": "data/avatar/ep2/scene4.png",
+   "seconds": 1.42,
+   "align": "center"
+  },
+  {
+   "image": "data/avatar/ep2/b2.png",
+   "seconds": 2.38,
+   "align": "center"
+  },
+  {
+   "image": "data/avatar/ep2/b3.png",
+   "seconds": 2.84,
+   "align": "right"
+  },
+  {
+   "image": "data/avatar/ep2/b4.png",
+   "seconds": 4.75,
+   "align": "center"
+  },
+  {
+   "image": "data/avatar/ep2/scene2.png",
+   "seconds": 3.01,
+   "align": "center"
+  }
+ ],
+ "headlines": [
+  {
+   "line1": "글만 썼는데",
+   "line2": "밥이 공짜라고요?",
+   "from": 0,
+   "to": 4.89
+  },
+  {
+   "line1": "체험단 시작은",
+   "line2": "딱 3단계",
+   "from": 4.89,
+   "to": 20.24
+  },
+  {
+   "line1": "다음 편",
+   "line2": "애드포스트",
+   "from": 20.24,
+   "to": 23.25
+  }
+ ],
+ "captions": [
+  {
+   "from": 0.2,
+   "to": 1.9,
+   "text": "글 쓰는데, 생활비가 아껴지고"
+  },
+  {
+   "from": 1.9,
+   "to": 3.3,
+   "text": "밥도 공짜라고요?"
+  },
+  {
+   "from": 3.3,
+   "to": 4.8,
+   "text": "체험단 이야기예요."
+  },
+  {
+   "from": 4.89,
+   "to": 6.72,
+   "text": "식당이나 제품을 제공받고,"
+  },
+  {
+   "from": 6.72,
+   "to": 8.85,
+   "text": "후기를 블로그에 쓰는 거예요."
+  },
+  {
+   "from": 8.85,
+   "to": 10.27,
+   "text": "시작은 세 단계예요."
+  },
+  {
+   "from": 10.27,
+   "to": 12.65,
+   "text": "하나, 체험단 사이트에 가입해요."
+  },
+  {
+   "from": 12.65,
+   "to": 15.49,
+   "text": "둘, 내 블로그 주제에 맞는 곳에 신청해요."
+  },
+  {
+   "from": 15.49,
+   "to": 18.5,
+   "text": "셋, 후기엔 제공받았다는 문구를 꼭 적어요."
+  },
+  {
+   "from": 18.5,
+   "to": 20.24,
+   "text": "빼면 안 되는 규칙이에요."
+  },
+  {
+   "from": 20.24,
+   "to": 23.25,
+   "text": "다음에 글로 돈 버는 방법, 애드포스트예요."
+  }
+ ]
+}

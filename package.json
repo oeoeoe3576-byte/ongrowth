@@ -22,6 +22,7 @@
     "test:design": "tsx src/design/design.test.ts",
     "editorial": "tsx src/editorial/cli.ts",
     "shorts": "tsx src/shorts/collect.ts",
+    "shorts-analyze": "tsx src/shorts/analyze.ts",
     "test:editorial": "tsx src/editorial/editorial.test.ts"
   },
   "dependencies": {

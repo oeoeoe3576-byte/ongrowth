@@ -6,7 +6,8 @@
 //     "captionsAuto": ["문장1", "문장2"],                       // 글자 수 비율로 시간을 나눔 (근사치)
 //     "captions": [{ "from": 0, "to": 3.2, "text": "문장" }], // 시간을 직접 지정 (captionsAuto보다 우선)
 //     "theme": "light",                                      // light: 밝은 배경용 (남색 글자 + 남색 강조 상자). 기본은 dark(흰 글자 + 노랑)
-//     "scenes": [{ "image": "a.png", "seconds": 1.5 }], "audio": "voice.mp3" } // 영상 대신 장면 그림들을 이어 붙여 기본 영상을 만든다 (video 대신 사용)
+//     "scenes": [{ "image": "a.png", "seconds": 1.5 }], "audio": "voice.mp3",
+//     "sceneScale": 0.82, "sceneBg": "#FDECCE", "zoom": false } // 영상 대신 장면 그림들을 이어 붙여 기본 영상을 만든다 (video 대신 사용)
 // 제목·자막은 Pretendard로 PNG를 만들어 ffmpeg overlay로 얹는다 (ffmpeg-static에는 drawtext가 없음).
 
 import fs from "node:fs";
@@ -24,6 +25,11 @@ export interface Spec {
   video?: string;
   scenes?: Scene[];
   audio?: string;
+  /** 장면 그림을 화면 대비 이 비율로 줄여 아래쪽에 붙이고 남는 곳을 sceneBg로 채운다 (기본 1 = 꽉 채움) */
+  sceneScale?: number;
+  sceneBg?: string;
+  /** 장면마다 천천히 확대/축소 (기본 꺼짐) */
+  zoom?: boolean;
   theme?: "dark" | "light";
   out: string;
   headline?: { line1: string; line2: string; from?: number; to?: number };
@@ -85,9 +91,15 @@ export function buildScenes(spec: Spec, outFile: string): void {
   if (spec.audio) args.push("-i", spec.audio);
   const total = scenes.reduce((n, sc) => n + sc.seconds, 0);
   let chain = "";
+  const k = spec.sceneScale ?? 1;
+  const w = Math.round((1080 * k) / 2) * 2, h = Math.round((1920 * k) / 2) * 2;
+  const bg = (spec.sceneBg ?? "#FDECCE").replace("#", "0x");
   scenes.forEach((sc, i) => {
     const z = i % 2 === 0 ? "1+0.0009*on" : "1.1-0.0009*on";
-    chain += `[${i}:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,zoompan=z='${z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=25,setsar=1[s${i}];`;
+    const motion = spec.zoom ? `scale=2160:3840,zoompan=z='${z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=25,` : "";
+    // 그림을 줄여서 아래쪽 가운데에 붙인다 (그림 아래가 잘린 구도라 아래에 붙여야 어색하지 않다)
+    const fit = k < 1 ? `scale=${w}:${h},pad=1080:1920:(1080-${w})/2:(1920-${h}):color=${bg},` : "";
+    chain += `[${i}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,${fit}${motion}fps=25,setsar=1[s${i}];`;
   });
   chain += scenes.map((_, i) => `[s${i}]`).join("") + `concat=n=${scenes.length}:v=1:a=0,format=yuv420p[v]`;
   args.push("-filter_complex", chain, "-map", "[v]");

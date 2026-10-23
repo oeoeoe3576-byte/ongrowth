@@ -106,6 +106,7 @@ def cmd_videos(a):
         for i in range(0, len(vids), 50):
             r = call("videos", part="snippet,contentDetails,statistics", id=",".join(vids[i:i+50]))
             for it in r.get("items", []):
+                if "duration" not in it["contentDetails"]: continue  # 예정·라이브 영상
                 s, st = it["snippet"], it.get("statistics", {})
                 c.execute("INSERT OR REPLACE INTO videos VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (
                     it["id"], ch, s["title"], s["publishedAt"], iso_dur(it["contentDetails"]["duration"]),

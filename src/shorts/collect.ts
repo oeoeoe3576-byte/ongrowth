@@ -9,6 +9,8 @@ import path from "node:path";
 const API = "https://www.googleapis.com/youtube/v3";
 const OUT = path.resolve("data/shorts-db/videos.csv");
 const QUERIES = ["부업", "부업 추천", "직장인 부업", "블로그 부업", "스마트스토어 부업", "퇴근 후 부업", "n잡", "애드포스트 수익", "체험단 부업", "집에서 하는 부업"];
+// 시범(58개) 분류에서 나온 잡음: 수공예 재택부업 모집 반복 영상(스팸), 기업 광고 시리즈
+const EXCLUDE = /모집|인원\s*급구|인원\s*모집|손부업|수공예|가정부업|삼성화재/;
 const HEADER = ["id", "title", "channel", "views", "likes", "comments", "seconds", "published", "query", "url", "thumbnail", "description"];
 
 function key(): string {
@@ -64,6 +66,7 @@ export async function collect(opts: { maxSearches: number; minViews: number; max
         const views = Number(it.statistics?.viewCount ?? 0);
         const sec = isoToSeconds(it.contentDetails?.duration ?? "");
         if (views < opts.minViews || sec === 0 || sec > opts.maxSec || seen.has(it.id)) continue;
+        if (EXCLUDE.test(`${it.snippet.title} ${it.snippet.description ?? ""}`)) continue;
         seen.add(it.id);
         const sn = it.snippet;
         rows.push([it.id, esc(sn.title), esc(sn.channelTitle), views, it.statistics?.likeCount ?? "", it.statistics?.commentCount ?? "", sec, sn.publishedAt.slice(0, 10), esc(q), `https://www.youtube.com/shorts/${it.id}`, sn.thumbnails?.high?.url ?? sn.thumbnails?.default?.url ?? "", esc((sn.description ?? "").slice(0, 300))].join(","));

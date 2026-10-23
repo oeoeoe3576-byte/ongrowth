@@ -23,6 +23,7 @@
     "editorial": "tsx src/editorial/cli.ts",
     "shorts": "tsx src/shorts/collect.ts",
     "shorts-analyze": "tsx src/shorts/analyze.ts",
+    "shorts-channels": "tsx src/shorts/channels.ts",
     "shorts-compose": "tsx src/shorts/compose.ts",
     "test:editorial": "tsx src/editorial/editorial.test.ts"
   },

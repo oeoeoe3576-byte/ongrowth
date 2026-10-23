@@ -43,6 +43,13 @@ export interface Spec {
 /** 온그로스 로고 남색 (data/brands/ongrowth-logo-sheet.png에서 추출) */
 export const NAVY = "#0B2443";
 
+/**
+ * 릴스 안전 영역: 위 약 14%는 상단 UI, 아래 약 35%는 설명글·프로필·버튼이 가린다 (제3자 자료 기준, Meta 공식 확인은 못 함).
+ * 제목은 위 15% 아래에서 시작하고, 자막 아래 끝은 화면 아래에서 36.5% 위에 둔다. 상위 영상도 글자를 10~78% 구간에 놓는다.
+ */
+export const SAFE_TOP = 0.15;
+export const SAFE_BOTTOM = 0.365;
+
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 
 function ffmpegPath(): string {
@@ -77,10 +84,10 @@ function css(width: number, theme: "dark" | "light"): string {
   const u = width / 896; // 896px 폭 기준으로 글자 크기를 맞춘다
   return `@font-face{font-family:P;font-weight:45 920;src:url(data:font/woff2;base64,${font}) format('woff2');}
 html,body{margin:0;background:transparent}
-.head{position:absolute;left:0;right:0;top:${Math.round(130 * u)}px;text-align:center;font-family:P;font-weight:900;line-height:1.25;
+.head{position:absolute;left:0;right:0;top:${SAFE_TOP * 100}%;text-align:center;font-family:P;font-weight:900;line-height:1.25;
  text-shadow:0 4px 18px rgba(0,0,0,.65),0 0 3px rgba(0,0,0,.9);-webkit-text-stroke:${2 * u}px rgba(0,0,0,.55);paint-order:stroke fill}
 .l1{font-size:${Math.round(78 * u)}px;color:#fff}.l2{font-size:${Math.round(86 * u)}px;color:#FFE600}
-.cap{position:absolute;left:0;right:0;bottom:${Math.round(210 * u)}px;text-align:center;font-family:P}
+.cap{position:absolute;left:0;right:0;bottom:${SAFE_BOTTOM * 100}%;text-align:center;font-family:P}
 .cap span{display:inline-block;max-width:${Math.round(780 * u)}px;background:rgba(0,0,0,.72);color:#fff;font-weight:700;font-size:${Math.round(46 * u)}px;line-height:1.4;padding:${Math.round(10 * u)}px ${Math.round(24 * u)}px;border-radius:${Math.round(10 * u)}px}
 ${theme === "light" ? `.head{text-shadow:none;-webkit-text-stroke:0}.l1{color:${NAVY}}.l2{display:inline-block;margin-top:${Math.round(10 * u)}px;color:#fff;background:${NAVY};padding:${Math.round(6 * u)}px ${Math.round(28 * u)}px;border-radius:${Math.round(18 * u)}px}.cap span{background:${NAVY}}` : ""}`;
 }

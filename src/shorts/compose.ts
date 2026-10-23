@@ -16,6 +16,7 @@ import path from "node:path";
 import { createRequire } from "node:module";
 import { execFileSync, spawnSync } from "node:child_process";
 import { launchBrowser } from "../design/renderPng.js";
+import { cutout } from "./cutout.js";
 
 const require = createRequire(import.meta.url);
 
@@ -31,6 +32,11 @@ export interface Spec {
   sceneBg?: string;
   /** 장면마다 천천히 확대/축소 (기본 꺼짐) */
   zoom?: boolean;
+  /** true: 장면 그림에서 인물만 오려(누끼) 배경 위에 올린다. sceneScale은 인물 그림 높이 비율(권장 0.78). 배경은 background(이미지 경로) 없으면 남색 + 은은한 빛 번짐을 자동 생성 */
+  cutout?: boolean;
+  /** 말 자막 위쪽 가장자리 위치(화면 높이 비율). 주면 자막을 이 높이에 둔다 (얼굴이 아래쪽에 올 때 제목 아래에 두려고) */
+  captionTop?: number;
+  background?: string;
   /** dark: 어두운 영상용(흰 글자+노랑) · light: 밝은 배경용 · navy: 남색 바탕에 제목은 흰/노랑, 자막은 남색 상자 (상위 영상 구조: 위 제목 / 가운데 창 / 자막) */
   theme?: "dark" | "light" | "navy";
   out: string;
@@ -80,7 +86,7 @@ export function autoCaptions(lines: string[], seconds: number, lead = 0.3, tail 
   });
 }
 
-function css(width: number, theme: "dark" | "light" | "navy"): string {
+function css(width: number, theme: "dark" | "light" | "navy", captionTop?: number): string {
   const font = fs.readFileSync(require.resolve("pretendard/dist/web/variable/woff2/PretendardVariable.woff2")).toString("base64");
   const u = width / 896; // 896px 폭 기준으로 글자 크기를 맞춘다
   return `@font-face{font-family:P;font-weight:45 920;src:url(data:font/woff2;base64,${font}) format('woff2');}
@@ -88,18 +94,32 @@ html,body{margin:0;background:transparent}
 .head{position:absolute;left:0;right:0;top:${SAFE_TOP * 100}%;text-align:center;font-family:P;font-weight:900;line-height:1.25;
  text-shadow:0 4px 18px rgba(0,0,0,.65),0 0 3px rgba(0,0,0,.9);-webkit-text-stroke:${2 * u}px rgba(0,0,0,.55);paint-order:stroke fill}
 .l1{font-size:${Math.round(78 * u)}px;color:#fff}.l2{font-size:${Math.round(86 * u)}px;color:#FFE600}
-.cap{position:absolute;left:0;right:0;bottom:${SAFE_BOTTOM * 100}%;text-align:center;font-family:P}
+.cap{position:absolute;left:0;right:0;${captionTop !== undefined ? `top:${captionTop * 100}%` : `bottom:${SAFE_BOTTOM * 100}%`};text-align:center;font-family:P}
 .cap span{display:inline-block;max-width:${Math.round(780 * u)}px;background:rgba(0,0,0,.72);color:#fff;font-weight:700;font-size:${Math.round(46 * u)}px;line-height:1.4;padding:${Math.round(10 * u)}px ${Math.round(24 * u)}px;border-radius:${Math.round(10 * u)}px}
 ${theme === "navy" ? `.head{text-shadow:none;-webkit-text-stroke:0}.l1{color:#fff}.l2{color:#FFE600}.cap span{background:${NAVY}}` : ""}
 ${theme === "light" ? `.head{text-shadow:none;-webkit-text-stroke:0}.l1{color:${NAVY}}.l2{display:inline-block;margin-top:${Math.round(10 * u)}px;color:#fff;background:${NAVY};padding:${Math.round(6 * u)}px ${Math.round(28 * u)}px;border-radius:${Math.round(18 * u)}px}.cap span{background:${NAVY}}` : ""}`;
 }
 
-/** 장면 그림들을 1080x1920 세로 영상으로 잇는다 (장면마다 천천히 확대/축소, 목소리가 있으면 입힌다) */
-export function buildScenes(spec: Spec, outFile: string): void {
+/** 인물 뒤 은은한 빛 번짐이 있는 바탕 (1080x1920). 밝은 테마는 흰색→연한 파랑, 그 외는 남색 */
+export async function makeBackground(out: string, light = false): Promise<void> {
+  const browser = await launchBrowser();
+  try {
+    const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+    await page.setContent(`<html><body style="margin:0;width:1080px;height:1920px;background:${light ? "radial-gradient(ellipse 700px 820px at 50% 62%, #FFFFFF 0%, #EAF1FB 45%, #CFDDF2 100%)" : `radial-gradient(ellipse 640px 760px at 50% 62%, #1F4C8F 0%, #153A70 38%, ${NAVY} 80%)`}"></body></html>`);
+    await page.screenshot({ path: out });
+  } finally {
+    await browser.close();
+  }
+}
+
+/** 장면 그림들을 1080x1920 세로 영상으로 잇는다 (목소리가 있으면 입힌다). cutout이면 오린 인물을 배경 위에 아래 붙여 올린다 */
+export function buildScenes(spec: Spec, outFile: string, background?: string): void {
   const scenes = spec.scenes ?? [];
   if (!scenes.length) throw new Error("scenes가 비어 있음");
   const args = ["-y", "-hide_banner", "-loglevel", "error"];
   for (const sc of scenes) args.push("-loop", "1", "-framerate", "25", "-t", String(sc.seconds), "-i", sc.image);
+  if (spec.cutout) for (const sc of scenes) args.push("-loop", "1", "-framerate", "25", "-t", String(sc.seconds), "-i", background!);
+  const audioIndex = scenes.length * (spec.cutout ? 2 : 1);
   if (spec.audio) args.push("-i", spec.audio);
   const total = scenes.reduce((n, sc) => n + sc.seconds, 0);
   let chain = "";
@@ -107,16 +127,20 @@ export function buildScenes(spec: Spec, outFile: string): void {
   const w = Math.round((1080 * k) / 2) * 2, h = Math.round((1920 * k) / 2) * 2;
   const bg = (spec.sceneBg ?? (spec.theme === "navy" ? NAVY : "#FDECCE")).replace("#", "0x");
   scenes.forEach((sc, i) => {
+    if (spec.cutout) {
+      chain += `[${i}:v]scale=trunc(iw*${(h / 1344).toFixed(4)}/2)*2:-2,format=rgba[fg${i}];[${scenes.length + i}:v]format=rgba[bg${i}];[bg${i}][fg${i}]overlay=${sc.align === "right" ? "W-w" : sc.align === "left" ? "0" : "(W-w)/2"}:H-h:shortest=1,fps=25,format=yuv420p,setsar=1[s${i}];`;
+      return;
+    }
     const z = i % 2 === 0 ? "1+0.0009*on" : "1.1-0.0009*on";
     const motion = spec.zoom ? `scale=2160:3840,zoompan=z='${z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=25,` : "";
-    // 그림을 줄여서 아래쪽 가운데에 붙인다 (그림 아래가 잘린 구도라 아래에 붙여야 어색하지 않다)
+    // 그림을 줄여서 아래쪽에 붙인다 (그림 아래가 잘린 구도라 아래에 붙여야 어색하지 않다)
     const px = sc.align === "left" ? 0 : sc.align === "right" ? 1080 - w : (1080 - w) / 2;
     const fit = k < 1 ? `scale=${w}:${h},pad=1080:1920:${px}:(1920-${h}):color=${bg},` : "";
     chain += `[${i}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,${fit}${motion}fps=25,setsar=1[s${i}];`;
   });
   chain += scenes.map((_, i) => `[s${i}]`).join("") + `concat=n=${scenes.length}:v=1:a=0,format=yuv420p[v]`;
   args.push("-filter_complex", chain, "-map", "[v]");
-  if (spec.audio) args.push("-map", `${scenes.length}:a`, "-c:a", "aac", "-b:a", "128k");
+  if (spec.audio) args.push("-map", `${audioIndex}:a`, "-c:a", "aac", "-b:a", "128k");
   args.push("-t", String(total), "-c:v", "libx264", "-crf", "20", "-preset", "veryfast", outFile);
   execFileSync(ffmpegPath(), args, { stdio: ["ignore", "inherit", "inherit"] });
 }
@@ -126,7 +150,24 @@ export async function compose(spec: Spec): Promise<{ out: string; captions: numb
   const work = fs.mkdtempSync(path.join(os.tmpdir(), "compose-base-"));
   if (!source) {
     source = path.join(work, "base.mp4");
-    buildScenes(spec, source);
+    let scenesSpec = spec;
+    let background = spec.background;
+    if (spec.cutout) {
+      // 누끼: 이미 <이름>-cut.png가 있으면 다시 만들지 않는다
+      const cuts = new Map<string, string>();
+      const todo = [...new Set((spec.scenes ?? []).map((sc) => path.resolve(sc.image)))].filter((f) => {
+        const c = f.replace(/\.png$/i, "-cut.png");
+        cuts.set(f, c);
+        return !fs.existsSync(c);
+      });
+      if (todo.length) await cutout(todo);
+      scenesSpec = { ...spec, scenes: (spec.scenes ?? []).map((sc) => ({ ...sc, image: cuts.get(path.resolve(sc.image))! })) };
+      if (!background) {
+        background = path.join(work, "bg.png");
+        await makeBackground(background, spec.theme === "light");
+      }
+    }
+    buildScenes(scenesSpec, source, background);
   }
   const info = probe(source);
   const caps = spec.captions ?? (spec.captionsAuto ? autoCaptions(spec.captionsAuto, info.seconds) : []);
@@ -136,7 +177,7 @@ export async function compose(spec: Spec): Promise<{ out: string; captions: numb
   try {
     const page = await browser.newPage({ viewport: { width: info.width, height: info.height } });
     const shot = async (body: string, name: string) => {
-      await page.setContent(`<html><head><style>${css(info.width, spec.theme ?? "dark")}</style></head><body>${body}</body></html>`);
+      await page.setContent(`<html><head><style>${css(info.width, spec.theme ?? "dark", spec.captionTop)}</style></head><body>${body}</body></html>`);
       const f = path.join(tmp, name);
       await page.screenshot({ path: f, omitBackground: true });
       return f;

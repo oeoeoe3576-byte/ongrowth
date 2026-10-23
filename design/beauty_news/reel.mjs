@@ -82,6 +82,26 @@ function prepCard(idx, opt) {
     for (const ch of [...node.childNodes]) {
       if (ch.nodeType === 1) {
         if (ch.matches(SKIP)) continue;
+        if (ch.matches(".ov")) {
+          // 사진 위 그리기 오버레이: 선(.draw)은 펜으로 긋듯, 나머지(음영·점)는 서서히 나타난다
+          for (const el of ch.querySelectorAll("path, line, ellipse, circle, polyline, polygon, rect, text")) {
+            if (el.closest("defs")) continue;
+            const op = parseFloat(el.getAttribute("opacity") ?? "1"); // 원래 투명도를 넘지 않게
+            if (el.matches(".draw")) {
+              const len = el.getTotalLength();
+              el.style.strokeDasharray = len;
+              el.style.strokeDashoffset = len;
+              items.push({ el, at: t, dur: 700, draw: true, len, op });
+              t += 140;
+            } else {
+              el.style.opacity = 0;
+              items.push({ el, at: t, dur: 500, fadeOnly: true, op });
+              t += 100;
+            }
+          }
+          t += 450;
+          continue;
+        }
         if (ch.matches(".whole")) {
           // 라벨·단계처럼 짧은 덩어리는 통째로 나타난다
           ch.classList.add("r-b");
@@ -158,6 +178,12 @@ function setTime(ms, total) {
   for (const it of window.__items) {
     const p = Math.max(0, Math.min(1, (ms - it.at) / it.dur));
     const e = ease(p);
+    if (it.draw) {
+      it.el.style.opacity = p > 0 ? it.op : 0;
+      it.el.style.strokeDashoffset = it.len * (1 - e);
+      continue;
+    }
+    if (it.fadeOnly) { it.el.style.opacity = e * it.op; continue; }
     it.el.style.opacity = e;
     if (it.out) {
       it.el.style.opacity = 1 - p;

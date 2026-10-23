@@ -31,7 +31,8 @@ export interface Spec {
   sceneBg?: string;
   /** 장면마다 천천히 확대/축소 (기본 꺼짐) */
   zoom?: boolean;
-  theme?: "dark" | "light";
+  /** dark: 어두운 영상용(흰 글자+노랑) · light: 밝은 배경용 · navy: 남색 바탕에 제목은 흰/노랑, 자막은 남색 상자 (상위 영상 구조: 위 제목 / 가운데 창 / 자막) */
+  theme?: "dark" | "light" | "navy";
   out: string;
   headline?: { line1: string; line2: string; from?: number; to?: number };
   /** 구간마다 다른 제목 (headline과 함께 쓸 수 있다) */
@@ -79,7 +80,7 @@ export function autoCaptions(lines: string[], seconds: number, lead = 0.3, tail 
   });
 }
 
-function css(width: number, theme: "dark" | "light"): string {
+function css(width: number, theme: "dark" | "light" | "navy"): string {
   const font = fs.readFileSync(require.resolve("pretendard/dist/web/variable/woff2/PretendardVariable.woff2")).toString("base64");
   const u = width / 896; // 896px 폭 기준으로 글자 크기를 맞춘다
   return `@font-face{font-family:P;font-weight:45 920;src:url(data:font/woff2;base64,${font}) format('woff2');}
@@ -89,6 +90,7 @@ html,body{margin:0;background:transparent}
 .l1{font-size:${Math.round(78 * u)}px;color:#fff}.l2{font-size:${Math.round(86 * u)}px;color:#FFE600}
 .cap{position:absolute;left:0;right:0;bottom:${SAFE_BOTTOM * 100}%;text-align:center;font-family:P}
 .cap span{display:inline-block;max-width:${Math.round(780 * u)}px;background:rgba(0,0,0,.72);color:#fff;font-weight:700;font-size:${Math.round(46 * u)}px;line-height:1.4;padding:${Math.round(10 * u)}px ${Math.round(24 * u)}px;border-radius:${Math.round(10 * u)}px}
+${theme === "navy" ? `.head{text-shadow:none;-webkit-text-stroke:0}.l1{color:#fff}.l2{color:#FFE600}.cap span{background:${NAVY}}` : ""}
 ${theme === "light" ? `.head{text-shadow:none;-webkit-text-stroke:0}.l1{color:${NAVY}}.l2{display:inline-block;margin-top:${Math.round(10 * u)}px;color:#fff;background:${NAVY};padding:${Math.round(6 * u)}px ${Math.round(28 * u)}px;border-radius:${Math.round(18 * u)}px}.cap span{background:${NAVY}}` : ""}`;
 }
 
@@ -103,7 +105,7 @@ export function buildScenes(spec: Spec, outFile: string): void {
   let chain = "";
   const k = spec.sceneScale ?? 1;
   const w = Math.round((1080 * k) / 2) * 2, h = Math.round((1920 * k) / 2) * 2;
-  const bg = (spec.sceneBg ?? "#FDECCE").replace("#", "0x");
+  const bg = (spec.sceneBg ?? (spec.theme === "navy" ? NAVY : "#FDECCE")).replace("#", "0x");
   scenes.forEach((sc, i) => {
     const z = i % 2 === 0 ? "1+0.0009*on" : "1.1-0.0009*on";
     const motion = spec.zoom ? `scale=2160:3840,zoompan=z='${z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=25,` : "";

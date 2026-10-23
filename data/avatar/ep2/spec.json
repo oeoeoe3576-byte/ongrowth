@@ -1,6 +1,6 @@
 {
- "theme": "light",
- "sceneScale": 0.78,
+ "theme": "navy",
+ "sceneScale": 0.7,
  "zoom": false,
  "out": "data/avatar/ep2-full.mp4",
  "audio": "data/avatar/ep2/voice.mp3",
@@ -43,7 +43,7 @@
   {
    "image": "data/avatar/ep2/b3.png",
    "seconds": 2.62,
-   "align": "right"
+   "align": "center"
   },
   {
    "image": "data/avatar/ep2/b4.png",
@@ -137,5 +137,6 @@
    "to": 21.79,
    "text": "알려드릴게요."
   }
- ]
+ ],
+ "sceneBg": "#0B2443"
 }

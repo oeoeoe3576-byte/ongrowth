@@ -49,11 +49,37 @@ def pen(t, point):
 BR = p("<br>")
 
 
+def shades(point):
+    """포인트색에서 진한 글자색, 연한 배경, 테두리색을 만든다."""
+    r, g, b = (int(point.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
+    mix = lambda t, c: "#%02X%02X%02X" % tuple(round(v + (c - v) * t) for v in (r, g, b))
+    dark = "#%02X%02X%02X" % tuple(round(v * 0.72) for v in (r, g, b))
+    return dark, mix(0.9, 255), mix(0.55, 255)
+
+
+def quote_bar(text, point):
+    """인용구(왼쪽 세로 바) 소제목. 붙여넣기에서 서식이 유지되도록 1칸 표로 만든다."""
+    dark, light, _ = shades(point)
+    return (f'<table style="width:100%;border-collapse:collapse;margin:8px 0 18px;"><tr>'
+            f'<td style="border-left:5px solid {point};background:{light};padding:14px 18px;text-align:left;">'
+            f'<b><span style="font-size:19px;color:{dark};">{html.escape(text)}</span></b></td></tr></table>')
+
+
+def emphasis_box(lines, point):
+    """강조 박스: 점선 테두리 1칸 표 (10/22 디자인본과 같은 형식)."""
+    dark, light, line = shades(point)
+    inner = "<br>".join(html.escape(l) for l in lines)
+    return (f'<table style="width:100%;border-collapse:collapse;margin:8px 0 24px;"><tr>'
+            f'<td style="background:{light};border:2px dashed {line};padding:22px 20px;text-align:center;'
+            f'font-size:16px;line-height:1.9;color:{dark};"><b>{inner}</b></td></tr></table>')
+
+
 def convert(md, img_dir, point):
     lines = md.splitlines()
     out = [p(f'<b><span style="font-size:24px;color:{point};">{html.escape(lines[0])}</span></b>'), BR]
     mode = None
     rows = []
+    box = []
     for raw in lines[1:]:
         s = raw.strip()
         if mode == "table":
@@ -62,12 +88,17 @@ def convert(md, img_dir, point):
                 continue
             out.append(table(rows, point))
             mode, rows = None, []
+        if mode == "box":
+            if s:
+                box.append(s)
+                continue
+            out.append(emphasis_box(box, point))  # 빈 줄에서 강조 박스가 끝난다
+            mode, box = None, []
         if not s:
-            mode = None if mode == "box" else mode
             out.append(BR)
             continue
         if s.startswith("[인용구]"):
-            out.append(p(f'<b><span style="font-size:19px;color:#333333;">{html.escape(s[5:].strip())}</span></b>', "left"))
+            out.append(quote_bar(s[5:].strip(), point))
         elif s.startswith("[이미지"):
             m = re.search(r"→\s*(\S+)\]", s)
             if m:
@@ -84,7 +115,7 @@ def convert(md, img_dir, point):
             out.append(p(f'<span style="font-size:13px;color:#999999;">{html.escape(s[4:].strip())}</span>'))
         elif s.startswith("[쇼핑커넥트"):
             out.append(p('<span style="font-size:13px;color:#999999;">(쇼핑커넥트 상품 3개를 여기에 넣어요)</span>'))
-        elif mode == "box" or s.startswith("→"):
+        elif s.startswith("→"):
             out.append(pen(s.lstrip("→ ").strip(), point))
         elif re.match(r"^0\d\. ", s):
             name, _, tag = s[4:].partition(" #")
@@ -98,17 +129,26 @@ def convert(md, img_dir, point):
             out.append(body(s, point))
     if rows:
         out.append(table(rows, point))
+    if box:
+        out.append(emphasis_box(box, point))
     return "\n".join(out)
 
 
 def table(rows, point):
-    h = ['<table style="border-collapse:collapse;width:100%;margin:0 auto;">']
+    """비교 표: 포인트색 테두리, 머리 행·첫 열 연한 배경 (10/22 디자인본과 같은 형식)."""
+    dark, light, line = shades(point)
+    cell = f"border:1px solid {line};padding:10px 8px;font-size:14px;text-align:center;"
+    h = ['<table style="width:100%;border-collapse:collapse;margin:0 0 16px;">']
     for i, r in enumerate(rows):
-        bg = f"background:{point}22;font-weight:700;" if i == 0 else ""
-        cells = "".join(
-            f'<td style="border:1px solid #e2e2e2;padding:8px;text-align:center;font-size:14px;color:#333333;{bg}">{html.escape(c)}</td>'
-            for c in r)
-        h.append(f"<tr>{cells}</tr>")
+        tds = []
+        for j, c in enumerate(r):
+            if i == 0:
+                tds.append(f'<td style="{cell}background:{light};color:{dark};font-weight:bold;">{html.escape(c)}</td>')
+            elif j == 0:
+                tds.append(f'<td style="{cell}background:{light};color:{dark};font-weight:bold;">{html.escape(c)}</td>')
+            else:
+                tds.append(f'<td style="{cell}color:#333333;">{html.escape(c)}</td>')
+        h.append("<tr>" + "".join(tds) + "</tr>")
     h.append("</table>")
     return "".join(h)
 

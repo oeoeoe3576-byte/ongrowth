@@ -113,10 +113,10 @@ def product(style, cut, no, brand, name, tag, point, photo: Image.Image | None =
         tracked(d, (500, 66), f"NO. {no:02d}", serif_en(40, 600, False), MOCHA, 2, "c")
         tracked(d, (500, 118), brand.upper(), pre(22, "SemiBold"), SUB, 5, "c")
         tracked(d, (500, 156), name, pre(46, "Black"), INK, -1, "c")
-        b = pedestal(im, 500, 800, 330, 150, "#F5E8E0")
-        stand(im, cut, 500, b + 6, 230, 500)
-        d = ImageDraw.Draw(im)
-        pill(d, 500, 890, f"{tag}  ·  {point}", pre(28, "Bold"), "#FFFFFF", MOCHA, h=60)
+        # 성분 칸은 위 글자 묶음 바로 아래, 받침대는 낮게 두고 제품을 그 위에 세운다
+        pill(d, 500, 232, f"{tag}  ·  {point}", pre(28, "Bold"), "#FFFFFF", MOCHA, h=60)
+        b = pedestal(im, 500, 872, 340, 98, "#F5E8E0")
+        stand(im, cut, 500, b + 6, 240, 520)
         return grain(im.convert("RGB"), 2.5)
     # B
     if photo is not None:

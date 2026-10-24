@@ -102,6 +102,13 @@ function prepCard(idx, opt) {
           t += 450;
           continue;
         }
+        if (ch.matches(".pop")) {
+          // 제품 누끼 등: 작게 시작해 살짝 튀어 오르며 '뿅' 나타난다
+          ch.classList.add("r-b");
+          items.push({ el: ch, at: t, dur: 480, pop: true, base: (getComputedStyle(ch).transform || 'none').replace('none', '') });
+          t += 350;
+          continue;
+        }
         if (ch.matches(".whole")) {
           // 라벨·단계처럼 짧은 덩어리는 통째로 나타난다
           ch.classList.add("r-b");
@@ -184,6 +191,12 @@ function setTime(ms, total) {
       continue;
     }
     if (it.fadeOnly) { it.el.style.opacity = e * it.op; continue; }
+    if (it.pop) {
+      const q = p - 1, back = 1 + 2.7 * q * q * q + 1.7 * q * q; // 살짝 넘쳤다 돌아오는 곡선
+      it.el.style.opacity = Math.min(1, p * 3);
+      it.el.style.transform = `${it.base || ''} scale(${0.3 + 0.7 * back})`;
+      continue;
+    }
     it.el.style.opacity = e;
     if (it.out) {
       it.el.style.opacity = 1 - p;

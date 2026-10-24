@@ -184,4 +184,5 @@ Pretendard와 Cormorant Garamond는 둘 다 SIL Open Font License라서 상업�
   - 마크업: 사진은 `<svg class="phsvg static" viewBox="(사진 좌표 크롭)" preserveAspectRatio="xMidYMid slice"><image .../></svg>`, 단계마다 같은 viewBox의 `<svg class="ov">` + 라벨 `<div class="wb cx lab whole">`. 오버레이 좌표는 원본 사진 픽셀 기준이라 사진과 어긋나지 않는다(사진 좌표는 격자 이미지로 먼저 잰다).
   - reel.mjs: `.ov` 안의 `.draw` 선은 펜으로 긋듯, 나머지(음영·번호)는 서서히. 원래 opacity 속성을 넘지 않는다. 음영은 얇은 모양에 블러를 세게 주면 사라지므로 선(stroke 16~20)+블러 4 정도.
   - 한 장에 단계 2개까지(라벨 겹침 방지). 라벨은 가운데, 화면 75% 위.
+- **제품은 그 사람이 나올 때 얼굴 옆에 '뿅' (2026-10-24).** 마지막에 제품을 몰아 보여주지 말고, 셀럽 장마다 그 사람이 쓰는 제품 누끼를 얼굴 옆 빈자리에 `<div class="prdpop pop">`로 띄운다(reel.mjs `.pop`: 작게 시작해 살짝 튀어 오르며 등장). 얼굴·입을 가리지 않는 자리(머리카락·배경)에.
 - 진행: 주제 목록 → 내용 시안(정지 이미지) → 사용자 사진 받아 썸네일·영상.

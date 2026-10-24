@@ -1960,7 +1960,10 @@ PART 59. 디자인 템플릿 (본문 서식 + 이미지 카드)
 1.
 이미지 카드는 tools/glowchoi/cards.py 로 만든다.
 썸네일(thumb) / 체크·루틴·선택 포인트(point_list) / 한눈에 보기(overview) / 제품(product) / 팔레트(palette).
-컬러칩 띠 표지(cover)는 퍼스널컬러 시리즈 전용이다. 일반 뷰티 글 썸네일은 thumb을 쓴다.
+컬러칩 띠 표지(cover)는 퍼스널컬러 시리즈 전용이다.
+일반 뷰티 글 썸네일은 tools/glowchoi/thumbs.py 의 label_photo 를 쓴다.
+(상위 10% 블로그 썸네일 1,110장 분석: 실사 + 아래 라벨 형식, 로지 베이지·모카 계열. 근거는 design-template.md 6절)
+직접 찍은 사진이 있으면 그 사진을 배경으로 먼저 쓴다.
 
 2.
 한 글에 THEMES 중 하나만 고른다.

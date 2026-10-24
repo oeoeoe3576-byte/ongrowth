@@ -14,7 +14,7 @@ try {
   await p.evaluate(() => document.fonts.ready);
   // 글자 겹침·화면 밖 검사: 겹치면 경고를 찍는다(시안 확인 전에 꼭 본다)
   const warn = await p.evaluate(() => {
-    const SEL = ".wb, .rb, .hl, .say, .ttl2, .big, .follow, .note, .prods figure, .rs .ttl, .steps .st, .figbox, .prdpop, .ptag, .tprod";
+    const SEL = ".wb, .rb, .hl, .say, .ttl2, .big, .follow, .note, .prods figure, .rs .ttl, .steps .st, .figbox, .prdpop, .ptag, .tprod, .pmain, .side";
     const out = [];
     for (const card of document.querySelectorAll(".card")) {
       card.style.display = "block";
@@ -41,7 +41,7 @@ try {
         }
       }
       // 가장자리 검사: 박스·제품·태그가 양끝에 붙으면 인스타에서 잘리거나 버튼에 가린다 (왼쪽 90px, 오른쪽 150px, 위 200px)
-      for (const e of card.querySelectorAll(".wb, .rb, .prdpop, .ptag, .tprod")) {
+      for (const e of card.querySelectorAll(".wb, .rb, .prdpop, .ptag, .tprod, .pmain, .side")) {
         const rr = e.getBoundingClientRect(), sx = cr.width / 1080;
         if (rr.left - cr.left < 90 * sx || cr.right - rr.right < 150 * sx || rr.top - cr.top < 200 * sx) out.push(`${name}: 가장자리 → 양끝·위에 너무 붙음 [${label(e)}]`);
       }
@@ -50,7 +50,7 @@ try {
         for (const e of card.querySelectorAll(".wb, .rb")) {
           const rr = e.getBoundingClientRect();
           if (rr.bottom - cr.top > cr.height * 0.75) out.push(`${name}: 인스타 UI → 박스가 너무 아래 [${label(e)}]`);
-          if (Math.abs((rr.left + rr.right) / 2 - (cr.left + cr.right) / 2) > 6) out.push(`${name}: 인스타 UI → 사진 장 박스는 가운데로 [${label(e)}]`);
+          if (rr.bottom - cr.top > cr.height * 0.6 && Math.abs((rr.left + rr.right) / 2 - (cr.left + cr.right) / 2) > 6) out.push(`${name}: 인스타 UI → 아래쪽 박스는 가운데로(왼쪽 아래는 프로필에 가림) [${label(e)}]`);
         }
       }
       card.style.display = "";

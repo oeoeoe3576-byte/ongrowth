@@ -2,6 +2,14 @@
 
 본문 가운데 15px #333, 소제목 왼쪽 19px 굵게, 강조는 나눔손글씨 펜 19px 포인트색.
 사용: python3 format_html.py 원고.md 이미지폴더 포인트색 출력.html
+
+원고 표시:
+  ==문구==          문장 안 손글씨 강조 (나눔손글씨 펜 19px 포인트색)
+  **문구**          문장 안 굵게
+  [부제] 문구       제목 아래 손글씨 부제
+  01. 제품명 #태그  굵은 제품명 + 굵은 포인트색 #태그
+  [마무리] 문구     손글씨 마무리 줄
+  [태그] #a #b      태그 줄
 """
 import html
 import os
@@ -15,8 +23,23 @@ def p(inner, align="center"):
     return f'<p style="text-align:{align};">{inner}</p>'
 
 
-def body(t):
-    return p(f'<span style="font-size:15px;color:#333333;">{html.escape(t)}</span>')
+def inline(t, point):
+    """==손글씨==, **굵게** 를 원래 서식 span 으로 바꾼다."""
+    out = []
+    for part in re.split(r"(==.+?==|\*\*.+?\*\*)", t):
+        if not part:
+            continue
+        if part.startswith("=="):
+            out.append(f'<span style="{PEN}color:{point};">{html.escape(part[2:-2])}</span>')
+        elif part.startswith("**"):
+            out.append(f'<b><span style="font-size:15px;color:#333333;">{html.escape(part[2:-2])}</span></b>')
+        else:
+            out.append(f'<span style="font-size:15px;color:#333333;">{html.escape(part)}</span>')
+    return "".join(out)
+
+
+def body(t, point="#333333"):
+    return p(inline(t, point))
 
 
 def pen(t, point):
@@ -53,17 +76,26 @@ def convert(md, img_dir, point):
             mode = "box"
         elif s == "[표]":
             mode = "table"
+        elif s.startswith("[부제]"):
+            out.append(pen(s[4:].strip(), point))
+        elif s.startswith("[마무리]"):
+            out.append(pen(s[5:].strip(), point))
+        elif s.startswith("[태그]"):
+            out.append(p(f'<span style="font-size:13px;color:#999999;">{html.escape(s[4:].strip())}</span>'))
         elif s.startswith("[쇼핑커넥트"):
             out.append(p('<span style="font-size:13px;color:#999999;">(쇼핑커넥트 상품 3개를 여기에 넣어요)</span>'))
         elif mode == "box" or s.startswith("→"):
             out.append(pen(s.lstrip("→ ").strip(), point))
         elif re.match(r"^0\d\. ", s):
-            out.append(p(f'<b><span style="font-size:15px;color:#333333;">{html.escape(s[4:])}</span></b>'
-                         f' <b><span style="font-size:15px;color:{point};">#{s[:2]}</span></b>'))
+            name, _, tag = s[4:].partition(" #")
+            tag = "#" + tag if tag else "#" + s[:2]
+            out.append(p(f'<b><span style="font-size:15px;color:#333333;">{html.escape(name)}</span></b>'
+                         f'<span style="font-size:15px;color:#333333;"> </span>'
+                         f'<b><span style="font-size:15px;color:{point};">{html.escape(tag)}</span></b>'))
         elif re.match(r"^\d\. ", s):
-            out.append(p(f'<b><span style="font-size:15px;color:#333333;">✅ {html.escape(s[3:])}</span></b>'))
+            out.append(p(f'<b><span style="font-size:15px;color:#333333;">✅{html.escape(s[3:])}</span></b>'))
         else:
-            out.append(body(s))
+            out.append(body(s, point))
     if rows:
         out.append(table(rows, point))
     return "\n".join(out)

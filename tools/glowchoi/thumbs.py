@@ -190,9 +190,10 @@ def podium(cuts: list, title: str, sub: str, en: str = "Brightening Ampoule Edit
     tracked(d, (500, 112), title, pre(108, "Black"), INK, -4, "c")
     tracked(d, (500, 250), en, serif_en(44, 500), label_col, 0, "c")
     pill(d, 500, 320, sub, pre(30, "SemiBold"), "#FFFFFF", MOCHA)
-    b1 = pedestal(im, 265, 830, 250, 170, ped_side)
-    b3 = pedestal(im, 735, 840, 250, 160, ped_side)
-    b2 = pedestal(im, 500, 770, 270, 240, ped_mid)
+    # 받침대를 낮춰 제품과 위 글자 사이에 80px 이상 여백을 둔다
+    b1 = pedestal(im, 265, 885, 250, 115, ped_side)
+    b3 = pedestal(im, 735, 893, 250, 107, ped_side)
+    b2 = pedestal(im, 500, 838, 270, 162, ped_mid)
     stand(im, cuts[0], 265, b1 + 6, 175, 400)
     stand(im, cuts[2], 735, b3 + 6, 175, 385)
     stand(im, cuts[1], 500, b2 + 6, 150, 370)

@@ -12,6 +12,11 @@ try {
   const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
   await p.goto(pathToFileURL(html).href, { waitUntil: "load" });
   await p.evaluate(() => document.fonts.ready);
+  // 영상 클립은 시작 지점 프레임을 보여 준다
+  await p.evaluate(() => Promise.all([...document.querySelectorAll("video.clip")].map((v) => new Promise((r) => {
+    const go = () => { v.addEventListener("seeked", () => r(), { once: true }); v.currentTime = (parseFloat(v.dataset.start) || 0) + 0.5; };
+    if (v.readyState >= 1) go(); else { v.addEventListener("loadedmetadata", go, { once: true }); v.addEventListener("error", () => r(), { once: true }); }
+  }))));
   // 글꼴을 못 불러오면 기본 글꼴로 조용히 바뀌므로 꼭 경고한다
   const badFonts = await p.evaluate(() => [...document.fonts].filter(f => f.status === "error").map(f => f.family));
   for (const f of new Set(badFonts)) console.log(`⚠ 글꼴 불러오기 실패 → ${f} (기본 글꼴로 나옴)`);

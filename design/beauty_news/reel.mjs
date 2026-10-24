@@ -212,6 +212,21 @@ function setTime(ms, total) {
   if (window.__cover) window.__cover.style.transform = `scale(${1 + 0.06 * (ms / total)})`;
 }
 
+// 영상 클립 장: <video class="clip" src="img/clip_*.webm" data-start="초">를 프레임마다 그 시각으로 맞춘다
+// (클립은 clip.py로 세로 1080x1920 webm으로 잘라 둔다. 크롬은 mp4(H.264)를 못 읽을 수 있음)
+function seekClips(idx, ms) {
+  const vs = document.querySelectorAll(".card")[idx].querySelectorAll("video.clip");
+  return Promise.all([...vs].map((v) => new Promise((r) => {
+    const go = () => {
+      const t = Math.min((parseFloat(v.dataset.start) || 0) + ms / 1000, Math.max(0, v.duration - 0.05));
+      if (Math.abs(v.currentTime - t) < 0.001 && v.readyState >= 2) return r();
+      v.addEventListener("seeked", () => r(), { once: true });
+      v.currentTime = t;
+    };
+    if (v.readyState >= 1) go(); else v.addEventListener("loadedmetadata", go, { once: true });
+  })));
+}
+
 const browser = await chromium
   .launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_PATH || "/opt/pw-browsers/chromium" })
   .catch(() => chromium.launch());
@@ -226,7 +241,7 @@ try {
   await page.evaluate(() => document.fonts.ready);
   await page.addStyleTag({ content: REEL_CSS });
   const n = await page.$$eval(".card", (c) => c.length);
-  await page.addScriptTag({ content: `window.__prep = ${prepCard.toString()}; window.__set = ${setTime.toString()};` });
+  await page.addScriptTag({ content: `window.__prep = ${prepCard.toString()}; window.__set = ${setTime.toString()}; window.__seek = ${seekClips.toString()};` });
   let total = 0;
   const sfx = []; // 효과음 이벤트(초)
   for (let i = 0; i < n; i++) {
@@ -257,6 +272,7 @@ try {
     for (let f = 0; f < frames; f++) {
       const ms = (f / FPS) * 1000;
       await page.evaluate(([m, d]) => window.__set(m, d), [ms, dur]);
+      await page.evaluate(([idx, m]) => window.__seek(idx, m), [i, ms]);
       ff.stdin.write(await page.screenshot({ type: "jpeg", quality: 92 }));
     }
     const ev = await page.evaluate(() => window.__ev);

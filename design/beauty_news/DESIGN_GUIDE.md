@@ -170,6 +170,7 @@ Pretendard와 Cormorant Garamond는 둘 다 SIL Open Font License라서 상업�
 ## 릴스 만들기 (2026-10-15부터 카드뉴스 대신 전부 릴스)
 
 - **작업 순서 (사용자 지시):** 기획 → 시안(stills.mjs 정지 이미지 보드)을 먼저 보여 주기 → 사용자 확인 → 영상 렌더(reel.mjs·sfx.py) → 업로드 키트. 확인 전에는 영상을 만들지 않는다.
+- **영상 클립 버전 (2026-10-24):** 남의 영상은 **1인당 2~3초만** 짧게 쓰고 우리 그래픽(제품명·메모·화살표)을 꼭 얹는다(독창성 정책·저작권 위험 줄이기). 이 환경은 유튜브 영상 서버가 막혀 있어 클립은 사용자가 화면 녹화로 보내 준다. `python clip.py <녹화> img/clip_이름.webm --start 초 --dur 3 --crop x:y:w:h`(영상 속 자막은 crop으로 제외) → reel.html에서 사진 svg 대신 `<video class="clip static" src="img/clip_이름.webm" muted playsinline preload="auto">`. reel.mjs가 프레임마다 맞춰 재생한다. 클립 파일은 커밋하지 않는다.
 
 - 카드뉴스는 더 만들지 않고 올리지도 않는다. 릴스는 노래를 앱에서 붙여야 해서 **사용자가 직접 올린다**(자동 발행 없음).
 - 결과물은 두 개: **썸네일 이미지**(`output/reel_thumb.jpg`)와 **썸네일을 뺀 영상**(`output/reel.mp4`). 레터 폴더의 `reel.html`을 `node design/beauty_news/reel.mjs <reel.html>`로 렌더한다. 썸네일 장은 `<section ... data-thumb>`.

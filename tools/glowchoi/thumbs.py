@@ -177,3 +177,23 @@ def label_photo(photo: Image.Image, cuts: list, small: str, big: str, tint=ROSY,
     d.rectangle((60, 864, 60 + w2, 952), fill="#FFFFFF")
     d.text((86, 868), big, font=f2, fill=INK)
     return grain(im.convert("RGB"), 3.0)
+
+
+def podium(cuts: list, title: str, sub: str, en: str = "Brightening Ampoule Edit",
+           top="#F3E5DD", bottom=ROSY, ped_side="#EAD3C6", ped_mid="#F5E8E0", label_col="#A27A68"):
+    """시상대(등수) 썸네일. 로지 베이지 배경 + 가운데가 높은 받침대 3개 + 위 제목.
+    cuts 순서: [왼쪽, 가운데(1등 자리), 오른쪽]."""
+    im = vgrad(top, bottom)
+    im = light(im, 500, 380, 520, 0.45).convert("RGBA")
+    d = ImageDraw.Draw(im)
+    tracked(d, (500, 70), "GLOW CHOI  BEAUTY NOTE", pre(20, "SemiBold"), label_col, 5, "c")
+    tracked(d, (500, 112), title, pre(108, "Black"), INK, -4, "c")
+    tracked(d, (500, 250), en, serif_en(44, 500), label_col, 0, "c")
+    pill(d, 500, 320, sub, pre(30, "SemiBold"), "#FFFFFF", MOCHA)
+    b1 = pedestal(im, 265, 830, 250, 170, ped_side)
+    b3 = pedestal(im, 735, 840, 250, 160, ped_side)
+    b2 = pedestal(im, 500, 770, 270, 240, ped_mid)
+    stand(im, cuts[0], 265, b1 + 6, 175, 400)
+    stand(im, cuts[2], 735, b3 + 6, 175, 385)
+    stand(im, cuts[1], 500, b2 + 6, 150, 370)
+    return grain(im.convert("RGB"), 3.0)

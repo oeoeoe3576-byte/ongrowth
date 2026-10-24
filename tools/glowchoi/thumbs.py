@@ -157,7 +157,7 @@ INK = "#483B33"
 
 
 def label_photo(photo: Image.Image, cuts: list, small: str, big: str, tint=ROSY, label=MOCHA):
-    """실사(제형·촬영 사진) 배경 + 제품 라인업 + 왼쪽 아래 2단 라벨 박스."""
+    """실사(제형·촬영 사진) 배경 + 제품 라인업 + 아래 가운데 2단 라벨 박스(큰 글자)."""
     w, h = photo.size
     m = min(w, h)
     bg = photo.convert("RGB").crop(((w - m) // 2, (h - m) // 2, (w + m) // 2, (h + m) // 2)).resize((S, S), Image.LANCZOS)
@@ -167,15 +167,16 @@ def label_photo(photo: Image.Image, cuts: list, small: str, big: str, tint=ROSY,
     xs = [500 - span / 2 + span * i / max(1, n - 1) for i in range(n)] if n > 1 else [500]
     for i, (c, x) in enumerate(zip(cuts, xs)):
         mid = n % 2 == 1 and i == n // 2
-        stand(im, c, x, 760, 165 if mid else 190, 520 if mid else 465, 0.75)
+        stand(im, c, x, 690, 160 if mid else 180, 500 if mid else 445, 0.75)
     d = ImageDraw.Draw(im)
-    f1, f2 = pre(34, "Bold"), pre(64, "Black")
-    w1 = d.textlength(small, font=f1) + 44
-    d.rectangle((60, 800, 60 + w1, 856), fill=label)
-    d.text((82, 806), small, font=f1, fill="#FFFFFF")
-    w2 = d.textlength(big, font=f2) + 52
-    d.rectangle((60, 864, 60 + w2, 952), fill="#FFFFFF")
-    d.text((86, 868), big, font=f2, fill=INK)
+    # 위 라벨: 모카 박스 + 흰 글자, 아래 라벨: 흰 박스 + 큰 다크모카 글자. 둘 다 가운데 정렬
+    f1, f2 = pre(42, "Bold"), pre(96, "Black")
+    for y0, y1, text, f, bgc, fg in ((728, 800, small, f1, label, "#FFFFFF"),
+                                     (810, 940, big, f2, "#FFFFFF", INK)):
+        tw = d.textlength(text, font=f)
+        d.rectangle((500 - tw / 2 - 30, y0, 500 + tw / 2 + 30, y1), fill=bgc)
+        bb = d.textbbox((0, 0), text, font=f)
+        d.text((500 - (bb[2] - bb[0]) / 2 - bb[0], (y0 + y1) / 2 - (bb[3] - bb[1]) / 2 - bb[1]), text, font=f, fill=fg)
     return grain(im.convert("RGB"), 3.0)
 
 

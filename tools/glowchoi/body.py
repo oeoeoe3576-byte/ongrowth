@@ -102,8 +102,12 @@ def product(style, cut, no, brand, name, tag, point):
     tracked(d, (500, 156), name, pre(46, "Black"), INK, -1, "c")
     # 성분 칸은 위 글자 묶음 바로 아래, 받침대는 낮게 두고 제품을 그 위에 세운다
     pill(d, 500, 232, f"{tag}  ·  {point}", pre(28, "Bold"), "#FFFFFF", P["point"], h=60)
-    b = pedestal(im, 500, 872, 340, 98, P["ped"])
-    stand(im, cut, 500, b + 6, 240, 520)
+    if style == "A":
+        b = pedestal(im, 500, 872, 340, 98, P["ped"])
+        stand(im, cut, 500, b + 6, 240, 520)
+    else:
+        # B: 받침대 없이 바닥에 세우고 접지 그림자만
+        stand(im, cut, 500, 900, 260, 560, 0.8)
     return grain(im.convert("RGB"), 2.5)
 
 

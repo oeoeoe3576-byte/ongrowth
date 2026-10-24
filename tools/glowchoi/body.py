@@ -160,3 +160,148 @@ def pick(style, en, title, rows):
         d = ImageDraw.Draw(im)
         y += h + 20
     return grain(im.convert("RGB"), 2.5)
+
+
+# ---------- 서로 다른 구성의 정보 카드 3종 ----------
+# 체크 포인트 = 2x2 타일, 성분 = 3열 비교표, 루틴 = 아이콘 단계 흐름.
+# 같은 글 안에서 정보 카드가 같은 목록 모양으로 반복되지 않게 한다.
+
+def _box(d, box, style, fill=CARD, r=26):
+    if style == "A":
+        d.rounded_rectangle(box, radius=r, fill=fill)
+    else:
+        d.rectangle(box, fill=fill)
+
+
+def _check_mark(d, cx, cy, s, col, width=7):
+    d.line((cx - s * 0.5, cy, cx - s * 0.12, cy + s * 0.38, cx + s * 0.55, cy - s * 0.4), fill=col, width=width, joint="curve")
+
+
+def check_grid(style, en, title, tiles):
+    """2x2 체크 타일. tiles=[(굵은 한 줄, 작은 설명)] 4개."""
+    im = _bg(style)
+    d = ImageDraw.Draw(im)
+    y0 = _header(d, style, en, title) + 10
+    gap = 24
+    w = (S - 140 - gap) / 2
+    h = (S - y0 - 70 - gap) / 2
+    for i, (head, sub) in enumerate(tiles):
+        x = 70 + (i % 2) * (w + gap)
+        y = y0 + (i // 2) * (h + gap)
+        _box(d, (x, y, x + w, y + h), style)
+        # 체크 아이콘
+        cx, cy, r = x + 70, y + 78, 38
+        if style == "A":
+            d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=CHIP)
+        else:
+            d.rectangle((cx - r, cy - r, cx + r, cy + r), fill=CHIP)
+        _check_mark(d, cx, cy, 34, MOCHA)
+        tracked(d, (x + w - 40, y + 50), f"0{i + 1}", serif_en(44, 600, False), "#D9BFB1", 0, "r")
+        yy = y + 150
+        for ln in head.split("\n"):
+            d.text((x + 34, yy), ln, font=pre(36, "Black"), fill=INK)
+            yy += 48
+        yy += 8
+        for ln in sub.split("\n"):
+            d.text((x + 34, yy), ln, font=pre(25, "Medium"), fill=SUB)
+            yy += 36
+    return grain(im.convert("RGB"), 2.5)
+
+
+def compare_columns(style, en, title, cols, row_labels=("이런 분께", "알아둘 점")):
+    """3열 비교표. cols=[(기호, 성분명, 이런 분께, 알아둘 점)]."""
+    im = _bg(style)
+    d = ImageDraw.Draw(im)
+    y0 = _header(d, style, en, title) + 10
+    gap = 18
+    w = (S - 140 - gap * 2) / 3
+    bottom = S - 70
+    for i, (sym, name, good, note) in enumerate(cols):
+        x = 70 + i * (w + gap)
+        _box(d, (x, y0, x + w, bottom), style)
+        # 위 색 띠 + 기호 원
+        if style == "A":
+            d.rounded_rectangle((x, y0, x + w, y0 + 190), radius=26, fill=CHIP)
+            d.rectangle((x, y0 + 160, x + w, y0 + 190), fill=CHIP)
+        else:
+            d.rectangle((x, y0, x + w, y0 + 190), fill=CHIP)
+        cx, cy, r = x + w / 2, y0 + 95, 64
+        if style == "A":
+            d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=MOCHA)
+        else:
+            d.rectangle((cx - r, cy - r, cx + r, cy + r), fill=MOCHA)
+        f = serif_en(44 if len(sym) <= 3 else 32, 600, False)
+        bb = d.textbbox((0, 0), sym, font=f)
+        d.text((cx - (bb[2] - bb[0]) / 2 - bb[0], cy - (bb[3] - bb[1]) / 2 - bb[1]), sym, font=f, fill="#FFFFFF")
+        yy = y0 + 222
+        nf = pre(36 if len(name) <= 6 else 28, "Black")
+        tracked(d, (cx, yy), name, nf, INK, 0, "c")
+        yy += 76
+        for lab, txt in zip(row_labels, (good, note)):
+            d.line((x + 26, yy, x + w - 26, yy), fill=CHIP, width=2)
+            yy += 26
+            tracked(d, (cx, yy), lab, pre(24, "Bold"), MOCHA, 1, "c")
+            yy += 48
+            for ln in txt.split("\n"):
+                tracked(d, (cx, yy), ln, pre(30, "SemiBold"), INK, 0, "c")
+                yy += 44
+            yy += 34
+    return grain(im.convert("RGB"), 2.5)
+
+
+def _icon(d, kind, cx, cy, s, col):
+    if kind == "drop":
+        d.polygon([(cx, cy - s * 0.62), (cx - s * 0.36, cy + s * 0.05), (cx + s * 0.36, cy + s * 0.05)], fill=col)
+        d.ellipse((cx - s * 0.37, cy - s * 0.18, cx + s * 0.37, cy + s * 0.52), fill=col)
+    elif kind == "tap":
+        for k, a in ((0.55, 3), (0.36, 4)):
+            d.ellipse((cx - s * k, cy - s * k, cx + s * k, cy + s * k), outline=col, width=a)
+        d.ellipse((cx - s * 0.16, cy - s * 0.16, cx + s * 0.16, cy + s * 0.16), fill=col)
+    elif kind == "sun":
+        import math
+        d.ellipse((cx - s * 0.26, cy - s * 0.26, cx + s * 0.26, cy + s * 0.26), fill=col)
+        for k in range(8):
+            a = math.pi / 4 * k
+            d.line((cx + math.cos(a) * s * 0.38, cy + math.sin(a) * s * 0.38,
+                    cx + math.cos(a) * s * 0.56, cy + math.sin(a) * s * 0.56), fill=col, width=6)
+
+
+def steps_flow(style, en, title, steps, note=""):
+    """아이콘 단계 흐름. steps=[(아이콘, 제목, 설명)], 아이콘 = drop / tap / sun."""
+    im = _bg(style)
+    d = ImageDraw.Draw(im)
+    y0 = _header(d, style, en, title) + 30
+    n = len(steps)
+    xs = [70 + (S - 140) * (i + 0.5) / n for i in range(n)]
+    cy, r = y0 + 120, 112
+    # 연결선 (점선)
+    x = xs[0]
+    while x < xs[-1]:
+        d.line((x, cy, min(x + 14, xs[-1]), cy), fill=MOCHA, width=4)
+        x += 26
+    for i, ((kind, head, sub), cx) in enumerate(zip(steps, xs)):
+        if style == "A":
+            d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=CARD)
+        else:
+            d.rectangle((cx - r, cy - r, cx + r, cy + r), fill=CARD)
+        _icon(d, kind, cx, cy, 118, MOCHA)
+        pill(d, cx, cy + r + 28, f"STEP {i + 1}", pre(24, "Bold"), "#FFFFFF", MOCHA, padx=22, h=46)
+        yy = cy + r + 104
+        for ln in head.split("\n"):
+            tracked(d, (cx, yy), ln, pre(36, "Black"), INK, 0, "c")
+            yy += 48
+        yy += 8
+        for ln in sub.split("\n"):
+            tracked(d, (cx, yy), ln, pre(27, "Medium"), SUB, 0, "c")
+            yy += 38
+    if note:
+        by = S - 180
+        _box(d, (70, by, S - 70, S - 70), style, fill=CARD, r=24)
+        if style == "A":
+            d.rounded_rectangle((70, by, 82, S - 70), radius=6, fill=MOCHA)
+        else:
+            d.rectangle((70, by, 82, S - 70), fill=MOCHA)
+        head, sub = note.split("\n")
+        d.text((110, by + 20), head, font=pre(32, "Black"), fill=INK)
+        d.text((110, by + 64), sub, font=pre(25, "Medium"), fill=SUB)
+    return grain(im.convert("RGB"), 2.5)

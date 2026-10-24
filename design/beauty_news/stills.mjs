@@ -12,6 +12,9 @@ try {
   const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
   await p.goto(pathToFileURL(html).href, { waitUntil: "load" });
   await p.evaluate(() => document.fonts.ready);
+  // 글꼴을 못 불러오면 기본 글꼴로 조용히 바뀌므로 꼭 경고한다
+  const badFonts = await p.evaluate(() => [...document.fonts].filter(f => f.status === "error").map(f => f.family));
+  for (const f of new Set(badFonts)) console.log(`⚠ 글꼴 불러오기 실패 → ${f} (기본 글꼴로 나옴)`);
   // 글자 겹침·화면 밖 검사: 겹치면 경고를 찍는다(시안 확인 전에 꼭 본다)
   const warn = await p.evaluate(() => {
     const SEL = ".wb, .rb, .hl, .say, .ttl2, .big, .follow, .note, .prods figure, .rs .ttl, .steps .st, .figbox, .prdpop, .ptag, .tprod, .pmain, .side";

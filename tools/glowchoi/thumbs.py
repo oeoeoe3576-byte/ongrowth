@@ -163,11 +163,15 @@ def label_photo(photo: Image.Image, cuts: list, small: str, big: str, tint=ROSY,
     bg = photo.convert("RGB").crop(((w - m) // 2, (h - m) // 2, (w + m) // 2, (h + m) // 2)).resize((S, S), Image.LANCZOS)
     im = Image.blend(bg, Image.new("RGB", (S, S), tint), 0.18).convert("RGBA")
     n = len(cuts)
-    span = 400 if n == 3 else 300 * (n - 1) / 2 if n > 1 else 0
+    wide = any(c.width / c.height > 0.9 for c in cuts)  # 낮고 넓은 병(클렌징밤 등)은 간격과 폭을 넓힌다
+    span = (480 if wide else 400) if n == 3 else 300 * (n - 1) / 2 if n > 1 else 0
     xs = [500 - span / 2 + span * i / max(1, n - 1) for i in range(n)] if n > 1 else [500]
     for i, (c, x) in enumerate(zip(cuts, xs)):
         mid = n % 2 == 1 and i == n // 2
-        stand(im, c, x, 690, 160 if mid else 180, 500 if mid else 445, 0.75)
+        if c.width / c.height > 0.9:
+            stand(im, c, x, 690, 235, 330, 0.75)
+        else:
+            stand(im, c, x, 690, 160 if mid else 180, 500 if mid else 445, 0.75)
     d = ImageDraw.Draw(im)
     # 위 라벨: 모카 박스 + 흰 글자, 아래 라벨: 흰 박스 + 큰 다크모카 글자. 둘 다 가운데 정렬
     f1, f2 = pre(42, "Bold"), pre(96, "Black")

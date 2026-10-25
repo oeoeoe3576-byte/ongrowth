@@ -104,10 +104,12 @@ def product(style, cut, no, brand, name, tag, point):
     pill(d, 500, 232, f"{tag}  ·  {point}", pre(28, "Bold"), "#FFFFFF", P["point"], h=60)
     if style == "A":
         b = pedestal(im, 500, 872, 340, 98, P["ped"])
-        stand(im, cut, 500, b + 6, 240, 520)
+        wide = cut.width / cut.height > 0.9
+        stand(im, cut, 500, b + 6, 330 if wide else 240, 520)
     else:
         # B: 받침대 없이 바닥에 세우고 접지 그림자만
-        stand(im, cut, 500, 900, 260, 560, 0.8)
+        wide = cut.width / cut.height > 0.9
+        stand(im, cut, 500, 900, 420 if wide else 380, 480 if wide else 540, 0.8)
     return grain(im.convert("RGB"), 2.5)
 
 
@@ -211,6 +213,12 @@ def _icon(d, kind, cx, cy, s, col):
         for k, a in ((0.55, 3), (0.36, 4)):
             d.ellipse((cx - s * k, cy - s * k, cx + s * k, cy + s * k), outline=col, width=a)
         d.ellipse((cx - s * 0.16, cy - s * 0.16, cx + s * 0.16, cy + s * 0.16), fill=col)
+    elif kind == "water":
+        import math
+        for k in (-0.28, 0.0, 0.28):
+            pts = [(cx + s * (t / 20 - 0.5) * 1.0, cy + s * k + math.sin(t / 20 * 2 * math.pi) * s * 0.07)
+                   for t in range(21)]
+            d.line(pts, fill=col, width=7, joint="curve")
     elif kind == "sun":
         import math
         d.ellipse((cx - s * 0.26, cy - s * 0.26, cx + s * 0.26, cy + s * 0.26), fill=col)

@@ -27,12 +27,13 @@ const parse = (l: string): string[] => {
 };
 const chunk = <T,>(a: T[], n: number) => Array.from({ length: Math.ceil(a.length / n) }, (_, i) => a.slice(i * n, i * n + n));
 
-export async function collectChannels(opts: { pages: number; minViews: number; maxSec: number }) {
+export async function collectChannels(opts: { pages: number; minViews: number; maxSec: number; seeds?: string }) {
   const videosCsv = path.join(DIR, "videos.csv");
   const rows = fs.readFileSync(videosCsv, "utf8").trim().split("\n").slice(1).map(parse);
   const seen = new Set(rows.map((r) => r[0]));
   const tags = new Map<string, string>(fs.readFileSync(path.join(DIR, "tags.csv"), "utf8").trim().split("\n").slice(1).map((l) => l.split(",") as [string, string]));
-  const seedIds = rows.filter((r) => tags.get(r[0]) === "valid").map((r) => r[0]);
+  // --seeds <파일>: 그 파일의 영상 ID들의 채널만 훑는다 (이미 훑은 채널을 다시 훑지 않으려고)
+  const seedIds = opts.seeds ? fs.readFileSync(opts.seeds, "utf8").trim().split("\n") : rows.filter((r) => tags.get(r[0]) === "valid").map((r) => r[0]);
   // 1) 시드 영상의 채널 ID (videos.list 1유닛/50개)
   const channels = new Map<string, string>();
   for (const ids of chunk(seedIds, 50)) {
@@ -73,7 +74,8 @@ export async function collectChannels(opts: { pages: number; minViews: number; m
 
 if (process.argv[1]?.endsWith("channels.ts")) {
   const arg = (n: string, d: number) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? Number(process.argv[i + 1]) : d; };
-  collectChannels({ pages: arg("pages", 10), minViews: arg("min-views", 100000), maxSec: arg("max-sec", 180) })
+  const si = process.argv.indexOf("--seeds");
+  collectChannels({ pages: arg("pages", 10), minViews: arg("min-views", 100000), maxSec: arg("max-sec", 180), seeds: si > 0 ? process.argv[si + 1] : undefined })
     .then((r) => console.log(`채널 ${r.channels}개 · 훑은 영상 ${r.scanned}개 · 새로 저장 ${r.added}개 · 약 ${r.units}유닛`))
     .catch((e) => { console.error((e as Error).message); process.exitCode = 1; });
 }

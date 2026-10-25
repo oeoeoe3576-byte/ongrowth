@@ -8,7 +8,8 @@ import path from "node:path";
 
 const API = "https://www.googleapis.com/youtube/v3";
 const OUT = path.resolve("data/shorts-db/videos.csv");
-const QUERIES = ["부업", "부업 추천", "직장인 부업", "블로그 부업", "스마트스토어 부업", "퇴근 후 부업", "n잡", "애드포스트 수익", "체험단 부업", "집에서 하는 부업"];
+// 1차(10/23)는 일반 검색어, 2차는 세부 주제로 새 채널을 발굴한다
+const QUERIES = ["블로그 수익화", "애드센스 수익", "쿠팡파트너스 수익", "앱테크 추천", "쌀먹 게임", "해외구매대행 후기", "재택 부업 후기", "AI 부업 수익", "쇼츠 수익화 후기", "배달 부업 수입", "스마트스토어 후기", "N잡러 후기"];
 // 시범(58개) 분류에서 나온 잡음: 수공예 재택부업 모집 반복 영상(스팸), 기업 광고 시리즈
 const EXCLUDE = /모집|인원\s*급구|인원\s*모집|손부업|수공예|가정부업|삼성화재/;
 const HEADER = ["id", "title", "channel", "views", "likes", "comments", "seconds", "published", "query", "url", "thumbnail", "description"];

@@ -11,11 +11,13 @@ import { fileURLToPath } from "node:url";
 const here = path.dirname(fileURLToPath(import.meta.url));
 const qPath = path.join(here, "auto_queue.json");
 const DRY = process.argv.includes("--dry");
-const tok = process.env.META_ACCESS_TOKEN_BEAUTY;
-const igId = process.env.INSTAGRAM_ACCOUNT_ID_BEAUTY;
-if (!tok || !igId) throw new Error("META_ACCESS_TOKEN_BEAUTY / INSTAGRAM_ACCOUNT_ID_BEAUTY 없음");
+// 영상 파일 직접 업로드는 페이스북 로그인 토큰(EAA…, graph.facebook.com)에서만 된다.
+// 인스타그램 로그인 토큰(IGAA…)은 공개 video_url만 받아서 쓰지 않는다(기사 사진이 든 영상을 공개 주소에 올리지 않기 위해).
+const tok = process.env.META_FB_ACCESS_TOKEN_BEAUTY;
+const igId = process.env.INSTAGRAM_BUSINESS_ID_BEAUTY;
+if (!tok || !igId) throw new Error("META_FB_ACCESS_TOKEN_BEAUTY / INSTAGRAM_BUSINESS_ID_BEAUTY 없음 (페이스북 연결 토큰 필요)");
 const V = "v23.0";
-const host = tok.startsWith("IGAA") ? "https://graph.instagram.com" : "https://graph.facebook.com";
+const host = "https://graph.facebook.com";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function api(method, p, params = {}) {

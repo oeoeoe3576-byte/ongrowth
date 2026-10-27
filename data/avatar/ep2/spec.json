@@ -7,52 +7,52 @@
  "scenes": [
   {
    "image": "data/avatar/ep2/scene1.png",
-   "seconds": 1,
-   "align": "center"
-  },
-  {
-   "image": "data/avatar/ep2/scene2.png",
    "seconds": 0.9,
    "align": "center"
   },
   {
+   "image": "data/avatar/ep2/scene2.png",
+   "seconds": 0.85,
+   "align": "center"
+  },
+  {
    "image": "data/avatar/ep2/scene3.png",
-   "seconds": 1.4,
+   "seconds": 0.75,
    "align": "center"
   },
   {
    "image": "data/avatar/ep2/scene4.png",
-   "seconds": 1.59,
+   "seconds": 2.5,
    "align": "center"
   },
   {
    "image": "data/avatar/ep2/b1.png",
-   "seconds": 3.64,
+   "seconds": 3.5,
    "align": "center"
   },
   {
    "image": "data/avatar/ep2/scene4.png",
-   "seconds": 1.31,
+   "seconds": 1.75,
    "align": "center"
   },
   {
    "image": "data/avatar/ep2/b2.png",
-   "seconds": 2.19,
+   "seconds": 1.75,
    "align": "center"
   },
   {
    "image": "data/avatar/ep2/b3.png",
-   "seconds": 2.62,
+   "seconds": 2.85,
    "align": "right"
   },
   {
    "image": "data/avatar/ep2/b4.png",
-   "seconds": 4.37,
+   "seconds": 4.25,
    "align": "center"
   },
   {
    "image": "data/avatar/ep2/scene2.png",
-   "seconds": 2.77,
+   "seconds": 2.69,
    "align": "center"
   }
  ],
@@ -61,79 +61,79 @@
    "line1": "글만 썼는데",
    "line2": "밥이 공짜라고요?",
    "from": 0,
-   "to": 4.89
+   "to": 5
   },
   {
    "line1": "체험단 시작은",
    "line2": "딱 3단계",
-   "from": 4.89,
-   "to": 19.02
+   "from": 5,
+   "to": 19.1
   },
   {
    "line1": "다음 편",
    "line2": "글로 돈 버는 법",
-   "from": 19.02,
+   "from": 19.1,
    "to": 21.79
   }
  ],
  "captions": [
   {
-   "from": 0.2,
-   "to": 1.9,
+   "from": 0.16,
+   "to": 1.72,
    "text": "글 쓰는데, 생활비가 아껴지고"
   },
   {
-   "from": 1.9,
-   "to": 3.3,
+   "from": 1.78,
+   "to": 2.5,
    "text": "밥도 공짜라고요?"
   },
   {
-   "from": 3.3,
-   "to": 4.8,
+   "from": 2.5,
+   "to": 4.75,
    "text": "체험단 이야기예요."
   },
   {
-   "from": 4.89,
-   "to": 6.64,
+   "from": 5.1,
+   "to": 6.7,
    "text": "식당이나 제품을 제공받고,"
   },
   {
-   "from": 6.64,
-   "to": 8.53,
+   "from": 6.7,
+   "to": 8.3,
    "text": "후기를 블로그에 쓰는 거예요."
   },
   {
-   "from": 8.53,
-   "to": 9.84,
+   "from": 8.5,
+   "to": 10.2,
    "text": "시작은 세 단계예요."
   },
   {
-   "from": 9.84,
-   "to": 12.03,
+   "from": 10.3,
+   "to": 12,
    "text": "하나, 체험단 사이트에 가입해요."
   },
   {
-   "from": 12.03,
-   "to": 14.65,
+   "from": 12.07,
+   "to": 14.75,
    "text": "둘, 내 블로그 주제에 맞는 곳에 신청해요."
   },
   {
-   "from": 14.65,
-   "to": 17.42,
+   "from": 14.85,
+   "to": 17.5,
    "text": "셋, 후기엔 제공받았다는 문구를 꼭 적어요."
   },
   {
-   "from": 17.42,
-   "to": 19.02,
+   "from": 17.6,
+   "to": 19.1,
    "text": "빼면 안 되는 규칙이에요."
   },
   {
-   "from": 19.02,
-   "to": 20.77,
+   "from": 19.1,
+   "to": 20.4,
    "text": "다음에는 글로 돈 버는 방법을"
   },
   {
-   "from": 20.77,
+   "from": 20.4,
    "to": 21.79,
    "text": "알려드릴게요."
   }

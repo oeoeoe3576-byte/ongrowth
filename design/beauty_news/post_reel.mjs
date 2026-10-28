@@ -13,9 +13,10 @@ const qPath = path.join(here, "auto_queue.json");
 const DRY = process.argv.includes("--dry");
 // 영상 파일 직접 업로드는 페이스북 로그인 토큰(EAA…, graph.facebook.com)에서만 된다.
 // 인스타그램 로그인 토큰(IGAA…)은 공개 video_url만 받아서 쓰지 않는다(기사 사진이 든 영상을 공개 주소에 올리지 않기 위해).
-const tok = process.env.META_FB_ACCESS_TOKEN_BEAUTY;
-const igId = process.env.INSTAGRAM_BUSINESS_ID_BEAUTY;
-if (!tok || !igId) throw new Error("META_FB_ACCESS_TOKEN_BEAUTY / INSTAGRAM_BUSINESS_ID_BEAUTY 없음 (페이스북 연결 토큰 필요)");
+// 기존 META_ACCESS_TOKEN_BEAUTY를 페이스북 토큰(EAA…)으로 바꿔 넣어도 되고, 따로 META_FB_ACCESS_TOKEN_BEAUTY로 둬도 된다.
+const tok = [process.env.META_FB_ACCESS_TOKEN_BEAUTY, process.env.META_ACCESS_TOKEN_BEAUTY].find((t) => t && t.startsWith("EAA"));
+const igId = process.env.INSTAGRAM_BUSINESS_ID_BEAUTY || process.env.INSTAGRAM_ACCOUNT_ID_BEAUTY;
+if (!tok || !igId) throw new Error("페이스북 연결 토큰(EAA…)이 없음: META_ACCESS_TOKEN_BEAUTY 또는 META_FB_ACCESS_TOKEN_BEAUTY에 넣어 주세요");
 const V = "v23.0";
 const host = "https://graph.facebook.com";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

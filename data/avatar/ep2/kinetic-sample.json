@@ -1,0 +1,74 @@
+{
+ "audio": "/tmp/claude-0/-home-user-ongrowth/a17b1ca9-cfba-53ce-8e83-a355421d333e/scratchpad/hook.mp3",
+ "out": "data/avatar/ep2-kinetic.mp4",
+ "seconds": 4.95,
+ "beats": [
+  {
+   "at": 0.16,
+   "until": 0.88,
+   "lines": [
+    {
+     "text": "글 쓰는데",
+     "size": 150
+    }
+   ]
+  },
+  {
+   "at": 0.88,
+   "until": 1.76,
+   "lines": [
+    {
+     "text": "생활비가",
+     "size": 130
+    },
+    {
+     "text": "아껴지고",
+     "size": 150,
+     "mark": true
+    }
+   ]
+  },
+  {
+   "at": 1.76,
+   "until": 2.28,
+   "lines": [
+    {
+     "text": "밥도",
+     "size": 190
+    }
+   ]
+  },
+  {
+   "at": 2.28,
+   "until": 3.42,
+   "lines": [
+    {
+     "text": "밥도",
+     "size": 110
+    },
+    {
+     "text": "공짜라고요?",
+     "size": 175,
+     "color": "#FFE600"
+    }
+   ]
+  },
+  {
+   "at": 3.42,
+   "until": 4.95,
+   "lines": [
+    {
+     "text": "체험단",
+     "size": 150,
+     "pill": true
+    },
+    {
+     "text": "이야기예요",
+     "size": 130
+    }
+   ]
+  }
+ ],
+ "tag": "체험단 ① 글쓰기로 생활비 아끼기",
+ "progress": true
+}

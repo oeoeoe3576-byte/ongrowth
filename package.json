@@ -26,6 +26,7 @@
     "shorts-channels": "tsx src/shorts/channels.ts",
     "shorts-compose": "tsx src/shorts/compose.ts",
     "shorts-cutout": "tsx src/shorts/cutout.ts",
+    "shorts-kinetic": "tsx src/shorts/kinetic.ts",
     "test:editorial": "tsx src/editorial/editorial.test.ts"
   },
   "dependencies": {

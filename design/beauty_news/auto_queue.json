@@ -1,15 +1,58 @@
 {
   "note": "하루 2편(11:30·20:30 KST 무렵) 자동 업로드 순서. posted가 비어 있는 첫 편이 다음 차례. 영상은 output/auto/reel_music.mp4(커밋 안 됨).",
   "items": [
-    { "dir": "2026-11-05_lipcare", "title": "태연 입술 각질템", "song": "Paradise Found" },
-    { "dir": "2026-10-29_midbob", "title": "요즘 중단발", "song": "Zazie" },
-    { "dir": "2026-10-28_bigeyes", "title": "눈 두 배 커 보이기", "song": "Aerosol of my Love" },
-    { "dir": "2026-11-01_ulmeok", "title": "울먹 메이크업", "song": "Late Night Radio" },
-    { "dir": "2026-10-26_highlighter", "title": "하이라이터 위치", "song": "Werq" },
-    { "dir": "2026-10-30_layered", "title": "흐트러진 레이어드", "song": "Cold Sober" },
-    { "dir": "2026-10-31_browtail", "title": "눈썹 꼬리", "song": "Jazz Brunch" },
-    { "dir": "2026-10-27_bunhair", "title": "올림머리", "song": "Sincerely" },
-    { "dir": "2026-10-25_browbleach", "title": "눈썹 탈색", "song": "Aerosol of my Love" },
-    { "dir": "2026-11-06_gareuma", "title": "가르마 비율", "song": "Werq" }
+    {
+      "dir": "2026-11-05_lipcare",
+      "title": "태연 입술 각질템",
+      "song": "Paradise Found",
+      "posted": "2026-10-30T02:18:45+0000",
+      "media_id": "18125443822886594",
+      "permalink": "https://www.instagram.com/reel/DfGfdusANOT/"
+    },
+    {
+      "dir": "2026-10-29_midbob",
+      "title": "요즘 중단발",
+      "song": "Zazie"
+    },
+    {
+      "dir": "2026-10-28_bigeyes",
+      "title": "눈 두 배 커 보이기",
+      "song": "Aerosol of my Love"
+    },
+    {
+      "dir": "2026-11-01_ulmeok",
+      "title": "울먹 메이크업",
+      "song": "Late Night Radio"
+    },
+    {
+      "dir": "2026-10-26_highlighter",
+      "title": "하이라이터 위치",
+      "song": "Werq"
+    },
+    {
+      "dir": "2026-10-30_layered",
+      "title": "흐트러진 레이어드",
+      "song": "Cold Sober"
+    },
+    {
+      "dir": "2026-10-31_browtail",
+      "title": "눈썹 꼬리",
+      "song": "Jazz Brunch"
+    },
+    {
+      "dir": "2026-10-27_bunhair",
+      "title": "올림머리",
+      "song": "Sincerely"
+    },
+    {
+      "dir": "2026-10-25_browbleach",
+      "title": "눈썹 탈색",
+      "song": "Aerosol of my Love"
+    },
+    {
+      "dir": "2026-11-06_gareuma",
+      "title": "가르마 비율",
+      "song": "Werq"
+    }
   ]
 }

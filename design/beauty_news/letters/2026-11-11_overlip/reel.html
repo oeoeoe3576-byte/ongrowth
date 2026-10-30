@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8" /><title>오버립 릴스</title>
+<link rel="stylesheet" href="../../styles.css" />
+<link rel="stylesheet" href="../../reel.css" />
+<link rel="stylesheet" href="../../reel_paper.css" />
+<style>.phsvg, .ov { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+.pp .pmain { position:absolute; left:50%; top:210px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:10px; }
+.pp .pmain .pim { width:220px; height:200px; background:center/contain no-repeat; filter: drop-shadow(0 10px 18px rgba(0,0,0,.35)); }
+
+.rs .ph2 { position:absolute; inset:0; width:100%; height:100%; }.pp .pmain .pnm { display:flex; flex-direction:column; align-items:center; background:none; color:#fff; padding:0 8px; font-size:68px; font-weight:900; line-height:1.15; letter-spacing:-0.04em; text-shadow:0 0 3px rgba(0,0,0,.85), 0 2px 4px rgba(0,0,0,.6), 0 6px 18px rgba(0,0,0,.45); }
+.pp .pmain .pnm small { display:inline-block; background:var(--rose); color:#fff; text-shadow:none; padding:4px 16px; border-radius:30px; font-size:32px; margin-bottom:10px; }
+.pp .pmain .pnm .hl { position:static; display:inline; inset:auto; color:inherit; font:inherit; background:linear-gradient(transparent 62%, rgba(225,80,130,.85) 62%, rgba(225,80,130,.85) 92%, transparent 92%); padding:0 6px; }
+.pp .pmain .pim { width:240px; height:210px; }
+.pp .pmain .pnm { white-space:nowrap; } .pp .pmain .pnm small { letter-spacing:0; word-spacing:4px; }
+/* 온글잎 의연체: 영상 사용 가능, 파일 재배포 금지 → 저장소에 넣지 않는다. 없으면 fonts/local/에 내려받기: curl -o fonts/local/Uiyeun.woff https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff */
+@font-face { font-family:"Uiyeun"; src:url(../../fonts/local/Uiyeun.woff) format("woff"); }
+/* 설명글: 메인(제품명, 고딕 굵게)과 다른 글꼴로 '에디터 메모'처럼. 입술 옆 + 입술을 가리키는 화살표 */
+.pp .side { position:absolute; color:#fff; text-shadow:0 0 3px rgba(0,0,0,.8), 0 2px 5px rgba(0,0,0,.55), 0 6px 16px rgba(0,0,0,.4); white-space:nowrap; }
+.pp .side b { font-weight:inherit; color:#ffd3e1; }
+.pp .side { font-family:"Uiyeun"; font-size:92px; line-height:1.08; letter-spacing:0; transform:rotate(-3deg); }
+.pp .arw path { fill:none; stroke:#fff; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; filter:drop-shadow(0 2px 3px rgba(0,0,0,.6)); }
+.pp .pnm-only { top:200px; }
+.pp .ov .part, .rs .ov .part { fill:none; stroke:#ff8fb3; stroke-width:7; stroke-linecap:round; stroke-dasharray:2 14; filter:drop-shadow(0 1px 2px rgba(0,0,0,.7)); }
+
+.pp .side.cx { left:200px !important; right:200px; white-space:normal; text-align:center; transform:rotate(-2deg); }
+.pp .steps.txt .st { grid-template-columns: 1fr; }
+.pp .steps.txt .st p { font-size: 46px; }
+</style>
+</head>
+<body>
+
+<section class="card pp" data-name="01_thumb" data-thumb>
+  <div class="bl-mark static" style="color:var(--ink)">BEAUTY <i>letter</i></div>
+  <div class="figbox static" style="top:300px; height:700px; border:none; background:none"><img src="img/lip0.svg" alt="" /></div>
+  <div class="big static" style="top:1180px">필러 없이<br/><em>도톰한 입술</em></div>
+  <div class="say static" style="top:1440px; font-size:44px">오버립 3단계</div>
+</section>
+
+<section class="card pp" data-name="02_s" data-hold="1.4">
+  <div class="ttl2">1. 립라이너는<br/><em>중앙만 밖으로</em></div>
+  <div class="figbox whole" style="top:600px; height:600px; border:none; background:none"><img src="img/lip1.svg" alt="" /></div>
+  <div class="wb cx" style="top:1220px; text-align:center"><small>입술색 비슷한 라이너로</small>입꼬리는 원래 선 그대로</div>
+  <div class="note">*출처: 얼루어 코리아 (2026.10.25) · 그래픽: 뷰티레터</div>
+</section>
+
+<section class="card pp" data-name="03_s" data-hold="1.6">
+  <div class="ttl2">2. 겉은 차분,<br/><em>안쪽은 생기</em></div>
+  <div class="figbox whole" style="top:600px; height:600px; border:none; background:none"><img src="img/lip2.svg" alt="" /></div>
+  <div class="wb cx" style="top:1220px; text-align:center"><small>겉: 누드 베이지·모브 매트</small>안: 한 톤 진한 색, 경계는 블렌딩</div>
+  <div class="note">*출처: 얼루어 코리아 (2026.10.25) · 그래픽: 뷰티레터</div>
+</section>
+
+<section class="card pp" data-name="04_s" data-hold="1.4">
+  <div class="ttl2">3. 중앙에<br/><em>글로스 한 방울</em></div>
+  <div class="figbox whole" style="top:600px; height:600px; border:none; background:none"><img src="img/lip3.svg" alt="" /></div>
+  <div class="wb cx" style="top:1220px; text-align:center"><small>데일리는 이것만 해도</small>유리알 광택이 볼륨을 만들어요</div>
+  <div class="note">*출처: 얼루어 코리아 (2026.10.25) · 그래픽: 뷰티레터</div>
+</section>
+
+<section class="card pp" data-name="05_end" data-hold="1.4">
+  <div class="big" style="top:640px">오버립, 해 본 적 있어?<br/><em>댓글</em>로 알려 주세요</div>
+  <div class="say" style="top:1010px; font-size:44px">얇은 입술 고민인 친구에게 보내기 📩</div>
+  <div class="follow cx" style="top:1160px">@from.beautyletter 팔로우</div>
+</section>
+</body></html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8" /><title>톤별 글로우 메이크업 릴스</title>
+<link rel="stylesheet" href="../../styles.css" />
+<link rel="stylesheet" href="../../reel.css" />
+<link rel="stylesheet" href="../../reel_paper.css" />
+<style>.phsvg, .ov { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+.pp .pmain { position:absolute; left:50%; top:210px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:10px; }
+.pp .pmain .pim { width:220px; height:200px; background:center/contain no-repeat; filter: drop-shadow(0 10px 18px rgba(0,0,0,.35)); }
+
+.rs .ph2 { position:absolute; inset:0; width:100%; height:100%; }.pp .pmain .pnm { display:flex; flex-direction:column; align-items:center; background:none; color:#fff; padding:0 8px; font-size:68px; font-weight:900; line-height:1.15; letter-spacing:-0.04em; text-shadow:0 0 3px rgba(0,0,0,.85), 0 2px 4px rgba(0,0,0,.6), 0 6px 18px rgba(0,0,0,.45); }
+.pp .pmain .pnm small { display:inline-block; background:var(--rose); color:#fff; text-shadow:none; padding:4px 16px; border-radius:30px; font-size:32px; margin-bottom:10px; }
+.pp .pmain .pnm .hl { position:static; display:inline; inset:auto; color:inherit; font:inherit; background:linear-gradient(transparent 62%, rgba(225,80,130,.85) 62%, rgba(225,80,130,.85) 92%, transparent 92%); padding:0 6px; }
+.pp .pmain .pim { width:240px; height:210px; }
+.pp .pmain .pnm { white-space:nowrap; } .pp .pmain .pnm small { letter-spacing:0; word-spacing:4px; }
+/* 온글잎 의연체: 영상 사용 가능, 파일 재배포 금지 → 저장소에 넣지 않는다. 없으면 fonts/local/에 내려받기: curl -o fonts/local/Uiyeun.woff https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff */
+@font-face { font-family:"Uiyeun"; src:url(../../fonts/local/Uiyeun.woff) format("woff"); }
+/* 설명글: 메인(제품명, 고딕 굵게)과 다른 글꼴로 '에디터 메모'처럼. 입술 옆 + 입술을 가리키는 화살표 */
+.pp .side { position:absolute; color:#fff; text-shadow:0 0 3px rgba(0,0,0,.8), 0 2px 5px rgba(0,0,0,.55), 0 6px 16px rgba(0,0,0,.4); white-space:nowrap; }
+.pp .side b { font-weight:inherit; color:#ffd3e1; }
+.pp .side { font-family:"Uiyeun"; font-size:92px; line-height:1.08; letter-spacing:0; transform:rotate(-3deg); }
+.pp .arw path { fill:none; stroke:#fff; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; filter:drop-shadow(0 2px 3px rgba(0,0,0,.6)); }
+.pp .pnm-only { top:200px; }
+.pp .ov .part, .rs .ov .part { fill:none; stroke:#ff8fb3; stroke-width:7; stroke-linecap:round; stroke-dasharray:2 14; filter:drop-shadow(0 1px 2px rgba(0,0,0,.7)); }
+
+.pp .side.cx { left:200px !important; right:200px; white-space:normal; text-align:center; transform:rotate(-2deg); }
+.pp .steps.txt .st { grid-template-columns: 1fr; }
+.pp .steps.txt .st p { font-size: 46px; }
+</style>
+</head>
+<body>
+
+<section class="card rs" data-name="01_thumb" data-thumb>
+  <img class="ph static kb" src="img/src_momo.jpg" alt="" style="object-position:50% 30%" />
+  <div class="dim static"></div>
+  <div class="bl-mark static">BEAUTY <i>letter</i></div>
+  <div class="ttl"><div class="kicker static"><span class="cat">Makeup Letter</span><span class="sep">·</span><span>GLOW</span></div><h1>글로우도<br/><em>톤</em> 따라 달라요</h1><p class="sub static">모모·김유정·신민아·미연의 광</p></div>
+</section>
+
+<section class="card pp pf" data-name="02_momo" data-hold="1.6">
+  <div class="full static kb" style="background-image:url(img/src_momo2.jpg); background-position:50% 25%"></div>
+  <div class="pmain pnm-only pop" style="top:960px"><div class="pnm"><small>모모 · 핑크 글로우</small><mark class="hl">펄은 빼고 맑게</mark></div></div>
+  <div class="side cx" style="top:1200px;">볼·입술에만<br/><b>핑크 광</b></div>
+  <div class="note">*출처: W 코리아 (2026.10.28) · 사진: 인스타그램 @momo</div>
+</section>
+
+<section class="card pp pf" data-name="03_yoojung" data-hold="1.6">
+  <div class="full static kb" style="background-image:url(img/src_yoojung.jpg); background-position:50% 30%"></div>
+  <div class="pmain pnm-only pop" style="top:960px"><div class="pnm"><small>김유정 · 샴페인 글로우</small><mark class="hl">피치 브라운</mark></div></div>
+  <div class="side cx" style="top:1200px;">빛 받는 곳에만<br/><b>은은하게</b></div>
+  <div class="note">*출처: W 코리아 (2026.10.28) · 사진: 인스타그램 @you_r_love</div>
+</section>
+
+<section class="card pp pf" data-name="04_mina" data-hold="1.6">
+  <div class="full static kb" style="background-image:url(img/src_mina.jpg); background-position:45% 30%"></div>
+  <div class="pmain pnm-only pop" style="top:960px"><div class="pnm"><small>신민아 · 모브 글로우</small><mark class="hl">모브 핑크 + 로즈 브라운</mark></div></div>
+  <div class="side cx" style="top:1200px;">하이라이터 대신<br/><b>이마·콧등만</b></div>
+  <div class="note">*출처: W 코리아 (2026.10.28) · 사진: 인스타그램 @illusomina</div>
+</section>
+
+<section class="card pp pf" data-name="05_miyeon" data-hold="1.6">
+  <div class="full static kb" style="background-image:url(img/src_miyeon.jpg); background-position:50% 25%"></div>
+  <div class="pmain pnm-only pop" style="top:960px"><div class="pnm"><small>미연 · 글라스 스킨</small><mark class="hl">코랄 로즈</mark></div></div>
+  <div class="side cx" style="top:1200px;">광대·눈 밑에<br/><b>리퀴드 광</b></div>
+  <div class="note">*출처: W 코리아 (2026.10.28) · 사진: 인스타그램 @noodle.zip</div>
+</section>
+
+<section class="card pp" data-name="06_end" data-hold="1.4">
+  <div class="big" style="top:640px">너는 몇 번 글로우?<br/><em>댓글</em>로 알려 주세요</div>
+  <div class="say" style="top:1010px; font-size:44px">쿨톤은 핑크·모브, 웜톤은 샴페인·코랄</div>
+  <div class="follow cx" style="top:1160px">@from.beautyletter 팔로우</div>
+</section>
+</body></html>

@@ -41,6 +41,20 @@ const queue = JSON.parse(await readFile(qPath, "utf8"));
 const item = queue.items.find((x) => !x.posted);
 if (!item) { console.log("큐가 비었어요: 올릴 편이 없음"); process.exit(0); }
 
+// 사용자 규칙(2026-10-30): 하루(KST) 최대 2편, 게시 간격 최소 1시간.
+// 여러 채팅방이 같은 큐를 돌려도 지켜지도록 큐 기록이 아니라 인스타그램에 실제로 올라간 게시물 시간으로 판단한다.
+const MAX_PER_DAY = 2;
+const MIN_GAP_MIN = 60;
+const kstDay = (t) => new Date(new Date(t).getTime() + 9 * 3600e3).toISOString().slice(0, 10);
+const recent = (await api("GET", `${igId}/media`, { fields: "timestamp", limit: "10" })).data.map((m) => new Date(m.timestamp.replace(/\+0000$/, "Z")));
+const now = new Date();
+const today = recent.filter((t) => kstDay(t) === kstDay(now)).length;
+const gap = recent.length ? (now - Math.max(...recent)) / 60e3 : Infinity;
+if (today >= MAX_PER_DAY || gap < MIN_GAP_MIN) {
+  console.log(`건너뜀: 오늘 ${today}편 게시됨, 마지막 게시 ${Math.round(gap)}분 전 (규칙: 하루 ${MAX_PER_DAY}편, 간격 ${MIN_GAP_MIN}분 이상) → 「${item.title}」 다음 차례로 미룸`);
+  process.exit(0);
+}
+
 const dir = path.join(here, "letters", item.dir);
 const video = path.join(dir, "output/auto/reel_music.mp4");
 const size = (await stat(video)).size;

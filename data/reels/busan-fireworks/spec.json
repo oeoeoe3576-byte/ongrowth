@@ -68,5 +68,15 @@
  "music": {
   "bpm": 108,
   "seed": 131
+ },
+ "hookDur": 4.0,
+ "voice": {
+  "hook": "voice/hook.mp3",
+  "stops": [
+   "voice/s1.mp3",
+   "voice/s2.mp3",
+   "voice/s3.mp3"
+  ],
+  "outro": "voice/outro.mp3"
  }
 }

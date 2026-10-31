@@ -4,7 +4,7 @@ import fs from "node:fs"; import path from "node:path"; import {execFileSync} fr
 const specPath=process.argv[2]; const spec=JSON.parse(fs.readFileSync(specPath,"utf8")); const dir=path.dirname(path.resolve(specPath));
 const ROOT=process.cwd(); const P=n=>`file://${ROOT}/data/images/travel/${n}`;
 const FONT=`file://${ROOT}/node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2`; const AQ="#38D0F0";
-const H=3.0, SD=3.6, OD=3.0, n=spec.stops.length, OUT0=H+n*SD, END=OUT0+OD;
+const H=spec.hookDur||3.0, SD=3.6, OD=3.0, n=spec.stops.length, OUT0=H+n*SD, END=OUT0+OD;
 const css=`@font-face{font-family:P;src:url(${FONT});font-weight:45 920}*{box-sizing:border-box;margin:0;padding:0}html,body{width:1080px;height:1920px;overflow:hidden;background:#000;font-family:P,sans-serif;color:#fff}
 .sc{position:absolute;inset:0;opacity:0}.bg{position:absolute;inset:-50px;background-size:cover;background-position:center;filter:brightness(1.1) saturate(1.15)}
 .shade2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.1) 40%,rgba(0,0,0,.35) 70%,rgba(0,0,0,.6))}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.05) 40%,rgba(0,0,0,.5))}
@@ -37,7 +37,7 @@ function scene(id,t,a,b,f=.3){g(id).style.opacity=Math.min(E((t-a)/f),E((b-t)/f)
 function ph(id,t,a,b,first,last,f=.3){const el=g(id);let o=1;if(!first)o=Math.min(o,E((t-a)/f));if(!last&&t>b-f)o=Math.min(o,E((b-t)/f));if(t<a&&!first)o=0;if(t>b&&!last)o=0;el.style.opacity=o;const pr=Math.min(1,Math.max(0,(t-a)/(b-a)));const dx=((id.charCodeAt(id.length-1)%2)?-1:1)*34*(pr-.5);el.style.transform='translateX('+dx+'px) scale('+(1.04+0.16*pr)+')';}
 window.END=${END};
 function setT(t){g('s0').style.opacity=E((${H}+.25-t)/.25);
- ['h0','h1','h2'].forEach((id,k)=>{const el=g(id);if(!el)return;const a=k*1.0,b=(k+1)*1.0+.1;let o=0;if(k===0)o=t<b?1:0;else o=(t>=a-.1&&t<(k===2?9:b+1))?Math.min(1,(t-(a-.1))/.2):0;el.style.opacity=o;el.style.transform='translateX('+((k%2?-1:1)*30*(t/3-.5))+'px) scale('+(1.04+.16*Math.min(1,t/3))+')';});
+ ['h0','h1','h2'].forEach((id,k)=>{const el=g(id);if(!el)return;const a=k*${H/3},b=(k+1)*${H/3}+.1;let o=0;if(k===0)o=t<b?1:0;else o=(t>=a-.1&&t<(k===2?9:b+1))?Math.min(1,(t-(a-.1))/.2):0;el.style.opacity=o;el.style.transform='translateX('+((k%2?-1:1)*30*(t/${H}-.5))+'px) scale('+(1.04+.16*Math.min(1,t/${H}))+')';});
 ${js}scene('s9',t,${OUT0-.3},${END},.3);show(g('o1'),t,${OUT0},.35,30);show(g('o2'),t,${OUT0+.5},.3,30);show(g('o3'),t,${OUT0+1.1},.3,20);}
 setT(0);</script></body>`;
 const th=spec.thumb; const thumb=`<html><head><meta charset=utf-8><style>${css}
@@ -51,7 +51,13 @@ const fps=24,N=Math.round(END*fps); fs.mkdirSync(path.join(tmp,"fr"));
 for(let i=0;i<N;i++){await pg.evaluate(`setT(${i/fps})`);await pg.screenshot({path:path.join(tmp,"fr",`f${String(i).padStart(4,"0")}.jpg`),type:"jpeg",quality:92});}
 await b.close();
 const wav=path.join(tmp,"bgm.wav"); execFileSync("python3",[path.join(ROOT,"tools/video/bgm.py"),wav,String(END),String(spec.music.bpm),String(spec.music.seed)]);
-execFileSync("ffmpeg",["-y","-loglevel","error","-framerate",String(fps),"-i",path.join(tmp,"fr","f%04d.jpg"),"-i",wav,"-af","loudnorm=I=-22:TP=-3:LRA=7,alimiter=limit=0.7,volume=-1.5dB,aresample=44100","-ac","2","-ar","44100","-c:v","libx264","-preset","medium","-crf","20","-pix_fmt","yuv420p","-c:a","aac","-profile:a","aac_low","-b:a","128k","-shortest","-movflags","+faststart",path.join(dir,"video.mp4")]);
+const voices=[]; if(spec.voice){ if(spec.voice.hook)voices.push([spec.voice.hook,0.15]); (spec.voice.stops||[]).forEach((f,i)=>f&&voices.push([f,H+i*SD+0.2])); if(spec.voice.outro)voices.push([spec.voice.outro,OUT0+0.2]); }
+const args=["-y","-loglevel","error","-framerate",String(fps),"-i",path.join(tmp,"fr","f%04d.jpg"),"-i",wav];
+voices.forEach(([f])=>args.push("-i",path.join(dir,f)));
+let fc; if(voices.length){ const parts=[`[1:a]volume=0.30[m]`]; voices.forEach(([f,t],i)=>parts.push(`[${i+2}:a]adelay=${Math.round(t*1000)}|${Math.round(t*1000)},volume=1.0[v${i}]`)); parts.push(`[m]${voices.map((_,i)=>`[v${i}]`).join("")}amix=inputs=${voices.length+1}:normalize=0:duration=longest[mx]`,`[mx]loudnorm=I=-20:TP=-2:LRA=7,alimiter=limit=0.9,aresample=44100[a]`); fc=parts.join(";"); args.push("-filter_complex",fc,"-map","0:v","-map","[a]"); }
+else args.push("-af","loudnorm=I=-22:TP=-3:LRA=7,alimiter=limit=0.7,volume=-1.5dB,aresample=44100");
+args.push("-ac","2","-ar","44100","-t",String(END),"-c:v","libx264","-preset","medium","-crf","20","-pix_fmt","yuv420p","-c:a","aac","-profile:a","aac_low","-b:a","128k","-movflags","+faststart",path.join(dir,"video.mp4"));
+execFileSync("ffmpeg",args);
 console.log("done",END+"s",path.join(dir,"video.mp4")); fs.cpSync(path.join(tmp,"fr","f0030.jpg"),path.join(tmp,"keep.jpg"));
 for(const t of [0,2,20,45,70,95]){const f=path.join(tmp,"fr",`f${String(Math.min(N-1,t)).padStart(4,"0")}.jpg`);}
 console.log("frames in",tmp);

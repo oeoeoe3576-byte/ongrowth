@@ -7,7 +7,7 @@ const FONT=`file://${ROOT}/node_modules/pretendard/dist/web/variable/woff2/Prete
 const H=3.0, SD=3.6, OD=3.0, n=spec.stops.length, OUT0=H+n*SD, END=OUT0+OD;
 const css=`@font-face{font-family:P;src:url(${FONT});font-weight:45 920}*{box-sizing:border-box;margin:0;padding:0}html,body{width:1080px;height:1920px;overflow:hidden;background:#000;font-family:P,sans-serif;color:#fff}
 .sc{position:absolute;inset:0;opacity:0}.bg{position:absolute;inset:-50px;background-size:cover;background-position:center;filter:brightness(1.1) saturate(1.15)}
-.shade2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.62) 66%,rgba(0,0,0,.86) 85%)}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.05) 40%,rgba(0,0,0,.5))}
+.shade2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.1) 40%,rgba(0,0,0,.35) 70%,rgba(0,0,0,.6))}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.05) 40%,rgba(0,0,0,.5))}
 .c{position:absolute;left:0;right:0;text-align:center;opacity:0;text-shadow:0 3px 16px rgba(0,0,0,.85)}.aq{color:${AQ}}
 .pill{display:inline-block;background:${AQ};color:#06222b;font-weight:900;border-radius:999px;text-shadow:none}
 .num{display:inline-block;width:100px;height:100px;border-radius:50%;background:${AQ};color:#06222b;font-size:66px;font-weight:900;line-height:100px;text-shadow:none;box-shadow:0 4px 16px rgba(0,0,0,.5)}
@@ -19,10 +19,12 @@ const hp=spec.hook.photos; body+=`<div class=sc id=s0 style="opacity:1">${hp.map
 <div class=c id=hk2 style="top:490px;font-size:${spec.hook.l2size||104}px;font-weight:900;letter-spacing:-3px;opacity:1;color:${AQ}">${spec.hook.l2}</div></div>`;
 spec.stops.forEach((s,i)=>{const t0=H+i*SD;
  body+=`<div class=sc id=s${i+1}>${s.ph.map((p,k)=>`<div class="bg ph" id=p${i+1}_${k} style="background-image:url(${P(p)})"></div>`).join("")}<div class=shade2></div>
-<div class=c id=a${i+1} style="top:960px"><span class=num>${i+1}</span></div>
-<div class="c nm" id=b${i+1} style="top:1075px;font-size:${s.fs||100}px">${s.n}</div>
-<div class="c dt" id=d${i+1} style="top:${s.dtop||1200}px"><span class=pd>${s.when}</span>${s.l2?`<br><span class=l2>${s.l2}</span>`:""}</div><div class=src>${s.src}</div></div>`;
- js+=`scene('s${i+1}',t,${t0-.15},${t0+SD},.3);show(g('a${i+1}'),t,${t0+.1},.3,30);show(g('b${i+1}'),t,${t0+.3},.3,30);show(g('d${i+1}'),t,${t0+.6},.3,20);\n`;
+<div class=c id=a${i+1} style="top:${s.big?640:960}px"><span class=num>${i+1}</span></div>
+${s.big?`<div class="c" id=b${i+1} style="top:770px;font-size:72px;font-weight:800;letter-spacing:-1px">${s.n}</div>
+<div class="c" id=e${i+1} style="top:860px;font-size:${s.bigSize||160}px;font-weight:900;letter-spacing:-4px;line-height:1.05;color:#fff">${s.big}</div>
+<div class="c dt" id=d${i+1} style="top:${s.dtop||1190}px;font-size:58px;text-shadow:0 3px 18px rgba(0,0,0,.95),0 0 6px rgba(0,0,0,.9)"><span class=aq>${s.l2||""}</span></div>`:`<div class="c nm" id=b${i+1} style="top:1075px;font-size:${s.fs||100}px">${s.n}</div>
+<div class="c dt" id=d${i+1} style="top:${s.dtop||1200}px"><span class=pd>${s.when}</span>${s.l2?`<br><span class=l2>${s.l2}</span>`:""}</div>`}<div class=src>${s.src}</div></div>`;
+ js+=`scene('s${i+1}',t,${t0-.15},${t0+SD},.3);show(g('a${i+1}'),t,${t0+.1},.3,30);show(g('b${i+1}'),t,${t0+.3},.3,30);show(g('d${i+1}'),t,${t0+.6},.3,20);${s.big?`show(g('e${i+1}'),t,${t0+.35},.3,30);`:''}\n`;
  s.ph.forEach((p,k)=>{const m=s.ph.length,a=t0+k*SD/m,b=t0+(k+1)*SD/m;js+=`ph('p${i+1}_${k}',t,${a},${b},${k===0},${k===m-1});\n`;});});
 const o=spec.outro; body+=`<div class=sc id=s9><div class=bg style="background-image:url(${P(o.bg)})"></div><div class=shade></div>
 <div class=c id=o1 style="top:640px"><span class=pill style="font-size:96px;padding:20px 64px">${o.pill}</span></div>

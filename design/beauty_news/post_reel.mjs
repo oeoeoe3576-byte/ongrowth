@@ -4,7 +4,8 @@
 // 캡션 = caption.txt + 음원 출처 한 줄(CC BY 필수).
 // 실행: node post_reel.mjs          → 다음 편 게시
 //       node post_reel.mjs --dry    → 업로드·처리까지만 확인하고 게시하지 않음
-import { readFile, writeFile, stat } from "node:fs/promises";
+import { readFile, writeFile, stat, readdir } from "node:fs/promises";
+import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -62,6 +63,19 @@ let caption = (await readFile(path.join(dir, "caption.txt"), "utf8")).trim();
 caption += `\n\nMusic: "${item.song}" Kevin MacLeod (incompetech.com) · CC BY 4.0`;
 if (caption.length > 2200) throw new Error("캡션이 2200자를 넘음");
 
+// 0) 표지 검사 (2026-11-01 사고: 제목 없는 사진으로 시작하는 영상이 그대로 표지가 됨)
+//    0.3초 화면(표지가 되는 곳)이 업로드 키트의 썸네일과 같은지 SSIM으로 확인. 다르면 게시하지 않는다.
+{
+  const up = path.join(dir, "output/upload");
+  const thumb = (await readdir(up).catch(() => [])).find((f) => f.startsWith("1_") && f.endsWith(".jpg"));
+  if (!thumb) throw new Error(`표지 검사 실패: ${item.dir}에 썸네일(output/upload/1_*.jpg)이 없음 → 게시 안 함`);
+  const out = spawnSync("ffmpeg", ["-nostdin", "-hide_banner", "-ss", "0.3", "-i", video, "-i", path.join(up, thumb),
+    "-filter_complex", "[0:v]trim=end_frame=1,scale=270:480,format=gray[a];[1:v]scale=270:480,format=gray[b];[a][b]ssim",
+    "-frames:v", "1", "-f", "null", "-"], { encoding: "utf8" }).stderr || "";
+  const m = /All:([\d.]+)/.exec(out);
+  const ssim = m ? parseFloat(m[1]) : NaN;
+  if (!(ssim >= 0.85)) throw new Error(`표지 검사 실패: ${item.dir} 0.3초 화면이 썸네일과 다름(SSIM ${ssim}) → 썸네일 장면을 영상 앞에 붙인 뒤 다시`);
+}
 // 1) 컨테이너 생성(재개 가능 업로드)
 const c = await api("POST", `${igId}/media`, {
   media_type: "REELS", upload_type: "resumable", caption, share_to_feed: "true", thumb_offset: "300",

@@ -27,3 +27,8 @@ mkdir -p $B/fonts/local && cp $M/_fonts/Uiyeun.woff $B/fonts/local/
 2. 성공하면 하루 2편 예약(scheduled task, 이 세션으로 깨우기): 매번 `node design/beauty_news/post_reel.mjs` 실행 → 결과 한 줄 보고 → `auto_queue.json` 변경 커밋·푸시
 3. 실패하면 게시하지 말고 사용자에게 오류를 그대로 알린다.
 4. 아침 확인 루틴(trig_01P3UTXmqqFg3vr3VE2dNSrn) 문구의 "인스타에 아무것도 올리지 않는다"는 자동 업로드 큐 이외엔 올리지 않는다로 바꾼다.
+
+## 표지 검사 (2026-11-01 사고 후 추가)
+- 하이라이터 편이 제목 없는 사진으로 시작해 그 사진이 표지로 올라감. post_reel.mjs는 이제 0.3초 화면과 `output/upload/1_*.jpg` 썸네일의 SSIM이 0.85 미만이면 게시하지 않고 멈춘다(제목 썸네일로 시작하는 영상은 0.88 이상, 사고 영상은 0.78).
+- 걸리면: 썸네일 이미지를 1.2초 장면으로 영상 앞에 붙인 뒤 music.py로 음악을 다시 넣는다(눈썹 탈색 편처럼).
+- 큐에 넣는 편은 `output/auto/reel_music.mp4`를 비공개 저장소에도 반드시 백업한다(가르마 편은 백업이 없었음).

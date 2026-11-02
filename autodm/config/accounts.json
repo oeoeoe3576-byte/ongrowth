@@ -1,0 +1,13 @@
+{
+  "_설명": "계정 목록. tokenEnv는 Vercel 환경 변수 '이름'(값은 사용자가 넣음). igUserId가 비어 있으면 토큰으로 /me 조회. enabled=false면 서버가 건드리지 않음. 실제 켜기는 환경 변수 AUTODM_ACCOUNTS에 키를 넣어야 함(이중 잠금).",
+  "accounts": [
+    { "key": "ongrowth",     "name": "온그로스",       "handle": "ongrowth_marketing", "igUserId": "17841410465575346", "tokenEnv": "IG_TOKEN_ONGROWTH",     "enabled": true },
+    { "key": "stay",         "name": "숙소어디감",     "handle": "eodigam_stay",       "igUserId": "",                  "tokenEnv": "IG_TOKEN_STAY",         "enabled": true },
+    { "key": "staykim",      "name": "스테이킴",       "handle": "stay___kim",         "igUserId": "",                  "tokenEnv": "IG_TOKEN_STAYKIM",      "enabled": true },
+    { "key": "yojeom",       "name": "요즘어디감",     "handle": "eodigam_yojeom",     "igUserId": "17841426708064609", "tokenEnv": "IG_TOKEN_YOJEOM",       "enabled": true },
+    { "key": "beautyletter", "name": "뷰티레터",       "handle": "from.beautyletter",  "igUserId": "",                  "tokenEnv": "IG_TOKEN_BEAUTYLETTER", "enabled": true },
+    { "key": "copymarong",   "name": "카피마롱",       "handle": "",                   "igUserId": "",                  "tokenEnv": "IG_TOKEN_COPYMARONG",   "enabled": true },
+    { "key": "glowchoi_kr",  "name": "글로우초이 한국", "handle": "",                   "igUserId": "",                  "tokenEnv": "IG_TOKEN_GLOWCHOI_KR",  "enabled": false, "_보류": "11/3 관제탑 지시로 대상에서 제외(문구는 보관)" },
+    { "key": "glowchoi_global", "name": "글로우초이 해외", "handle": "",                "igUserId": "",                  "tokenEnv": "IG_TOKEN_GLOWCHOI_GLOBAL", "enabled": false, "_보류": "11/3 관제탑 지시로 대상에서 제외. 계정 아이디·언어 미확인, 문구 없음" }
+  ]
+}

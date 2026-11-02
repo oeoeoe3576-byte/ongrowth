@@ -1,0 +1,14 @@
+{
+  "name": "ongrowth-autodm",
+  "private": true,
+  "type": "module",
+  "description": "인스타 댓글 → 답글 + 비공개 답장(DM) 자동화. Vercel 무료 함수용. 외부 의존성 없음.",
+  "engines": { "node": ">=18.17" },
+  "scripts": {
+    "build:data": "node tools/build-data.mjs",
+    "check": "node tools/build-data.mjs --check",
+    "simulate": "npx tsx tools/simulate.ts",
+    "pinned": "npx tsx tools/pinned.ts",
+    "status": "npx tsx tools/status.ts"
+  }
+}

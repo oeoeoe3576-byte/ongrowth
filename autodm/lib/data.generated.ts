@@ -55,7 +55,7 @@ export const ACCOUNTS: AccountConfig[] = [
   "handle": "",
   "igUserId": "",
   "tokenEnv": "IG_TOKEN_GLOWCHOI_KR",
-  "enabled": true
+  "enabled": false
  },
  {
   "key": "glowchoi_global",

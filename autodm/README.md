@@ -3,7 +3,8 @@
 댓글을 단 사람에게 ① 공개 답글 ② 비공개 답장(DM, 인사말 + 링크)을 자동으로 보낸다.
 인스타 공식 API(인스타그램 로그인 방식) + Meta 앱 「Ongrowth Cardnews」 + Vercel 무료 함수. 유료 서비스·유료 AI 없음.
 
-대상: 온그로스, 숙소어디감, 스테이킴, 요즘어디감, 뷰티레터, 카피마롱, 글로우초이 한국 (글로우초이 해외는 계정·언어 미확인이라 보류)
+대상: 온그로스, 숙소어디감, 스테이킴, 요즘어디감, 뷰티레터, 카피마롱
+보류(꺼 둠, 11/3 관제탑 지시): 글로우초이 한국·해외. 한국 문구 `phrases/glowchoi_kr.json`은 보관만 하고 서버는 쓰지 않음(`enabled: false`)
 제외: 초이블러, 주말부부 (인포크 사용 중)
 
 ## 동작
@@ -31,7 +32,7 @@
 ## 환경 변수 (이름만. 값은 Vercel 프로젝트 설정 > Environment Variables 에 사용자가 넣음)
 | 이름 | 내용 |
 |---|---|
-| `IG_TOKEN_ONGROWTH` `IG_TOKEN_STAY` `IG_TOKEN_STAYKIM` `IG_TOKEN_YOJEOM` `IG_TOKEN_BEAUTYLETTER` `IG_TOKEN_COPYMARONG` `IG_TOKEN_GLOWCHOI_KR` | 계정별 인스타 토큰(인스타그램 로그인 방식, IG로 시작하는 장기 토큰). 60일마다 갱신 필요 |
+| `IG_TOKEN_ONGROWTH` `IG_TOKEN_STAY` `IG_TOKEN_STAYKIM` `IG_TOKEN_YOJEOM` `IG_TOKEN_BEAUTYLETTER` `IG_TOKEN_COPYMARONG` | 계정별 인스타 토큰(인스타그램 로그인 방식, IG로 시작하는 장기 토큰). 60일마다 갱신 필요 |
 | `POLL_SECRET` | 폴링 호출 암호(아무 긴 문자열). 크론 호출 시 헤더 `x-poll-key` 로 보냄 |
 | `KV_REST_API_URL` `KV_REST_API_TOKEN` | Vercel Storage > Upstash Redis(무료) 연결하면 자동 생성. 중복 방지·최근 50건 기억용. 없으면 메모리(재시작 시 잊음) |
 | `AUTODM_MODE` `AUTODM_ACCOUNTS` `AUTODM_TEST_USERNAMES` `AUTODM_DRY_RUN` | 위 안전장치 |

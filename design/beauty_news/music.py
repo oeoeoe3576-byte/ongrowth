@@ -41,7 +41,7 @@ dur = duration(a.video)
 start = a.start if a.start is not None else auto_start(a.music)
 has_audio = bool(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index",
                                  "-of", "csv=p=0", a.video], capture_output=True, text=True).stdout.strip())
-mus = (f"[1:a]atrim=start={start}:duration={dur},asetpts=PTS-STARTPTS,loudnorm=I=-16:TP=-1.5:LRA=11,"
+mus = (f"[1:a]atrim=start={start}:duration={dur},asetpts=PTS-STARTPTS,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=44100,"
        f"afade=t=in:d=0.3,afade=t=out:st={max(0, dur - 1.2)}:d=1.2[m]")
 if has_audio:
     graph = mus + ";[0:a]volume=-4dB[s];[m][s]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.9[a]"

@@ -1,0 +1,13 @@
+name: autodm-poll
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Call autodm poll
+        run: |
+          curl -sS -m 60 -o /dev/null -w "%{http_code}\n" -H "x-poll-key: ${{ secrets.POLL_SECRET }}" https://ongrowth-autodm.vercel.app/api/poll

@@ -8,7 +8,7 @@ export interface PhraseSet {
   handle?: string;
   language?: string;
   toneSource?: string;
-  dm: { greetings: string[]; bodies: string[]; closings: string[]; disclosures?: string[] };
+  dm: { greetings: string[]; bodies: string[]; closings: string[]; disclosures?: string[]; questionFallbacks?: string[] };
   reply: { greetings: string[]; bodies: string[]; closings: string[] };
   replyNoLink: { bodies: string[] };
   pinned: string[];
@@ -47,6 +47,7 @@ export async function pick(
   p: PhraseSet,
   kind: Kind,
   vars: Record<string, string> = {},
+  opts: { prefix?: string } = {},
 ): Promise<Picked> {
   const parts = partsFor(p, kind);
   const listKey = `recent:${p.account}:${kind}`;
@@ -59,8 +60,9 @@ export async function pick(
     // 조합 수가 50 이하(고정 댓글 등)면 '가장 오래전에 쓴 것'이 될 때까지 재시도하다 마지막 값을 쓴다
     if (total <= recent.size && t > 50) break;
   }
+  // prefix(질문 답)가 있으면 인사말 대신 그 답으로 시작한다
   let text = parts
-    .map((l, i) => l[idx[i]].trim())
+    .map((l, i) => (opts.prefix && kind === "dm" && i === 0 ? opts.prefix : l[idx[i]].trim()))
     .filter(Boolean)
     .join(kind === "dm" ? "\n\n" : " ");
   for (const [k, v] of Object.entries(vars)) text = text.split(`{${k}}`).join(v);

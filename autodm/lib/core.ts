@@ -14,7 +14,7 @@
 //  - DM 실패(비공개 계정·DM 수신 제한 등) 또는 링크 없는 게시물 → DM 없이 "프로필 링크 확인" 답글
 //    (비공개 계정 안내 자체는 개별 답글이 아니라 게시물 고정 댓글로 한다)
 
-import { ACCOUNTS, LINKS, PHRASES, RULES, type AccountConfig } from "./data.generated.js";
+import { ACCOUNTS, FAQ, LINKS, PHRASES, RULES, type AccountConfig } from "./data.generated.js";
 import { commitPick, pick } from "./phrases.js";
 import { getStore } from "./store.js";
 import { GraphError, me, privateReply, replyToComment, type IgComment } from "./graph.js";
@@ -64,11 +64,31 @@ export async function accountByIgId(igId: string): Promise<AccountConfig | undef
   return undefined;
 }
 
+// 질문형 댓글 판별: 물음표 또는 질문 단어
+const QUESTION_WORDS = ["어디", "얼마", "몇", "되나요", "있나요", "가능", "어떻게", "언제", "사이즈", "냄새", "무슨", "뭐", "어떤", "궁금", "알려", "인가요", "나요", "까요", "을까", "ㄹ까"];
+export function isQuestion(text: string): boolean {
+  const t = text.replace(/\s+/g, "");
+  return /[?？]/.test(t) || QUESTION_WORDS.some((w) => t.includes(w));
+}
+
+/** 게시물 → 상품 → FAQ에서 댓글 단어로 답 고르기. 못 찾으면 null */
+export function faqAnswer(account: string, mediaId: string, text: string): string | null {
+  const f = FAQ[account];
+  if (!f) return null;
+  const key = f.media?.[mediaId] ?? f.defaultProduct ?? undefined;
+  const prod = key ? f.products?.[key] : undefined;
+  if (!prod) return null;
+  const t = text.replace(/\s+/g, "").toLowerCase();
+  for (const it of prod.faq) if (it.match.some((m) => t.includes(m.replace(/\s+/g, "").toLowerCase()))) return it.answer;
+  return null;
+}
+
 export interface Outcome {
   account: string;
   commentId: string;
   action: "skip" | "dm+reply" | "reply-nolink" | "dm-failed+reply-nolink" | "error";
   reason?: string;
+  question?: "answered" | "unanswered";
   dmCombo?: string;
   replyCombo?: string;
   preview?: { dm?: string; reply?: string };
@@ -127,14 +147,32 @@ export async function handleComment(a: AccountConfig, c: IgComment, ownUsername?
   try {
     let dmFailed = "";
     if (link) {
-      const dm = await pick(store, phrases, "dm", { link });
+      // 질문형 댓글: FAQ 답(없으면 '상세 페이지 확인 + 댓글로 답 드릴게요' 문장)을 DM 맨 앞에
+      let prefix: string | undefined;
+      let question: Outcome["question"];
+      if (isQuestion(c.text ?? "")) {
+        const ans = faqAnswer(a.key, c.mediaId, c.text ?? "");
+        const fb = phrases.dm.questionFallbacks ?? [];
+        if (ans) {
+          prefix = ans;
+          question = "answered";
+        } else if (fb.length) {
+          prefix = fb[Math.floor(Math.random() * fb.length)];
+          question = "unanswered";
+        }
+      }
+      const dm = await pick(store, phrases, "dm", { link }, { prefix });
       try {
         if (!dry) await privateReply(token, igId, c.id, dm.text);
         await commitPick(store, a.key, dm);
+        if (question === "unanswered") {
+          // 관제가 나중에 댓글로 답할 수 있게 미답변 목록에 남긴다(최근 200건, 30일)
+          await store.pushRecent(`unanswered:${a.key}`, JSON.stringify({ commentId: c.id, mediaId: c.mediaId, text: (c.text ?? "").slice(0, 200), at: new Date().toISOString() }), 200);
+        }
         const rp = await pick(store, phrases, "reply");
         if (!dry) await replyToComment(token, c.id, rp.text);
         await commitPick(store, a.key, rp);
-        const o: Outcome = { ...base, action: "dm+reply", dmCombo: dm.combo, replyCombo: rp.combo, preview: { dm: dm.text, reply: rp.text } };
+        const o: Outcome = { ...base, action: "dm+reply", question, dmCombo: dm.combo, replyCombo: rp.combo, preview: { dm: dm.text, reply: rp.text } };
         log(o);
         return o;
       } catch (e) {

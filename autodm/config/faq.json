@@ -1,0 +1,17 @@
+{
+  "_설명": "질문형 댓글 답변 표. 계정 → products(상품 키 → 이름·FAQ) + media(게시물 ID → 상품 키) + defaultProduct(표에 없는 게시물에 쓸 상품 키, 없으면 null). FAQ 항목 match 단어 중 하나가 댓글에 있으면 그 answer를 DM 맨 앞에 넣는다. answer는 상세 페이지에서 확인된 정보만(효과·경험 지어내기 금지). 맞는 답이 없으면 phrases의 dm.questionFallbacks 문장을 쓰고 미답변 목록에 남긴다.",
+  "copymarong": {
+    "defaultProduct": null,
+    "media": {},
+    "products": {
+      "mold-gel": {
+        "name": "에코후레쉬 실리콘 곰팡이 제거젤 220ml 4개",
+        "source": "상품명 기준(관제 전달 11/3). 그 밖의 정보는 상세 페이지 확인 후 추가",
+        "faq": [
+          { "match": ["몇개", "몇 개", "개수", "수량", "구성", "몇통", "몇 통"], "answer": "이 상품은 220ml짜리 4개가 들어 있는 구성이에요." },
+          { "match": ["용량", "몇ml", "몇 ml", "ml", "얼마나 들어"], "answer": "한 개 용량은 220ml이고, 4개 구성이에요." }
+        ]
+      }
+    }
+  }
+}

@@ -7,6 +7,10 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const accounts = JSON.parse(readFileSync(join(root, "config/accounts.json"), "utf8")).accounts;
 const linksRaw = JSON.parse(readFileSync(join(root, "config/links.json"), "utf8"));
+const rulesRaw = JSON.parse(readFileSync(join(root, "config/rules.json"), "utf8"));
+const rules = Object.fromEntries(Object.entries(rulesRaw).filter(([k]) => !k.startsWith("_")));
+const faqRaw = JSON.parse(readFileSync(join(root, "config/faq.json"), "utf8"));
+const faq = Object.fromEntries(Object.entries(faqRaw).filter(([k]) => !k.startsWith("_")));
 const links = Object.fromEntries(Object.entries(linksRaw).filter(([k]) => !k.startsWith("_")));
 
 const phrases = {};
@@ -39,12 +43,29 @@ for (const [acc, table] of Object.entries(links)) {
     if (!/^https:\/\//.test(String(url))) errs.push(`links.${acc}.${mid}: https 링크가 아님`);
   }
 }
+for (const [acc, r] of Object.entries(rules)) {
+  if (r.defaultLink && !/^https:\/\//.test(r.defaultLink)) errs.push(`rules.${acc}.defaultLink: https 아님`);
+  if (r.keywords && !Array.isArray(r.keywords)) errs.push(`rules.${acc}.keywords: 배열이어야 함`);
+}
+for (const [acc, f] of Object.entries(faq)) {
+  for (const [pk, prod] of Object.entries(f.products ?? {})) for (const it of prod.faq ?? []) {
+    if (!it.answer || !Array.isArray(it.match) || !it.match.length) errs.push(`faq.${acc}.${pk}: match/answer 확인`);
+  }
+  for (const [mid, pk] of Object.entries(f.media ?? {})) if (!f.products?.[pk]) errs.push(`faq.${acc}.media.${mid}: 없는 상품 키 ${pk}`);
+  if (f.defaultProduct && !f.products?.[f.defaultProduct]) errs.push(`faq.${acc}.defaultProduct: 없는 상품 키`);
+  if ((phrases[acc]?.dm?.questionFallbacks?.length ?? 0) < 6) errs.push(`${acc}: dm.questionFallbacks 6개 미만`);
+}
 for (const a of accounts) if (a.enabled && !phrases[a.key]) errs.push(`${a.key}: 문구 파일 없음 (켜져 있어도 서버가 건너뜀)`);
 
 const ts = `// 자동 생성 파일: npm run build:data (직접 고치지 말 것)
 export interface AccountConfig { key: string; name: string; handle: string; igUserId: string; tokenEnv: string; enabled: boolean }
 export const ACCOUNTS: AccountConfig[] = ${JSON.stringify(accounts.map(({ key, name, handle, igUserId, tokenEnv, enabled }) => ({ key, name, handle, igUserId, tokenEnv, enabled })), null, 1)};
 export const LINKS: Record<string, Record<string, string>> = ${JSON.stringify(links, null, 1)};
+export interface AccountRule { keywords?: string[]; defaultLink?: string; disclosure?: string; nonKeywordReply?: boolean }
+export interface FaqItem { match: string[]; answer: string }
+export interface AccountFaq { defaultProduct?: string | null; media?: Record<string, string>; products?: Record<string, { name: string; source?: string; faq: FaqItem[] }> }
+export const FAQ: Record<string, AccountFaq> = ${JSON.stringify(faq, null, 1)};
+export const RULES: Record<string, AccountRule> = ${JSON.stringify(rules, null, 1)};
 import type { PhraseSet } from "./phrases.js";
 export const PHRASES: Record<string, PhraseSet> = ${JSON.stringify(phrases)};
 `;

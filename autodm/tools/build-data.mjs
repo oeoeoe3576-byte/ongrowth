@@ -7,6 +7,8 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const accounts = JSON.parse(readFileSync(join(root, "config/accounts.json"), "utf8")).accounts;
 const linksRaw = JSON.parse(readFileSync(join(root, "config/links.json"), "utf8"));
+const rulesRaw = JSON.parse(readFileSync(join(root, "config/rules.json"), "utf8"));
+const rules = Object.fromEntries(Object.entries(rulesRaw).filter(([k]) => !k.startsWith("_")));
 const links = Object.fromEntries(Object.entries(linksRaw).filter(([k]) => !k.startsWith("_")));
 
 const phrases = {};
@@ -39,12 +41,18 @@ for (const [acc, table] of Object.entries(links)) {
     if (!/^https:\/\//.test(String(url))) errs.push(`links.${acc}.${mid}: https 링크가 아님`);
   }
 }
+for (const [acc, r] of Object.entries(rules)) {
+  if (r.defaultLink && !/^https:\/\//.test(r.defaultLink)) errs.push(`rules.${acc}.defaultLink: https 아님`);
+  if (r.keywords && !Array.isArray(r.keywords)) errs.push(`rules.${acc}.keywords: 배열이어야 함`);
+}
 for (const a of accounts) if (a.enabled && !phrases[a.key]) errs.push(`${a.key}: 문구 파일 없음 (켜져 있어도 서버가 건너뜀)`);
 
 const ts = `// 자동 생성 파일: npm run build:data (직접 고치지 말 것)
 export interface AccountConfig { key: string; name: string; handle: string; igUserId: string; tokenEnv: string; enabled: boolean }
 export const ACCOUNTS: AccountConfig[] = ${JSON.stringify(accounts.map(({ key, name, handle, igUserId, tokenEnv, enabled }) => ({ key, name, handle, igUserId, tokenEnv, enabled })), null, 1)};
 export const LINKS: Record<string, Record<string, string>> = ${JSON.stringify(links, null, 1)};
+export interface AccountRule { keywords?: string[]; defaultLink?: string; disclosure?: string; nonKeywordReply?: boolean }
+export const RULES: Record<string, AccountRule> = ${JSON.stringify(rules, null, 1)};
 import type { PhraseSet } from "./phrases.js";
 export const PHRASES: Record<string, PhraseSet> = ${JSON.stringify(phrases)};
 `;

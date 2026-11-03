@@ -14,7 +14,7 @@
 //  - DM 실패(비공개 계정·DM 수신 제한 등) 또는 링크 없는 게시물 → DM 없이 "프로필 링크 확인" 답글
 //    (비공개 계정 안내 자체는 개별 답글이 아니라 게시물 고정 댓글로 한다)
 
-import { ACCOUNTS, LINKS, PHRASES, type AccountConfig } from "./data.generated.js";
+import { ACCOUNTS, LINKS, PHRASES, RULES, type AccountConfig } from "./data.generated.js";
 import { commitPick, pick } from "./phrases.js";
 import { getStore } from "./store.js";
 import { GraphError, me, privateReply, replyToComment, type IgComment } from "./graph.js";
@@ -104,8 +104,15 @@ export async function handleComment(a: AccountConfig, c: IgComment, ownUsername?
 
   const token = tokenFor(a);
   if (!token) return skip(`토큰 없음(${a.tokenEnv})`);
-  const phrases = PHRASES[a.key];
-  const link = LINKS[a.key]?.[c.mediaId];
+  const rule = RULES[a.key] ?? {};
+  const norm = (s: string) => s.replace(/\s+/g, "").toLowerCase();
+  const kws = (rule.keywords ?? []).map(norm).filter(Boolean);
+  const keywordHit = kws.length === 0 || kws.some((k) => norm(c.text ?? "").includes(k));
+  if (!keywordHit && !rule.nonKeywordReply) return skip("키워드 없음");
+  const basePhrases = PHRASES[a.key];
+  // 고정 고지 문구가 있으면 무작위 고지 대신 그 문장을 그대로 붙인다
+  const phrases = rule.disclosure ? { ...basePhrases, dm: { ...basePhrases.dm, disclosures: [rule.disclosure] } } : basePhrases;
+  const link = keywordHit ? LINKS[a.key]?.[c.mediaId] || rule.defaultLink : undefined;
 
   // 중복 방지: 댓글 하나는 한 번만(30일 기억)
   if (!(await store.claim(`done:${c.id}`, 30 * 24 * 3600))) return skip("이미 처리함");

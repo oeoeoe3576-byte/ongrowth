@@ -1,0 +1,9 @@
+{
+  "_설명": "계정별 규칙. keywords: 댓글에 이 중 하나가 들어 있을 때만 반응(띄어쓰기·대소문자 무시). 비어 있으면 모든 댓글에 반응. defaultLink: 게시물별 링크 표(links.json)에 없는 게시물에 보낼 기본 링크(비우면 '프로필 링크 확인' 답글만). disclosure: DM 끝에 그대로 붙이는 고정 문구(바꾸지 않음). nonKeywordReply: 키워드 없는 댓글에 '프로필 링크 확인' 답글을 달지(false면 무시).",
+  "copymarong": {
+    "keywords": [],
+    "defaultLink": "https://link.coupang.com/a/inrBRtMpl6",
+    "disclosure": "쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.",
+    "nonKeywordReply": false
+  }
+}

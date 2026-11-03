@@ -38,7 +38,7 @@ export interface Spec {
   captionTop?: number;
   background?: string;
   /** dark: 어두운 영상용(흰 글자+노랑) · light: 밝은 배경용 · navy: 남색 바탕에 제목은 흰/노랑, 자막은 남색 상자 (상위 영상 구조: 위 제목 / 가운데 창 / 자막) */
-  theme?: "dark" | "light" | "navy";
+  theme?: "dark" | "light" | "navy" | "footage";
   out: string;
   headline?: { line1: string; line2: string; from?: number; to?: number };
   /** 구간마다 다른 제목 (headline과 함께 쓸 수 있다) */
@@ -86,7 +86,7 @@ export function autoCaptions(lines: string[], seconds: number, lead = 0.3, tail 
   });
 }
 
-function css(width: number, theme: "dark" | "light" | "navy", captionTop?: number): string {
+function css(width: number, theme: "dark" | "light" | "navy" | "footage", captionTop?: number): string {
   const font = fs.readFileSync(require.resolve("pretendard/dist/web/variable/woff2/PretendardVariable.woff2")).toString("base64");
   const u = width / 896; // 896px 폭 기준으로 글자 크기를 맞춘다
   return `@font-face{font-family:P;font-weight:45 920;src:url(data:font/woff2;base64,${font}) format('woff2');}
@@ -96,6 +96,7 @@ html,body{margin:0;background:transparent}
 .l1{font-size:${Math.round(78 * u)}px;color:#fff}.l2{font-size:${Math.round(86 * u)}px;color:#FFE600}
 .cap{position:absolute;left:0;right:0;${captionTop !== undefined ? `top:${captionTop * 100}%` : `bottom:${SAFE_BOTTOM * 100}%`};text-align:center;font-family:P}
 .cap span{display:inline-block;max-width:${Math.round(780 * u)}px;background:rgba(0,0,0,.72);color:#fff;font-weight:700;font-size:${Math.round(46 * u)}px;line-height:1.4;padding:${Math.round(10 * u)}px ${Math.round(24 * u)}px;border-radius:${Math.round(10 * u)}px}
+${theme === "footage" ? `.l1{color:#fff}.l2{display:inline-block;margin-top:${Math.round(10 * u)}px;color:#fff;background:${NAVY};padding:${Math.round(6 * u)}px ${Math.round(28 * u)}px;border-radius:${Math.round(18 * u)}px;text-shadow:none;-webkit-text-stroke:0}.cap span{background:${NAVY}}` : ""}
 ${theme === "navy" ? `.head{text-shadow:none;-webkit-text-stroke:0}.l1{color:#fff}.l2{color:#FFE600}.cap span{background:${NAVY}}` : ""}
 ${theme === "light" ? `.head{text-shadow:none;-webkit-text-stroke:0}.l1{color:${NAVY}}.l2{display:inline-block;margin-top:${Math.round(10 * u)}px;color:#fff;background:${NAVY};padding:${Math.round(6 * u)}px ${Math.round(28 * u)}px;border-radius:${Math.round(18 * u)}px}.cap span{background:${NAVY}}` : ""}`;
 }

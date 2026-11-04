@@ -72,7 +72,9 @@ export const LINKS: Record<string, Record<string, string>> = {
  "staykim": {},
  "yojeom": {},
  "beautyletter": {},
- "copymarong": {},
+ "copymarong": {
+  "18113491162882107": "https://link.coupang.com/a/inCD3VjF3Q"
+ },
  "glowchoi_kr": {}
 };
 export interface AccountRule { keywords?: string[]; defaultLink?: string; disclosure?: string; nonKeywordReply?: boolean }
@@ -117,7 +119,7 @@ export const FAQ: Record<string, AccountFaq> = {
 export const RULES: Record<string, AccountRule> = {
  "copymarong": {
   "keywords": [],
-  "defaultLink": "https://link.coupang.com/a/inrBRtMpl6",
+  "defaultLink": "",
   "disclosure": "쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.",
   "nonKeywordReply": false
  }

@@ -86,6 +86,8 @@ export function faqAnswer(account: string, mediaId: string, text: string): strin
 export interface Outcome {
   account: string;
   commentId: string;
+  mediaId?: string;
+  link?: string;
   action: "skip" | "dm+reply" | "reply-nolink" | "dm-failed+reply-nolink" | "error";
   reason?: string;
   question?: "answered" | "unanswered";
@@ -100,7 +102,7 @@ function log(o: Outcome) {
 }
 
 export async function handleComment(a: AccountConfig, c: IgComment, ownUsername?: string): Promise<Outcome> {
-  const base = { account: a.key, commentId: c.id };
+  const base = { account: a.key, commentId: c.id, mediaId: c.mediaId };
   const store = getStore();
   const author = (c.from?.username || c.username || "").toLowerCase();
   const authorId = c.from?.id;
@@ -172,7 +174,7 @@ export async function handleComment(a: AccountConfig, c: IgComment, ownUsername?
         const rp = await pick(store, phrases, "reply");
         if (!dry) await replyToComment(token, c.id, rp.text);
         await commitPick(store, a.key, rp);
-        const o: Outcome = { ...base, action: "dm+reply", question, dmCombo: dm.combo, replyCombo: rp.combo, preview: { dm: dm.text, reply: rp.text } };
+        const o: Outcome = { ...base, action: "dm+reply", link, question, dmCombo: dm.combo, replyCombo: rp.combo, preview: { dm: dm.text, reply: rp.text } };
         log(o);
         return o;
       } catch (e) {

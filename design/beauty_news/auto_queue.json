@@ -84,12 +84,16 @@
     {
       "dir": "2026-11-12_adultmakeup",
       "title": "어른 메이크업",
-      "song": "Zazie"
+      "song": "Zazie",
+      "posted": "manual-2026-11-04",
+      "note": "토큰 무효로 Aside가 Meta Business Suite로 예약 업로드(11/4 11:17·20:17). 자동 업로드 대상 아님"
     },
     {
       "dir": "2026-11-07_dirtyglam",
       "title": "더티 글래머",
-      "song": "Late Night Radio"
+      "song": "Late Night Radio",
+      "posted": "manual-2026-11-04",
+      "note": "토큰 무효로 Aside가 Meta Business Suite로 예약 업로드(11/4 11:17·20:17). 자동 업로드 대상 아님"
     },
     {
       "dir": "2026-11-08_glowtone",

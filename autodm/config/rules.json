@@ -5,5 +5,17 @@
     "defaultLink": "",
     "disclosure": "쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.",
     "nonKeywordReply": false
+  },
+  "stay": {
+    "keywords": [],
+    "defaultLink": "",
+    "disclosure": "이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.",
+    "nonKeywordReply": false
+  },
+  "staykim": {
+    "keywords": [],
+    "defaultLink": "",
+    "disclosure": "이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.",
+    "nonKeywordReply": false
   }
 }

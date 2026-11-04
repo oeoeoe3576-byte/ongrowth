@@ -6,6 +6,7 @@
   "engines": { "node": ">=18.17" },
   "scripts": {
     "build:data": "node tools/build-data.mjs",
+    "vercel-build": "node tools/build-data.mjs",
     "check": "node tools/build-data.mjs --check",
     "simulate": "npx tsx tools/simulate.ts",
     "pinned": "npx tsx tools/pinned.ts",

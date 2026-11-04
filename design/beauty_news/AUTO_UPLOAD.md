@@ -32,3 +32,8 @@ mkdir -p $B/fonts/local && cp $M/_fonts/Uiyeun.woff $B/fonts/local/
 - 하이라이터 편이 제목 없는 사진으로 시작해 그 사진이 표지로 올라감. post_reel.mjs는 이제 0.3초 화면과 `output/upload/1_*.jpg` 썸네일의 SSIM이 0.85 미만이면 게시하지 않고 멈춘다(제목 썸네일로 시작하는 영상은 0.88 이상, 사고 영상은 0.78).
 - 걸리면: 썸네일 이미지를 1.2초 장면으로 영상 앞에 붙인 뒤 music.py로 음악을 다시 넣는다(눈썹 탈색 편처럼).
 - 큐에 넣는 편은 `output/auto/reel_music.mp4`를 비공개 저장소에도 반드시 백업한다(가르마 편은 백업이 없었음).
+
+## 도구 (11/03~04 추가)
+- `node design/beauty_news/insights.mjs [개수]`: 최근 릴스 인사이트(views·reach·saved·shares·평균 시청·reels_skip_rate=3초 이탈). 오류 code 190이면 토큰 무효 → 사용자에게 재발급 요청(값은 채팅에 받지 않음, 환경 설정에서 교체)
+- `music.py`는 11/03에 끝 3초 잘림 수정(loudnorm 뒤 aresample=44100). 음악판 길이가 원본(upload/2_*.mp4)과 같은지 꼭 확인
+- 수동 업로드한 편은 auto_queue.json에 `posted: manual-YYYY-MM-DD`로 표시해 중복 게시를 막는다

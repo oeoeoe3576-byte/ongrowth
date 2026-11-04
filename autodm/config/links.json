@@ -2,7 +2,9 @@
   "_설명": "게시물 ID → DM으로 보낼 링크. 게시물 ID는 인스타 media id(숫자). 여기에 없는 게시물은 DM을 보내지 않고 '프로필 링크 확인' 답글만 단다. 고친 뒤 git push 하면 Vercel이 다시 배포.",
   "ongrowth": {},
   "stay": {},
-  "staykim": {},
+  "staykim": {
+    "18036249170857227": "https://link.coupang.com/a/g34rqkL0ou"
+  },
   "yojeom": {},
   "beautyletter": {},
   "copymarong": {

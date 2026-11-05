@@ -1,10 +1,26 @@
 {
-  "_설명": "계정별 규칙. keywords: 댓글에 이 중 하나가 들어 있을 때만 반응(띄어쓰기·대소문자 무시). 비어 있으면 모든 댓글에 반응. defaultLink: 게시물별 링크 표(links.json)에 없는 게시물에 보낼 기본 링크(비우면 '프로필 링크 확인' 답글만). disclosure: DM 끝에 그대로 붙이는 고정 문구(바꾸지 않음). nonKeywordReply: 키워드 없는 댓글에 '프로필 링크 확인' 답글을 달지(false면 무시). profileLinks: 캡션에 \"프로필 링크 N번\"이 있으면 N번 링크를 DM으로 보냄(인포크 eodigam 쿠팡 링크, 11/5 사용자 지시).",
+  "_설명": "계정별 규칙. keywords: 댓글에 이 중 하나가 들어 있을 때만 반응(띄어쓰기·대소문자 무시). 비어 있으면 모든 댓글에 반응. defaultLink: 게시물별 링크 표(links.json)에 없는 게시물에 보낼 기본 링크(비우면 '프로필 링크 확인' 답글만). disclosure: DM 끝에 그대로 붙이는 고정 문구(바꾸지 않음). nonKeywordReply: 키워드 없는 댓글에 '프로필 링크 확인' 답글을 달지(false면 무시). profileLinks: 캡션에 \"프로필 링크 N번\"이 있으면 N번 링크를 DM으로 보냄(인포크 eodigam 쿠팡 링크, 11/5 사용자 지시). captionLinks: 게시물 ID 표에 없고 캡션에 match 단어가 있으면 그 링크(게시 전에 미리 연결, 11/5).",
   "copymarong": {
     "keywords": [],
     "defaultLink": "",
     "disclosure": "쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.",
-    "nonKeywordReply": false
+    "nonKeywordReply": false,
+    "captionLinks": [
+      {
+        "match": [
+          "곰팡이"
+        ],
+        "link": "https://link.coupang.com/a/inrBRtMpl6"
+      },
+      {
+        "match": [
+          "전기담요",
+          "입는 담요",
+          "입는담요"
+        ],
+        "link": "https://link.coupang.com/a/inCD3VjF3Q"
+      }
+    ]
   },
   "stay": {
     "keywords": [],

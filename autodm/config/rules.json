@@ -1,5 +1,5 @@
 {
-  "_설명": "계정별 규칙. keywords: 댓글에 이 중 하나가 들어 있을 때만 반응(띄어쓰기·대소문자 무시). 비어 있으면 모든 댓글에 반응. defaultLink: 게시물별 링크 표(links.json)에 없는 게시물에 보낼 기본 링크(비우면 '프로필 링크 확인' 답글만). disclosure: DM 끝에 그대로 붙이는 고정 문구(바꾸지 않음). nonKeywordReply: 키워드 없는 댓글에 '프로필 링크 확인' 답글을 달지(false면 무시). profileLinks: 캡션에 \"프로필 링크 N번\"이 있으면 N번 링크를 DM으로 보냄(인포크 eodigam 쿠팡 링크, 11/5 사용자 지시). captionLinks: 게시물 ID 표에 없고 캡션에 match 단어가 있으면 그 링크(게시 전에 미리 연결, 11/5).",
+  "_설명": "계정별 규칙. keywords: 댓글에 이 중 하나가 들어 있을 때만 반응(띄어쓰기·대소문자 무시). 비어 있으면 모든 댓글에 반응. defaultLink: 게시물별 링크 표(links.json)에 없는 게시물에 보낼 기본 링크(비우면 '프로필 링크 확인' 답글만). disclosure: DM 끝에 그대로 붙이는 고정 문구(바꾸지 않음). nonKeywordReply: 키워드 없는 댓글에 '프로필 링크 확인' 답글을 달지(false면 무시). profileLinks: 캡션에 \"프로필 링크 N번\"이 있으면 N번 링크를 DM으로 보냄(인포크 eodigam 쿠팡 링크, 11/5 사용자 지시). captionLinks: 게시물 ID 표에 없고 캡션에 match 단어가 있으면 그 링크(게시 전에 미리 연결, 11/5). scheduled: [{at(ISO, KST +09:00), link, label}] 업로드 예약 시각으로 게시물을 찾아 링크 연결(게시 시각 ±45분, 업로드 키트의 쿠팡 링크, 11/5).",
   "copymarong": {
     "keywords": [],
     "defaultLink": "",
@@ -19,6 +19,18 @@
           "입는담요"
         ],
         "link": "https://link.coupang.com/a/inCD3VjF3Q"
+      }
+    ],
+    "scheduled": [
+      {
+        "at": "2026-11-04T18:47:00+09:00",
+        "link": "https://link.coupang.com/a/inCD3VjF3Q",
+        "label": "입는 전기담요 v9"
+      },
+      {
+        "at": "2026-11-05T20:47:00+09:00",
+        "link": "https://link.coupang.com/a/inrBRtMpl6",
+        "label": "곰팡이 젤 v3"
       }
     ]
   },
@@ -43,7 +55,14 @@
       "13": "https://link.coupang.com/a/h6c5fWwSQ0",
       "14": "https://link.coupang.com/a/h6c5f4oWw8",
       "15": "https://link.coupang.com/a/h6c5gdaFye"
-    }
+    },
+    "scheduled": [
+      {
+        "at": "2026-11-05T18:40:00+09:00",
+        "link": "https://link.coupang.com/a/g34wGSaGYK",
+        "label": "강릉 씨마크"
+      }
+    ]
   },
   "staykim": {
     "keywords": [],
@@ -66,6 +85,13 @@
       "13": "https://link.coupang.com/a/h6c5fWwSQ0",
       "14": "https://link.coupang.com/a/h6c5f4oWw8",
       "15": "https://link.coupang.com/a/h6c5gdaFye"
-    }
+    },
+    "scheduled": [
+      {
+        "at": "2026-11-05T20:00:00+09:00",
+        "link": "https://link.coupang.com/a/g34wGSaGYK",
+        "label": "강릉 씨마크"
+      }
+    ]
   }
 }

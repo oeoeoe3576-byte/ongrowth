@@ -30,7 +30,7 @@ export async function GET(request: Request): Promise<Response> {
         for (const c of await mediaComments(token, m.id)) {
           if (c.timestamp && Date.parse(c.timestamp) < since) continue;
           if (used >= budget) break;
-          const o = await handleComment(a, c, own);
+          const o = await handleComment(a, { ...c, caption: m.caption }, own);
           counts[o.action] = (counts[o.action] ?? 0) + 1;
           if (o.action !== "skip") used++;
         }

@@ -28,7 +28,7 @@ export async function GET(request: Request): Promise<Response> {
       const own = (await me(token)).username;
       for (const m of await recentMedia(token, mediaLimit)) {
         const cs = m.comments_count ? await mediaComments(token, m.id) : [];
-        if (u.searchParams.get("debug") === "1") dbg.push({ id: m.id, cc: m.comments_count ?? 0, got: cs.length, ts: m.timestamp, link: linkFor(a, m.id, m.caption) ?? null, cap: (m.caption ?? "").replace(/\s+/g, " ").slice(0, 70) });
+        if (u.searchParams.get("debug") === "1") dbg.push({ id: m.id, cc: m.comments_count ?? 0, got: cs.length, ts: m.timestamp, link: linkFor(a, m.id, m.caption) ?? null, cap: (m.caption ?? "").replace(/\s+/g, " ").slice(0, u.searchParams.get("full") === "1" ? 2200 : 70) });
         if (!m.comments_count) continue;
         for (const c of cs) {
           if (c.timestamp && Date.parse(c.timestamp) < since) continue;

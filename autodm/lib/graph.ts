@@ -37,14 +37,15 @@ export interface IgComment {
   username?: string;
   parent_id?: string;
   mediaId: string;
+  caption?: string; // 게시물 캡션(폴링 때 붙임): "프로필 링크 N번" 읽기용
 }
 
 export async function me(token: string): Promise<{ user_id: string; username: string }> {
   return call("me", token, { query: { fields: "user_id,username" } });
 }
 
-export async function recentMedia(token: string, limit = 10): Promise<{ id: string; timestamp: string; comments_count?: number }[]> {
-  const j = await call("me/media", token, { query: { fields: "id,timestamp,comments_count", limit: String(limit) } });
+export async function recentMedia(token: string, limit = 10): Promise<{ id: string; timestamp: string; comments_count?: number; caption?: string }[]> {
+  const j = await call("me/media", token, { query: { fields: "id,timestamp,comments_count,caption", limit: String(limit) } });
   return j.data ?? [];
 }
 

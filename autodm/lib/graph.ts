@@ -2,7 +2,10 @@
 // 토큰 값은 로그·오류 메시지에 절대 넣지 않는다.
 
 const VERSION = () => process.env.IG_GRAPH_VERSION || "v23.0";
-const BASE = () => `https://graph.instagram.com/${VERSION()}`;
+// 토큰 종류로 경로 선택: 인스타 로그인 토큰(IG…) = graph.instagram.com, 페이스북 페이지 토큰(EAA…) = graph.facebook.com
+// (인스타 로그인 방식은 개발 모드에서 댓글 목록이 빈 배열로 와서, 11/5부터 페이지 연결 계정은 페이스북 방식 사용)
+export const isFb = (token: string) => token.startsWith("EAA");
+const BASE = (token: string) => (isFb(token) ? `https://graph.facebook.com/${VERSION()}` : `https://graph.instagram.com/${VERSION()}`);
 
 export class GraphError extends Error {
   constructor(message: string, public code?: number, public subcode?: number) {
@@ -12,7 +15,7 @@ export class GraphError extends Error {
 
 async function call(path: string, token: string, init?: { method?: string; json?: unknown; query?: Record<string, string> }) {
   const q = new URLSearchParams(init?.query ?? {});
-  const url = `${BASE()}/${path}${q.toString() ? `?${q}` : ""}`;
+  const url = `${BASE(token)}/${path}${q.toString() ? `?${q}` : ""}`;
   const res = await fetch(url, {
     method: init?.method ?? "GET",
     headers: {
@@ -24,7 +27,7 @@ async function call(path: string, token: string, init?: { method?: string; json?
   const json = (await res.json().catch(() => ({}))) as any;
   if (!res.ok || json.error) {
     const e = json.error ?? {};
-    throw new GraphError(String(e.message ?? `HTTP ${res.status}`).replace(/IG[A-Za-z0-9]{20,}/g, "[토큰]"), e.code, e.error_subcode);
+    throw new GraphError(String(e.message ?? `HTTP ${res.status}`).replace(/(IG|EAA)[A-Za-z0-9]{20,}/g, "[토큰]"), e.code, e.error_subcode);
   }
   return json;
 }
@@ -41,11 +44,18 @@ export interface IgComment {
 }
 
 export async function me(token: string): Promise<{ user_id: string; username: string }> {
+  if (isFb(token)) {
+    // 페이지 토큰: 페이지에 연결된 인스타 비즈니스 계정
+    const p = await call("me", token, { query: { fields: "instagram_business_account{id,username}" } });
+    const ig = p.instagram_business_account ?? {};
+    return { user_id: ig.id, username: ig.username };
+  }
   return call("me", token, { query: { fields: "user_id,username" } });
 }
 
 export async function recentMedia(token: string, limit = 10): Promise<{ id: string; timestamp: string; comments_count?: number; caption?: string }[]> {
-  const j = await call("me/media", token, { query: { fields: "id,timestamp,comments_count,caption", limit: String(limit) } });
+  const owner = isFb(token) ? (await me(token)).user_id : "me";
+  const j = await call(`${owner}/media`, token, { query: { fields: "id,timestamp,comments_count,caption", limit: String(limit) } });
   return j.data ?? [];
 }
 
@@ -64,7 +74,8 @@ export async function replyToComment(token: string, commentId: string, message: 
 
 /** 비공개 답장(DM): 댓글 후 7일 이내, 1통만 */
 export async function privateReply(token: string, igUserId: string, commentId: string, text: string): Promise<string> {
-  const j = await call(`${igUserId}/messages`, token, {
+  // 페이스북 방식은 페이지 토큰으로 me(=페이지)/messages
+  const j = await call(isFb(token) ? "me/messages" : `${igUserId}/messages`, token, {
     method: "POST",
     json: { recipient: { comment_id: commentId }, message: { text } },
   });

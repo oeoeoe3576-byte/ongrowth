@@ -23,11 +23,14 @@ export async function GET(request: Request): Promise<Response> {
       continue;
     }
     const counts: Record<string, number> = {};
+    const dbg: unknown[] = [];
     try {
       const own = (await me(token)).username;
       for (const m of await recentMedia(token, mediaLimit)) {
+        const cs = m.comments_count ? await mediaComments(token, m.id) : [];
+        if (u.searchParams.get("debug") === "1") dbg.push({ id: m.id, cc: m.comments_count ?? 0, got: cs.length, ts: m.timestamp });
         if (!m.comments_count) continue;
-        for (const c of await mediaComments(token, m.id)) {
+        for (const c of cs) {
           if (c.timestamp && Date.parse(c.timestamp) < since) continue;
           if (used >= budget) break;
           const o = await handleComment(a, { ...c, caption: m.caption }, own);
@@ -35,7 +38,7 @@ export async function GET(request: Request): Promise<Response> {
           if (o.action !== "skip") used++;
         }
       }
-      summary[a.key] = counts;
+      summary[a.key] = dbg.length ? { ...counts, dbg } : counts;
     } catch (e) {
       summary[a.key] = `오류: ${String((e as Error).message).slice(0, 150)}`;
     }

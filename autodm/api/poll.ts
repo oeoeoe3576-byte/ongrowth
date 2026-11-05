@@ -1,4 +1,4 @@
-// 주기 확인(폴링): 웹훅 없이도 동작. 무료 외부 크론(cron-job.org 등)이 5~10분마다 호출.
+// 주기 확인(폴링): 웹훅 없이도 동작. (11/5: 숙소어디감·스테이킴은 페이스북 페이지 토큰 경로) 무료 외부 크론(cron-job.org 등)이 5~10분마다 호출.
 // 켜진 계정마다 최근 게시물 N개의 댓글을 읽어, 아직 처리 안 한 7일 이내 댓글을 처리한다.
 // 호출 인증: 헤더 x-poll-key 또는 ?key= 가 환경 변수 POLL_SECRET 과 같아야 함.
 import { activeAccounts, handleComment, mode, dryRun, tokenFor } from "../lib/core.js";

@@ -83,6 +83,17 @@ export function faqAnswer(account: string, mediaId: string, text: string): strin
   return null;
 }
 
+
+/** 게시물 링크 고르기: links.json(게시물 ID) → 캡션 "프로필 링크 N번" → rules.captionLinks(캡션 단어) → defaultLink */
+export function linkFor(a: AccountConfig, mediaId: string, caption?: string): string | undefined {
+  const rule: any = RULES[a.key] ?? {};
+  const capNo = (caption ?? "").match(/프로필\s*링크\s*\[?\s*(\d{1,2})\s*번/);
+  const profileLinks: Record<string, string> = rule.profileLinks ?? {};
+  const capN = (caption ?? "").replace(/\s+/g, "").toLowerCase();
+  const cl = (rule.captionLinks ?? []).find((x: any) => (x.match ?? []).some((w: string) => w && capN.includes(w.replace(/\s+/g, "").toLowerCase())));
+  return LINKS[a.key]?.[mediaId] || (capNo ? profileLinks[capNo[1]] : undefined) || cl?.link || rule.defaultLink || undefined;
+}
+
 export interface Outcome {
   account: string;
   commentId: string;
@@ -134,10 +145,7 @@ export async function handleComment(a: AccountConfig, c: IgComment, ownUsername?
   const basePhrases = PHRASES[a.key];
   // 고정 고지 문구가 있으면 무작위 고지 대신 그 문장을 그대로 붙인다
   const phrases = rule.disclosure ? { ...basePhrases, dm: { ...basePhrases.dm, disclosures: [rule.disclosure] } } : basePhrases;
-  // 게시물별 링크 표 → 캡션의 "프로필 링크 N번" → rules.profileLinks[N] → defaultLink 순서
-  const capNo = (c.caption ?? "").match(/프로필\s*링크\s*\[?\s*(\d{1,2})\s*번/);
-  const profileLinks: Record<string, string> = (rule as any).profileLinks ?? {};
-  const link = keywordHit ? LINKS[a.key]?.[c.mediaId] || (capNo ? profileLinks[capNo[1]] : undefined) || rule.defaultLink : undefined;
+  const link = keywordHit ? linkFor(a, c.mediaId, c.caption) : undefined;
 
   // 중복 방지: 댓글 하나는 한 번만(30일 기억)
   if (!(await store.claim(`done:${c.id}`, 30 * 24 * 3600))) return skip("이미 처리함");

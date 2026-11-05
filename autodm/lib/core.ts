@@ -84,14 +84,24 @@ export function faqAnswer(account: string, mediaId: string, text: string): strin
 }
 
 
-/** 게시물 링크 고르기: links.json(게시물 ID) → 캡션 "프로필 링크 N번" → rules.captionLinks(캡션 단어) → defaultLink */
-export function linkFor(a: AccountConfig, mediaId: string, caption?: string): string | undefined {
+/** 게시물 링크 고르기: links.json(게시물 ID) → rules.scheduled(게시 시각) → 캡션 "프로필 링크 N번" → rules.captionLinks(캡션 단어) → defaultLink */
+export function linkFor(a: AccountConfig, mediaId: string, caption?: string, mediaTs?: string): string | undefined {
   const rule: any = RULES[a.key] ?? {};
+  // 업로드 예약표(rules.scheduled: {at, link, label}): 게시 시각 ±45분 안의 가장 가까운 항목 (11/5 사용자: 링크는 제작 단계에서 정해짐)
+  let sched: string | undefined;
+  const ts = mediaTs ? Date.parse(mediaTs) : NaN;
+  if (!Number.isNaN(ts)) {
+    let best = 45 * 60 * 1000 + 1;
+    for (const s of rule.scheduled ?? []) {
+      const d = Math.abs(Date.parse(s.at) - ts);
+      if (s.link && d < best) { best = d; sched = s.link; }
+    }
+  }
   const capNo = (caption ?? "").match(/프로필\s*링크\s*\[?\s*(\d{1,2})\s*번/);
   const profileLinks: Record<string, string> = rule.profileLinks ?? {};
   const capN = (caption ?? "").replace(/\s+/g, "").toLowerCase();
   const cl = (rule.captionLinks ?? []).find((x: any) => (x.match ?? []).some((w: string) => w && capN.includes(w.replace(/\s+/g, "").toLowerCase())));
-  return LINKS[a.key]?.[mediaId] || (capNo ? profileLinks[capNo[1]] : undefined) || cl?.link || rule.defaultLink || undefined;
+  return LINKS[a.key]?.[mediaId] || sched || (capNo ? profileLinks[capNo[1]] : undefined) || cl?.link || rule.defaultLink || undefined;
 }
 
 export interface Outcome {
@@ -145,7 +155,7 @@ export async function handleComment(a: AccountConfig, c: IgComment, ownUsername?
   const basePhrases = PHRASES[a.key];
   // 고정 고지 문구가 있으면 무작위 고지 대신 그 문장을 그대로 붙인다
   const phrases = rule.disclosure ? { ...basePhrases, dm: { ...basePhrases.dm, disclosures: [rule.disclosure] } } : basePhrases;
-  const link = keywordHit ? linkFor(a, c.mediaId, c.caption) : undefined;
+  const link = keywordHit ? linkFor(a, c.mediaId, c.caption, (c as any).mediaTs) : undefined;
 
   // 중복 방지: 댓글 하나는 한 번만(30일 기억)
   if (!(await store.claim(`done:${c.id}`, 30 * 24 * 3600))) return skip("이미 처리함");

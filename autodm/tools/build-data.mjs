@@ -26,7 +26,7 @@ const errs = [];
 const min = { greetings: 15, bodies: 15, closings: 15 };
 for (const [key, p] of Object.entries(phrases)) {
   for (const sec of ["dm", "reply"]) for (const [part, n0] of Object.entries(min)) {
-    const n = sec === "reply" && part !== "bodies" ? 1 : n0; // 공개 답글은 인사·마무리 없이 짧게(사용자 11/6)
+    const n = sec === "reply" && part === "bodies" ? n0 : 1; // 사용자 11/6: DM은 고정 양식, 공개 답글은 짧게
     const len = p[sec]?.[part]?.length ?? 0;
     if (len < n) errs.push(`${key}: ${sec}.${part} ${len}개 (최소 ${n})`);
   }

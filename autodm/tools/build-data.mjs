@@ -25,7 +25,8 @@ for (const f of readdirSync(join(root, "phrases")).filter((f) => f.endsWith(".js
 const errs = [];
 const min = { greetings: 15, bodies: 15, closings: 15 };
 for (const [key, p] of Object.entries(phrases)) {
-  for (const sec of ["dm", "reply"]) for (const [part, n] of Object.entries(min)) {
+  for (const sec of ["dm", "reply"]) for (const [part, n0] of Object.entries(min)) {
+    const n = sec === "reply" && part !== "bodies" ? 1 : n0; // 공개 답글은 인사·마무리 없이 짧게(사용자 11/6)
     const len = p[sec]?.[part]?.length ?? 0;
     if (len < n) errs.push(`${key}: ${sec}.${part} ${len}개 (최소 ${n})`);
   }
@@ -35,7 +36,7 @@ for (const [key, p] of Object.entries(phrases)) {
   const all = [p.dm, p.reply].flatMap((s) => [...(s?.greetings ?? []), ...(s?.bodies ?? []), ...(s?.closings ?? [])])
     .concat(p.replyNoLink?.bodies ?? [], p.pinned ?? []);
   const seen = new Set();
-  for (const s of all) { if (seen.has(s)) errs.push(`${key}: 중복 → ${s.slice(0, 25)}`); seen.add(s); }
+  for (const s of all) { if (!s) continue; if (seen.has(s)) errs.push(`${key}: 중복 → ${s.slice(0, 25)}`); seen.add(s); }
 }
 for (const [acc, table] of Object.entries(links)) {
   for (const [mid, url] of Object.entries(table)) {

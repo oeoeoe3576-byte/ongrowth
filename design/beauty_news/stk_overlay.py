@@ -8,9 +8,10 @@ def arrow(x1,y1,x2,y2,bend=0.25):
     h=[(x2-L*math.cos(ang+a),y2-L*math.sin(ang+a)) for a in (0.5,-0.5)]
     return (f'<path class="draw" d="M{x1} {y1} Q{cx:.0f} {cy:.0f} {x2} {y2}"/>'
             f'<path class="draw" d="M{h[0][0]:.0f} {h[0][1]:.0f} L{x2} {y2} L{h[1][0]:.0f} {h[1][1]:.0f}"/>')
-def block(text,size,pos,arr,stk=None):
-    a=arrow(*arr[:4],bend=arr[4] if len(arr)>4 else .25)
-    h=f'<svg class="ov arw" viewBox="0 0 1080 1920">{a}</svg>'
+def block(text,size,pos,arr=None,stk=None):
+    h=''
+    if arr:
+        h+=f'<svg class="ov arw" viewBox="0 0 1080 1920">{arrow(*arr[:4],bend=arr[4] if len(arr)>4 else .25)}</svg>'
     h+=f'<div class="side" style="left:{pos[0]}px; top:{pos[1]}px; font-size:{size}px;">{text}</div>'
     if stk: h+=f'<div class="stk pop" style="left:{stk[1][0]}px; top:{stk[1][1]}px;">{stk[0]}</div>'
     return h
@@ -29,15 +30,16 @@ def apply(letter,spec):
         s=s[:m.start()]+sec+s[m.end():]
     open(p,'w',encoding='utf-8').write(s)
 if __name__=='__main__':
+    # 사용자 11/7: 화살표·이모지 없이 설명글만, 안쪽(가장자리 150~900px)·타이틀과 간격(top≥440)·얼굴 피함
     bang={
-     '02_minni':['틈 덕분에<br/><b>가볍게</b>',84,(190,470),(480,670,480,745,.1),('✨',(820,620))],
-     '03_soyeon':['눈썹 덮는<br/><b>길이로</b>',72,(330,610),(370,650,275,545,.2)],
-     '04_chaewon':['사이드뱅<br/><b>감싸기</b>',72,(645,690),(660,760,618,715,.2)],
-     '05_momo':['얇게 나눠<br/><b>이마 살짝</b>',60,(100,470),(280,570,340,570,.1),('✨',(115,640))],
+     '02_minni':['틈 덕분에<br/><b>가볍게</b>',84,(200,470)],
+     '03_soyeon':['눈썹 덮는<br/><b>길이로</b>',72,(330,610)],
+     '04_chaewon':['사이드뱅<br/><b>감싸기</b>',64,(640,700)],
+     '05_momo':['얇게 나눠<br/><b>이마 살짝</b>',54,(110,470)],
     }
     wave={
-     '02_miyeon':['여기서부터<br/><b>S컬</b>',76,(105,460),(350,615,445,705,.25),('✨',(115,660))],
-     '03_gayoung':['끝까지<br/><b>쭉</b>',84,(560,560),(700,760,730,1300,.08)],
-     '04_minni':['불규칙해서<br/><b>가볍게</b>',64,(640,790),(800,780,840,690,.2)],
+     '02_miyeon':['여기서부터<br/><b>S컬</b>',64,(150,470)],
+     '03_gayoung':['끝까지<br/><b>쭉</b>',84,(560,560)],
+     '04_minni':['불규칙해서<br/><b>가볍게</b>',64,(610,850)],
     }
     apply('2026-11-13_seethroughbang',bang); apply('2026-11-14_wave',wave)

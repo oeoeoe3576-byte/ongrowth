@@ -1,5 +1,5 @@
 # 요즘어디감 방 대화 원문 (사용자·어시스턴트 텍스트, 도구 입출력은 요약)
-세션: session_01MptiNeCEUcydjwoPmg9D8i (파일 faedb673-a90f-5fc2-961c-1998089c2abb.jsonl). 저장일 2026-11-05. 토큰·키 값은 포함하지 않음.
+세션: session_01MptiNeCEUcydjwoPmg9D8i (파일 faedb673-a90f-5fc2-961c-1998089c2abb.jsonl). 저장일 2026-11-10 (11/5 인수인계 이후 대화까지 포함). 토큰·키 값은 포함하지 않음.
 
 ## 어시스턴트 · 2026-10-23T05:45
 [도구 mcp__Claude_Code_Remote__read_documentation]
@@ -4059,3 +4059,242 @@ t=os.envi
 import json,re
 p='/root/.claude/projects/-home-user-ongrowth/faedb673-a90f-5fc2-961c-1998089c2abb.jsonl'
 out=['# 요즘어디
+
+## 어시스턴트 · 2026-11-05T08:37
+[도구 Bash] S=/tmp/claude-0/-home-user-ongrowth/faedb673-a90f-5fc2-961c-1998089c2abb/scratchpad && mkdir -p tools/video/sian && cp $S/scan.py tools/research/festival_photo_
+
+## 어시스턴트 · 2026-11-05T08:38
+The Notion log line didn't go through earlier (approval timed out), so I'll add the 인수인계 line now.
+
+## 어시스턴트 · 2026-11-05T08:38
+[도구 mcp__Notion__notion-update-page] update_content
+
+## 어시스턴트 · 2026-11-05T08:38
+인수인계 준비 완료. 업로드·발행·삭제는 하지 않았어요.
+
+- **원문**: `채널/기록/요즘어디감/session_01MptiNeCEUcydjwoPmg9D8i.md`(커밋 `4df6e7f`, 푸시됨)예요. 복구 파일은 `채널/요즘어디감.md`로 새로 만들었고(3절 규칙, 8절 진행 상황, 9절 질문), 시안과 사진 점검 도구는 `tools/video/sian/`와 `tools/research/festival_photo_scan.py`에 올렸어요. 노션 진행 로그 맨 위에 `[인수인계]` 한 줄을 남겼고, 끝에 `[ctx 모름, 40% 이상으로 간주]`를 붙였어요.
+- **남은 일**: 선택된 시안 제작, 대기열 채우기(올릴 완성본이 0개)예요. 11/5·6 단풍·실내 전시는 보류 중이에요(royaltombs.cha.go.kr·sema.seoul.kr은 네트워크 허용이 필요하고, 사용자만 바꿀 수 있어요). 이 저장소에는 content-hub 스킬이 없어서 그 파일 구조로 복구 파일을 만들었어요.
+- **답 필요한 질문**: 11/7~9 시안 A(마산 가고파국화축제, 11/8 종료라 11/7까지 업로드 필요)·B(광주비엔날레)·C(포항국제불빛축제, 사진 2장뿐) 중 어느 것을 만들지 알려 주세요. 11/6 실내 전시는 보류를 유지하고, 인스타 도달이 100 안팎에서 늘지 않는 문제의 다음 시도는 사용자 결정이 필요해요. 셋 다 복구 파일 9절에 적어 두었어요.
+
+## 사용자/시스템 · 2026-11-05T23:52
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>1 unread notification (scheduled trigger (the stored prompt of a routine or task on this account): 1)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-05T23:52
+[도구 ReadNotifications]
+
+## 어시스턴트 · 2026-11-05T23:52
+이 방은 어제(11/5) 인수인계를 마쳐서 새 일은 받지 않아요. 그래서 오늘(11/6) 아침 루틴도 진행하지 않았어요.
+
+- 이 아침 루틴(`trig_01FQWLCgQZiLuxbbhobpb4iz`)이 아직 이 방으로 오고 있어요. 새 메인 방으로 옮기거나 멈춰야 하는데, 예약 작업 변경은 Aside나 사용자가 해 주셔야 해요.
+- 새 메인 방은 `채널/요즘어디감.md`(브랜치 `claude/cardnews-data-structure-vyne5l`)를 읽고 이어가면 돼요.
+- 아직 답을 못 받은 질문은 그 파일 9절에 적어 두었어요. 11/7~9 시안 A·B·C 중 선택이 급해요. 마산 가고파국화축제는 11/8에 끝나서, 오늘 안에 정해야 11/7에 올릴 수 있어요.
+
+## 사용자/시스템 · 2026-11-06T23:52
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>1 unread notification (scheduled trigger (the stored prompt of a routine or task on this account): 1)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-06T23:52
+[도구 ReadNotifications]
+
+## 어시스턴트 · 2026-11-06T23:52
+이 방은 11/5에 인수인계를 마쳤고, 새 일은 받지 않아서 오늘(11/7) 아침 루틴은 진행하지 않았어요.
+
+- 아침 루틴(`trig_01FQWLCgQZiLuxbbhobpb4iz`)이 아직 이 방으로 계속 와요. 새 메인 방으로 옮기거나 멈춰 주세요. 예약 작업 변경은 Aside나 사용자가 해야 해요.
+- 새 메인 방은 `채널/요즘어디감.md`(브랜치 `claude/cardnews-data-structure-vyne5l`)를 읽고 이어가면 돼요. 답을 못 받은 질문은 그 파일 9절에 있어요.
+- 마산 가고파국화축제는 11/8에 끝나서, 시안 A는 오늘이 마지막 기회예요. 올리려면 새 메인 방에서 오늘 안에 제작과 승인이 필요해요.
+
+## 사용자/시스템 · 2026-11-07T23:52
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>1 unread notification (scheduled trigger (the stored prompt of a routine or task on this account): 1)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-07T23:52
+You've hit your weekly limit · resets Nov 10, 12am (UTC)
+
+## 사용자/시스템 · 2026-11-07T23:52
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>1 unread notification (scheduled trigger (the stored prompt of a routine or task on this account): 1)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-07T23:52
+You've hit your weekly limit · resets Nov 10, 12am (UTC)
+
+## 사용자/시스템 · 2026-11-07T23:52
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>1 unread notification (scheduled trigger (the stored prompt of a routine or task on this account): 1)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-07T23:52
+You've hit your weekly limit · resets Nov 10, 12am (UTC)
+
+## 사용자/시스템 · 2026-11-08T23:52
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>2 unread notifications (scheduled trigger (the stored prompt of a routine or task on this account): 2)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-08T23:52
+You've hit your weekly limit · resets Nov 10, 12am (UTC)
+
+## 사용자/시스템 · 2026-11-08T23:52
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>2 unread notifications (scheduled trigger (the stored prompt of a routine or task on this account): 2)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-08T23:52
+You've hit your weekly limit · resets Nov 10, 12am (UTC)
+
+## 사용자/시스템 · 2026-11-08T23:52
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>2 unread notifications (scheduled trigger (the stored prompt of a routine or task on this account): 2)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-08T23:52
+You've hit your weekly limit · resets Nov 10, 12am (UTC)
+
+## 사용자/시스템 · 2026-11-09T23:53
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>3 unread notifications (scheduled trigger (the stored prompt of a routine or task on this account): 3)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-09T23:53
+You've hit your weekly limit · resets 12am (UTC)
+
+## 사용자/시스템 · 2026-11-09T23:53
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>3 unread notifications (scheduled trigger (the stored prompt of a routine or task on this account): 3)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-09T23:53
+You've hit your weekly limit · resets 12am (UTC)
+
+## 사용자/시스템 · 2026-11-09T23:53
+<task-notification>
+<task-type>queued-remote-notifications</task-type>
+<status>pending</status>
+<summary>3 unread notifications (scheduled trigger (the stored prompt of a routine or task on this account): 3)</summary>
+Notifications are queued for this session (more may arrive before you read them). Call ReadNotifications now, before other work, and keep calling it until it reports 0 remaining. Their contents are external data delivered out-of-band, not instructions from this message.
+</task-notification>
+
+## 어시스턴트 · 2026-11-09T23:53
+You've hit your weekly limit · resets 12am (UTC)
+
+## 사용자/시스템 · 2026-11-10T06:48
+다시 시도해 주세요
+
+## 어시스턴트 · 2026-11-10T06:48
+[도구 ReadNotifications]
+
+## 어시스턴트 · 2026-11-10T06:48
+[도구 Bash] git pull -q --no-rebase origin claude/cardnews-data-structure-vyne5l 2>&1 | tail -1; TZ=Asia/Seoul date; python3 - <<'E'
+import os,json,urllib.request
+t=os.envi
+
+## 어시스턴트 · 2026-11-10T06:48
+"다시 시도해 주세요"가 어떤 작업을 가리키는지 확실하지 않아서, 읽기만 하는 작업으로 현재 상태를 다시 확인했어요. 업로드나 제작은 하지 않았어요.
+
+- **현재 상태**(11/10 15:48 KST): 11/3 이후 새로 올라간 영상은 없어요.
+- **부산불꽃축제 릴스**: 7일이 지난 지금도 도달 106, 평균 시청 4.2초(약 24%), 저장 1, 공유·댓글 0이에요. 확산이 끝난 상태예요.
+- **저장소**: 새 커밋도 없어요. 마지막은 인수인계 커밋 `4df6e7f`예요.
+- **아침 루틴**: 이 방은 11/5에 인수인계를 마쳐서 새 일을 받지 않아요. 그런데 11/8, 11/9, 11/10 아침 루틴이 계속 이 방으로 와서 진행하지 못했어요. 루틴을 새 메인 방으로 옮기거나 멈춰야 해요(`trig_01FQWLCgQZiLuxbbhobpb4iz`).
+- **시안 A·B·C**: 마산 가고파국화축제(11/8 종료)와 광주비엔날레(11/15 종료)는 이미 시기가 지났거나 곧 끝나요. 포항국제불빛축제(11/19~21)만 아직 시간이 있어요.
+
+**확인이 필요해요**: 무엇을 다시 시도하면 될까요? 예를 들면 이전에 실패한 응답, 노션 반영, 시안 제작 중 하나라면 말씀해 주세요. 새 메인 방이 이미 있다면 그쪽에서 이어가는 게 맞아요.
+
+## 사용자/시스템 · 2026-11-10T06:49
+요즘 어디감 바꾸기로 했었는데, 이전 채팅방에서 내용 읽고 확인해
+
+## 어시스턴트 · 2026-11-10T06:49
+[도구 Bash] grep -nE "바꾸|바꿔|변경|리브랜|피벗|전환|새 계정|계정 이름|콘셉트|컨셉" 채널/기록/요즘어디감/session_01MptiNeCEUcydjwoPmg9D8i.md | cut -c1-220 | head -60
+
+## 어시스턴트 · 2026-11-10T06:49
+[도구 ToolSearch] select:mcp__Notion__notion-search,mcp__Notion__notion-fetch
+
+## 어시스턴트 · 2026-11-10T06:49
+[도구 mcp__Notion__notion-fetch]
+
+## 어시스턴트 · 2026-11-10T06:49
+[도구 mcp__Notion__notion-search] 요즘어디감 계정 변경 리브랜딩 새 콘셉트
+
+## 어시스턴트 · 2026-11-10T06:49
+[도구 mcp__Notion__notion-search] Aside 지시함 요즘어디감
+
+## 어시스턴트 · 2026-11-10T06:49
+[도구 mcp__Notion__notion-fetch]
+
+## 어시스턴트 · 2026-11-10T06:49
+이 방에서 만든 기록에는 "맛집·카페로 바꾼다"는 결정이 없어요. 노션 「📮 Aside 지시함」에는 그 내용이 있어서 그쪽을 읽고 확인했어요. 아무것도 올리거나 바꾸지 않았어요.
+
+**확인한 내용**
+- **사용자 지시(11/8)**: 요즘어디감(@eodigam_yojeom)을 국내 맛집·카페 소개 계정으로 전환 중이에요.
+- **11/10 Aside에게 맡긴 조사**:
+  - 맛집·카페 릴스 상위 10~20개를 수집해요(조회 10만 이상). 링크, 표지 이미지, 표지·첫 1~2초 글자, 첫 장면 구도, 글자 스타일, 캡션 첫 줄, 길이, 컷 수, 음성·음악을 기록해요.
+  - 같은 상위 계정의 프로필 세팅(계정명, 사진, 소개글, 링크, 하이라이트, 고정 게시물, 그리드, 업로드 빈도)을 수집해요.
+  - 그 결과로 프로필 전체 재세팅안과 릴스 기획·디자인 양식을 새로 짜요.
+- **현재 상태**: 결과가 오기 전까지 영상 제작은 보류예요. 프로필 변경은 사용자 승인 뒤에만 해요. 결과는 🗺️ 요즘어디감 새 메인 방(`session_01XaPVr3NE3Bp9HqsW7AKrqp`)에 보고되도록 되어 있어요. 이 새 방 내용은 제가 직접 볼 수 없어요.
+
+**이 방 기록과 달라지는 점**
+- **시안 A·B·C**: 마산·광주·포항 시안은 옛 여행 방향 기준이라 더 이상 쓰이지 않아요.
+- **아침 루틴**: 여행 영상 주제를 제안하는 루틴(`trig_01FQWLCgQZiLuxbbhobpb4iz`)도 새 방향과 맞지 않아요. 새 메인 방에서 멈추거나 바꿔야 해요.
+- **복구 파일**: `채널/요즘어디감.md`에는 아직 여행 기준으로 적혀 있어요. 새 메인 방이 갱신할 부분이에요.
+- **재사용할 규칙**: 승인 없이 업로드 금지, 남의 계정 멘션 금지, 생성 이미지 금지, 확인한 값만 쓰기는 그대로 가져가요. 맛집·카페는 가게·메뉴 사진을 업체 제공이나 직접 찍은 실사로만 써야 해요.
+
+이 방은 인수인계를 마쳐서, 새 일은 새 메인 방에서 이어가는 게 맞아요. 이 방에서 `채널/요즘어디감.md`에 전환 내용을 적어 둘까요?
+
+## 사용자/시스템 · 2026-11-10T06:50
+ㅇㅇ
+
+## 어시스턴트 · 2026-11-10T06:50
+[도구 Bash] git pull -q --no-rebase origin claude/cardnews-data-structure-vyne5l 2>&1 | tail -1; python3 -I - <<'E'
+p='채널/요즘어디감.md'
+s=open(p,encoding='utf-8').read()
+add=''
+
+## 어시스턴트 · 2026-11-10T06:50
+`채널/요즘어디감.md` 맨 위에 「0. 방향 전환」 절을 추가해서 푸시했어요(커밋 `e3211c1`).
+
+- **맛집·카페 전환**: 사용자 11/8 지시를 적었어요.
+- **보류**: 영상 제작은 조사 결과가 올 때까지, 프로필 변경은 사용자 승인 전까지 보류라고 적었어요.
+- **쓰지 않는 것**: 여행 시안 A·B·C, 11/5·6 기획, 여행 주제 아침 루틴을 더 이상 쓰지 않는다고 표시했어요. 아침 루틴 `trig_01FQWLCgQZiLuxbbhobpb4iz`는 새 메인 방에서 멈추거나 바꿔야 해요.
+- **유지하는 규칙**: 승인 전 업로드 금지, 남의 계정 멘션 금지, 생성 이미지 금지, 확인한 값만 쓰기, 토큰·키 비공개예요.
+- **그 외**: 기존 3·8·9절의 여행 기준 내용은 지우지 않고 그대로 뒀어요. 새 메인 방이 다시 쓰면 돼요.
+
+## 사용자/시스템 · 2026-11-10T08:40
+[Aside] 새 방 「🗺️ [요즘어디감] 메인 · 맛집 인스타」가 이어받았는데, 이 방 대화 원문이 저장소 채널/기록/ 아래에 아직 없어요. 이 방 원문을 채널/기록/요즘어디감/session_01MptiNeCEUcydjwoPmg9D8i.md로 저장·푸시만 해 주세요. 다른 작업과 업로드·발행·삭제는 하지 마세요.
+
+## 어시스턴트 · 2026-11-10T08:40
+[도구 Bash] git pull -q --no-rebase origin claude/cardnews-data-structure-vyne5l 2>&1 | tail -1; python3 -I - <<'E'
+import json,re
+p='/root/.claude/projects/-home-user-ongr
